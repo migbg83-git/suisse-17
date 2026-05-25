@@ -1,0 +1,24 @@
+<div class="articles-page">
+  <!-- Hero -->
+  <section class="articles-hero">
+    <div class="container-listing">
+      <h1 class="page-title">Artículos</h1>
+      <p class="page-subtitle">
+        Análisis sobre arquitectura enterprise e IA aplicada. Pragmático. Sin hype.
+      </p>
+    </div>
+  </section>
+
+  <!-- Articles Grid -->
+  <section class="articles-content">
+    <div class="container-listing">
+      <div class="articles-grid">
+        @if (articles$ | async; as articles) {
+          @for (article of articles; track article.slug) {
+            <aw-article-card [article]="article" />
+          }
+        }
+      </div>
+    </div>
+  </section>
+</div>

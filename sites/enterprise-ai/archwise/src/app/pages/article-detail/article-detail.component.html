@@ -1,0 +1,51 @@
+<div class="article-detail">
+  @if (loading) {
+    <div class="article-loading">
+      <div class="container-reading">
+        <p>Cargando artículo...</p>
+      </div>
+    </div>
+  }
+
+  @if (notFound) {
+    <div class="article-not-found">
+      <div class="container-reading">
+        <h1>Artículo no encontrado</h1>
+        <p>El artículo que buscas no existe o ha sido movido.</p>
+        <a routerLink="/" class="back-link">← Volver al inicio</a>
+      </div>
+    </div>
+  }
+
+  @if (article && !loading) {
+    <!-- Hero -->
+    <section class="article-hero">
+      <div class="container-reading">
+        <p class="article-cluster">{{ article.cluster }}</p>
+        <h1 class="article-title">{{ article.title }}</h1>
+        <p class="article-subtitle">{{ article.description }}</p>
+        <div class="article-meta">
+          <span>{{ formatDate(article.date) }}</span>
+          <span class="meta-separator">·</span>
+          <span>{{ article.readingTime }} min de lectura</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Content -->
+    <article class="article-content">
+      <div class="container-reading" [innerHTML]="article.html"></div>
+    </article>
+
+    <!-- CTA Section -->
+    <section class="article-cta">
+      <div class="container-reading">
+        <h2 class="cta-heading">Más artículos fundacionales</h2>
+        <p class="cta-text">
+          Explora otros temas sobre arquitectura enterprise e IA aplicada.
+        </p>
+        <a routerLink="/articles" class="cta-link">Ver todos los artículos →</a>
+      </div>
+    </section>
+  }
+</div>

@@ -1,0 +1,68 @@
+// Article Card Component - using CSS custom properties
+
+.article-card {
+  display: block;
+  height: 100%;
+}
+
+.article-card-link {
+  display: block;
+  padding: 1.5rem; // 24px
+  height: 100%;
+  border: 1px solid var(--aw-gray-100);
+  border-radius: 8px;
+  background-color: var(--aw-white);
+  text-decoration: none;
+  transition: border-color 150ms ease;
+  
+  &:hover {
+    border-color: var(--aw-gray-200);
+    
+    .article-title {
+      color: var(--aw-accent);
+    }
+  }
+  
+  &:focus-visible {
+    outline: 2px solid var(--aw-accent);
+    outline-offset: 2px;
+  }
+}
+
+.article-tag {
+  display: inline-block;
+  font-size: 0.75rem; // 12px
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--aw-gray-500);
+  margin-bottom: 0.75rem; // 12px
+  font-weight: 400;
+}
+
+.article-title {
+  font-size: 1.25rem; // 20px desktop
+  font-weight: 600;
+  color: var(--aw-gray-900);
+  margin-bottom: 0.75rem; // 12px
+  line-height: 1.3;
+  transition: color 150ms ease;
+  
+  @media (max-width: 768px) {
+    font-size: 1.125rem; // 18px mobile
+  }
+}
+
+.article-description {
+  font-size: 0.9375rem; // 15px
+  font-weight: 400;
+  color: var(--aw-gray-500);
+  margin-bottom: 0.75rem; // 12px
+  line-height: 1.6;
+}
+
+.article-meta {
+  font-size: 0.8125rem; // 13px
+  font-weight: 400;
+  color: var(--aw-gray-500);
+  margin: 0;
+}

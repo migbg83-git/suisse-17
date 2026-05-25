@@ -1,0 +1,67 @@
+// Articles Page - All articles listing
+
+.articles-page {
+  background-color: var(--aw-white);
+}
+
+// Hero Section
+.articles-hero {
+  padding: 6rem 0 4rem;
+  text-align: center;
+  background-color: var(--aw-white);
+  
+  @media (max-width: 768px) {
+    padding: 4rem 0 3rem;
+    text-align: left;
+  }
+}
+
+.page-title {
+  margin: 0 0 1.5rem;
+  font-size: 3rem; // 48px
+  font-weight: 700;
+  line-height: 1.1;
+  color: var(--aw-gray-900);
+  letter-spacing: -0.02em;
+  
+  @media (max-width: 768px) {
+    font-size: 2.25rem; // 36px
+  }
+}
+
+.page-subtitle {
+  margin: 0;
+  font-size: 1.25rem; // 20px
+  font-weight: 400;
+  line-height: 1.6;
+  color: var(--aw-gray-600);
+  max-width: 640px;
+  margin-left: auto;
+  margin-right: auto;
+  
+  @media (max-width: 768px) {
+    margin-left: 0;
+    margin-right: 0;
+    font-size: 1.125rem; // 18px
+  }
+}
+
+// Articles Content
+.articles-content {
+  padding: 3rem 0 6rem;
+  
+  @media (max-width: 768px) {
+    padding: 2rem 0 4rem;
+  }
+}
+
+.articles-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem; // 32px
+  
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    gap: 1.5rem; // 24px
+  }
+}
