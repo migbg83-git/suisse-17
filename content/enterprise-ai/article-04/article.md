@@ -1,3 +1,20 @@
+---
+title: La arquitectura vuelve a ser estratégica
+slug: arquitectura-vuelve-ser-estrategica
+description: Cuando la ejecución de código se abarata, el criterio arquitectónico aumenta su valor. Por qué equipos pequeños con arquitectura explícita superan a equipos grandes sin ella.
+cluster: Architecture Strategy
+date: 2026-04-20
+readingTime: 16
+featured: true
+tags:
+  - architecture
+  - strategy
+  - AI
+  - enterprise
+  - team dynamics
+series: Context Engineering Essentials
+---
+
 # La arquitectura vuelve a ser estratégica
 
 Una empresa presenta una propuesta para un proyecto enterprise. Doce developers. Seis meses. Arquitectura "ágil" — es decir, sin arquitecto definido, la estructura emerge del equipo. Planificación por volumen: muchas manos, mucho output, entrega iterativa. Es el modelo que funciona desde hace una década. Gana licitaciones. Impresiona a directivos. Doce personas suena a compromiso serio.

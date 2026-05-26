@@ -1,3 +1,19 @@
+---
+title: Por qué un architecture.md vale más que cien prompts mágicos
+slug: architecture-md-vale-mas-que-prompts
+description: El contexto es más importante que la formulación del prompt. Por qué la documentación correcta multiplica el valor de la IA.
+cluster: Context Engineering
+date: 2026-01-15
+readingTime: 12
+featured: true
+tags:
+  - architecture
+  - AI
+  - documentation
+  - context engineering
+series: Context Engineering Essentials
+---
+
 # Por qué un architecture.md vale más que cien prompts mágicos
 
 Son las diez de la mañana. Llevas quince minutos refinando un prompt para que tu AI tool genere un servicio Angular que siga las convenciones del equipo. El resultado usa `BehaviorSubject` cuando vosotros usáis signals. Pone el archivo en `src/services/` cuando vuestro monorepo tiene una estructura completamente diferente. El naming es genérico — `NotificationService` — cuando vuestra convención es `UserNotificationFacadeService`.

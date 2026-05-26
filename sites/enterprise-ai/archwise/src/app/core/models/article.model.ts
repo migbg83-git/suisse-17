@@ -6,6 +6,8 @@ export interface Article {
   date: string;
   readingTime: number;
   featured: boolean;
+  tags?: string[];
+  series?: string;
 }
 
 export interface ArticleDetail extends Article {

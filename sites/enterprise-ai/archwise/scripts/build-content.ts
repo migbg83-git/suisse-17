@@ -28,6 +28,8 @@ interface ArticleFrontmatter {
   date: string;
   readingTime?: number;
   featured?: boolean;
+  tags?: string[];
+  series?: string;
 }
 
 interface Article extends ArticleFrontmatter {
@@ -82,10 +84,10 @@ function processMarkdownFile(filePath: string): Article | null {
 
 // Main build function
 function buildContent() {
-  console.log('🚀 Building content from Markdown files...\n');
+  console.log('🚀 Building content from Suisse-17 content repository...\n');
   
-  // Paths
-  const contentDir = path.join(process.cwd(), 'src', 'content', 'articles');
+  // Paths - reading from the centralized content directory
+  const contentDir = path.join(process.cwd(), '..', '..', '..', 'content', 'enterprise-ai');
   const outputDir = path.join(process.cwd(), 'src', 'assets', 'content');
   const articlesOutputDir = path.join(outputDir, 'articles');
   
@@ -97,24 +99,35 @@ function buildContent() {
     fs.mkdirSync(articlesOutputDir, { recursive: true });
   }
   
-  // Read all markdown files
-  const files = fs.readdirSync(contentDir).filter(file => file.endsWith('.md'));
+  // Read all article-* directories
+  const articleDirs = fs.readdirSync(contentDir)
+    .filter(item => {
+      const fullPath = path.join(contentDir, item);
+      return fs.statSync(fullPath).isDirectory() && item.startsWith('article-');
+    })
+    .sort(); // Ensure consistent order
   
-  if (files.length === 0) {
-    console.error('❌ No markdown files found in', contentDir);
+  if (articleDirs.length === 0) {
+    console.error('❌ No article directories found in', contentDir);
     process.exit(1);
   }
   
-  console.log(`📝 Found ${files.length} markdown file(s)\n`);
+  console.log(`📁 Found ${articleDirs.length} article director(ies)\n`);
   
   // Process all articles
   const articles: Article[] = [];
   
-  for (const file of files) {
-    const filePath = path.join(contentDir, file);
-    console.log(`   Processing: ${file}`);
+  for (const dir of articleDirs) {
+    const articlePath = path.join(contentDir, dir, 'article.md');
     
-    const article = processMarkdownFile(filePath);
+    if (!fs.existsSync(articlePath)) {
+      console.warn(`   ⚠️  Skipping ${dir}: article.md not found`);
+      continue;
+    }
+    
+    console.log(`   Processing: ${dir}/article.md`);
+    
+    const article = processMarkdownFile(articlePath);
     if (article) {
       articles.push(article);
       

@@ -1,3 +1,20 @@
+---
+title: Qué documentación necesita realmente un LLM
+slug: documentacion-necesita-llm
+description: No todo lo que documentes ayuda a la IA. La diferencia entre documentar frameworks públicos que el modelo ya conoce y decisiones privadas que solo tu equipo puede proporcionar.
+cluster: Context Engineering
+date: 2026-03-05
+readingTime: 14
+featured: false
+tags:
+  - documentation
+  - LLM
+  - AI
+  - context engineering
+  - knowledge
+series: Context Engineering Essentials
+---
+
 # Qué documentación necesita realmente un LLM
 
 Un equipo de doce personas decide que va a mejorar sus resultados con IA. Crean un canal en Teams: "AI context docs." En las siguientes dos semanas producen cuarenta páginas de documentación: cómo funciona Angular signals, cómo se configura HttpClient con interceptors, patrones de inyección de dependencias en .NET, qué es un middleware, cómo funcionan los variable groups en Azure DevOps.

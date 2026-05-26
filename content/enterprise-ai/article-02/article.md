@@ -1,3 +1,20 @@
+---
+title: La deuda técnica que la IA está empezando a revelar
+slug: deuda-tecnica-ia-revela
+description: La IA no crea deuda técnica, la hace visible. Cómo los sistemas de IA funcionan como un audit involuntario de la calidad del conocimiento explícito en proyectos enterprise.
+cluster: Technical Debt
+date: 2026-02-10
+readingTime: 15
+featured: true
+tags:
+  - technical debt
+  - AI
+  - documentation
+  - enterprise
+  - knowledge management
+series: Context Engineering Essentials
+---
+
 # La deuda técnica que la IA está empezando a revelar
 
 La reunión de retro dura veinte minutos. En algún momento, alguien dice la frase: "Es que Copilot no sirve para un proyecto como el nuestro." Cabezas asintiendo. El tech lead añade que probaron Cursor y "tampoco entiende nuestras convenciones." El engineering manager toma nota: *AI tools — revisar inversión Q3*. Nadie pregunta por qué. El diagnóstico queda establecido: la IA no funciona para enterprise.
