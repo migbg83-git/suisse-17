@@ -10,11 +10,11 @@ export const routes: Routes = [
     loadComponent: () => import('./pages/manifesto/manifesto.component').then(m => m.ManifestoComponent)
   },
   {
-    path: 'articles',
+    path: 'articulos',
     loadComponent: () => import('./pages/articles/articles.component').then(m => m.ArticlesComponent)
   },
   {
-    path: 'articles/:slug',
+    path: 'articulos/:slug',
     loadComponent: () => import('./pages/article-detail/article-detail.component').then(m => m.ArticleDetailComponent)
   },
   {
