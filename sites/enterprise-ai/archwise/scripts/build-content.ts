@@ -46,6 +46,39 @@ function calculateReadingTime(text: string): number {
   return minutes;
 }
 
+// Remove first H1 heading if it duplicates the title from frontmatter
+function removeFirstHeadingIfDuplicate(content: string, title: string): string {
+  const lines = content.split('\n');
+  
+  // Check if first non-empty line is an H1
+  for (let i = 0; i < lines.length; i++) {
+    const line = lines[i].trim();
+    
+    // Skip empty lines
+    if (line === '') continue;
+    
+    // Check if it's an H1 heading (starts with #)
+    if (line.startsWith('# ')) {
+      const headingText = line.substring(2).trim();
+      
+      // If the heading matches the title, remove this line
+      if (headingText === title) {
+        // Remove the line and return the rest
+        lines.splice(i, 1);
+        return lines.join('\n').trim();
+      }
+      
+      // If first heading doesn't match, return original content
+      return content;
+    }
+    
+    // If first non-empty line is not H1, return original content
+    return content;
+  }
+  
+  return content;
+}
+
 // Process single markdown file
 function processMarkdownFile(filePath: string): Article | null {
   try {
@@ -63,15 +96,18 @@ function processMarkdownFile(filePath: string): Article | null {
     
     const frontmatter = data as ArticleFrontmatter;
     
+    // Remove first H1 if it duplicates the title
+    const cleanedContent = removeFirstHeadingIfDuplicate(content, frontmatter.title);
+    
     // Calculate reading time if not provided
-    const readingTime = frontmatter.readingTime || calculateReadingTime(content);
+    const readingTime = frontmatter.readingTime || calculateReadingTime(cleanedContent);
     
     // Convert markdown to HTML
-    const html = marked(content);
+    const html = marked(cleanedContent);
     
     return {
       ...frontmatter,
-      content,
+      content: cleanedContent,
       html: html as string,
       readingTime,
       featured: frontmatter.featured || false
