@@ -1,4 +1,5 @@
 import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
+import { SeoService } from '../../shared/seo/seo.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ContentService } from '../../core/services/content.service';
 import { ArticleDetail } from '../../core/models/article.model';
@@ -21,7 +22,8 @@ export class ArticleDetailComponent implements OnInit {
     private route: ActivatedRoute,
     private router: Router,
     private contentService: ContentService,
-    private cdr: ChangeDetectorRef
+    private cdr: ChangeDetectorRef,
+    private seo: SeoService
   ) {}
 
   ngOnInit(): void {
@@ -35,21 +37,23 @@ export class ArticleDetailComponent implements OnInit {
 
     this.contentService.getArticleBySlug(slug).subscribe({
       next: (article: ArticleDetail | null) => {
-        console.log('Article loaded:', article);
-        console.log('Before - loading:', this.loading, 'notFound:', this.notFound);
         if (article) {
           this.article = article;
+          this.seo.update({
+            title: `${article.title} | Archwise`,
+            description: article.description,
+            url: SeoService.getBaseUrl() + '/articulos/' + article.slug,
+            type: 'article'
+          });
           this.loading = false;
           this.notFound = false;
         } else {
           this.notFound = true;
           this.loading = false;
         }
-        console.log('After - loading:', this.loading, 'notFound:', this.notFound, 'article:', !!this.article);
         this.cdr.detectChanges();
       },
       error: (err) => {
-        console.error('Error loading article:', err);
         this.notFound = true;
         this.loading = false;
         this.cdr.detectChanges();
