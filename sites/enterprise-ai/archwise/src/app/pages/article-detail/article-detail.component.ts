@@ -3,11 +3,12 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { ContentService } from '../../core/services/content.service';
 import { ArticleDetail } from '../../core/models/article.model';
 import { CommonModule } from '@angular/common';
+import { NewsletterCtaComponent } from '../../shared/newsletter-cta/newsletter-cta.component';
 
 @Component({
   selector: 'aw-article-detail',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, NewsletterCtaComponent],
   templateUrl: './article-detail.component.html',
   styleUrls: ['./article-detail.component.scss']
 })

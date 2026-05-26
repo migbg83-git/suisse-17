@@ -18,6 +18,7 @@
   }
 
   @if (article && !loading) {
+
     <!-- Hero -->
     <section class="article-hero">
       <div class="container-reading">
@@ -32,10 +33,20 @@
       </div>
     </section>
 
+
     <!-- Content -->
     <article class="article-content">
-      <div class="container-reading" [innerHTML]="article.html"></div>
+      <div class="container-reading">
+        <div [innerHTML]="article.html"></div>
+      </div>
     </article>
+
+    <!-- Newsletter CTA: SOLO después del contenido -->
+    <section class="newsletter-cta-section">
+      <div class="container-reading">
+        <app-newsletter-cta></app-newsletter-cta>
+      </div>
+    </section>
 
     <!-- CTA Section -->
     <section class="article-cta">

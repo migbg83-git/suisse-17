@@ -1,0 +1,13 @@
+<div class="newsletter-cta" *ngIf="!submitted">
+  <h3>Si esto fue útil, cada semana publico análisis similares.</h3>
+  <p>Arquitectura enterprise e IA aplicada. Sin hype. Sin marketing.</p>
+  <form (ngSubmit)="submit()" #newsletterForm="ngForm">
+    <div class="cta-form-row">
+      <input type="email" name="email" [(ngModel)]="email" required placeholder="Tu email" aria-label="Email" />
+      <button type="submit" [disabled]="!email">Suscribirme</button>
+    </div>
+  </form>
+</div>
+<div class="newsletter-cta success" *ngIf="submitted">
+  <h3>Gracias. Te avisaré cuando esté disponible.</h3>
+</div>
