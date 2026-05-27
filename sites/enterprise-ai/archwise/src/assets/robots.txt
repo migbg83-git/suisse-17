@@ -1,3 +1,4 @@
 User-agent: *
 Allow: /
 Sitemap: /sitemap.xml
+<!-- eliminado: usar solo public/robots.txt como fuente -->
