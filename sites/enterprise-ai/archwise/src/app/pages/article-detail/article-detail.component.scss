@@ -6,13 +6,15 @@
 
 // Hero Section
 .article-hero {
-  padding: 6rem 0 4rem;
+  padding: 4.5rem 0 3rem;
   text-align: center;
   background-color: var(--aw-white);
-  
   @media (max-width: 768px) {
-    padding: 4rem 0 3rem;
+    padding: 2.5rem 0 1.5rem;
     text-align: left;
+  }
+  @media (max-width: 480px) {
+    padding: 1.5rem 0 1rem;
   }
 }
 
@@ -27,27 +29,25 @@
 }
 
 .article-title {
-  margin: 0 0 1.5rem;
-  font-size: 3rem; // 48px
+  margin: 0 0 1.25rem;
+  font-size: 2.25rem;
   font-weight: 700;
   line-height: 1.1;
   color: var(--aw-gray-900);
   letter-spacing: -0.02em;
-  
   @media (max-width: 768px) {
-    font-size: 2.25rem; // 36px
+    font-size: 1.5rem;
   }
 }
 
 .article-subtitle {
-  margin: 0 0 2rem;
-  font-size: 1.25rem; // 20px
+  margin: 0 0 1.5rem;
+  font-size: 1rem;
   font-weight: 400;
   line-height: 1.6;
   color: var(--aw-gray-600);
-  
   @media (max-width: 768px) {
-    font-size: 1.125rem; // 18px
+    font-size: 0.95rem;
   }
 }
 
@@ -70,10 +70,9 @@
 
 // Content Section
 .article-content {
-  padding: 3rem 0 6rem;
-  
+  padding: 2.5rem 0 4rem;
   @media (max-width: 768px) {
-    padding: 2rem 0 4rem;
+    padding: 1.5rem 0 2.5rem;
   }
 
   // Typography styles for rendered HTML content

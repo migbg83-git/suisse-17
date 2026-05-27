@@ -152,12 +152,18 @@ button {
 }
 
 .btn-primary {
-  background-color: $aw-accent;
+  background-color: darken($aw-accent, 2%);
   color: $aw-white;
-  
-  &:hover {
-    background-color: $aw-accent-hover;
+  box-shadow: none;
+  border: 1px solid transparent;
+  transition: background-color 100ms cubic-bezier(.4,0,.2,1), border-color 100ms cubic-bezier(.4,0,.2,1);
+  &:hover,
+  &:focus {
+    background-color: darken($aw-accent-hover, 2%);
     color: $aw-white;
+    border-color: darken($aw-accent-hover, 2%);
+    box-shadow: none;
+    filter: brightness(0.97);
     text-decoration: none;
   }
 }
