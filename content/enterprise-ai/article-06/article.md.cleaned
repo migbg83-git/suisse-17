@@ -1,9 +1,9 @@
 ---
-title: "Context Engineering para proyectos legacy: por qué la IA falla en sistemas enterprise reales"
+title: Context Engineering para proyectos legacy: por qué la IA falla en sistemas enterprise reales
 slug: context-engineering-legacy-ia-falla
-category: "Context Engineering"
-cluster: "Context Engineering"
-series: "Context Engineering Essentials"
+category: Context Engineering
+cluster: Context Engineering
+series: Context Engineering Essentials
 tags:
   - context-engineering
   - knowledge-debt
@@ -11,8 +11,8 @@ tags:
   - organizational-memory
   - invisible-rules
   - decision-systems
-summary: "La IA no falla en sistemas legacy por limitaciones técnicas, sino porque tropieza con reglas invisibles, conocimiento tácito y memoria institucional. Este artículo explora la fricción real y las consecuencias organizacionales de intentar automatizar lo que nunca fue explícito."
-description: "La IA no tropieza con el código, tropieza con la organización. En arquitecturas legacy, la deuda de conocimiento y las reglas invisibles son el verdadero cuello de botella. Este artículo muestra, desde la experiencia enterprise, por qué el context engineering es la clave para sobrevivir a la automatización."
+summary: La IA no falla en sistemas legacy por limitaciones técnicas, sino porque tropieza con reglas invisibles, conocimiento tácito y memoria institucional. Este artículo explora la fricción real y las consecuencias organizacionales de intentar automatizar lo que nunca fue explícito.
+description: La IA no tropieza con el código, tropieza con la organización. En arquitecturas legacy, la deuda de conocimiento y las reglas invisibles son el verdadero cuello de botella. Este artículo muestra, desde la experiencia enterprise, por qué el context engineering es la clave para sobrevivir a la automatización.
 author: Archwise Editorial
 date: 2026-05-28
 readingTime: 9

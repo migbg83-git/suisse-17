@@ -1,9 +1,9 @@
 ---
-title: "Technical Debt vs Knowledge Debt: cómo la IA cambia la gestión de deuda en organizaciones"
+title: Technical Debt vs Knowledge Debt: cómo la IA cambia la gestión de deuda en organizaciones
 slug: technical-debt-vs-knowledge-debt-ia
-category: "Technical Debt"
-cluster: "Context Engineering"
-series: "Context Engineering Essentials"
+category: Technical Debt
+cluster: Context Engineering
+series: Context Engineering Essentials
 tags:
   - technical-debt
   - knowledge-debt
@@ -11,8 +11,8 @@ tags:
   - organizational-memory
   - context-engineering
   - decision-systems
-summary: "La IA no solo amplifica la deuda técnica, sino que expone la deuda de conocimiento que antes era invisible. Gestionar el conocimiento explícito es el nuevo reto estratégico en organizaciones complejas."
-description: "La IA no crea deuda, la revela. Este artículo explora cómo la deuda de conocimiento emerge como el verdadero cuello de botella en sistemas enterprise, y por qué la gestión rigurosa del conocimiento explícito es la nueva ventaja competitiva."
+summary: La IA no solo amplifica la deuda técnica, sino que expone la deuda de conocimiento que antes era invisible. Gestionar el conocimiento explícito es el nuevo reto estratégico en organizaciones complejas.
+description: La IA no crea deuda, la revela. Este artículo explora cómo la deuda de conocimiento emerge como el verdadero cuello de botella en sistemas enterprise, y por qué la gestión rigurosa del conocimiento explícito es la nueva ventaja competitiva.
 author: Archwise Editorial
 date: 2026-05-28
 readingTime: 8
