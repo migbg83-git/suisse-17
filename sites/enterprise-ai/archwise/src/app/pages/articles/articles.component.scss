@@ -5,14 +5,13 @@
 }
 
 // Hero Section
-.articles-hero {
-  padding: 6rem 0 4rem;
-  text-align: center;
+
+.articles-hero.minimal-hero {
+  padding: 3.5rem 0 2.5rem;
+  text-align: left;
   background-color: var(--aw-white);
-  
   @media (max-width: 768px) {
-    padding: 4rem 0 3rem;
-    text-align: left;
+    padding: 2.25rem 0 1.5rem;
   }
 }
 
@@ -55,13 +54,53 @@
   }
 }
 
-.articles-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 2rem; // 32px
-  
-  @media (max-width: 768px) {
-    grid-template-columns: 1fr;
-    gap: 1.5rem; // 24px
+
+// Editorial Index
+.editorial-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.editorial-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--aw-gray-100);
+}
+
+.editorial-title {
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: var(--aw-gray-900);
+  text-decoration: none;
+  transition: color 150ms;
+  &:hover {
+    color: var(--aw-accent);
   }
+}
+
+.editorial-summary {
+  font-size: 1rem;
+  color: var(--aw-gray-600);
+  font-weight: 400;
+}
+
+.editorial-meta {
+  font-size: 0.95rem;
+  color: var(--aw-gray-400);
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.editorial-category {
+  font-style: italic;
+  color: var(--aw-gray-300);
+}
+
+.editorial-dot {
+  font-size: 1.1em;
+  line-height: 1;
 }
