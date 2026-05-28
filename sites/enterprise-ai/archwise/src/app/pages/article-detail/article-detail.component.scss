@@ -6,30 +6,64 @@
 
 // Hero Section
 .article-hero {
-  padding: 4.5rem 0 3rem;
+  padding: 2.5rem 0 1.5rem;
   text-align: center;
   background-color: var(--aw-white);
   @media (max-width: 768px) {
-    padding: 2.5rem 0 1.5rem;
+    padding: 1.25rem 0 0.75rem;
     text-align: left;
   }
   @media (max-width: 480px) {
-    padding: 1.5rem 0 1rem;
+    padding: 0.75rem 0 0.5rem;
   }
 }
 
-.article-cluster {
-  display: inline-block;
-  margin: 0 0 1rem;
-  font-size: 0.8125rem; // 13px
-  font-weight: 500;
+.refined-hero {
+  /* marker class for future refinements if needed */
+}
+
+// Breadcrumb
+.article-breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  color: var(--aw-gray-400);
+  margin-bottom: 1.25rem;
+  .breadcrumb-link {
+    color: var(--aw-gray-500);
+    text-transform: none;
+    font-weight: 400;
+    &.category {
+      color: var(--aw-gray-600);
+      text-transform: uppercase;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+    }
+  }
+  .breadcrumb-title {
+    color: var(--aw-gray-400);
+    font-weight: 400;
+    text-transform: none;
+  }
+  .breadcrumb-separator {
+    color: var(--aw-gray-300);
+    font-size: 0.9em;
+  }
+}
+
+// Category label
+.category-label {
+  font-size: 0.75rem;
+  font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
-  color: var(--aw-accent);
+  color: var(--aw-gray-500);
+  letter-spacing: 0.06em;
+  margin-bottom: 0.5rem;
 }
 
 .article-title {
-  margin: 0 0 1.25rem;
+  margin: 0 0 0.75rem;
   font-size: 2.25rem;
   font-weight: 700;
   line-height: 1.1;
@@ -37,6 +71,22 @@
   letter-spacing: -0.02em;
   @media (max-width: 768px) {
     font-size: 1.5rem;
+  }
+}
+
+.article-lead {
+  margin: 0 0 1.5rem;
+  font-size: 1.15rem;
+  font-weight: 500;
+  color: var(--aw-gray-700);
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.7;
+  @media (max-width: 768px) {
+    font-size: 1.05rem;
+    margin-left: 0;
+    margin-right: 0;
   }
 }
 
@@ -56,13 +106,92 @@
   gap: 0.5rem;
   justify-content: center;
   align-items: center;
-  font-size: 0.875rem; // 14px
+  font-size: 0.875rem;
   color: var(--aw-gray-500);
-  
-  @media (max-width: 768px) {
-    justify-content: flex-start;
+  margin-bottom: 0.5rem;
+  .meta-author {
+    font-weight: 500;
+    color: var(--aw-gray-600);
   }
 }
+  // Tags
+  .article-tags {
+    margin-top: 2.5rem;
+    font-size: 0.92rem;
+    color: var(--aw-gray-400);
+    .tags-label {
+      font-weight: 400;
+      color: var(--aw-gray-400);
+      margin-right: 0.5em;
+    }
+    .tags-list {
+      font-weight: 400;
+      color: var(--aw-gray-500);
+    }
+    .tag-name {
+      font-weight: 400;
+      color: var(--aw-gray-500);
+      text-transform: none;
+    }
+  }
+
+  // Related articles
+  .related-articles-section {
+    padding: 4rem 0 2rem;
+    background: none;
+    .related-title {
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: var(--aw-gray-800);
+      margin-bottom: 1.5rem;
+      text-align: left;
+    }
+    .related-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .related-item {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.2rem;
+      .related-link {
+        font-size: 1.08rem;
+        font-weight: 500;
+        color: var(--aw-gray-900);
+        text-decoration: none;
+        &:hover {
+          text-decoration: underline;
+          color: var(--aw-accent);
+        }
+      }
+      .related-meta {
+        font-size: 0.92rem;
+        color: var(--aw-gray-400);
+        .related-category {
+          color: var(--aw-gray-500);
+          text-transform: uppercase;
+          font-weight: 500;
+          letter-spacing: 0.04em;
+        }
+        .meta-separator {
+          color: var(--aw-gray-300);
+          margin: 0 0.3em;
+        }
+      }
+    }
+    .related-empty {
+      color: var(--aw-gray-400);
+      font-size: 0.95rem;
+      margin-top: 1rem;
+    }
+
+    @media (max-width: 768px) {
+      justify-content: flex-start;
+    }
+  }
 
 .meta-separator {
   color: var(--aw-gray-300);

@@ -1,15 +1,10 @@
-import { Component, Input } from '@angular/core';
-import { RouterLink } from '@angular/router';
-import { CommonModule } from '@angular/common';
 
-export interface ArticleCardData {
-  slug: string;
-  title: string;
-  description: string;
-  cluster: string;
-  date: string;
-  readingTime: number;
-}
+
+
+import { Component, Input } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { RouterLink } from '@angular/router';
+import { Article } from '../../core/models/article.model';
 
 @Component({
   selector: 'aw-article-card',
@@ -19,7 +14,7 @@ export interface ArticleCardData {
   styleUrls: ['./article-card.component.scss']
 })
 export class ArticleCardComponent {
-  @Input() article!: ArticleCardData;
+  @Input() article!: Article;
 
   formatDate(dateString: string): string {
     const date = new Date(dateString);

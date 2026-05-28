@@ -7,11 +7,10 @@ date: 2026-04-20
 readingTime: 16
 featured: true
 tags:
-  - architecture
-  - strategy
-  - AI
-  - enterprise
-  - team dynamics
+  - enterprise-architecture
+  - decision-systems
+  - system-design
+  - organizational-knowledge
 series: Context Engineering Essentials
 ---
 

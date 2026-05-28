@@ -7,11 +7,10 @@ date: 2026-03-05
 readingTime: 14
 featured: false
 tags:
-  - documentation
-  - LLM
-  - AI
-  - context engineering
-  - knowledge
+  - context-engineering
+  - explicit-knowledge
+  - documentation-systems
+  - ai-systems
 series: Context Engineering Essentials
 ---
 
