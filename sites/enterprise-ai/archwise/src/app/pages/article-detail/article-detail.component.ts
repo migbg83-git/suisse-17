@@ -45,7 +45,8 @@ export class ArticleDetailComponent implements OnInit {
             title: `${article.title} | Archwise`,
             description: article.description,
             url: SeoService.getBaseUrl() + '/articulos/' + article.slug,
-            type: 'article'
+            type: 'article',
+            image: SeoService.getBaseUrl() + '/assets/images/og-image.png'
           });
           this.loading = false;
           this.notFound = false;
