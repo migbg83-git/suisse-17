@@ -25,7 +25,8 @@ export class HomeComponent implements OnInit {
       title: 'Enterprise Architecture para la era de la IA | Archwise',
       description: 'Análisis sobre arquitectura enterprise, documentación, contexto explícito, IA aplicada y decisiones técnicas para arquitectos y tech leads.',
       url: SeoService.getBaseUrl() + '/',
-      type: 'website'
+      type: 'website',
+      image: SeoService.getBaseUrl() + '/assets/images/og-image.png'
     });
   }
 }
