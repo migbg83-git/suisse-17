@@ -2,7 +2,7 @@ import fs from 'fs';
 import path from 'path';
 
 // Centralized base URL for the site
-const baseUrl = 'https://archwise.dev';
+const baseUrl = 'https://archwise.org';
 
 // Paths
 const articlesJsonPath = path.join(__dirname, '../src/assets/content/articles.json');

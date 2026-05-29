@@ -2,7 +2,7 @@ import { Injectable, Inject } from '@angular/core';
 import { Title, Meta } from '@angular/platform-browser';
 import { DOCUMENT } from '@angular/common';
 
-const BASE_URL = 'https://archwise.dev';
+const BASE_URL = 'https://archwise.org';
 
 export interface SeoConfig {
   title: string;
