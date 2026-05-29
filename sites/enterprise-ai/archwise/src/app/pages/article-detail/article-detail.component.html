@@ -1,11 +1,5 @@
 <div class="article-detail">
-  @if (loading) {
-    <div class="article-loading">
-      <div class="container-reading">
-        <p>Cargando artículo...</p>
-      </div>
-    </div>
-  }
+
 
   @if (notFound) {
     <div class="article-not-found">
@@ -19,13 +13,20 @@
 
   @if (article && !loading) {
 
-    <!-- Hero -->
+    <!-- Editorial Header -->
     <section class="article-hero">
       <div class="container-reading">
-        <p class="article-cluster">{{ article.cluster }}</p>
+        <nav class="article-breadcrumb">
+          <a routerLink="/articulos" class="breadcrumb-link">Artículos</a>
+          <span class="breadcrumb-separator">/</span>
+          <span class="breadcrumb-link category">{{ article.category.name }}</span>
+        </nav>
+        <div class="category-label">{{ article.category.name }}</div>
         <h1 class="article-title">{{ article.title }}</h1>
-        <p class="article-subtitle">{{ article.description }}</p>
+        <div class="article-lead" *ngIf="article.summary">{{ article.summary }}</div>
         <div class="article-meta">
+          <span class="meta-author">{{ article.author }}</span>
+          <span class="meta-separator">·</span>
           <span>{{ formatDate(article.date) }}</span>
           <span class="meta-separator">·</span>
           <span>{{ article.readingTime }} min de lectura</span>
@@ -38,6 +39,15 @@
     <article class="article-content">
       <div class="container-reading">
         <div [innerHTML]="article.html"></div>
+        <!-- Tags -->
+        <div *ngIf="article.tags?.length" class="article-tags">
+          <span class="tags-label">Tags:</span>
+          <span class="tags-list">
+            <ng-container *ngFor="let tag of article.tags; let last = last">
+              <span class="tag-name">{{ tag.name }}</span><span *ngIf="!last"> · </span>
+            </ng-container>
+          </span>
+        </div>
       </div>
     </article>
 
@@ -48,14 +58,25 @@
       </div>
     </section>
 
-    <!-- CTA Section -->
-    <section class="article-cta">
+    <!-- Related Articles -->
+    <section class="related-articles-section">
       <div class="container-reading">
-        <h2 class="cta-heading">Más artículos fundacionales</h2>
-        <p class="cta-text">
-          Explora otros temas sobre arquitectura enterprise e IA aplicada.
-        </p>
-        <a routerLink="/articulos" class="cta-link">Ver todos los artículos →</a>
+        <h2 class="related-title">Seguir leyendo</h2>
+        <div *ngIf="relatedArticles.length > 0" class="related-list">
+          <div *ngFor="let rel of relatedArticles" class="related-item">
+            <a [routerLink]="['/articulos', rel.slug]" class="related-link">
+              <span class="related-title">{{ rel.title }}</span>
+            </a>
+            <span class="related-meta">
+              <span class="related-category">{{ rel.category?.name }}</span>
+              <span class="meta-separator">·</span>
+              <span>{{ formatDate(rel.date) }}</span>
+            </span>
+          </div>
+        </div>
+        <div *ngIf="relatedArticles.length === 0" class="related-empty">
+          <span>No hay artículos relacionados.</span>
+        </div>
       </div>
     </section>
   }

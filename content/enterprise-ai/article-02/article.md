@@ -7,11 +7,10 @@ date: 2026-02-10
 readingTime: 15
 featured: true
 tags:
-  - technical debt
-  - AI
-  - documentation
-  - enterprise
-  - knowledge management
+  - technical-debt
+  - knowledge-debt
+  - organizational-knowledge
+  - enterprise-architecture
 series: Context Engineering Essentials
 ---
 

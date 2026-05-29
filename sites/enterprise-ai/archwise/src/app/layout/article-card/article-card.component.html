@@ -1,6 +1,6 @@
 <article class="article-card">
   <a [routerLink]="['/articulos', article.slug]" class="article-card-link">
-    <span class="article-tag">{{ article.cluster }}</span>
+    <span class="article-tag">{{ article.category?.name }}</span>
     <h3 class="article-title">{{ article.title }}</h3>
     <p class="article-description">{{ article.description }}</p>
     <div class="article-meta">{{ formatDate(article.date) }} · {{ article.readingTime }} min</div>

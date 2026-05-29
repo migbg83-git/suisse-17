@@ -20,16 +20,38 @@ marked.setOptions({
   gfm: true
 });
 
+
+interface Category {
+  slug: string;
+  name: string;
+  description?: string;
+}
+
+interface Tag {
+  slug: string;
+  name: string;
+  description?: string;
+}
+
+interface Series {
+  slug: string;
+  name: string;
+  description?: string;
+}
+
 interface ArticleFrontmatter {
   title: string;
   slug: string;
   description: string;
-  cluster: string;
+  summary?: string;
+  category?: string;
+  cluster?: string;
+  tags?: string[];
+  series?: string;
+  author?: string;
   date: string;
   readingTime?: number;
   featured?: boolean;
-  tags?: string[];
-  series?: string;
 }
 
 interface Article extends ArticleFrontmatter {
@@ -80,37 +102,100 @@ function removeFirstHeadingIfDuplicate(content: string, title: string): string {
 }
 
 // Process single markdown file
+function toSlug(str: string): string {
+  return str
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/(^-|-$)+/g, '');
+}
+
 function processMarkdownFile(filePath: string): Article | null {
   try {
     const fileContent = fs.readFileSync(filePath, 'utf-8');
     const { data, content } = matter(fileContent);
-    
-    // Validate required frontmatter fields
-    const requiredFields = ['title', 'slug', 'description', 'cluster', 'date'];
+    const frontmatter = data as ArticleFrontmatter;
+
+    // Validate required frontmatter fields (allow cluster optional)
+    const requiredFields = ['title', 'slug', 'description', 'date'];
     for (const field of requiredFields) {
-      if (!(field in data)) {
+      if (!(field in frontmatter)) {
         console.error(`Missing required field "${field}" in ${filePath}`);
         return null;
       }
     }
-    
-    const frontmatter = data as ArticleFrontmatter;
-    
+
     // Remove first H1 if it duplicates the title
     const cleanedContent = removeFirstHeadingIfDuplicate(content, frontmatter.title);
-    
+
     // Calculate reading time if not provided
     const readingTime = frontmatter.readingTime || calculateReadingTime(cleanedContent);
-    
+
     // Convert markdown to HTML
     const html = marked(cleanedContent);
-    
+
+    // Category mapping
+    let category: Category = { slug: '', name: '' };
+    if (frontmatter.category) {
+      category = {
+        slug: toSlug(frontmatter.category),
+        name: frontmatter.category
+      };
+    } else if (frontmatter.cluster) {
+      // fallback: use cluster as category if category missing
+      category = {
+        slug: toSlug(frontmatter.cluster),
+        name: frontmatter.cluster
+      };
+    }
+
+    // Tags mapping
+    let tags: Tag[] | undefined = undefined;
+    if (frontmatter.tags && Array.isArray(frontmatter.tags)) {
+      tags = frontmatter.tags.map(tag => ({
+        slug: toSlug(tag),
+        name: tag
+      }));
+    }
+
+    // Series mapping
+    let series: Series | undefined = undefined;
+    if (frontmatter.series) {
+      series = {
+        slug: toSlug(frontmatter.series),
+        name: frontmatter.series
+      };
+    }
+
+    // Author
+    const author = frontmatter.author || 'Miguel García';
+
+    // Summary
+    let summary = frontmatter.summary;
+    if (!summary) {
+      // fallback: use description or first 2 lines of content
+      summary = frontmatter.description || cleanedContent.split('\n').slice(0, 2).join(' ');
+    }
+
+    // Cluster (legacy, optional)
+    const cluster = frontmatter.cluster;
+
+    // Featured
+    const featured = frontmatter.featured === true;
+
     return {
-      ...frontmatter,
-      content: cleanedContent,
-      html: html as string,
+      title: frontmatter.title,
+      slug: frontmatter.slug,
+      description: frontmatter.description,
+      summary,
+      category,
+      cluster,
+      tags,
+      series,
+      author,
+      date: frontmatter.date,
       readingTime,
-      featured: frontmatter.featured || false
+      featured,
+      html: html as string
     };
   } catch (error) {
     console.error(`Error processing file ${filePath}:`, error);
@@ -187,7 +272,12 @@ function buildContent() {
     title: article.title,
     slug: article.slug,
     description: article.description,
+    summary: article.summary,
+    category: article.category,
     cluster: article.cluster,
+    tags: article.tags,
+    series: article.series,
+    author: article.author,
     date: article.date,
     readingTime: article.readingTime,
     featured: article.featured

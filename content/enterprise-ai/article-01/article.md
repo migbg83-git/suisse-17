@@ -7,10 +7,10 @@ date: 2026-01-15
 readingTime: 12
 featured: true
 tags:
-  - architecture
-  - AI
-  - documentation
-  - context engineering
+  - context-engineering
+  - explicit-knowledge
+  - documentation-systems
+  - decision-systems
 series: Context Engineering Essentials
 ---
 

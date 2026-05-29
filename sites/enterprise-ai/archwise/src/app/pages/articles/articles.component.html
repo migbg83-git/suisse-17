@@ -1,21 +1,31 @@
 <div class="articles-page">
   <!-- Hero -->
-  <section class="articles-hero">
+  <section class="articles-hero minimal-hero">
     <div class="container-listing">
       <h1 class="page-title">Artículos</h1>
       <p class="page-subtitle">
-        Análisis sobre arquitectura enterprise e IA aplicada. Pragmático. Sin hype.
+        Índice editorial de ensayos sobre arquitectura enterprise e IA aplicada.
       </p>
     </div>
   </section>
 
-  <!-- Articles Grid -->
+  <!-- Editorial Index -->
   <section class="articles-content">
     <div class="container-listing">
-      <div class="articles-grid">
+      <div class="editorial-list">
         @if (articles$ | async; as articles) {
           @for (article of articles; track article.slug) {
-            <aw-article-card [article]="article" />
+            <div class="editorial-item">
+              <a [routerLink]="['/articulos', article.slug]" class="editorial-title">{{ article.title }}</a>
+              <div class="editorial-summary">{{ article.summary }}</div>
+              <div class="editorial-meta">
+                <span class="editorial-category">{{ article.category?.name }}</span>
+                <span class="editorial-dot">·</span>
+                <span class="editorial-date">{{ article.date | date:'d MMM y' }}</span>
+                <span class="editorial-dot">·</span>
+                <span class="editorial-reading-time">{{ article.readingTime }} min</span>
+              </div>
+            </div>
           }
         }
       </div>

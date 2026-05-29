@@ -1,16 +1,11 @@
 <div class="home">
   <!-- Hero Section -->
-  <section class="hero">
+  <section class="hero minimal-hero">
     <div class="container-listing">
-      <h1 class="hero-title">Enterprise architecture para la era de la IA</h1>
+      <h1 class="hero-title">Arquitectura. Criterio. IA.</h1>
       <p class="hero-subtitle">
-        Análisis, decisiones y criterio para arquitectos y tech leads 
-        que construyen sistemas complejos.
+        Una publicación para arquitectos y líderes técnicos que diseñan sistemas complejos en la era de la inteligencia artificial.
       </p>
-      <div class="hero-actions">
-        <button class="btn btn-primary">Suscribirme a la newsletter</button>
-        <a routerLink="/manifesto" class="btn-link">Leer el manifesto →</a>
-      </div>
     </div>
   </section>
 
@@ -24,14 +19,22 @@
     </div>
   </section>
 
-  <!-- Articles Section -->
-  <section class="articles-section">
+  <!-- Featured Essays Section -->
+  <section class="featured-essays-section">
     <div class="container-listing">
-      <h2 class="section-title">Artículos fundacionales</h2>
-      <div class="articles-grid">
+      <h2 class="section-title">Ensayos destacados</h2>
+      <div class="essays-list">
         @if (foundationalArticles$ | async; as articles) {
           @for (article of articles; track article.slug) {
-            <aw-article-card [article]="article" />
+            <div class="essay-item">
+              <a [routerLink]="['/articulos', article.slug]" class="essay-title">{{ article.title }}</a>
+              <div class="essay-summary">{{ article.summary }}</div>
+              <div class="essay-meta">
+                <span class="essay-date">{{ article.date | date:'d MMM y' }}</span>
+                <span class="essay-dot">·</span>
+                <span class="essay-reading-time">{{ article.readingTime }} min</span>
+              </div>
+            </div>
           }
         }
       </div>

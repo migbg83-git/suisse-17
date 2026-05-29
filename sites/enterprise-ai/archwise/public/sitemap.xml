@@ -1,28 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://archwise.dev/</loc>
+    <loc>https://archwise.org/</loc>
   </url>
   <url>
-    <loc>https://archwise.dev/manifesto</loc>
+    <loc>https://archwise.org/manifesto</loc>
   </url>
   <url>
-    <loc>https://archwise.dev/articulos</loc>
+    <loc>https://archwise.org/articulos</loc>
   </url>
   <url>
-    <loc>https://archwise.dev/articulos/arquitectura-vuelve-ser-estrategica</loc>
+    <loc>https://archwise.org/articulos/technical-debt-vs-knowledge-debt-ia</loc>
+    <lastmod>2026-05-28</lastmod>
+  </url>
+  <url>
+    <loc>https://archwise.org/articulos/context-engineering-legacy-ia-falla</loc>
+    <lastmod>2026-05-28</lastmod>
+  </url>
+  <url>
+    <loc>https://archwise.org/articulos/arquitectura-vuelve-ser-estrategica</loc>
     <lastmod>2026-04-20</lastmod>
   </url>
   <url>
-    <loc>https://archwise.dev/articulos/documentacion-necesita-llm</loc>
+    <loc>https://archwise.org/articulos/documentacion-necesita-llm</loc>
     <lastmod>2026-03-05</lastmod>
   </url>
   <url>
-    <loc>https://archwise.dev/articulos/deuda-tecnica-ia-revela</loc>
+    <loc>https://archwise.org/articulos/deuda-tecnica-ia-revela</loc>
     <lastmod>2026-02-10</lastmod>
   </url>
   <url>
-    <loc>https://archwise.dev/articulos/architecture-md-vale-mas-que-prompts</loc>
+    <loc>https://archwise.org/articulos/architecture-md-vale-mas-que-prompts</loc>
     <lastmod>2026-01-15</lastmod>
   </url>
 </urlset>
