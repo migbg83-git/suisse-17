@@ -1,0 +1,18 @@
+{
+  "title": "Framework práctico para Context Engineering en equipos Enterprise",
+  "slug": "framework-context-engineering-enterprise",
+  "description": "El contexto diferencial es el nuevo multiplicador de productividad y calidad en la era IA. Framework accionable, ejemplos reales y plantillas para arquitectos y tech leads.",
+  "date": "2026-05-29",
+  "author": "Archwise Editorial",
+  "tags": ["contexto diferencial", "context engineering", "architecture.md", "knowledge debt", "onboarding", "microfrontends", "DevOps", "sistemas legacy", "productividad IA"],
+  "url": "/enterprise-ai/framework-context-engineering-enterprise",
+  "ogImage": "/assets/images/enterprise-ai-context-engineering-og.png",
+  "heroImage": "/assets/images/enterprise-ai-context-engineering-og.png",
+  "related": [
+    "/enterprise-ai/por-que-un-architecture-md-vale-mas-que-cien-prompts",
+    "/enterprise-ai/deuda-tecnica-ia-revela",
+    "/enterprise-ai/documentacion-necesita-llm",
+    "/enterprise-ai/arquitectura-vuelve-ser-estrategica"
+  ],
+  "index": true
+}
