@@ -5,6 +5,9 @@ cluster: AI-Ready Systems
 published: true
 summary: |
   Las organizaciones AI-Ready no destacan por las herramientas que utilizan, sino por cómo gestionan conocimiento, arquitectura y contexto. Este artículo explora, desde la experiencia real y la práctica, las capacidades organizativas y arquitectónicas que permiten a una organización integrar IA de forma sostenible y escalable.
+slug: "las-7-caracteristicas-arquitectura-ai-ready"
+description: "Descubre las claves organizativas y arquitectónicas que distinguen a las organizaciones realmente AI-Ready. Aprende cómo estructurar contexto, transferir conocimiento y escalar IA de forma sostenible."
+date: "2024-06-07"
 ---
 
 # Introducción
