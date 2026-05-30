@@ -1,0 +1,29 @@
+{
+  "title": "¿Por qué la mayoría de los sistemas no están preparados para trabajar con IA?",
+  "slug": "por-que-la-mayoria-de-los-sistemas-no-estan-preparados-para-ia",
+  "cluster": "AI-Ready Systems",
+  "published": true,
+  "summary": "La mayoría de las organizaciones creen que tienen un problema de IA. En realidad, tienen un problema de contexto, conocimiento, arquitectura y governance. La IA no crea esos problemas: los hace visibles. Este artículo explora, con ejemplos reales y experiencia directa, por qué la AI Readiness es una cuestión de conocimiento y contexto, no de herramientas ni de hype tecnológico.",
+  "date": "2026-05-30",
+  "keywords": [
+    "AI Readiness",
+    "arquitectura empresarial",
+    "contexto estructurado",
+    "governance",
+    "deuda de conocimiento",
+    "onboarding",
+    "sistemas legacy",
+    "transformación digital"
+  ],
+  "authors": ["Archwise Editorial"],
+  "url": "/articulos/por-que-la-mayoria-de-los-sistemas-no-estan-preparados-para-ia",
+  "ogTitle": "¿Por qué la mayoría de los sistemas no están preparados para trabajar con IA?",
+  "ogDescription": "La IA no crea los problemas de las organizaciones: los hace visibles. Descubre cómo el contexto, la arquitectura y el governance definen el éxito o fracaso de la IA en tu empresa.",
+  "ogImagePrompt": "Enterprise architecture blueprint with abstract, layered structures representing context, governance, and knowledge flows. Premium, minimalistic style inspired by Stripe and Vercel. No robots, no brains, no clichés. Colors: deep blue, white, and subtle gradients. Convey clarity, structure, and readiness for AI.",
+  "related": [
+    "article-07",
+    "article-08",
+    "article-09",
+    "article-10"
+  ]
+}

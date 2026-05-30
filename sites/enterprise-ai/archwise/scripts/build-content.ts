@@ -112,6 +112,15 @@ function toSlug(str: string): string {
 function processMarkdownFile(filePath: string): Article | null {
   try {
     const fileContent = fs.readFileSync(filePath, 'utf-8');
+    // LOG TEMPORAL SOLO PARA article-11
+    if (filePath.includes('article-11')) {
+      console.log('DEBUG article-11: ruta:', filePath);
+      console.log('DEBUG article-11: primeros 50 chars (JSON):', JSON.stringify(fileContent.slice(0, 50)));
+      // Llamada a gray-matter
+      const parsed = matter(fileContent);
+      console.log('DEBUG article-11: gray-matter data:', parsed.data);
+      console.log('DEBUG article-11: gray-matter content:', parsed.content.slice(0, 50));
+    }
     const { data, content } = matter(fileContent);
     const frontmatter = data as ArticleFrontmatter;
 
