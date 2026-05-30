@@ -18,3 +18,10 @@
   date: 2026-05-30
   tags: [architecture review, governance arquitectónico, context engineering, knowledge debt, architecture.md, onboarding, DevOps, microfrontends, IA]
   featured: false
+
+- title: Architecture Governance en la era de la IA: del comité de arquitectura al contexto compartido
+  slug: architecture-governance-contexto-compartido
+  url: /enterprise-ai/architecture-governance-contexto-compartido
+  date: 2026-05-30
+  tags: [architecture governance, contexto compartido, context engineering, architecture.md, knowledge debt, onboarding arquitectónico, IA, resiliencia]
+  featured: false
