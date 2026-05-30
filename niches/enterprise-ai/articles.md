@@ -11,3 +11,10 @@
   date: 2026-05-30
   tags: [architecture.md, documentación, enterprise, onboarding, IA, DevOps, knowledge management, plantillas]
   featured: false
+
+- title: Cómo hacer una Architecture Review efectiva en la era de la IA
+  slug: architecture-review-efectiva-ia
+  url: /enterprise-ai/architecture-review-efectiva-ia
+  date: 2026-05-30
+  tags: [architecture review, governance arquitectónico, context engineering, knowledge debt, architecture.md, onboarding, DevOps, microfrontends, IA]
+  featured: false
