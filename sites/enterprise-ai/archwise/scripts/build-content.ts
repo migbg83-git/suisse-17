@@ -176,7 +176,7 @@ function processMarkdownFile(filePath: string): Article | null {
     }
 
     // Author
-    const author = frontmatter.author || 'Miguel García';
+    const author = frontmatter.author || 'Miguel Benito García';
 
     // Summary
     let summary = frontmatter.summary;
@@ -213,14 +213,26 @@ function processMarkdownFile(filePath: string): Article | null {
 }
 
 // Main build function
+
+function normalizeCategory(cat: any): { slug: string, name: string } {
+  if (!cat) return { slug: '', name: '' };
+  if (typeof cat === 'string') {
+    return { slug: toSlug(cat), name: cat };
+  }
+  if (typeof cat === 'object' && cat.name) {
+    return { slug: cat.slug || toSlug(cat.name), name: cat.name };
+  }
+  return { slug: '', name: '' };
+}
+
 function buildContent() {
   console.log('🚀 Building content from Suisse-17 content repository...\n');
-  
+
   // Paths - reading from the centralized content directory
   const contentDir = path.join(process.cwd(), '..', '..', '..', 'content', 'enterprise-ai');
   const outputDir = path.join(process.cwd(), 'src', 'assets', 'content');
   const articlesOutputDir = path.join(outputDir, 'articles');
-  
+
   // Ensure output directories exist
   if (!fs.existsSync(outputDir)) {
     fs.mkdirSync(outputDir, { recursive: true });
@@ -228,7 +240,7 @@ function buildContent() {
   if (!fs.existsSync(articlesOutputDir)) {
     fs.mkdirSync(articlesOutputDir, { recursive: true });
   }
-  
+
   // Read all article-* directories
   const articleDirs = fs.readdirSync(contentDir)
     .filter(item => {
@@ -236,67 +248,110 @@ function buildContent() {
       return fs.statSync(fullPath).isDirectory() && item.startsWith('article-');
     })
     .sort(); // Ensure consistent order
-  
+
   if (articleDirs.length === 0) {
     console.error('❌ No article directories found in', contentDir);
     process.exit(1);
   }
-  
+
   console.log(`📁 Found ${articleDirs.length} article director(ies)\n`);
-  
+
   // Process all articles
-  const articles: Article[] = [];
-  
+  const articles: any[] = [];
+
   for (const dir of articleDirs) {
     const articlePath = path.join(contentDir, dir, 'article.md');
-    
+    const articleJsonPath = path.join(contentDir, dir, 'article.json');
+
     if (!fs.existsSync(articlePath)) {
       console.warn(`   ⚠️  Skipping ${dir}: article.md not found`);
       continue;
     }
-    
-    console.log(`   Processing: ${dir}/article.md`);
-    
-    const article = processMarkdownFile(articlePath);
-    if (article) {
-      articles.push(article);
-      
-      // Write individual article JSON
-      const articleOutputPath = path.join(articlesOutputDir, `${article.slug}.json`);
-      fs.writeFileSync(articleOutputPath, JSON.stringify(article, null, 2), 'utf-8');
-      console.log(`   ✓ Generated: articles/${article.slug}.json`);
+
+    // Read frontmatter from article.md
+    const fileContent = fs.readFileSync(articlePath, 'utf-8');
+    const { data: frontmatter, content } = matter(fileContent);
+
+    // Read article.json if exists
+    let articleJson: any = {};
+    if (fs.existsSync(articleJsonPath)) {
+      try {
+        articleJson = JSON.parse(fs.readFileSync(articleJsonPath, 'utf-8'));
+      } catch (e) {
+        console.warn(`   ⚠️  Could not parse article.json for ${dir}`);
+      }
     }
+
+    // Category priority
+    let category = null;
+    if (articleJson.category) {
+      category = articleJson.category;
+    } else if (frontmatter.category) {
+      category = frontmatter.category;
+    } else if (articleJson.cluster) {
+      category = articleJson.cluster;
+    } else if (frontmatter.cluster) {
+      category = frontmatter.cluster;
+    }
+    const normalizedCategory = normalizeCategory(category);
+
+    // Author
+    const author = articleJson.author || frontmatter.author || 'Miguel Benito García';
+
+    // Reading time
+    let readingTime = articleJson.readingTime;
+    if (!readingTime) {
+      const wordsPerMinute = 200;
+      const words = content.trim().split(/\s+/).length;
+      readingTime = Math.ceil(words / wordsPerMinute);
+    }
+
+    // Tags
+    const tags = articleJson.tags || frontmatter.tags;
+    // Series
+    const series = articleJson.series || frontmatter.series;
+    // Summary
+    const summary = articleJson.summary || frontmatter.summary || frontmatter.description || content.split('\n').slice(0, 2).join(' ');
+    // Featured
+    const featured = articleJson.featured === true || frontmatter.featured === true;
+
+    // Compose article object
+    const article = {
+      title: frontmatter.title,
+      slug: frontmatter.slug,
+      description: frontmatter.description,
+      summary,
+      category: normalizedCategory,
+      cluster: articleJson.cluster || frontmatter.cluster,
+      tags,
+      series,
+      author,
+      date: frontmatter.date,
+      readingTime,
+      featured
+    };
+
+    articles.push(article);
+
+    // Write individual article JSON (legacy, not used by Angular listing)
+    const articleOutputPath = path.join(articlesOutputDir, `${article.slug}.json`);
+    fs.writeFileSync(articleOutputPath, JSON.stringify(article, null, 2), 'utf-8');
+    console.log(`   ✓ Generated: articles/${article.slug}.json`);
   }
-  
+
   if (articles.length === 0) {
     console.error('\n❌ No valid articles processed');
     process.exit(1);
   }
-  
+
   // Sort articles by date (newest first)
   articles.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
-  
-  // Create articles list (without full HTML content for listing)
-  const articlesList = articles.map(article => ({
-    title: article.title,
-    slug: article.slug,
-    description: article.description,
-    summary: article.summary,
-    category: article.category,
-    cluster: article.cluster,
-    tags: article.tags,
-    series: article.series,
-    author: article.author,
-    date: article.date,
-    readingTime: article.readingTime,
-    featured: article.featured
-  }));
-  
+
   // Write articles list JSON
   const articlesListPath = path.join(outputDir, 'articles.json');
-  fs.writeFileSync(articlesListPath, JSON.stringify(articlesList, null, 2), 'utf-8');
-  console.log(`\n✓ Generated: articles.json (${articlesList.length} articles)`);
-  
+  fs.writeFileSync(articlesListPath, JSON.stringify(articles, null, 2), 'utf-8');
+  console.log(`\n✓ Generated: articles.json (${articles.length} articles)`);
+
   console.log('\n✅ Content build completed successfully!\n');
 }
 

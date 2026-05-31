@@ -1,7 +1,7 @@
 {
   "title": "Architecture Governance en la era de la IA: del comité de arquitectura al contexto compartido",
   "slug": "architecture-governance-contexto-compartido",
-  "cluster": "Context Engineering",
+  "category": "Governance",
   "date": "2026-05-30",
   "author": "Archwise Editorial Team",
   "summary": "Por qué el verdadero gobierno arquitectónico no es control ni burocracia, sino la capacidad de compartir y aplicar contexto diferencial, decisiones y aprendizajes entre personas, equipos e IA. Casos reales, conflictos y trade-offs en entornos enterprise.",
