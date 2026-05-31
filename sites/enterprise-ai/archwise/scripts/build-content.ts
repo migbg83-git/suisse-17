@@ -316,6 +316,10 @@ function buildContent() {
     const featured = articleJson.featured === true || frontmatter.featured === true;
 
     // Compose article object
+    // Remove first H1 if it duplicates the title
+    const cleanedContent = removeFirstHeadingIfDuplicate(content, frontmatter.title);
+    const html = marked(cleanedContent);
+
     const article = {
       title: frontmatter.title,
       slug: frontmatter.slug,
@@ -328,7 +332,9 @@ function buildContent() {
       author,
       date: frontmatter.date,
       readingTime,
-      featured
+      featured,
+      content: cleanedContent,
+      html: html
     };
 
     articles.push(article);

@@ -1,0 +1,40 @@
+{
+  "title": "AI Operating Model: cómo organizar equipos, procesos y arquitectura para escalar la IA en la empresa",
+  "slug": "ai-operating-model-enterprise",
+  "description": "Descubre cómo escalar la IA en la empresa con un AI Operating Model que coordina personas, procesos, sistemas y conocimiento. Framework Archwise, organizational memory, knowledge debt y governance para una transformación enterprise sostenible.",
+  "excerpt": "La IA no escala mediante tecnología, sino mediante coordinación. Este artículo explica cómo diseñar un AI Operating Model para transformar capacidades aisladas en una capacidad organizativa sostenible.",
+  "category": "Enterprise AI",
+  "tags": [
+    "Enterprise AI",
+    "Governance",
+    "Organizational Memory",
+    "Knowledge Debt",
+    "AI Operating Model",
+    "AI-Native Organizations",
+    "Context Engineering"
+  ],
+  "keywords": [
+    "AI operating model",
+    "enterprise AI operating model",
+    "organizational memory",
+    "knowledge debt",
+    "AI governance",
+    "AI-native organization",
+    "enterprise AI strategy",
+    "AI transformation"
+  ],
+  "readingTime": 18,
+  "difficulty": "advanced",
+  "featured": false,
+  "published": true,
+  "author": "Archwise Editorial",
+  "relatedArticles": [
+    "ai-governance-framework",
+    "enterprise-ai-transformation-roadmap",
+    "por-que-fracasan-iniciativas-ia",
+    "ai-native-organizations",
+    "ai-augmented-development-teams"
+  ],
+  "ogImage": "/content/enterprise-ai/article-21/og-image.png",
+  "canonicalUrl": "https://archwise.ai/enterprise-ai/ai-operating-model-enterprise"
+}
