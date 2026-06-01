@@ -1,4 +1,4 @@
-import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
+import { Component, OnInit, OnDestroy, ChangeDetectorRef } from '@angular/core';
 import { SeoService } from '../../shared/seo/seo.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ContentService } from '../../core/services/content.service';
@@ -6,8 +6,8 @@ import { Article, ArticleDetail } from '../../core/models/article.model';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { NewsletterCtaComponent } from '../../shared/newsletter-cta/newsletter-cta.component';
-import { forkJoin, of } from 'rxjs';
-import { catchError } from 'rxjs/operators';
+import { forkJoin, of, Subscription } from 'rxjs';
+import { catchError, distinctUntilChanged, map, switchMap } from 'rxjs/operators';
 
 @Component({
   selector: 'aw-article-detail',
@@ -16,11 +16,12 @@ import { catchError } from 'rxjs/operators';
   templateUrl: './article-detail.component.html',
   styleUrls: ['./article-detail.component.scss']
 })
-export class ArticleDetailComponent implements OnInit {
+export class ArticleDetailComponent implements OnInit, OnDestroy {
   article: ArticleDetail | null = null;
   loading = true;
   notFound = false;
   relatedArticles: Article[] = [];
+  private routeParamsSubscription?: Subscription;
 
   constructor(
     private route: ActivatedRoute,
@@ -31,48 +32,69 @@ export class ArticleDetailComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    const slug = this.route.snapshot.paramMap.get('slug');
-    
-    if (!slug) {
-      this.notFound = true;
-      this.loading = false;
-      return;
-    }
+    this.routeParamsSubscription = this.route.paramMap
+      .pipe(
+        map(params => params.get('slug')),
+        distinctUntilChanged(),
+        switchMap(slug => {
+          this.loading = true;
+          this.notFound = false;
+          this.article = null;
+          this.relatedArticles = [];
 
-    forkJoin({
-      article: this.contentService.getArticleBySlug(slug),
-      articles: this.contentService.getArticles().pipe(catchError(() => of([] as Article[])))
-    }).subscribe({
-      next: ({ article, articles }) => {
-        if (!article) {
+          if (!slug) {
+            this.notFound = true;
+            this.loading = false;
+            this.cdr.detectChanges();
+            return of({ article: null, articles: [] as Article[] });
+          }
+
+          this.cdr.detectChanges();
+
+          return forkJoin({
+            article: this.contentService.getArticleBySlug(slug),
+            articles: this.contentService.getArticles().pipe(catchError(() => of([] as Article[])))
+          });
+        })
+      )
+      .subscribe({
+        next: ({ article, articles }) => {
+          if (!article) {
+            this.notFound = true;
+            this.loading = false;
+            this.cdr.detectChanges();
+            return;
+          }
+
+          this.article = article;
+          this.relatedArticles = this.resolveRelatedArticles(article, articles);
+
+          this.seo.update({
+            title: `${article.title} | Archwise`,
+            description: article.description,
+            url: SeoService.getBaseUrl() + '/articulos/' + article.slug,
+            type: 'article',
+            image: SeoService.getBaseUrl() + '/assets/images/og-image.png'
+          });
+
+          if (typeof window !== 'undefined') {
+            window.scrollTo({ top: 0, behavior: 'auto' });
+          }
+
+          this.loading = false;
+          this.notFound = false;
+          this.cdr.detectChanges();
+        },
+        error: () => {
           this.notFound = true;
           this.loading = false;
           this.cdr.detectChanges();
-          return;
         }
+      });
+  }
 
-        this.article = article;
-        this.relatedArticles = this.resolveRelatedArticles(article, articles);
-
-        this.seo.update({
-          title: `${article.title} | Archwise`,
-          description: article.description,
-          url: SeoService.getBaseUrl() + '/articulos/' + article.slug,
-          type: 'article',
-          image: SeoService.getBaseUrl() + '/assets/images/og-image.png'
-        });
-
-        this.loading = false;
-        this.notFound = false;
-        this.cdr.detectChanges();
-      },
-      error: () => {
-        this.notFound = true;
-        this.loading = false;
-        this.cdr.detectChanges();
-      }
-    });
-
+  ngOnDestroy(): void {
+    this.routeParamsSubscription?.unsubscribe();
   }
 
   private resolveRelatedArticles(article: ArticleDetail, articles: Article[]): Article[] {

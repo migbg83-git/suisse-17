@@ -181,6 +181,27 @@
       }
     }
 
+    .related-card-anchor {
+      text-decoration: none;
+      color: inherit;
+      cursor: pointer;
+
+      &:hover,
+      &:focus-visible {
+        text-decoration: none;
+      }
+
+      &:hover .related-card-link,
+      &:focus-visible .related-card-link {
+        color: var(--aw-accent);
+      }
+
+      &:hover .related-card-cta,
+      &:focus-visible .related-card-cta {
+        text-decoration: underline;
+      }
+    }
+
     .related-card-header {
       display: flex;
       align-items: center;
@@ -217,10 +238,6 @@
     .related-card-link {
       color: var(--aw-gray-900);
       text-decoration: none;
-
-      &:hover {
-        color: var(--aw-accent);
-      }
     }
 
     .related-card-excerpt {
