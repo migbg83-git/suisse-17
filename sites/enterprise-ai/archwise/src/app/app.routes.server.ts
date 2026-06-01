@@ -1,4 +1,20 @@
 import { RenderMode, ServerRoute } from '@angular/ssr';
+import { readFileSync } from 'node:fs';
+import { resolve } from 'node:path';
+
+interface PrerenderArticle {
+  slug: string;
+}
+
+function getArticleSlugs(): string[] {
+  const articlesPath = resolve(process.cwd(), 'src', 'assets', 'content', 'articles.json');
+  const raw = readFileSync(articlesPath, 'utf-8');
+  const articles = JSON.parse(raw) as PrerenderArticle[];
+
+  return articles
+    .map((article) => article.slug)
+    .filter((slug): slug is string => typeof slug === 'string' && slug.length > 0);
+}
 
 export const serverRoutes: ServerRoute[] = [
   {
@@ -17,12 +33,7 @@ export const serverRoutes: ServerRoute[] = [
     path: 'articulos/:slug',
     renderMode: RenderMode.Prerender,
     getPrerenderParams: async () => {
-      return [
-        { slug: 'architecture-md-vale-mas-que-prompts' },
-        { slug: 'deuda-tecnica-ia-revela' },
-        { slug: 'documentacion-necesita-llm' },
-        { slug: 'arquitectura-vuelve-ser-estrategica' }
-      ];
+      return getArticleSlugs().map((slug) => ({ slug }));
     }
   },
   {

@@ -1,0 +1,44 @@
+{
+  "title": "Organizational Memory: el activo más infravalorado de las organizaciones AI-Native",
+  "slug": "organizational-memory-activo-ai-native",
+  "description": "Las organizaciones AI-Native no compiten por modelos, compiten por memoria. Este artículo explica por qué la Organizational Memory es infraestructura crítica, cómo se relaciona con Context Engineering, Knowledge Debt, AI Governance y AI Operating Models, y qué modelo operativo permite escalarla en empresas complejas.",
+  "excerpt": "La verdadera ventaja competitiva de una organización AI-Native no son los modelos. Es su capacidad para capturar, estructurar, gobernar y reutilizar Organizational Memory como infraestructura estratégica.",
+  "category": "Enterprise AI",
+  "tags": [
+    "Enterprise AI",
+    "Organizational Memory",
+    "Knowledge Debt",
+    "Context Engineering",
+    "AI Governance",
+    "AI Operating Model",
+    "AI-Native Organizations",
+    "Memory Architecture"
+  ],
+  "keywords": [
+    "organizational memory",
+    "organizational memory enterprise",
+    "memory as infrastructure",
+    "knowledge debt organizational memory",
+    "AI-native organizations",
+    "enterprise AI strategy",
+    "context engineering",
+    "AI governance framework",
+    "hero dependency risk",
+    "decision amnesia enterprise",
+    "organizational memory maturity model"
+  ],
+  "readingTime": 20,
+  "difficulty": "advanced",
+  "featured": false,
+  "published": true,
+  "author": "Archwise Editorial",
+  "relatedArticles": [
+    "ai-operating-model-enterprise",
+    "ai-governance-framework",
+    "ai-native-organizations",
+    "context-engineering-vs-prompt-engineering",
+    "por-que-fracasan-iniciativas-ia"
+  ],
+  "ogImage": "/content/enterprise-ai/article-22/og-image.png",
+  "canonicalUrl": "https://archwise.ai/enterprise-ai/organizational-memory-activo-ai-native"
+}

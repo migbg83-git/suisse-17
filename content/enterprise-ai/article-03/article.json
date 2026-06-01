@@ -1,0 +1,35 @@
+{
+  "title": "Qué documentación necesita realmente un LLM",
+  "slug": "documentacion-necesita-llm",
+  "description": "No todo lo que documentes ayuda a la IA. La diferencia entre documentar frameworks públicos que el modelo ya conoce y decisiones privadas que solo tu equipo puede proporcionar.",
+  "excerpt": "Documentar más no equivale a documentar mejor: este artículo define qué contexto exclusivo debe entregarse a un LLM para obtener resultados útiles en proyectos reales.",
+  "category": "Context Engineering",
+  "tags": [
+    "context-engineering",
+    "explicit-knowledge",
+    "documentation-systems",
+    "ai-systems"
+  ],
+  "keywords": [
+    "documentación para LLM",
+    "context engineering",
+    "knowledge context",
+    "documentación técnica viva",
+    "IA en desarrollo de software",
+    "convenciones de arquitectura",
+    "productividad con copilots",
+    "enterprise documentation"
+  ],
+  "readingTime": 14,
+  "author": "Miguel Benito García",
+  "relatedArticles": [
+    "architecture-md-vale-mas-que-prompts",
+    "deuda-tecnica-ia-revela",
+    "framework-context-engineering-enterprise",
+    "context-engineering-vs-prompt-engineering",
+    "technical-debt-vs-knowledge-debt-ia"
+  ],
+  "canonicalUrl": "https://archwise.org/articulos/documentacion-necesita-llm",
+  "featured": false,
+  "published": true
+}

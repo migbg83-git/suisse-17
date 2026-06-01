@@ -1,0 +1,35 @@
+{
+  "title": "Por qué un architecture.md vale más que cien prompts mágicos",
+  "slug": "architecture-md-vale-mas-que-prompts",
+  "description": "El contexto es más importante que la formulación del prompt. Por qué la documentación correcta multiplica el valor de la IA.",
+  "excerpt": "Un prompt sin contexto produce resultados genéricos. Este artículo explica por qué architecture.md y el contexto explícito son el verdadero multiplicador en equipos enterprise.",
+  "category": "Context Engineering",
+  "tags": [
+    "context-engineering",
+    "explicit-knowledge",
+    "documentation-systems",
+    "decision-systems"
+  ],
+  "keywords": [
+    "architecture.md",
+    "context engineering",
+    "prompt engineering",
+    "documentación para IA",
+    "conocimiento explícito",
+    "equipos enterprise",
+    "convenciones de equipo",
+    "productividad con IA"
+  ],
+  "readingTime": 12,
+  "author": "Miguel Benito García",
+  "relatedArticles": [
+    "documentacion-necesita-llm",
+    "deuda-tecnica-ia-revela",
+    "arquitectura-vuelve-ser-estrategica",
+    "framework-context-engineering-enterprise",
+    "context-engineering-vs-prompt-engineering"
+  ],
+  "canonicalUrl": "https://archwise.org/articulos/architecture-md-vale-mas-que-prompts",
+  "featured": true,
+  "published": true
+}
