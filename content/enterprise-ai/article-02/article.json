@@ -1,0 +1,35 @@
+{
+  "title": "La deuda técnica que la IA está empezando a revelar",
+  "slug": "deuda-tecnica-ia-revela",
+  "description": "La IA no crea deuda técnica, la hace visible. Cómo los sistemas de IA funcionan como un audit involuntario de la calidad del conocimiento explícito en proyectos enterprise.",
+  "excerpt": "La IA actúa como un espejo de la arquitectura real: acelera lo que está bien definido y expone la deuda técnica y de conocimiento que estaba oculta.",
+  "category": "Technical Debt",
+  "tags": [
+    "technical-debt",
+    "knowledge-debt",
+    "organizational-knowledge",
+    "enterprise-architecture"
+  ],
+  "keywords": [
+    "deuda técnica",
+    "deuda de conocimiento",
+    "IA en enterprise",
+    "arquitectura enterprise",
+    "contexto explícito",
+    "copilot en proyectos legacy",
+    "onboarding técnico",
+    "gobernanza técnica"
+  ],
+  "readingTime": 15,
+  "author": "Miguel Benito García",
+  "relatedArticles": [
+    "technical-debt-vs-knowledge-debt-ia",
+    "documentacion-necesita-llm",
+    "context-engineering-legacy-ia-falla",
+    "por-que-fracasan-iniciativas-ia",
+    "architecture-md-vale-mas-que-prompts"
+  ],
+  "canonicalUrl": "https://archwise.org/articulos/deuda-tecnica-ia-revela",
+  "featured": true,
+  "published": true
+}

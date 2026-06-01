@@ -1,0 +1,35 @@
+{
+  "title": "La arquitectura vuelve a ser estratégica",
+  "slug": "arquitectura-vuelve-ser-estrategica",
+  "description": "Cuando la ejecución de código se abarata, el criterio arquitectónico aumenta su valor. Por qué equipos pequeños con arquitectura explícita superan a equipos grandes sin ella.",
+  "excerpt": "Si la ejecución se abarata con IA, la escasez se desplaza al criterio: arquitectura, decisiones y contexto pasan a ser la ventaja competitiva real.",
+  "category": "Architecture Strategy",
+  "tags": [
+    "enterprise-architecture",
+    "decision-systems",
+    "system-design",
+    "organizational-knowledge"
+  ],
+  "keywords": [
+    "arquitectura estratégica",
+    "criterio arquitectónico",
+    "teams AI augmented",
+    "economía del software",
+    "system design enterprise",
+    "knowledge as infrastructure",
+    "context engineering",
+    "productividad de equipos"
+  ],
+  "readingTime": 16,
+  "author": "Miguel Benito García",
+  "relatedArticles": [
+    "enterprise-ai-transformation-roadmap",
+    "ai-operating-model-enterprise",
+    "ai-native-organizations",
+    "ai-augmented-development-teams",
+    "por-que-fracasan-iniciativas-ia"
+  ],
+  "canonicalUrl": "https://archwise.org/articulos/arquitectura-vuelve-ser-estrategica",
+  "featured": true,
+  "published": true
+}

@@ -1,0 +1,37 @@
+{
+  "title": "Technical Debt vs Knowledge Debt: cómo la IA cambia la gestión de deuda en organizaciones",
+  "slug": "technical-debt-vs-knowledge-debt-ia",
+  "description": "La IA no crea deuda, la revela. Este artículo explora cómo la deuda de conocimiento emerge como el verdadero cuello de botella en sistemas enterprise, y por qué la gestión rigurosa del conocimiento explícito es la nueva ventaja competitiva.",
+  "excerpt": "La deuda técnica sigue importando, pero la IA está mostrando que la deuda de conocimiento es el factor que más bloquea la escalabilidad organizativa.",
+  "category": "Technical Debt",
+  "tags": [
+    "technical-debt",
+    "knowledge-debt",
+    "explicit-knowledge",
+    "organizational-memory",
+    "context-engineering",
+    "decision-systems"
+  ],
+  "keywords": [
+    "technical debt vs knowledge debt",
+    "deuda de conocimiento",
+    "organizational memory",
+    "context engineering",
+    "AI readiness",
+    "enterprise architecture",
+    "knowledge management",
+    "gobernanza técnica"
+  ],
+  "readingTime": 8,
+  "author": "Archwise Editorial",
+  "relatedArticles": [
+    "deuda-tecnica-ia-revela",
+    "documentacion-necesita-llm",
+    "context-engineering-legacy-ia-falla",
+    "por-que-fracasan-iniciativas-ia",
+    "ai-governance-framework"
+  ],
+  "canonicalUrl": "https://archwise.org/articulos/technical-debt-vs-knowledge-debt-ia",
+  "featured": true,
+  "published": true
+}
