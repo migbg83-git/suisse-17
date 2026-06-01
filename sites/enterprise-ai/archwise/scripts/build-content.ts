@@ -306,8 +306,9 @@ function buildContent() {
       readingTime = Math.ceil(words / wordsPerMinute);
     }
 
-    // Tags
-    const tags = articleJson.tags || frontmatter.tags;
+    // Tags — normalize to { slug, name } objects regardless of source
+    const rawTags: string[] | undefined = articleJson.tags || frontmatter.tags;
+    const tags = rawTags?.map((tag: string) => ({ slug: toSlug(tag), name: tag }));
     // Series
     const series = articleJson.series || frontmatter.series;
     // Summary
