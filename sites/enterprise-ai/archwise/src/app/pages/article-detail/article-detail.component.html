@@ -65,20 +65,25 @@
         <p class="related-intro">Artículos conectados para profundizar en la misma línea estratégica.</p>
 
         <div *ngIf="relatedArticles.length > 0" class="related-grid">
-          <article *ngFor="let rel of relatedArticles" class="related-card">
+          <a
+            *ngFor="let rel of relatedArticles"
+            class="related-card related-card-anchor"
+            [routerLink]="['/articulos', rel.slug]"
+            [attr.aria-label]="'Leer artículo: ' + rel.title"
+          >
             <div class="related-card-header">
               <span class="related-card-category">{{ rel.category?.name }}</span>
               <span class="related-card-time">{{ rel.readingTime }} min</span>
             </div>
 
             <h3 class="related-card-title">
-              <a [routerLink]="['/articulos', rel.slug]" class="related-card-link">{{ rel.title }}</a>
+              <span class="related-card-link">{{ rel.title }}</span>
             </h3>
 
             <p class="related-card-excerpt">{{ rel.summary || rel.description }}</p>
 
-            <a [routerLink]="['/articulos', rel.slug]" class="related-card-cta">Leer artículo</a>
-          </article>
+            <span class="related-card-cta">Leer artículo</span>
+          </a>
         </div>
 
         <div *ngIf="relatedArticles.length === 0" class="related-empty">
