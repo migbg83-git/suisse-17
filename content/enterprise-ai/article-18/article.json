@@ -2,6 +2,27 @@
   "title": "Por qué fracasan la mayoría de las iniciativas de IA en las empresas",
   "slug": "por-que-fracasan-iniciativas-ia",
   "description": "La mayoría de los fracasos en IA empresarial no son tecnológicos, sino organizativos, arquitectónicos y de gestión del conocimiento. Un análisis profundo de patrones, causas raíz y cómo construir sistemas que sí escalen.",
-  "date": "2026-05-31"
-  ,"category": "Enterprise AI"
+  "category": "Enterprise AI",
+  "tags": [
+    "AI Failure",
+    "Enterprise AI",
+    "Organizational Barriers",
+    "Knowledge Gaps",
+    "AI Adoption"
+  ],
+  "readingTime": 18,
+  "difficulty": "advanced",
+  "featured": false,
+  "published": true,
+  "author": "Archwise Editorial",
+  "date": "2026-05-31",
+  "relatedArticles": [
+    "enterprise-ai-transformation-roadmap",
+    "ai-governance-framework",
+    "organizational-memory-activo-ai-native",
+    "technical-debt-vs-knowledge-debt-ia",
+    "por-que-la-mayoria-de-los-sistemas-no-estan-preparados-para-ia"
+  ],
+  "ogImage": "/content/enterprise-ai/article-18/og-image.png",
+  "canonicalUrl": "https://archwise.ai/enterprise-ai/por-que-fracasan-iniciativas-ia"
 }

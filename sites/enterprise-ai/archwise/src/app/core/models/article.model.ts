@@ -30,6 +30,7 @@ export interface Article {
   date: string;
   readingTime: number;
   featured?: boolean;
+  relatedArticles?: string[];
   html?: string;
 }
 

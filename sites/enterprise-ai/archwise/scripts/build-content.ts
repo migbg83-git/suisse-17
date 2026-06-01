@@ -315,6 +315,8 @@ function buildContent() {
     const summary = articleJson.summary || frontmatter.summary || frontmatter.description || content.split('\n').slice(0, 2).join(' ');
     // Featured
     const featured = articleJson.featured === true || frontmatter.featured === true;
+    // Related Articles
+    const relatedArticles = articleJson.relatedArticles || [];
 
     // Compose article object
     // Remove first H1 if it duplicates the title
@@ -334,6 +336,7 @@ function buildContent() {
       date: frontmatter.date,
       readingTime,
       featured,
+      relatedArticles,
       content: cleanedContent,
       html: html
     };

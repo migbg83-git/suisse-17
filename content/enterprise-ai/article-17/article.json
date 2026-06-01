@@ -2,6 +2,27 @@
   "title": "AI-Native Organizations: cómo se construyen organizaciones diseñadas para trabajar con IA",
   "slug": "ai-native-organizations",
   "description": "Por qué la verdadera transformación con IA ocurre cuando la organización rediseña procesos, conocimiento, governance y arquitectura para colaborar estructuralmente con sistemas inteligentes. Frameworks, casos y roadmap para líderes enterprise.",
-  "date": "2026-05-31"
-  ,"category": "Enterprise AI"
+  "category": "Enterprise AI",
+  "tags": [
+    "AI-Native Organizations",
+    "Enterprise AI",
+    "Organizational Design",
+    "AI Strategy",
+    "AI Governance"
+  ],
+  "readingTime": 16,
+  "difficulty": "advanced",
+  "featured": false,
+  "published": true,
+  "author": "Archwise Editorial",
+  "date": "2026-05-31",
+  "relatedArticles": [
+    "ai-operating-model-enterprise",
+    "ai-governance-framework",
+    "organizational-memory-activo-ai-native",
+    "enterprise-ai-transformation-roadmap",
+    "por-que-fracasan-iniciativas-ia"
+  ],
+  "ogImage": "/content/enterprise-ai/article-17/og-image.png",
+  "canonicalUrl": "https://archwise.ai/enterprise-ai/ai-native-organizations"
 }
