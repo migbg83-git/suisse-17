@@ -96,8 +96,11 @@
 }
 
 .editorial-category {
-  font-style: italic;
-  color: var(--aw-gray-300);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--aw-gray-500);
 }
 
 .editorial-dot {

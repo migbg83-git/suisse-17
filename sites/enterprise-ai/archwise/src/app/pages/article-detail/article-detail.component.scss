@@ -211,15 +211,12 @@
     }
 
     .related-card-category {
-      display: inline-flex;
-      align-items: center;
-      padding: 0.22rem 0.55rem;
-      border-radius: 999px;
+      display: inline-block;
+      font-size: 0.75rem;
       text-transform: uppercase;
       letter-spacing: 0.05em;
       font-weight: 600;
-      color: var(--aw-accent);
-      background-color: rgba(27, 127, 200, 0.08);
+      color: var(--aw-gray-500);
     }
 
     .related-card-time {
