@@ -27,13 +27,13 @@
   "difficulty": "advanced",
   "featured": false,
   "published": true,
-  "author": "Archwise Editorial",
+  "author": "Miguel Benito García",
   "relatedArticles": [
+    "organizational-memory-activo-ai-native",
     "ai-governance-framework",
     "enterprise-ai-transformation-roadmap",
     "por-que-fracasan-iniciativas-ia",
-    "ai-native-organizations",
-    "ai-augmented-development-teams"
+    "ai-native-organizations"
   ],
   "ogImage": "/content/enterprise-ai/article-21/og-image.png",
   "canonicalUrl": "https://archwise.ai/enterprise-ai/ai-operating-model-enterprise"

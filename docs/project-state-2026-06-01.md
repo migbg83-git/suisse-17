@@ -5,7 +5,7 @@ Fecha: 2026-06-01
 
 ## Executive Summary
 
-El clúster Enterprise AI de Archwise cuenta con **22 artículos publicados**. Durante la sesión del 31 de mayo / 1 de junio de 2026 se completó el ciclo editorial completo de article-21 ("AI Operating Model") y article-22 ("Organizational Memory"), se detectó y resolvió un bug crítico en el pipeline de generación de contenido (`build-content.ts`), se completó la normalización editorial/técnica de article-01 → article-05 con creación de `article.json`, y se ajustó el presupuesto de bundle en `angular.json` para garantizar builds exitosos.
+El clúster Enterprise AI de Archwise cuenta con **22 artículos publicados**. Durante la sesión del 31 de mayo / 1 de junio de 2026 se completó el ciclo editorial completo de article-21 ("AI Operating Model") y article-22 ("Organizational Memory"), se detectó y resolvió un bug crítico en el pipeline de generación de contenido (`build-content.ts`), se completó la normalización editorial/técnica de article-01 → article-05 con creación de `article.json`, se ajustó el presupuesto de bundle en `angular.json` para garantizar builds exitosos, y se completó la **Fase 1 de Internal Linking** del framework core con relatedArticles visibles en HTML prerenderizado.
 
 El proyecto se encuentra en estado operativo. La infraestructura técnica, el pipeline de build y la publicación editorial funcionan correctamente. No hay bloqueos activos de publicación.
 
@@ -20,6 +20,7 @@ El proyecto se encuentra en estado operativo. La infraestructura técnica, el pi
 | Angular SSG/SSR | ✅ Operativo | v21.2.0 |
 | Vercel deploy | ✅ Configurado | Deploy automático |
 | SEO (OG, meta, sitemap) | ✅ Funcional | sitemap.xml regenerado 2026-06-01 |
+| SEO interno (relatedArticles prerender) | ✅ Mejorado | Fase 1 framework core completada |
 | Google Analytics | ✅ Conectado | — |
 | Search Console | ✅ Verificado | — |
 | robots.txt | ✅ Correcto | Apunta a https://archwise.org/sitemap.xml |
@@ -34,8 +35,9 @@ El proyecto se encuentra en estado operativo. La infraestructura técnica, el pi
 
 ### Archivos generados clave
 
-- `src/assets/content/articles.json` — 21 artículos, todos con `content` y `html` presentes
+- `src/assets/content/articles.json` — 22 artículos, todos con `content` y `html` presentes
 - `src/assets/content/articles/ai-operating-model-enterprise.json` — article-21 individual
+- `src/assets/content/articles/organizational-memory-activo-ai-native.json` — article-22 individual
 - `content/enterprise-ai/article-01/article.json` — creado en normalización
 - `content/enterprise-ai/article-02/article.json` — creado en normalización
 - `content/enterprise-ai/article-03/article.json` — creado en normalización
@@ -46,16 +48,17 @@ El proyecto se encuentra en estado operativo. La infraestructura técnica, el pi
 
 ### Technical State (actual)
 
-- 21 artículos normalizados.
+- 22 artículos normalizados.
 - Todos con `article.json` en `content/enterprise-ai/article-XX/`.
 - Build correcto (doble ejecución exitosa).
-- Sitemap correcto (21 artículos detectados, incluyendo article-01 → article-05 y article-21).
+- Sitemap correcto (22 artículos detectados, incluyendo article-01 → article-05, article-21 y article-22).
+- Internal linking framework core (articles 17–22) con relatedArticles en HTML prerenderizado.
 
 ---
 
 ## Estado editorial
 
-### Artículos publicados: 21
+### Artículos publicados: 22
 
 | Nº | Título | Categoría | Slug | Estado |
 |----|--------|-----------|------|--------|
@@ -96,6 +99,18 @@ El proyecto se encuentra en estado operativo. La infraestructura técnica, el pi
 - Presencia en sitemap.xml: ✅ Confirmada
 - Presencia en /articulos/: ✅ Confirmada
 - Presencia en articles.json: ✅ Confirmada
+
+### Internal Linking — Fase 1 (completada)
+
+- Alcance aplicado: `article-17` a `article-22` (`article.json` con `relatedArticles` explícitos)
+- Soporte técnico completado:
+   - `build-content.ts` serializa `relatedArticles` desde `article.json`
+   - Modelo Angular incluye `relatedArticles?: string[]`
+   - `ArticleDetailComponent` usa flujo SSR-friendly con `forkJoin(article + articles)`
+   - Resolución por slug en orden definido + fallback por category/tags
+- Validación completada:
+   - `npm run build:ssg` exit code 0
+   - article-01, article-17 y article-22 contienen enlaces relacionados en HTML estático (`dist/.../index.html`)
 
 ### Historical Articles Audit
 
@@ -166,6 +181,19 @@ Nota: no se aplican reclasificaciones pendientes de auditoría. Se mantiene cate
   - `dist/archwise/browser/sitemap.xml` ✅
 - **Estado:** ✅ Resuelto. Future: considerar optimización de bundles (SCSS deprecation, CSS tree-shaking) en session posterior.
 
+### 4. Related articles visibles en runtime pero ausentes en HTML prerenderizado
+
+- **Fecha:** 2026-06-01
+- **Severidad:** Alta (SEO interno + navegación estática)
+- **Síntoma:** En detalle de artículo aparecía "No hay artículos relacionados" en HTML prerenderizado aunque `article.json` tuviera `relatedArticles`.
+- **Causa raíz:** Flujo asíncrono en dos subscriptions en `ArticleDetailComponent`; prerender no capturaba la segunda carga de datos.
+- **Solución:** Unificar carga en `forkJoin` (`article + articles`) y resolver related explícitos por slug preservando orden.
+- **Validación:** HTML estático con enlaces relacionados reales en:
+   - `dist/archwise/browser/articulos/ai-native-organizations/index.html` ✅
+   - `dist/archwise/browser/articulos/architecture-md-vale-mas-que-prompts/index.html` ✅
+   - `dist/archwise/browser/articulos/organizational-memory-activo-ai-native/index.html` ✅
+- **Estado:** ✅ Resuelto.
+
 ---
 
 ## Decisiones tomadas (sesión 2026-05-31/06-01)
@@ -179,6 +207,8 @@ Nota: no se aplican reclasificaciones pendientes de auditoría. Se mantiene cate
 | `getPrerenderParams` dinámico desde `src/assets/content/articles.json` | Evitar mantenimiento manual de slugs hardcodeados | Prerender completo y escalable con el crecimiento del corpus |
 | `npm run build:ssg` como comando estándar de publicación técnica | Garantiza secuencia `build:content` -> `build:seo` -> prerender | Evita fallos por `articles.json` ausente/desactualizado |
 | Ajuste de presupuesto en `angular.json` (budget inicial) | Exceso de 18.77 kB sobre presupuesto anterior (500 kB → 518.77 kB) tras article-22 | Permite builds exitosos (exit code 0) mientras mantiene control futuro (error threshold 600 kB) |
+| Fase 1 Internal Linking en framework core | Mejorar SEO interno y coherencia de navegación | RelatedArticles configurados en articles 17–22 |
+| Validación de relatedArticles en HTML prerenderizado | Runtime de navegador no es suficiente para una web editorial SSG | Criterio operativo obligatorio de QA técnico |
 
 ---
 
@@ -228,6 +258,7 @@ Nota: no se aplican reclasificaciones pendientes de auditoría. Se mantiene cate
 4. **Usa los comandos exactos de package.json.** No inventes comandos. El runtime es `tsx`, no `node` para scripts TypeScript.
 5. **El contenido editorial no se toca sin seguir el workflow.** brief → notes → outline → article → review → assets → article.json → build → verify → deploy.
 6. **Si algo no renderiza, verifica primero que `content` y `html` están en el JSON generado.** Es el error más común y más difícil de detectar sin abrir el navegador.
+7. **Valida relatedArticles en HTML prerenderizado (`dist/.../index.html`), no solo en navegador.**
 
 ### Para la arquitectura del proyecto
 
@@ -246,6 +277,7 @@ Nota: no se aplican reclasificaciones pendientes de auditoría. Se mantiene cate
 - No hay bloqueos activos.
 - El sitio es funcional y los 22 artículos se procesan correctamente en el build.
 - Presencia verificada en articles.json, sitemap.xml y rutas de prerender.
+- Related articles del framework core visibles en HTML estático prerenderizado.
 
 ---
 

@@ -61,19 +61,26 @@
     <!-- Related Articles -->
     <section class="related-articles-section">
       <div class="container-reading">
-        <h2 class="related-title">Seguir leyendo</h2>
-        <div *ngIf="relatedArticles.length > 0" class="related-list">
-          <div *ngFor="let rel of relatedArticles" class="related-item">
-            <a [routerLink]="['/articulos', rel.slug]" class="related-link">
-              <span class="related-title">{{ rel.title }}</span>
-            </a>
-            <span class="related-meta">
-              <span class="related-category">{{ rel.category?.name }}</span>
-              <span class="meta-separator">·</span>
-              <span>{{ formatDate(rel.date) }}</span>
-            </span>
-          </div>
+        <h2 class="related-heading">Seguir leyendo</h2>
+        <p class="related-intro">Artículos conectados para profundizar en la misma línea estratégica.</p>
+
+        <div *ngIf="relatedArticles.length > 0" class="related-grid">
+          <article *ngFor="let rel of relatedArticles" class="related-card">
+            <div class="related-card-header">
+              <span class="related-card-category">{{ rel.category?.name }}</span>
+              <span class="related-card-time">{{ rel.readingTime }} min</span>
+            </div>
+
+            <h3 class="related-card-title">
+              <a [routerLink]="['/articulos', rel.slug]" class="related-card-link">{{ rel.title }}</a>
+            </h3>
+
+            <p class="related-card-excerpt">{{ rel.summary || rel.description }}</p>
+
+            <a [routerLink]="['/articulos', rel.slug]" class="related-card-cta">Leer artículo</a>
+          </article>
         </div>
+
         <div *ngIf="relatedArticles.length === 0" class="related-empty">
           <span>No hay artículos relacionados.</span>
         </div>

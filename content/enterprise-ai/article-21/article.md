@@ -17,9 +17,9 @@ La mayoría de las empresas que fracasan en su transformación IA no lo hacen po
 
 En la mayoría de las empresas, la conversación sobre IA se mueve entre dos extremos: la estrategia y la ejecución. Se habla de visión, de objetivos, de "ser AI-Ready". Se habla de pilotos, de copilots, de despliegues en producción. Pero entre ambos extremos hay una capa crítica que casi siempre se ignora: el modelo operativo.
 
-...
-Strategy --> Governance --> Operating Model --> Execution
-...
+<blockquote>
+    <p><strong>Cadena operativa real:</strong> la estrategia fija prioridades, el governance establece límites y accountability, el operating model organiza cómo se trabaja y la ejecución convierte todo en resultados.</p>
+</blockquote>
 
 ## Qué es realmente un AI Operating Model
 
@@ -60,16 +60,17 @@ He visto empresas celebrar el éxito de un piloto solo para descubrir, meses des
 
 En Archwise, hemos sintetizado años de experiencia en un framework pragmático y propio para diseñar un AI Operating Model robusto. No es una receta universal, pero sí una brújula para evitar los errores más comunes y acelerar la madurez organizativa. Este framework no es lineal ni estático: es un sistema vivo, iterativo y adaptativo, diseñado para evolucionar junto con la organización y su contexto.
 
-```mermaid
-graph TD;
-    G[Governance: Dirección y límites]
-    C[Coordination: Orquestación y ownership]
-    M[Memory: Organizational Memory viva]
-    E[Execution: Operación y validación]
-    L[Learning: Feedback y ajuste]
-    G --> C --> M --> E --> L
-    L -.-> G
-```
+<section aria-label="Framework Archwise AI Operating Model">
+    <p><strong>Ciclo operativo Archwise</strong></p>
+    <ol>
+        <li><strong>Governance</strong>: define dirección, límites y accountability.</li>
+        <li><strong>Coordination</strong>: orquesta roles, procesos y ownership.</li>
+        <li><strong>Memory</strong>: convierte conocimiento en infraestructura viva.</li>
+        <li><strong>Execution</strong>: integra IA en operación con validación continua.</li>
+        <li><strong>Learning</strong>: captura feedback y ajusta decisiones.</li>
+    </ol>
+    <p><em>El aprendizaje cierra el ciclo y retroalimenta governance para la siguiente iteración.</em></p>
+</section>
 
 ### 1. Governance: Dirección y límites
 - Objetivo: Definir reglas, accountability y dirección estratégica.
@@ -140,9 +141,9 @@ La madurez operativa no se compra ni se improvisa. Se construye paso a paso. En 
 4. **Formalized Operating Model**: Procesos, roles y governance explícitos, organizational memory viva, accountability clara.
 5. **AI-Native Organization**: Coordinación sistémica, IA integrada en el sistema operativo organizativo, aprendizaje institucionalizado.
 
-```text
-Experimentation → Augmented Teams → Coordinated Processes → Formalized Operating Model → AI-Native Organization
-```
+<blockquote>
+    <p><strong>Progresión de madurez:</strong> Experimentation, Augmented Teams, Coordinated Processes, Formalized Operating Model y AI-Native Organization.</p>
+</blockquote>
 
 
 He visto organizaciones quedarse años en el nivel 2, repitiendo pilotos y acumulando herramientas. En una multinacional industrial, la imposibilidad de acceder a datos críticos en sistemas legacy bloqueó la integración de IA para mantenimiento predictivo. El salto ocurre cuando se formaliza el modelo operativo y se invierte en memoria organizativa y coordinación. La madurez no es un destino, es una disciplina: cada avance en el modelo operativo reduce la knowledge debt y multiplica la resiliencia.

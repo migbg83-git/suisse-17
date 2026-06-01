@@ -166,6 +166,7 @@ JSON individual por artículo. Mismo objeto que aparece en el array de `articles
 | series | article.json | frontmatter | undefined |
 | summary | article.json | frontmatter summary | description |
 | featured | article.json | frontmatter | false |
+| relatedArticles | article.json | — | [] |
 
 ---
 
@@ -188,7 +189,7 @@ Comando: `npm run build:content`
    - Elimina primer H1 si duplica el título del frontmatter
    - Convierte Markdown a HTML con `marked` (con highlight.js para bloques de código)
    - Calcula `readingTime` si no viene definido (200 palabras/minuto)
-   - Compone objeto artículo completo con `content` (Markdown limpio) y `html` (HTML renderizado)
+  - Compone objeto artículo completo con `content` (Markdown limpio), `html` (HTML renderizado) y `relatedArticles` (si existe en article.json)
 4. **Genera JSON individual**: escribe `src/assets/content/articles/{slug}.json`
 5. **Ordena por fecha** (más reciente primero)
 6. **Genera `articles.json`**: escribe `src/assets/content/articles.json`
@@ -203,6 +204,14 @@ Si `build-content.ts` deja de serializar `content` o `html`:
 - Sin `html`, el `<div>` queda vacío → el lector ve un artículo aparentemente roto
 
 Después de cualquier modificación a `build-content.ts`, **siempre verificar en navegador** que los artículos muestran contenido completo.
+
+### Related Articles (estado 2026-06-01)
+
+- `build-content.ts` serializa `relatedArticles` desde `article.json` hacia:
+  - `src/assets/content/articles.json`
+  - `src/assets/content/articles/{slug}.json`
+- Formato esperado: `string[]` (slugs) en orden editorial.
+- Regla de integridad: todos los slugs deben existir en el corpus publicado.
 
 ---
 
@@ -250,7 +259,11 @@ Comando: `npm run build:seo`
   - `article.author`, `article.date`, `article.readingTime` — metadata
   - **`article.html`** — contenido renderizado vía `[innerHTML]`
   - `article.tags` — etiquetas
-- Carga artículos relacionados (misma categoría → tags compartidos → featured)
+  - Carga artículos y relacionados en flujo SSR-friendly con `forkJoin` (`article + articles`)
+  - Resolución de relacionados:
+    - Si `article.relatedArticles` existe: resolver por slug preservando orden (excluyendo artículo actual)
+    - Si no existe: fallback por categoría → tags compartidos → featured
+  - Este enfoque garantiza que "Seguir leyendo" quede en HTML prerenderizado (SSG), no solo en runtime cliente.
 - Aplica SEO dinámico con `SeoService`:
   - `<title>`: `{article.title} | Archwise`
   - `meta description`: `article.description`
@@ -278,6 +291,7 @@ Comando: `npm run build:seo`
 | `date` | Fecha formateada |
 | `readingTime` | Indicador de lectura |
 | `slug` | URL y routing |
+| `relatedArticles` | Resolución de sección "Seguir leyendo" |
 
 ---
 
@@ -325,6 +339,12 @@ Validación operativa reciente:
 - 21 artículos prerenderizados
 - 24 rutas estáticas totales
 - Sin errores SSR
+
+Validación SEO interna reciente (relatedArticles en HTML estático):
+- `npm run build:ssg` exit code 0
+- article-01 con enlaces relacionados en `dist/archwise/browser/articulos/architecture-md-vale-mas-que-prompts/index.html`
+- article-17 con enlaces relacionados en `dist/archwise/browser/articulos/ai-native-organizations/index.html`
+- article-22 con enlaces relacionados en `dist/archwise/browser/articulos/organizational-memory-activo-ai-native/index.html`
 
 **Dependencia crítica:** este enfoque requiere que `articles.json` exista y esté actualizado antes del prerender. Por eso el flujo canónico de publicación es `npm run build:ssg` (`build:content` -> `build:seo` -> `ng build --prerender`).
 

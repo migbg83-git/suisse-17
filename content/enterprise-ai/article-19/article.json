@@ -2,16 +2,27 @@
   "title": "Enterprise AI Transformation Roadmap: cómo evolucionar desde Legacy Systems hasta AI-Native Organizations",
   "slug": "enterprise-ai-transformation-roadmap",
   "description": "La transformación hacia la IA no es un proyecto, sino una evolución organizativa progresiva. Descubre el modelo de madurez, los bloqueos, los casos reales y el roadmap estratégico para pasar de sistemas legacy a organizaciones AI-Native.",
-  "date": "2026-05-31",
   "category": "Enterprise AI",
+  "tags": [
+    "Enterprise AI",
+    "Transformation Roadmap",
+    "AI Maturity",
+    "Organizational Evolution",
+    "Legacy to AI-Native"
+  ],
   "readingTime": 15,
+  "difficulty": "advanced",
   "featured": false,
-  "internalLinks": [
-    "context-engineering-vs-prompt-engineering",
-    "ai-augmented-development-teams",
+  "published": true,
+  "author": "Miguel Benito García",
+  "date": "2026-05-31",
+  "relatedArticles": [
     "ai-native-organizations",
-    "por-que-fracasan-iniciativas-ia",
-    "article-12-slug",
-    "article-13-slug"
-  ]
+    "ai-governance-framework",
+    "ai-operating-model-enterprise",
+    "organizational-memory-activo-ai-native",
+    "por-que-fracasan-iniciativas-ia"
+  ],
+  "ogImage": "/content/enterprise-ai/article-19/og-image.png",
+  "canonicalUrl": "https://archwise.ai/enterprise-ai/enterprise-ai-transformation-roadmap"
 }

@@ -176,7 +176,7 @@ function processMarkdownFile(filePath: string): Article | null {
     }
 
     // Author
-    const author = frontmatter.author || 'Miguel Benito García';
+    const author = normalizeAuthor(frontmatter.author);
 
     // Summary
     let summary = frontmatter.summary;
@@ -223,6 +223,23 @@ function normalizeCategory(cat: any): { slug: string, name: string } {
     return { slug: cat.slug || toSlug(cat.name), name: cat.name };
   }
   return { slug: '', name: '' };
+}
+
+function normalizeAuthor(author: unknown): string {
+  const defaultAuthor = 'Miguel Benito García';
+
+  if (typeof author !== 'string' || author.trim().length === 0) {
+    return defaultAuthor;
+  }
+
+  const cleanAuthor = author.trim();
+  const legacyLabels = new Set(['archwise editorial', 'archwise editorial team']);
+
+  if (legacyLabels.has(cleanAuthor.toLowerCase())) {
+    return defaultAuthor;
+  }
+
+  return cleanAuthor;
 }
 
 function buildContent() {
@@ -296,7 +313,7 @@ function buildContent() {
     const normalizedCategory = normalizeCategory(category);
 
     // Author
-    const author = articleJson.author || frontmatter.author || 'Miguel Benito García';
+    const author = normalizeAuthor(articleJson.author || frontmatter.author);
 
     // Reading time
     let readingTime = articleJson.readingTime;
@@ -315,6 +332,8 @@ function buildContent() {
     const summary = articleJson.summary || frontmatter.summary || frontmatter.description || content.split('\n').slice(0, 2).join(' ');
     // Featured
     const featured = articleJson.featured === true || frontmatter.featured === true;
+    // Related Articles
+    const relatedArticles = articleJson.relatedArticles || [];
 
     // Compose article object
     // Remove first H1 if it duplicates the title
@@ -334,6 +353,7 @@ function buildContent() {
       date: frontmatter.date,
       readingTime,
       featured,
+      relatedArticles,
       content: cleanedContent,
       html: html
     };
@@ -343,7 +363,6 @@ function buildContent() {
     // Write individual article JSON (legacy, not used by Angular listing)
     const articleOutputPath = path.join(articlesOutputDir, `${article.slug}.json`);
     fs.writeFileSync(articleOutputPath, JSON.stringify(article, null, 2), 'utf-8');
-    console.log(`   ✓ Generated: articles/${article.slug}.json`);
   }
 
   if (articles.length === 0) {

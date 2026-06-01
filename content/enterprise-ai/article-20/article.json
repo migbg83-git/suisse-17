@@ -2,15 +2,27 @@
   "title": "AI Governance Framework: cómo gobernar sistemas, equipos y agentes de IA en la empresa",
   "slug": "ai-governance-framework",
   "description": "La IA escala cuando existe governance. Sin governance, la complejidad crece más rápido que el valor generado. Framework, casos y madurez para líderes enterprise.",
-  "date": "2026-05-31",
   "category": "Governance",
+  "tags": [
+    "AI Governance",
+    "Enterprise AI",
+    "Governance Framework",
+    "AI Risk",
+    "Organizational Control"
+  ],
   "readingTime": 15,
+  "difficulty": "advanced",
   "featured": false,
-  "internalLinks": [
-    "ai-augmented-development-teams",
+  "published": true,
+  "author": "Miguel Benito García",
+  "date": "2026-05-31",
+  "relatedArticles": [
+    "ai-operating-model-enterprise",
+    "organizational-memory-activo-ai-native",
     "ai-native-organizations",
-    "por-que-fracasan-iniciativas-ia",
     "enterprise-ai-transformation-roadmap",
-    "context-engineering-vs-prompt-engineering"
-  ]
+    "architecture-governance-contexto-compartido"
+  ],
+  "ogImage": "/content/enterprise-ai/article-20/og-image.png",
+  "canonicalUrl": "https://archwise.ai/enterprise-ai/ai-governance-framework"
 }
