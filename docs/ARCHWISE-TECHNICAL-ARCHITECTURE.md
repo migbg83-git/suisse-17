@@ -418,6 +418,31 @@ Checklist post-build antes de deploy:
 - [ ] No hay slugs duplicados en `articles.json`
 - [ ] El build completa sin errores (`ng build` exit code 0)
 
+### Post-deploy verification for Vercel
+
+Contexto:
+- Se detecto un incidente transitorio donde produccion sirvio contenido antiguo/cache para una ruta de articulo, aunque source, build, dist, sitemap y JSON eran correctos.
+
+Regla:
+- Despues de cada deploy, verificar 3 URLs criticas:
+  - article-01
+  - article-03
+  - ultimo articulo publicado
+
+Para cada URL comprobar:
+- title
+- h1
+- date
+- reading time
+- canonical
+- relatedArticles
+
+Si hay desajuste:
+1. comprobar deployment activo en Vercel
+2. comprobar headers cache y x-vercel-cache
+3. redeploy sin cache si es necesario
+4. validar en incognito o con curl
+
 ---
 
 ## 12. Incidentes conocidos
