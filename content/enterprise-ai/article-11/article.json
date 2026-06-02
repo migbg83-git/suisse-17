@@ -20,6 +20,13 @@
   "ogTitle": "¿Por qué la mayoría de los sistemas no están preparados para trabajar con IA?",
   "ogDescription": "La IA no crea los problemas de las organizaciones: los hace visibles. Descubre cómo el contexto, la arquitectura y el governance definen el éxito o fracaso de la IA en tu empresa.",
   "ogImagePrompt": "Enterprise architecture blueprint with abstract, layered structures representing context, governance, and knowledge flows. Premium, minimalistic style inspired by Stripe and Vercel. No robots, no brains, no clichés. Colors: deep blue, white, and subtle gradients. Convey clarity, structure, and readiness for AI.",
+  "relatedArticles": [
+    "las-7-caracteristicas-arquitectura-ai-ready",
+    "ai-ready-systems-vs-legacy-systems",
+    "por-que-el-prompt-engineering-no-es-suficiente-para-construir-sistemas-con-ia",
+    "por-que-fracasan-iniciativas-ia",
+    "ai-operating-model-enterprise"
+  ],
   "related": [
     "article-07",
     "article-08",
