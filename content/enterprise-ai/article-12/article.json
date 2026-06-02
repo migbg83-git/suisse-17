@@ -7,5 +7,12 @@
   "published": true,
   "date": "2024-06-07",
   "summary": "Las organizaciones AI-Ready no destacan por las herramientas que utilizan, sino por cómo gestionan conocimiento, arquitectura y contexto. Este artículo explora, desde la experiencia real y la práctica, las capacidades organizativas y arquitectónicas que permiten a una organización integrar IA de forma sostenible y escalable.",
-  "assets": "assets.md"
+  "assets": "assets.md",
+  "relatedArticles": [
+    "por-que-la-mayoria-de-los-sistemas-no-estan-preparados-para-ia",
+    "ai-ready-systems-vs-legacy-systems",
+    "por-que-el-prompt-engineering-no-es-suficiente-para-construir-sistemas-con-ia",
+    "context-engineering-vs-prompt-engineering",
+    "ai-operating-model-enterprise"
+  ]
 }

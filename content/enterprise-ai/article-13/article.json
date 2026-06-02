@@ -7,5 +7,12 @@
   "published": true,
   "date": "2026-05-30",
   "summary": "Este artículo cierra el cluster AI-Ready Systems, comparando en profundidad organizaciones AI-Ready y sistemas legacy. A partir de casos reales y experiencia de campo, se expone por qué la verdadera barrera para la IA no es tecnológica, sino organizativa y arquitectónica. Se desarrolla el marco de las cuatro deudas invisibles y se ofrece un test de autoevaluación para líderes técnicos y de transformación.",
-  "assets": "assets.md"
+  "assets": "assets.md",
+  "relatedArticles": [
+    "las-7-caracteristicas-arquitectura-ai-ready",
+    "por-que-la-mayoria-de-los-sistemas-no-estan-preparados-para-ia",
+    "context-engineering-vs-prompt-engineering",
+    "por-que-fracasan-iniciativas-ia",
+    "enterprise-ai-transformation-roadmap"
+  ]
 }

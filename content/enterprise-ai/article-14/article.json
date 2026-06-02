@@ -3,5 +3,12 @@
   "slug": "por-que-el-prompt-engineering-no-es-suficiente-para-construir-sistemas-con-ia",
   "description": "El auge y los límites del Prompt Engineering en IA. Por qué el verdadero multiplicador de resultados está en el Context Engineering y la arquitectura AI-Ready. Casos reales, marcos conceptuales y lecciones para organizaciones enterprise.",
   "date": "2026-05-30"
-  ,"category": "Context Engineering"
+  ,"category": "Context Engineering",
+  "relatedArticles": [
+    "context-engineering-vs-prompt-engineering",
+    "ai-governance-framework",
+    "ai-operating-model-enterprise",
+    "ai-native-organizations",
+    "ai-ready-systems-vs-legacy-systems"
+  ]
 }
