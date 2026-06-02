@@ -1,0 +1,46 @@
+{
+  "title": "Memory Architecture: cómo diseñar sistemas que convierten conocimiento organizativo en contexto reutilizable para humanos y agentes de IA",
+  "slug": "memory-architecture-contexto-reutilizable-enterprise",
+  "description": "Sin Memory Architecture, la IA no escala: convierte conocimiento organizativo en contexto reutilizable para decisiones enterprise.",
+  "excerpt": "La mayoría de organizaciones no tiene un problema de documentación, sino de arquitectura de memoria. Este artículo explica cómo diseñar Memory Architecture para capturar, estructurar, gobernar y recuperar contexto de forma reutilizable. Sin esa infraestructura, la IA escala ambigüedad más rápido que aprendizaje institucional.",
+  "category": "Enterprise AI",
+  "tags": [
+    "Enterprise AI",
+    "Memory Architecture",
+    "Organizational Memory",
+    "Context Engineering",
+    "AI Governance",
+    "AI Operating Model",
+    "Memory Debt",
+    "Knowledge Reusability"
+  ],
+  "keywords": [
+    "memory architecture",
+    "organizational memory architecture",
+    "enterprise memory systems",
+    "memory retrieval architecture",
+    "context engineering enterprise",
+    "AI governance and memory",
+    "AI operating model memory",
+    "memory as infrastructure",
+    "memory silos",
+    "context fragmentation",
+    "knowledge reusability enterprise",
+    "enterprise AI strategy"
+  ],
+  "readingTime": 23,
+  "difficulty": "advanced",
+  "featured": false,
+  "published": true,
+  "author": "Miguel Benito García",
+  "date": "2026-06-02",
+  "relatedArticles": [
+    "ai-governance-framework",
+    "ai-operating-model-enterprise",
+    "organizational-memory-activo-ai-native",
+    "context-engineering-vs-prompt-engineering",
+    "technical-debt-vs-knowledge-debt-ia"
+  ],
+  "ogImage": "/content/enterprise-ai/article-23/og-image.png",
+  "canonicalUrl": "https://archwise.org/articulos/memory-architecture-contexto-reutilizable-enterprise"
+}
