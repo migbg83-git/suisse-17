@@ -77,6 +77,31 @@ Reglas:
 - [ ] Canonical URL correcta
 - [ ] Open Graph tags correctos
 
+### Post-deploy verification for Vercel
+
+Contexto operativo:
+- Se detecto un incidente transitorio donde produccion sirvio contenido antiguo/cache para una ruta de articulo, aunque source, build, dist, sitemap y JSON eran correctos.
+
+Regla post-deploy:
+- Verificar siempre 3 URLs criticas:
+  - article-01
+  - article-03
+  - ultimo articulo publicado
+
+Para cada URL comprobar:
+- title
+- h1
+- date
+- reading time
+- canonical
+- relatedArticles
+
+Si hay desajuste:
+1. comprobar deployment activo en Vercel
+2. comprobar headers cache y x-vercel-cache
+3. redeploy sin cache si es necesario
+4. validar en incognito o con curl
+
 ---
 
 ## 4. Corpus Overview (01-22)
