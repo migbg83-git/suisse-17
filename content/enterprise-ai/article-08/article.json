@@ -1,9 +1,12 @@
 {
   "title": "Plantillas y ejemplos reales de architecture.md para proyectos enterprise",
   "slug": "plantillas-ejemplos-architecture-md-enterprise",
+  "description": "Plantillas reales y criterios para construir un architecture.md útil en proyectos enterprise. Convierte documentación técnica en contexto accionable para IA.",
+  "excerpt": "architecture.md es el contrato operativo entre tu equipo y la IA. Plantillas reales y criterios para que cada sección aporte contexto diferencial, no ruido.",
+  "readingTime": 8,
   "category": "Context Engineering",
   "date": "2026-05-30",
-  "author": "Archwise Editorial Team",
+  "author": "Archwise Editorial",
   "summary": "Guía definitiva para convertir tu architecture.md en el nuevo contrato social entre humanos y máquinas: plantillas, ejemplos reales y claves para equipos enterprise.",
   "keywords": [
     "architecture.md enterprise",

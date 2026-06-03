@@ -1,9 +1,12 @@
 {
   "title": "Cómo hacer una Architecture Review efectiva en la era de la IA",
   "slug": "architecture-review-efectiva-ia",
+  "description": "Cómo transformar la Architecture Review en una herramienta de transferencia de contexto y governance activo en organizaciones que trabajan con IA.",
+  "excerpt": "Una Architecture Review efectiva no revisa código: transfiere criterio y contexto. Cómo rediseñarla para que funcione como infraestructura de governance en la era de la IA.",
+  "readingTime": 9,
   "category": "Governance",
   "date": "2026-05-30",
-  "author": "Archwise Editorial Team",
+  "author": "Archwise Editorial",
   "summary": "Guía avanzada para transformar la Architecture Review en una herramienta estratégica de transferencia de contexto, reducción de riesgos y aceleración de la inteligencia organizacional en la era de la IA.",
   "keywords": [
     "architecture review efectiva",

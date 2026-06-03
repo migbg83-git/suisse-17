@@ -1,8 +1,8 @@
 # Archwise AI Handoff
 
-> Ultima actualizacion: 2026-06-01  
-> Ultimo articulo publicado: article-22 (Organizational Memory)  
-> Estado del proyecto: Operativo. 22 articulos publicados.
+> Ultima actualizacion: 2026-06-03  
+> Ultimo articulo publicado: article-23 (Memory Architecture)  
+> Estado del proyecto: Operativo. 23 articulos publicados.
 
 ---
 
@@ -27,22 +27,34 @@ Estado tecnico:
 - Deploy automatico en Vercel.
 - SEO tecnico funcional (OG, metadatos, sitemap, robots).
 - prerender dinamico de slugs activo.
+- Deploy de article-23 validado en produccion.
 
 Estado editorial:
-- 22 articulos publicados (01-22).
-- article-22 completado, publicado e integrado.
-- Internal Linking Fase 1 completada en framework core (17-22).
+- 23 articulos publicados (01-23).
+- article-23 completado, publicado e integrado.
+- Internal Linking Fase 1 completada en framework core (17-23).
 
 Estado de build (validado):
 - `npm run build:content`: OK
 - `npm run build:seo`: OK
 - `npm run build:ssg`: OK (exit code 0)
+- deploy: OK
 
 Estado de validacion SSG:
 - relatedArticles visibles en HTML prerenderizado de:
   - article-01
   - article-17
   - article-22
+  - article-23
+
+Estado de publicacion article-23:
+- Titulo: Memory Architecture: como disenar sistemas que convierten conocimiento organizativo en contexto reutilizable para humanos y agentes de IA
+- Slug: memory-architecture-contexto-reutilizable-enterprise
+- Categoria: Enterprise AI
+- Author: Miguel Benito Garcia
+- Sitemap actualizado: OK
+- Canonical correcta: OK
+- relatedArticles funcionando: OK
 
 Bloqueos activos:
 - No hay bloqueos criticos de publicacion.
@@ -104,7 +116,7 @@ Si hay desajuste:
 
 ---
 
-## 4. Corpus Overview (01-22)
+## 4. Corpus Overview (01-23)
 
 ### Tabla canonica de articulos
 
@@ -132,11 +144,12 @@ Si hay desajuste:
 | 20 | AI Governance Framework: como gobernar sistemas, equipos y agentes de IA en la empresa | Governance | ai-governance-framework | Publicado |
 | 21 | AI Operating Model: como organizar equipos, procesos y arquitectura para escalar la IA en la empresa | Enterprise AI | ai-operating-model-enterprise | Publicado |
 | 22 | Organizational Memory: el activo mas infravalorado de las organizaciones AI-Native | Enterprise AI | organizational-memory-activo-ai-native | Publicado |
+| 23 | Memory Architecture: como disenar sistemas que convierten conocimiento organizativo en contexto reutilizable para humanos y agentes de IA | Enterprise AI | memory-architecture-contexto-reutilizable-enterprise | Publicado |
 
 Estado de integridad del corpus:
-- 01-22 presentes en pipeline de contenido.
-- 01-22 publicados e indexados.
-- article-22 presente en listado, detalle, sitemap y prerender.
+- 01-23 presentes en pipeline de contenido.
+- 01-23 publicados e indexados.
+- article-23 presente en listado, detalle, sitemap y prerender.
 
 ---
 
@@ -150,11 +163,11 @@ Taxonomia cerrada oficial:
 - Architecture Strategy
 - Technical Debt
 
-Distribucion actual (01-22):
+Distribucion actual (01-23):
 - Context Engineering: 7
 - Governance: 3
 - AI-Ready Systems: 3
-- Enterprise AI: 6
+- Enterprise AI: 7
 - Architecture Strategy: 1
 - Technical Debt: 2
 
@@ -271,6 +284,7 @@ Context Engineering
 -> Organizational Memory  
 -> AI Governance  
 -> AI Operating Model  
+-> Memory Architecture  
 -> AI-Native Organizations
 
 Mapeo por corpus:
@@ -279,6 +293,7 @@ Mapeo por corpus:
 - Organizational Memory: 22
 - AI Governance: 20 (con puente 10)
 - AI Operating Model: 21
+- Memory Architecture: 23
 - AI-Native Organizations: 17
 
 Articulos de entrada:
@@ -318,6 +333,7 @@ Cobertura Fase 1:
 - `article-20/article.json`
 - `article-21/article.json`
 - `article-22/article.json`
+- `article-23/article.json`
 
 Soporte tecnico completado:
 - `build-content.ts` serializa `relatedArticles` desde `article.json`.
@@ -330,6 +346,7 @@ Validacion de resultado:
   - article-01
   - article-17
   - article-22
+  - article-23
 
 Pendiente:
 - Fase 2: clusters desconectados (11 articulos sin relatedArticles).
@@ -396,11 +413,9 @@ Mitigacion general:
 
 ## 16. Current Priorities
 
-1. Ejecutar Internal Linking Fase 2 (clusters desconectados).
-2. Ejecutar Internal Linking Fase 3 (enlaces inline contextuales).
-3. Limpiar logs debug en `build-content.ts`.
-4. Consolidar variantes editoriales historicas.
-5. Verificacion final en produccion de article-22 post-deploy.
+1. Corpus Audit 2.0.
+2. Article-24 candidato: Context Systems.
+3. Optimizacion de metadata/relatedArticles si procede.
 
 ---
 
@@ -419,13 +434,13 @@ Mitigacion general:
 ## 18. Next Article Candidates
 
 Candidatos priorizados:
-1. Memory Architecture: diseno tecnico de memoria organizativa en enterprise.
+1. Context Systems.
 2. Knowledge Systems for Enterprise AI.
 3. AI Coordination Beyond Teams.
 4. Continuous Learning Organizations en contexto AI-Native.
 
 Criterio de seleccion:
-- continuidad con cadena conceptual 01-22
+- continuidad con cadena conceptual 01-23
 - alto valor estrategico para audiencia enterprise
 - posibilidad de reutilizacion como framework accionable
 
@@ -434,7 +449,7 @@ Criterio de seleccion:
 ## 19. Diff Conceptual (secciones recuperadas)
 
 Recuperado respecto a la version reducida:
-- Corpus Overview completo 01-22 con tabla canonica.
+- Corpus Overview completo 01-23 con tabla canonica.
 - Categories and Taxonomy.
 - Historical Audits.
 - Technical Architecture ampliada.
@@ -451,7 +466,7 @@ Recuperado respecto a la version reducida:
 - Next Article Candidates.
 
 Se mantiene explicitamente:
-- article-22 publicado.
+- article-23 publicado.
 - Internal Linking Fase 1 completada.
 - fix SSR de relatedArticles documentado.
 - prerender dinamico documentado.

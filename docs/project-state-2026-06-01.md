@@ -1,11 +1,13 @@
 # Project State Report — Enterprise AI Cluster
 Fecha: 2026-06-01
 
+Actualizacion operativa: 2026-06-03 (post-publicacion de article-23)
+
 ---
 
 ## Executive Summary
 
-El clúster Enterprise AI de Archwise cuenta con **22 artículos publicados**. Durante la sesión del 31 de mayo / 1 de junio de 2026 se completó el ciclo editorial completo de article-21 ("AI Operating Model") y article-22 ("Organizational Memory"), se detectó y resolvió un bug crítico en el pipeline de generación de contenido (`build-content.ts`), se completó la normalización editorial/técnica de article-01 → article-05 con creación de `article.json`, se ajustó el presupuesto de bundle en `angular.json` para garantizar builds exitosos, y se completó la **Fase 1 de Internal Linking** del framework core con relatedArticles visibles en HTML prerenderizado.
+El clúster Enterprise AI de Archwise cuenta con **23 artículos publicados**. Tras la publicacion de article-23 ("Memory Architecture") se mantiene el estado operativo del pipeline editorial/técnico, con build de contenido, SEO y SSG validados, deploy confirmado, sitemap actualizado, canonical correcta y relatedArticles funcionando en prerender.
 
 El proyecto se encuentra en estado operativo. La infraestructura técnica, el pipeline de build y la publicación editorial funcionan correctamente. No hay bloqueos activos de publicación.
 
@@ -19,7 +21,7 @@ El proyecto se encuentra en estado operativo. La infraestructura técnica, el pi
 |------------|--------|-------|
 | Angular SSG/SSR | ✅ Operativo | v21.2.0 |
 | Vercel deploy | ✅ Configurado | Deploy automático |
-| SEO (OG, meta, sitemap) | ✅ Funcional | sitemap.xml regenerado 2026-06-01 |
+| SEO (OG, meta, sitemap) | ✅ Funcional | sitemap.xml regenerado 2026-06-03 |
 | SEO interno (relatedArticles prerender) | ✅ Mejorado | Fase 1 framework core completada |
 | Google Analytics | ✅ Conectado | — |
 | Search Console | ✅ Verificado | — |
@@ -29,36 +31,38 @@ El proyecto se encuentra en estado operativo. La infraestructura técnica, el pi
 
 | Comando | Estado | Última ejecución |
 |---------|--------|------------------|
-| `npm run build:content` | ✅ | 2026-06-01 |
-| `npm run build:seo` | ✅ | 2026-06-01 |
-| `npm run build` | ✅ | 2026-06-01 (doble ejecución OK) |
+| `npm run build:content` | ✅ | 2026-06-03 |
+| `npm run build:seo` | ✅ | 2026-06-03 |
+| `npm run build:ssg` | ✅ | 2026-06-03 |
+| deploy | ✅ | 2026-06-03 |
 
 ### Archivos generados clave
 
-- `src/assets/content/articles.json` — 22 artículos, todos con `content` y `html` presentes
+- `src/assets/content/articles.json` — 23 artículos, todos con `content` y `html` presentes
 - `src/assets/content/articles/ai-operating-model-enterprise.json` — article-21 individual
 - `src/assets/content/articles/organizational-memory-activo-ai-native.json` — article-22 individual
+- `src/assets/content/articles/memory-architecture-contexto-reutilizable-enterprise.json` — article-23 individual
 - `content/enterprise-ai/article-01/article.json` — creado en normalización
 - `content/enterprise-ai/article-02/article.json` — creado en normalización
 - `content/enterprise-ai/article-03/article.json` — creado en normalización
 - `content/enterprise-ai/article-04/article.json` — creado en normalización
 - `content/enterprise-ai/article-05/article.json` — creado en normalización
-- `public/sitemap.xml` — incluye `https://archwise.org/articulos/ai-operating-model-enterprise`
+- `public/sitemap.xml` — incluye `https://archwise.org/articulos/memory-architecture-contexto-reutilizable-enterprise`
 - `public/robots.txt` — `Sitemap: https://archwise.org/sitemap.xml`
 
 ### Technical State (actual)
 
-- 22 artículos normalizados.
+- 23 artículos normalizados.
 - Todos con `article.json` en `content/enterprise-ai/article-XX/`.
 - Build correcto (doble ejecución exitosa).
-- Sitemap correcto (22 artículos detectados, incluyendo article-01 → article-05, article-21 y article-22).
-- Internal linking framework core (articles 17–22) con relatedArticles en HTML prerenderizado.
+- Sitemap correcto (23 artículos detectados, incluyendo article-23).
+- Internal linking framework core (articles 17–23) con relatedArticles en HTML prerenderizado.
 
 ---
 
 ## Estado editorial
 
-### Artículos publicados: 22
+### Artículos publicados: 23
 
 | Nº | Título | Categoría | Slug | Estado |
 |----|--------|-----------|------|--------|
@@ -84,25 +88,32 @@ El proyecto se encuentra en estado operativo. La infraestructura técnica, el pi
 | 20 | AI Governance Framework | Governance | ai-governance-framework | ✅ |
 | **21** | **AI Operating Model** | **Enterprise AI** | **ai-operating-model-enterprise** | **✅ Publicado** |
 | **22** | **Organizational Memory** | **Enterprise AI** | **organizational-memory-activo-ai-native** | **✅ Nuevo** |
+| **23** | **Memory Architecture: cómo diseñar sistemas que convierten conocimiento organizativo en contexto reutilizable para humanos y agentes de IA** | **Enterprise AI** | **memory-architecture-contexto-reutilizable-enterprise** | **✅ Publicado** |
 
 ### Último artículo completado
 
-- **Article-22: Organizational Memory**
-- Título completo: "Organizational Memory: el activo más infravalorado de las organizaciones AI-Native"
+- **Article-23: Memory Architecture**
+- Título completo: "Memory Architecture: cómo diseñar sistemas que convierten conocimiento organizativo en contexto reutilizable para humanos y agentes de IA"
+- Slug: memory-architecture-contexto-reutilizable-enterprise
 - Categoría: Enterprise AI
-- Tags: Enterprise AI, Organizational Memory, Knowledge Debt, Context Engineering, AI Governance, AI Operating Model, AI-Native Organizations, Memory Architecture
-- Author: Archwise Editorial
-- readingTime: 20 min
-- Fecha: 2026-06-01
+- Author: Miguel Benito García
+- readingTime: 23 min
+- Fecha: 2026-06-02
 - Artefactos completados: brief.md, notes.md, outline.md, article.md, review.md, assets.md, article.json
-- Publicación técnica: ✅ Completada
+- Estado técnico:
+   - build:content OK
+   - build:seo OK
+   - build:ssg OK
+   - deploy OK
 - Presencia en sitemap.xml: ✅ Confirmada
+- Canonical correcta: ✅ Confirmada
+- relatedArticles funcionando: ✅ Confirmado
 - Presencia en /articulos/: ✅ Confirmada
 - Presencia en articles.json: ✅ Confirmada
 
 ### Internal Linking — Fase 1 (completada)
 
-- Alcance aplicado: `article-17` a `article-22` (`article.json` con `relatedArticles` explícitos)
+- Alcance aplicado: `article-17` a `article-23` (`article.json` con `relatedArticles` explícitos)
 - Soporte técnico completado:
    - `build-content.ts` serializa `relatedArticles` desde `article.json`
    - Modelo Angular incluye `relatedArticles?: string[]`
@@ -110,23 +121,23 @@ El proyecto se encuentra en estado operativo. La infraestructura técnica, el pi
    - Resolución por slug en orden definido + fallback por category/tags
 - Validación completada:
    - `npm run build:ssg` exit code 0
-   - article-01, article-17 y article-22 contienen enlaces relacionados en HTML estático (`dist/.../index.html`)
+   - article-01, article-17, article-22 y article-23 contienen enlaces relacionados en HTML estático (`dist/.../index.html`)
 
 ### Historical Articles Audit
 
 - Auditoría histórica 01–05 completada (docs/article-01-05-audit.md).
 - Resultado: 01–05 auditados, publicados, indexados, normalizados.
 - Acción aplicada: creación de `article.json` para los cinco artículos.
-- Estado final: integrados en el corpus oficial 01–21.
+- Estado final: integrados en el corpus oficial 01–23.
 
-### Distribución por categoría (articles 01–22)
+### Distribución por categoría (articles 01–23)
 
 | Categoría | Artículos | IDs |
 |-----------|-----------|-----|
 | Context Engineering | 7 | 01, 03, 06, 07, 08, 14, 15 |
 | Governance | 3 | 09, 10, 20 |
 | AI-Ready Systems | 3 | 11, 12, 13 |
-| Enterprise AI | 6 | 16, 17, 18, 19, 21, 22 |
+| Enterprise AI | 7 | 16, 17, 18, 19, 21, 22, 23 |
 | Architecture Strategy | 1 | 04 |
 | Technical Debt | 2 | 02, 05 |
 
@@ -173,10 +184,10 @@ Nota: no se aplican reclasificaciones pendientes de auditoría. Se mantiene cate
 - **Severidad:** Media (bloquea builds, pero output se genera)
 - **Síntoma:** `npm run build:ssg` termina con exit code 1 tras completar el build. SASS warnings sobre funciones deprecadas. Bundle: 518.77 kB vs presupuesto 500 kB.
 - **Causa raíz:** Angular detecta exceso de bundle (518.77 kB > 500 kB) como violación de presupuesto `maximumWarning`.
-- **Contexto:** Article-22 añadió contenido que incrementó el bundle. El exceso es de 18.77 kB (3.75%).
+- **Contexto:** El crecimiento del corpus hasta article-23 incrementó el bundle. El exceso medido fue de 18.77 kB (3.75%).
 - **Solución:** Ajustar presupuesto en `angular.json` (build.configurations.production.budgets): actualizar `maximumWarning: 520kB` y `maximumError: 600kB`. Mantiene control futuro (error en 600 kB) mientras permite build actual.
-- **Validación:** `npm run build:ssg` completa con exit code 0. Article-22 presente en:
-  - `dist/archwise/browser/articulos/organizational-memory-activo-ai-native/index.html` ✅
+- **Validación:** `npm run build:ssg` completa con exit code 0. Article-23 presente en:
+   - `dist/archwise/browser/articulos/memory-architecture-contexto-reutilizable-enterprise/index.html` ✅
   - `dist/archwise/browser/assets/content/articles.json` ✅
   - `dist/archwise/browser/sitemap.xml` ✅
 - **Estado:** ✅ Resuelto. Future: considerar optimización de bundles (SCSS deprecation, CSS tree-shaking) en session posterior.
@@ -206,8 +217,8 @@ Nota: no se aplican reclasificaciones pendientes de auditoría. Se mantiene cate
 | `npm run build:seo` como paso separado obligatorio | sitemap.xml no se genera automáticamente en `build` | Claridad en pipeline |
 | `getPrerenderParams` dinámico desde `src/assets/content/articles.json` | Evitar mantenimiento manual de slugs hardcodeados | Prerender completo y escalable con el crecimiento del corpus |
 | `npm run build:ssg` como comando estándar de publicación técnica | Garantiza secuencia `build:content` -> `build:seo` -> prerender | Evita fallos por `articles.json` ausente/desactualizado |
-| Ajuste de presupuesto en `angular.json` (budget inicial) | Exceso de 18.77 kB sobre presupuesto anterior (500 kB → 518.77 kB) tras article-22 | Permite builds exitosos (exit code 0) mientras mantiene control futuro (error threshold 600 kB) |
-| Fase 1 Internal Linking en framework core | Mejorar SEO interno y coherencia de navegación | RelatedArticles configurados en articles 17–22 |
+| Ajuste de presupuesto en `angular.json` (budget inicial) | Exceso de 18.77 kB sobre presupuesto anterior (500 kB → 518.77 kB) tras crecimiento del corpus | Permite builds exitosos (exit code 0) mientras mantiene control futuro (error threshold 600 kB) |
+| Fase 1 Internal Linking en framework core | Mejorar SEO interno y coherencia de navegación | RelatedArticles configurados en articles 17–23 |
 | Validación de relatedArticles en HTML prerenderizado | Runtime de navegador no es suficiente para una web editorial SSG | Criterio operativo obligatorio de QA técnico |
 
 ---
@@ -216,25 +227,16 @@ Nota: no se aplican reclasificaciones pendientes de auditoría. Se mantiene cate
 
 ### Inmediatos (prioridad alta)
 
-1. **Verificar article-22 en producción** tras deploy en Vercel
-   - Contenido renderizado completo
-   - Canonical URL: `https://archwise.org/articulos/organizational-memory-activo-ai-native`
-   - Open Graph tags correctos
-   - Related articles visibles
-   - Five Layers Model y otros diagrams (assets) visualizados
-2. **Limpieza de variantes editoriales antiguas**
-   - article-01/article-v2.md
-   - article-05/article-v2.md
-   - article-05/article.md.cleaned
-3. **Definir y arrancar article-23** (tema y brief)
-   - Candidatos: Memory Architecture (arquitectura técnica de memoria organizativa), o Next.next en secuencia Archwise
+1. **Corpus Audit 2.0**
+2. **Article-24 candidato: Context Systems**
+3. **Optimización de metadata/relatedArticles si procede**
 4. **Eliminar logs de debug** en build-content.ts (console.log de article-11)
-5. **Optimizar bundle** — investigar SCSS deprecation y tree-shaking para reducir los 18.77 kB extras
+5. **Optimizar bundle** — investigar SCSS deprecation y tree-shaking
 
 ### Medio plazo (próximas sesiones)
 
-6. **Definir article-23** — Temas candidatos:
-   - Memory Architecture: cómo diseñar una arquitectura de memoria organizativa para empresas enterprise
+6. **Definir article-24** — Temas candidatos:
+   - Context Systems
    - AI Coordination Beyond Teams
    - De Knowledge Systems a Continuous Learning Organizations
 7. **Revisión visual** del sitio completo (verificar que todos los artículos renderizan, assets se visualizan correctamente)
@@ -270,15 +272,15 @@ Nota: no se aplican reclasificaciones pendientes de auditoría. Se mantiene cate
 
 ## Verificación final
 
-- article-22 (Organizational Memory) es el último artículo completado y publicado.
-- El siguiente artículo a desarrollar es article-23 (tema por definir).
-- Los artículos 01–22 están publicados y normalizados con article.json.
+- article-23 (Memory Architecture) es el último artículo completado y publicado.
+- El siguiente artículo candidato es article-24 (Context Systems).
+- Los artículos 01–23 están publicados y normalizados con article.json.
 - Build pipeline ejecuta con exit code 0 tras ajuste de presupuesto de bundle.
 - No hay bloqueos activos.
-- El sitio es funcional y los 22 artículos se procesan correctamente en el build.
+- El sitio es funcional y los 23 artículos se procesan correctamente en el build.
 - Presencia verificada en articles.json, sitemap.xml y rutas de prerender.
 - Related articles del framework core visibles en HTML estático prerenderizado.
 
 ---
 
-_Informe generado el 2026-06-01. Basado en análisis directo de archivos fuente, build pipeline y estado de artefactos generados. Actualizado con inclusión de article-22 y ajuste de angular.json._
+_Informe generado el 2026-06-01. Actualizacion operativa aplicada el 2026-06-03 con inclusion de article-23, validacion completa de build/seo/ssg y estado READY FOR DEPLOY._

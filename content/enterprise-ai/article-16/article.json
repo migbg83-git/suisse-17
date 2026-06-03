@@ -2,8 +2,11 @@
   "title": "AI-Augmented Development Teams: cómo cambia realmente el trabajo de los equipos de software",
   "slug": "ai-augmented-development-teams",
   "description": "Cómo la IA transforma el trabajo real de los equipos de software cuando existen contexto, arquitectura, documentación viva y governance. Un análisis profundo sobre productividad colectiva, roles, procesos y madurez en equipos empresariales.",
-  "date": "2026-05-31"
-  ,"category": "Enterprise AI",
+  "date": "2026-05-31",
+  "author": "Archwise Editorial",
+  "excerpt": "La IA no augmenta desarrolladores aislados: augmenta equipos con contexto, arquitectura y governance. Cómo cambia el trabajo real cuando la infraestructura conceptual existe.",
+  "readingTime": 12,
+  "category": "Enterprise AI",
   "relatedArticles": [
     "context-engineering-vs-prompt-engineering",
     "ai-native-organizations",

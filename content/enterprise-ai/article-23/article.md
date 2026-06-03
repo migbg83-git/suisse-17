@@ -439,33 +439,33 @@ Este es exactamente el salto de [Context Engineering](/articulos/context-enginee
 
 La mejora no proviene de promesas tecnológicas abstractas, sino de una base organizativa más sólida para decidir y ejecutar.
 
-## 8. Puente explícito con la secuencia 20 -> 21 -> 22 -> 23
+## 8. De Governance a Memory Architecture
 
-### 8.1 article-20 ([AI Governance](/articulos/ai-governance-framework))
+### 8.1 [AI Governance Framework](/articulos/ai-governance-framework)
 
-Article-20 estableció el marco de decisión y accountability para sistemas, equipos y agentes.
+AI Governance Framework estableció el marco de decisión y accountability para sistemas, equipos y agentes.
 
 Su contribución clave fue responder quién decide, con qué reglas y cómo se audita.
 
 Pero governance sin memoria operativa corre el riesgo de convertirse en formalismo: reglas declaradas que no preservan rationale histórico.
 
-### 8.2 article-21 ([AI Operating Model](/articulos/ai-operating-model-enterprise))
+### 8.2 [AI Operating Model](/articulos/ai-operating-model-enterprise)
 
-Article-21 definió cómo coordinar personas, procesos y arquitectura para escalar IA de forma sostenida.
+AI Operating Model definió cómo coordinar personas, procesos y arquitectura para escalar IA de forma sostenida.
 
 Aportó estructura de ejecución.
 
 Sin embargo, un operating model puede coordinar actividad sin acumular aprendizaje si no existe una arquitectura de memoria que capture y reutilice decisiones entre ciclos.
 
-### 8.3 article-22 ([Organizational Memory](/articulos/organizational-memory-activo-ai-native))
+### 8.3 [Organizational Memory](/articulos/organizational-memory-activo-ai-native)
 
-Article-22 elevó la memoria organizativa como activo estratégico en organizaciones AI-Native.
+Organizational Memory elevó la memoria organizativa como activo estratégico en organizaciones AI-Native.
 
 Dejó claro que el diferencial no está en tener más datos, sino en preservar criterio institucional.
 
 Ese artículo resolvió el qué y el porqué.
 
-### 8.4 article-23 (Memory Architecture)
+### 8.4 Memory Architecture
 
 Este artículo resuelve el cómo.
 
@@ -477,12 +477,12 @@ Cómo cerrar el ciclo entre governance, operating model y aprendizaje institucio
 
 ### 8.5 Tesis de continuidad
 
-La continuidad 20 -> 21 -> 22 -> 23 puede resumirse así:
+La continuidad del framework puede resumirse así:
 
-- article-20 define reglas de decisión,
-- article-21 define coordinación de ejecución,
-- article-22 define el activo de conocimiento que debe persistir,
-- article-23 define la arquitectura que hace operable ese activo.
+- AI Governance Framework define reglas de decisión,
+- AI Operating Model define coordinación de ejecución,
+- Organizational Memory define el activo de conocimiento que debe persistir,
+- Memory Architecture define la arquitectura que hace operable ese activo.
 
 Sin Memory Architecture, estos tres elementos quedan desacoplados y la organización escala complejidad más rápido que su capacidad de aprender.
 
@@ -596,5 +596,3 @@ Si la respuesta es no, no te falta compromiso documental. Te falta arquitectura 
 Empieza por un dominio crítico, define capas, ownership y governance, y convierte el conocimiento que ya tienes en decisiones reutilizables a escala.
 
 Esa es la diferencia entre adoptar IA y construir una organización preparada para sostenerla.
-
-Miguel Benito García
