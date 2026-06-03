@@ -1,0 +1,44 @@
+{
+  "title": "Agentic AI en la empresa: por qué los agentes fallan y cómo construir la infraestructura para que funcionen",
+  "slug": "agentic-ai-enterprise-governance-memoria-arquitectura",
+  "description": "Los agentes de IA no son el punto de partida de la transformación enterprise. Son la consecuencia de cinco capas de infraestructura organizativa correctamente construida.",
+  "excerpt": "Los agentes no fallan por falta de modelo: fallan cuando la organización no ha construido governance, ownership, memoria y contexto operativo para sostener decisiones en producción.",
+  "category": "Enterprise AI",
+  "tags": [
+    "Enterprise AI",
+    "Agentic AI",
+    "AI Governance",
+    "AI Operating Model",
+    "Organizational Memory",
+    "Memory Architecture",
+    "Context Systems",
+    "AI Agents"
+  ],
+  "keywords": [
+    "agentic ai enterprise",
+    "enterprise agent architecture",
+    "ai governance framework",
+    "ai operating model enterprise",
+    "organizational memory",
+    "memory architecture",
+    "context systems",
+    "ai agents in production",
+    "agent decision governance",
+    "ai deployment readiness"
+  ],
+  "readingTime": 16,
+  "difficulty": "advanced",
+  "featured": false,
+  "published": true,
+  "author": "Miguel Benito García",
+  "date": "2026-06-04",
+  "relatedArticles": [
+    "ai-governance-framework",
+    "ai-operating-model-enterprise",
+    "organizational-memory-activo-ai-native",
+    "memory-architecture-contexto-reutilizable-enterprise",
+    "context-systems-entregar-contexto-correcto-enterprise"
+  ],
+  "ogImage": "/content/enterprise-ai/article-25/og-image.png",
+  "canonicalUrl": "https://archwise.org/articulos/agentic-ai-enterprise-governance-memoria-arquitectura"
+}
