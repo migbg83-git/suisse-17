@@ -1,0 +1,52 @@
+{
+  "title": "Context Systems: entregar el contexto correcto a la persona e IA correcta en el momento correcto",
+  "slug": "context-systems-entregar-contexto-correcto-enterprise",
+  "description": "Las organizaciones enterprise escalan IA cuando convierten memoria en decisiones: Context Systems entregan contexto correcto a personas y agentes en el momento.",
+  "excerpt": "Context Systems cierra la brecha entre lo que una organización sabe y lo que realmente usa al decidir. El artículo introduce Context Debt como coste acumulativo de no distribuir contexto a tiempo, y explica por qué Context Routing se vuelve una capacidad estratégica para operar IA a escala.",
+  "category": "Enterprise AI",
+  "tags": [
+    "Enterprise AI",
+    "Context Systems",
+    "Context Routing",
+    "Context Debt",
+    "Organizational Memory",
+    "Memory Architecture",
+    "AI Operating Model",
+    "AI Governance",
+    "AI-Native Organizations"
+  ],
+  "keywords": [
+    "context systems",
+    "context debt",
+    "context routing",
+    "organizational memory",
+    "memory architecture",
+    "enterprise ai",
+    "distribucion de contexto",
+    "decisiones en organizaciones AI-Native",
+    "gobernanza de contexto",
+    "contexto para agentes de IA",
+    "escalabilidad organizativa de IA",
+    "entrega de contexto en tiempo de decision",
+    "como implementar Context Systems en organizaciones enterprise",
+    "que es Context Debt y como reducirlo en entornos enterprise",
+    "diferencia entre Organizational Memory y Context Systems",
+    "como usar Context Routing para mejorar decisiones con IA",
+    "por que la memoria organizativa no basta para escalar IA"
+  ],
+  "readingTime": 13,
+  "difficulty": "advanced",
+  "featured": false,
+  "published": true,
+  "author": "Miguel Benito García",
+  "date": "2026-06-03",
+  "relatedArticles": [
+    "memory-architecture-contexto-reutilizable-enterprise",
+    "organizational-memory-activo-ai-native",
+    "ai-operating-model-enterprise",
+    "context-engineering-vs-prompt-engineering",
+    "technical-debt-vs-knowledge-debt-ia"
+  ],
+  "ogImage": "/content/enterprise-ai/article-24/og-image.png",
+  "canonicalUrl": "https://archwise.org/articulos/context-systems-entregar-contexto-correcto-enterprise"
+}
