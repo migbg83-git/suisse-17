@@ -1,13 +1,13 @@
 # Project State Report — Enterprise AI Cluster
 Fecha: 2026-06-01
 
-Actualizacion operativa: 2026-06-03 (post-publicacion de article-23)
+Actualizacion operativa: 2026-06-03 (post-publicacion de article-24 y deploy Articles Index v2)
 
 ---
 
 ## Executive Summary
 
-El clúster Enterprise AI de Archwise cuenta con **23 artículos publicados**. Tras la publicacion de article-23 ("Memory Architecture") se mantiene el estado operativo del pipeline editorial/técnico, con build de contenido, SEO y SSG validados, deploy confirmado, sitemap actualizado, canonical correcta y relatedArticles funcionando en prerender.
+El clúster Enterprise AI de Archwise cuenta con **24 artículos publicados**. Tras la publicación de article-24 ("Context Systems") y el deploy de **Articles Index v2**, el proyecto mantiene estado operativo pleno. La página /articulos ha sido rediseñada con Hero editorial, sección "Empieza aquí" (5 artículos), listado cronológico y Mapa del framework con navegación por anclas. Build, prerender, sitemap y canonical validados.
 
 El proyecto se encuentra en estado operativo. La infraestructura técnica, el pipeline de build y la publicación editorial funcionan correctamente. No hay bloqueos activos de publicación.
 
@@ -89,27 +89,43 @@ El proyecto se encuentra en estado operativo. La infraestructura técnica, el pi
 | **21** | **AI Operating Model** | **Enterprise AI** | **ai-operating-model-enterprise** | **✅ Publicado** |
 | **22** | **Organizational Memory** | **Enterprise AI** | **organizational-memory-activo-ai-native** | **✅ Nuevo** |
 | **23** | **Memory Architecture: cómo diseñar sistemas que convierten conocimiento organizativo en contexto reutilizable para humanos y agentes de IA** | **Enterprise AI** | **memory-architecture-contexto-reutilizable-enterprise** | **✅ Publicado** |
+| **24** | **Context Systems: entregar el contexto correcto a la persona e IA correcta en el momento correcto** | **Enterprise AI** | **context-systems-entregar-contexto-correcto-enterprise** | **✅ Publicado** |
 
 ### Último artículo completado
 
-- **Article-23: Memory Architecture**
-- Título completo: "Memory Architecture: cómo diseñar sistemas que convierten conocimiento organizativo en contexto reutilizable para humanos y agentes de IA"
-- Slug: memory-architecture-contexto-reutilizable-enterprise
+- **Article-24: Context Systems**
+- Título completo: "Context Systems: entregar el contexto correcto a la persona e IA correcta en el momento correcto"
+- Slug: context-systems-entregar-contexto-correcto-enterprise
 - Categoría: Enterprise AI
 - Author: Miguel Benito García
-- readingTime: 23 min
-- Fecha: 2026-06-02
-- Artefactos completados: brief.md, notes.md, outline.md, article.md, review.md, assets.md, article.json
+- readingTime: 13 min
+- Fecha: 2026-06-03
+- Artefactos completados: brief.md, notes.md, outline.md, article.md, article.json
 - Estado técnico:
    - build:content OK
    - build:seo OK
    - build:ssg OK
-   - deploy OK
-- Presencia en sitemap.xml: ✅ Confirmada
+   - deploy OK (via PR #27 → main)
+- Presencia en sitemap.xml: ✅ Confirmada (local/dist)
 - Canonical correcta: ✅ Confirmada
-- relatedArticles funcionando: ✅ Confirmado
+- relatedArticles: ✅ Configurados
 - Presencia en /articulos/: ✅ Confirmada
 - Presencia en articles.json: ✅ Confirmada
+
+### Articles Index v2
+
+Fecha: 2026-06-03
+Estado: DEPLOYED
+
+Resumen:
+- Hero editorial
+- Empieza aquí (5 artículos)
+- Últimos publicados (24 artículos cronológicos)
+- Mapa del framework (4 etapas con conectores visuales)
+- Navegación por anclas (#empieza-aqui, #ultimos-publicados, #mapa-framework)
+
+Resultado:
+Mejora de discoverability y onboarding del framework Archwise.
 
 ### Internal Linking — Fase 1 (completada)
 
@@ -130,14 +146,14 @@ El proyecto se encuentra en estado operativo. La infraestructura técnica, el pi
 - Acción aplicada: creación de `article.json` para los cinco artículos.
 - Estado final: integrados en el corpus oficial 01–23.
 
-### Distribución por categoría (articles 01–23)
+### Distribución por categoría (articles 01–24)
 
 | Categoría | Artículos | IDs |
 |-----------|-----------|-----|
 | Context Engineering | 7 | 01, 03, 06, 07, 08, 14, 15 |
 | Governance | 3 | 09, 10, 20 |
 | AI-Ready Systems | 3 | 11, 12, 13 |
-| Enterprise AI | 7 | 16, 17, 18, 19, 21, 22, 23 |
+| Enterprise AI | 8 | 16, 17, 18, 19, 21, 22, 23, 24 |
 | Architecture Strategy | 1 | 04 |
 | Technical Debt | 2 | 02, 05 |
 

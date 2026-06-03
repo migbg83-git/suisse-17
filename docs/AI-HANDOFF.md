@@ -1,8 +1,8 @@
 # Archwise AI Handoff
 
 > Ultima actualizacion: 2026-06-03  
-> Ultimo articulo publicado: article-23 (Memory Architecture)  
-> Estado del proyecto: Operativo. 23 articulos publicados.
+> Ultimo articulo publicado: article-24 (Context Systems)  
+> Estado del proyecto: Operativo. 24 articulos publicados. Articles Index v2 deployado.
 
 ---
 
@@ -30,9 +30,10 @@ Estado tecnico:
 - Deploy de article-23 validado en produccion.
 
 Estado editorial:
-- 23 articulos publicados (01-23).
-- article-23 completado, publicado e integrado.
+- 24 articulos publicados (01-24).
+- article-24 completado, publicado e integrado.
 - Internal Linking Fase 1 completada en framework core (17-23).
+- Articles Index v2 deployado (2026-06-03): Hero, Empieza aqui, Ultimos publicados, Mapa del framework, Navegacion por anclas.
 
 Estado de build (validado):
 - `npm run build:content`: OK
@@ -55,6 +56,37 @@ Estado de publicacion article-23:
 - Sitemap actualizado: OK
 - Canonical correcta: OK
 - relatedArticles funcionando: OK
+
+Estado de publicacion article-24:
+- Titulo: Context Systems: entregar el contexto correcto a la persona e IA correcta en el momento correcto
+- Slug: context-systems-entregar-contexto-correcto-enterprise
+- Categoria: Enterprise AI
+- Author: Miguel Benito Garcia
+- Fecha: 2026-06-03
+- readingTime: 13 min
+- Sitemap actualizado: OK
+- Canonical correcta: OK
+- relatedArticles: configurados
+
+### Articles Index v2
+
+Fecha: 2026-06-03
+Estado: DEPLOYED
+
+Resumen:
+- Hero editorial (titulo + subtitulo + CTAs a anclas)
+- Empieza aqui (5 articulos: ruta de entrada estrategica)
+- Ultimos publicados (24 articulos cronologicos)
+- Mapa del framework (4 etapas con conectores visuales)
+- Navegacion por anclas (#empieza-aqui, #ultimos-publicados, #mapa-framework)
+
+Resultado:
+Mejora de discoverability y onboarding del framework Archwise.
+
+Archivos modificados:
+- sites/enterprise-ai/archwise/src/app/pages/articles/articles.component.ts
+- sites/enterprise-ai/archwise/src/app/pages/articles/articles.component.html
+- sites/enterprise-ai/archwise/src/app/pages/articles/articles.component.scss
 
 Bloqueos activos:
 - No hay bloqueos criticos de publicacion.
@@ -116,7 +148,7 @@ Si hay desajuste:
 
 ---
 
-## 4. Corpus Overview (01-23)
+## 4. Corpus Overview (01-24)
 
 ### Tabla canonica de articulos
 
@@ -145,11 +177,12 @@ Si hay desajuste:
 | 21 | AI Operating Model: como organizar equipos, procesos y arquitectura para escalar la IA en la empresa | Enterprise AI | ai-operating-model-enterprise | Publicado |
 | 22 | Organizational Memory: el activo mas infravalorado de las organizaciones AI-Native | Enterprise AI | organizational-memory-activo-ai-native | Publicado |
 | 23 | Memory Architecture: como disenar sistemas que convierten conocimiento organizativo en contexto reutilizable para humanos y agentes de IA | Enterprise AI | memory-architecture-contexto-reutilizable-enterprise | Publicado |
+| 24 | Context Systems: entregar el contexto correcto a la persona e IA correcta en el momento correcto | Enterprise AI | context-systems-entregar-contexto-correcto-enterprise | Publicado |
 
 Estado de integridad del corpus:
-- 01-23 presentes en pipeline de contenido.
-- 01-23 publicados e indexados.
-- article-23 presente en listado, detalle, sitemap y prerender.
+- 01-24 presentes en pipeline de contenido.
+- 01-24 publicados e indexados.
+- article-24 presente en listado, detalle, sitemap y prerender.
 
 ---
 
@@ -163,11 +196,11 @@ Taxonomia cerrada oficial:
 - Architecture Strategy
 - Technical Debt
 
-Distribucion actual (01-23):
+Distribucion actual (01-24):
 - Context Engineering: 7
 - Governance: 3
 - AI-Ready Systems: 3
-- Enterprise AI: 7
+- Enterprise AI: 8
 - Architecture Strategy: 1
 - Technical Debt: 2
 
@@ -294,6 +327,7 @@ Mapeo por corpus:
 - AI Governance: 20 (con puente 10)
 - AI Operating Model: 21
 - Memory Architecture: 23
+- Context Systems: 24
 - AI-Native Organizations: 17
 
 Articulos de entrada:
@@ -413,9 +447,9 @@ Mitigacion general:
 
 ## 16. Current Priorities
 
-1. Corpus Audit 2.0.
-2. Article-24 candidato: Context Systems.
-3. Optimizacion de metadata/relatedArticles si procede.
+1. Article-25: candidato por definir (ver recomendacion estrategica).
+2. Internal Linking Fase 2: clusters desconectados (articulos sin relatedArticles).
+3. Optimizacion de bundle CSS/SCSS.
 
 ---
 
