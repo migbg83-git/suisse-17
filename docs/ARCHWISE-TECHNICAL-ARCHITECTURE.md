@@ -1,6 +1,6 @@
 # ARCHWISE — Technical Architecture Document
 
-> Última actualización: 2026-06-01  
+> Última actualización: 2026-06-03  
 > Propósito: documentar cómo funciona técnicamente el proyecto Archwise a nivel Angular, contenido, build, SSG, SEO y despliegue.  
 > Audiencia: desarrolladores, IAs asistentes, contribuidores.
 
@@ -332,12 +332,12 @@ export const serverRoutes: ServerRoute[] = [
 ];
 ```
 
-**Estado actual (2026-06-01):** `getPrerenderParams` ya no usa slugs hardcodeados. Lee dinámicamente todos los slugs publicados desde `src/assets/content/articles.json`.
+**Estado actual (2026-06-03):** `getPrerenderParams` ya no usa slugs hardcodeados. Lee dinámicamente todos los slugs publicados desde `src/assets/content/articles.json`.
 
 Validación operativa reciente:
 - `npm run build:ssg` OK
-- 21 artículos prerenderizados
-- 24 rutas estáticas totales
+- 23 artículos prerenderizados
+- 26 rutas estáticas totales
 - Sin errores SSR
 
 Validación SEO interna reciente (relatedArticles en HTML estático):
@@ -345,6 +345,7 @@ Validación SEO interna reciente (relatedArticles en HTML estático):
 - article-01 con enlaces relacionados en `dist/archwise/browser/articulos/architecture-md-vale-mas-que-prompts/index.html`
 - article-17 con enlaces relacionados en `dist/archwise/browser/articulos/ai-native-organizations/index.html`
 - article-22 con enlaces relacionados en `dist/archwise/browser/articulos/organizational-memory-activo-ai-native/index.html`
+- article-23 con enlaces relacionados en `dist/archwise/browser/articulos/memory-architecture-contexto-reutilizable-enterprise/index.html`
 
 **Dependencia crítica:** este enfoque requiere que `articles.json` exista y esté actualizado antes del prerender. Por eso el flujo canónico de publicación es `npm run build:ssg` (`build:content` -> `build:seo` -> `ng build --prerender`).
 

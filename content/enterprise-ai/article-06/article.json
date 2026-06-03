@@ -1,0 +1,39 @@
+{
+  "title": "Context Engineering para proyectos legacy: por qué la IA falla en sistemas enterprise reales",
+  "slug": "context-engineering-legacy-ia-falla",
+  "description": "La IA tropieza con el conocimiento tácito, no con el código. Por qué context engineering es la base para automatizar con éxito en arquitecturas enterprise complejas.",
+  "excerpt": "En sistemas legacy, la IA no falla por el código: falla por las reglas invisibles y la memoria institucional. Context Engineering convierte el conocimiento tácito en contexto explícito y accionable.",
+  "category": "Context Engineering",
+  "tags": [
+    "context-engineering",
+    "knowledge-debt",
+    "explicit-knowledge",
+    "organizational-memory",
+    "legacy-systems",
+    "enterprise-architecture"
+  ],
+  "keywords": [
+    "context engineering legacy",
+    "IA en sistemas legacy",
+    "reglas invisibles enterprise",
+    "conocimiento tácito arquitectura",
+    "deuda de conocimiento",
+    "knowledge debt legacy",
+    "arquitectura enterprise IA",
+    "context engineering"
+  ],
+  "readingTime": 9,
+  "difficulty": "intermediate",
+  "featured": false,
+  "published": true,
+  "author": "Archwise Editorial",
+  "date": "2026-05-28",
+  "relatedArticles": [
+    "architecture-md-vale-mas-que-prompts",
+    "documentacion-necesita-llm",
+    "technical-debt-vs-knowledge-debt-ia",
+    "framework-context-engineering-enterprise",
+    "por-que-la-mayoria-de-los-sistemas-no-estan-preparados-para-ia"
+  ],
+  "canonicalUrl": "https://archwise.org/articulos/context-engineering-legacy-ia-falla"
+}

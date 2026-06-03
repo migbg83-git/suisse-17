@@ -2,8 +2,11 @@
   "title": "Por qué el Prompt Engineering no es suficiente para construir sistemas con IA",
   "slug": "por-que-el-prompt-engineering-no-es-suficiente-para-construir-sistemas-con-ia",
   "description": "El auge y los límites del Prompt Engineering en IA. Por qué el verdadero multiplicador de resultados está en el Context Engineering y la arquitectura AI-Ready. Casos reales, marcos conceptuales y lecciones para organizaciones enterprise.",
-  "date": "2026-05-30"
-  ,"category": "Context Engineering",
+  "date": "2026-05-30",
+  "author": "Archwise Editorial",
+  "excerpt": "El Prompt Engineering optimiza respuestas aisladas. El Context Engineering construye capacidad organizativa. Por qué uno escala y el otro no en entornos enterprise reales.",
+  "readingTime": 10,
+  "category": "Context Engineering",
   "relatedArticles": [
     "context-engineering-vs-prompt-engineering",
     "ai-governance-framework",
