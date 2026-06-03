@@ -1,25 +1,69 @@
 <div class="articles-page">
-  <!-- Hero -->
-  <section class="articles-hero minimal-hero">
-    <div class="container-listing">
-      <h1 class="page-title">Artículos</h1>
-      <p class="page-subtitle">
-        Índice editorial de ensayos sobre arquitectura enterprise e IA aplicada.
-      </p>
-    </div>
-  </section>
+  @if (viewModel$ | async; as vm) {
+    <section class="articles-hero minimal-hero">
+      <div class="container-listing">
+        <h1 class="page-title">Artículos</h1>
+        <p class="page-subtitle">
+          Índice editorial para CTOs, arquitectos y equipos que escalan IA en entornos enterprise.
+        </p>
+        <div class="hero-actions">
+          <a href="#empieza-aqui" class="hero-link">Empieza aquí</a>
+          <a href="#mapa-framework" class="hero-link">Ver mapa del framework</a>
+        </div>
+      </div>
+    </section>
 
-  <!-- Editorial Index -->
-  <section class="articles-content">
-    <div class="container-listing">
-      <div class="editorial-list">
-        @if (articles$ | async; as articles) {
-          @for (article of articles; track article.slug) {
+    <section class="anchor-nav-section" aria-label="Navegación interna">
+      <div class="container-listing">
+        <p class="anchor-nav-title">Navega por objetivo</p>
+        <nav class="anchor-nav-links">
+          <a href="#empieza-aqui">Empieza aquí</a>
+          <a href="#ultimos-publicados">Últimos publicados</a>
+          <a href="#mapa-framework">Mapa del framework</a>
+        </nav>
+      </div>
+    </section>
+
+    <section id="empieza-aqui" class="articles-section start-here-section">
+      <div class="container-listing">
+        <h2 class="section-title">Empieza aquí</h2>
+        <p class="section-subtitle">
+          Ruta esencial para comprender el framework Archwise antes de profundizar por temas.
+        </p>
+
+        <div class="start-here-list">
+          @for (item of vm.startHereItems; track item.article.slug) {
+            <div class="start-here-item">
+              <div class="start-here-number">{{ item.number }}</div>
+              <div class="start-here-content">
+                <a [routerLink]="['/articulos', item.article.slug]" class="start-here-title">{{ item.article.title }}</a>
+                <p class="start-here-reason">{{ item.reason }}</p>
+                <div class="start-here-meta editorial-meta">
+                  <span class="editorial-category">{{ item.article.category.name }}</span>
+                  <span class="editorial-dot">·</span>
+                  <span class="editorial-reading-time">{{ item.article.readingTime }} min</span>
+                </div>
+              </div>
+            </div>
+          }
+        </div>
+      </div>
+    </section>
+
+    <section id="ultimos-publicados" class="articles-section articles-content">
+      <div class="container-listing">
+        <h2 class="section-title">Últimos publicados</h2>
+        <p class="section-subtitle">
+          Cronología completa del índice editorial.
+        </p>
+
+        <div class="editorial-list">
+          @for (article of vm.articles; track article.slug) {
             <div class="editorial-item">
               <a [routerLink]="['/articulos', article.slug]" class="editorial-title">{{ article.title }}</a>
               <div class="editorial-summary">{{ article.summary }}</div>
               <div class="editorial-meta">
-                <span class="editorial-category">{{ article.category?.name }}</span>
+                <span class="editorial-category">{{ article.category.name }}</span>
                 <span class="editorial-dot">·</span>
                 <span class="editorial-date">{{ article.date | date:'d MMM y' }}</span>
                 <span class="editorial-dot">·</span>
@@ -27,8 +71,39 @@
               </div>
             </div>
           }
-        }
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
+
+    <section id="mapa-framework" class="articles-section framework-section">
+      <div class="container-listing">
+        <h2 class="section-title">Mapa del framework Archwise</h2>
+        <p class="section-subtitle">
+          De contexto explícito a decisiones consistentes: una secuencia para escalar IA con criterio.
+        </p>
+
+        <div class="framework-stages">
+          @for (stage of vm.frameworkStages; let isLast = $last; track stage.name) {
+            <div class="framework-stage">
+              <div class="framework-stage-header">
+                <div class="framework-stage-connector"></div>
+                <h3 class="framework-stage-title">{{ stage.name }}</h3>
+              </div>
+              <p class="framework-stage-description">{{ stage.description }}</p>
+              <ul class="framework-stage-links">
+                @for (article of stage.articles; track article.slug) {
+                  <li>
+                    <a [routerLink]="['/articulos', article.slug]">{{ article.title }}</a>
+                  </li>
+                }
+              </ul>
+              @if (!isLast) {
+                <div class="framework-stage-arrow">↓</div>
+              }
+            </div>
+          }
+        </div>
+      </div>
+    </section>
+  }
 </div>
