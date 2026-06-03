@@ -167,6 +167,114 @@ Responsive verificado:
 - Visual: Framework percibido como educativo-secuencial
 - Performance: Mismo peso de build, sin regresiones
 
+## Iteration 3: Header navigation cleanup
+
+Fecha de aplicación: 2026-06-03
+
+### Problema detectado
+
+- Duplicidad de navegación interna en la parte superior de `/articulos`.
+- Los accesos `Empieza aquí` y `Ver mapa del framework` aparecían en dos lugares:
+  - Hero (como CTAs)
+  - Bloque `Navega por objetivo`
+- Impacto UX: ruido visual y sensación de redundancia.
+
+### Cambio aplicado
+
+- Se eliminaron los CTAs del Hero en `articles.component.html`:
+  - `Empieza aquí`
+  - `Ver mapa del framework`
+- El Hero queda únicamente con:
+  - H1 `Artículos`
+  - subtítulo actual
+- Se mantuvo `Navega por objetivo` como única navegación interna visible, conservando:
+  - `Empieza aquí`
+  - `Últimos publicados`
+  - `Mapa del framework`
+- Limpieza de estilos no usados en `articles.component.scss`:
+  - `.hero-actions`
+  - `.hero-link`
+
+Restricciones respetadas:
+- Sin nuevas rutas
+- Sin mover el Mapa del framework fuera de `/articulos`
+- Sin cambios SEO
+- Sin cambios sitemap
+- Sin cambios en `article.json`
+- Sin cambios en contenido editorial
+
+### Validación
+
+Comando ejecutado:
+- `npm run build`
+
+Resultado:
+- Build: ✅ OK
+- SSR/SSG: ✅ sin errores de compilación
+- Warnings: solo preexistentes (Sass deprecation + budget de `article-detail.component.scss`)
+
+Checks funcionales:
+- `/articulos` renderiza correctamente: ✅
+- Hero sin CTAs duplicados: ✅
+- `Navega por objetivo` sigue visible y funcionando: ✅
+- anclas (`#empieza-aqui`, `#ultimos-publicados`, `#mapa-framework`): ✅
+- lista de artículos sin cambios: ✅
+- Mapa del framework al final de la página: ✅
+
+### Estado final
+
+READY FOR DEPLOY
+
+## Iteration 4: Navigation visual refinement
+
+Fecha de aplicación: 2026-06-03
+
+### Problema detectado
+
+- La navegación `Navega por objetivo` funcionaba correctamente, pero visualmente se percibía como texto normal.
+- Faltaba jerarquía visual para comunicar que era un bloque de navegación editorial.
+
+### Cambio aplicado
+
+- Refinamiento visual del bloque existente sin cambiar layout ni estructura:
+  - Conversión visual a `tabs` editoriales sobrias.
+  - Mayor contraste y peso tipográfico en `Navega por objetivo`.
+  - Separación clara entre opciones con bordes sutiles y espaciado.
+  - Estado activo inicial en `Empieza aquí` (`is-active`, `aria-current="true"`).
+- Cambios implementados en:
+  - `sites/enterprise-ai/archwise/src/app/pages/articles/articles.component.html`
+  - `sites/enterprise-ai/archwise/src/app/pages/articles/articles.component.scss`
+
+### Restricciones respetadas
+
+- Sin cambios de layout.
+- Sin secciones nuevas.
+- Sin cambios de SEO.
+- Sin cambios de rutas.
+- Sin cambios de contenido editorial.
+- Sin cambios en `article.json`.
+- Sin colores nuevos, sin gradientes, sin sombras, sin iconografía.
+
+### Validación
+
+Comando ejecutado:
+- `npm run build`
+
+Resultado:
+- Build: ✅ OK
+- SSR/SSG: ✅ sin errores de compilación
+- Responsive: ✅ correcto (ajustes de tipografía/espaciado en móvil)
+- Funcionalidad: ✅ sin cambios (anclas, orden de secciones, contenido)
+- SEO/sitemap: ✅ sin cambios
+
+Resultado esperado UX:
+- Navegación más legible y reconocible como bloque de navegación.
+- Jerarquía editorial más clara en la cabecera de `/articulos`.
+
+### Estado final
+
+READY FOR DEPLOY
+
 ## Estado final
 
 READY FOR DEPLOY ✅
