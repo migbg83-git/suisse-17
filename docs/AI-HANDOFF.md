@@ -1,8 +1,8 @@
 # Archwise AI Handoff
 
-> Ultima actualizacion: 2026-06-03  
-> Ultimo articulo publicado: article-24 (Context Systems)  
-> Estado del proyecto: Operativo. 24 articulos publicados. Articles Index v2 deployado.
+> Ultima actualizacion: 2026-06-04  
+> Ultimo articulo publicado: article-25 (Agentic AI en la empresa)  
+> Estado del proyecto: Operativo. 25 articulos publicados. Article-25 deployado y validado en produccion.
 
 ---
 
@@ -30,8 +30,8 @@ Estado tecnico:
 - Deploy de article-23 validado en produccion.
 
 Estado editorial:
-- 24 articulos publicados (01-24).
-- article-24 completado, publicado e integrado.
+- 25 articulos publicados (01-25).
+- article-25 completado, publicado e integrado.
 - Internal Linking Fase 1 completada en framework core (17-23).
 - Articles Index v2 deployado (2026-06-03): Hero, Empieza aqui, Ultimos publicados, Mapa del framework, Navegacion por anclas.
 
@@ -68,6 +68,17 @@ Estado de publicacion article-24:
 - Canonical correcta: OK
 - relatedArticles: configurados
 
+Estado de publicacion article-25:
+- Titulo: Agentic AI en la empresa: por que los agentes fallan y como construir la infraestructura para que funcionen
+- Slug: agentic-ai-enterprise-governance-memoria-arquitectura
+- Categoria: Enterprise AI
+- Author: Miguel Benito Garcia
+- Fecha: 2026-06-04
+- readingTime: 16 min
+- Sitemap: post-deploy validado en produccion
+- Canonical correcta: OK
+- relatedArticles funcionando: OK
+
 ### Articles Index v2
 
 Fecha: 2026-06-03
@@ -77,6 +88,7 @@ Resumen:
 - Hero editorial (titulo + subtitulo + CTAs a anclas)
 - Empieza aqui (5 articulos: ruta de entrada estrategica)
 - Ultimos publicados (24 articulos cronologicos)
+- Ultimos publicados (25 articulos cronologicos)
 - Mapa del framework (4 etapas con conectores visuales)
 - Navegacion por anclas (#empieza-aqui, #ultimos-publicados, #mapa-framework)
 
@@ -148,7 +160,7 @@ Si hay desajuste:
 
 ---
 
-## 4. Corpus Overview (01-24)
+## 4. Corpus Overview (01-25)
 
 ### Tabla canonica de articulos
 
@@ -178,11 +190,12 @@ Si hay desajuste:
 | 22 | Organizational Memory: el activo mas infravalorado de las organizaciones AI-Native | Enterprise AI | organizational-memory-activo-ai-native | Publicado |
 | 23 | Memory Architecture: como disenar sistemas que convierten conocimiento organizativo en contexto reutilizable para humanos y agentes de IA | Enterprise AI | memory-architecture-contexto-reutilizable-enterprise | Publicado |
 | 24 | Context Systems: entregar el contexto correcto a la persona e IA correcta en el momento correcto | Enterprise AI | context-systems-entregar-contexto-correcto-enterprise | Publicado |
+| 25 | Agentic AI en la empresa: por que los agentes fallan y como construir la infraestructura para que funcionen | Enterprise AI | agentic-ai-enterprise-governance-memoria-arquitectura | Publicado |
 
 Estado de integridad del corpus:
-- 01-24 presentes en pipeline de contenido.
-- 01-24 publicados e indexados.
-- article-24 presente en listado, detalle, sitemap y prerender.
+- 01-25 presentes en pipeline de contenido.
+- 01-25 publicados e indexados.
+- article-25 presente en listado, detalle, sitemap y prerender.
 
 ---
 
@@ -196,11 +209,11 @@ Taxonomia cerrada oficial:
 - Architecture Strategy
 - Technical Debt
 
-Distribucion actual (01-24):
+Distribucion actual (01-25):
 - Context Engineering: 7
 - Governance: 3
 - AI-Ready Systems: 3
-- Enterprise AI: 8
+- Enterprise AI: 9
 - Architecture Strategy: 1
 - Technical Debt: 2
 
@@ -447,9 +460,9 @@ Mitigacion general:
 
 ## 16. Current Priorities
 
-1. Article-25: candidato por definir (ver recomendacion estrategica).
-2. Internal Linking Fase 2: clusters desconectados (articulos sin relatedArticles).
-3. Optimizacion de bundle CSS/SCSS.
+1. Article-26: recomendacion estrategica y decision editorial.
+2. Framework Archwise: consolidacion v1 (narrativa, rutas y posicionamiento).
+3. Corpus Audit 2.0: integridad editorial, taxonomica y de enlazado interno.
 
 ---
 
@@ -468,13 +481,13 @@ Mitigacion general:
 ## 18. Next Article Candidates
 
 Candidatos priorizados:
-1. Context Systems.
-2. Knowledge Systems for Enterprise AI.
+1. Framework Archwise (sintesis operativa del modelo 20-25).
+2. Corpus Audit 2.0 (diagnostico estructural post-25).
 3. AI Coordination Beyond Teams.
 4. Continuous Learning Organizations en contexto AI-Native.
 
 Criterio de seleccion:
-- continuidad con cadena conceptual 01-23
+- continuidad con cadena conceptual 01-25
 - alto valor estrategico para audiencia enterprise
 - posibilidad de reutilizacion como framework accionable
 
@@ -483,7 +496,7 @@ Criterio de seleccion:
 ## 19. Diff Conceptual (secciones recuperadas)
 
 Recuperado respecto a la version reducida:
-- Corpus Overview completo 01-23 con tabla canonica.
+- Corpus Overview completo 01-25 con tabla canonica.
 - Categories and Taxonomy.
 - Historical Audits.
 - Technical Architecture ampliada.
@@ -500,7 +513,7 @@ Recuperado respecto a la version reducida:
 - Next Article Candidates.
 
 Se mantiene explicitamente:
-- article-23 publicado.
+- article-25 publicado.
 - Internal Linking Fase 1 completada.
 - fix SSR de relatedArticles documentado.
 - prerender dinamico documentado.

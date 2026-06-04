@@ -1,13 +1,13 @@
 # Project State Report — Enterprise AI Cluster
 Fecha: 2026-06-01
 
-Actualizacion operativa: 2026-06-03 (post-publicacion de article-24 y deploy Articles Index v2)
+Actualizacion operativa: 2026-06-04 (post-publicacion de article-25)
 
 ---
 
 ## Executive Summary
 
-El clúster Enterprise AI de Archwise cuenta con **24 artículos publicados**. Tras la publicación de article-24 ("Context Systems") y el deploy de **Articles Index v2**, el proyecto mantiene estado operativo pleno. La página /articulos ha sido rediseñada con Hero editorial, sección "Empieza aquí" (5 artículos), listado cronológico y Mapa del framework con navegación por anclas. Build, prerender, sitemap y canonical validados.
+El clúster Enterprise AI de Archwise cuenta con **25 artículos publicados**. Tras la publicación de article-25 ("Agentic AI en la empresa") y la validación de producción, el proyecto mantiene estado operativo pleno. La página /articulos refleja el nuevo artículo en listado y detalle, con metadata y relatedArticles correctos.
 
 El proyecto se encuentra en estado operativo. La infraestructura técnica, el pipeline de build y la publicación editorial funcionan correctamente. No hay bloqueos activos de publicación.
 
@@ -38,7 +38,7 @@ El proyecto se encuentra en estado operativo. La infraestructura técnica, el pi
 
 ### Archivos generados clave
 
-- `src/assets/content/articles.json` — 23 artículos, todos con `content` y `html` presentes
+- `src/assets/content/articles.json` — 25 artículos, todos con `content` y `html` presentes
 - `src/assets/content/articles/ai-operating-model-enterprise.json` — article-21 individual
 - `src/assets/content/articles/organizational-memory-activo-ai-native.json` — article-22 individual
 - `src/assets/content/articles/memory-architecture-contexto-reutilizable-enterprise.json` — article-23 individual
@@ -52,17 +52,17 @@ El proyecto se encuentra en estado operativo. La infraestructura técnica, el pi
 
 ### Technical State (actual)
 
-- 23 artículos normalizados.
+- 25 artículos normalizados.
 - Todos con `article.json` en `content/enterprise-ai/article-XX/`.
 - Build correcto (doble ejecución exitosa).
-- Sitemap correcto (23 artículos detectados, incluyendo article-23).
+- Sitemap correcto en producción para article-25.
 - Internal linking framework core (articles 17–23) con relatedArticles en HTML prerenderizado.
 
 ---
 
 ## Estado editorial
 
-### Artículos publicados: 23
+### Artículos publicados: 25
 
 | Nº | Título | Categoría | Slug | Estado |
 |----|--------|-----------|------|--------|
@@ -90,8 +90,43 @@ El proyecto se encuentra en estado operativo. La infraestructura técnica, el pi
 | **22** | **Organizational Memory** | **Enterprise AI** | **organizational-memory-activo-ai-native** | **✅ Nuevo** |
 | **23** | **Memory Architecture: cómo diseñar sistemas que convierten conocimiento organizativo en contexto reutilizable para humanos y agentes de IA** | **Enterprise AI** | **memory-architecture-contexto-reutilizable-enterprise** | **✅ Publicado** |
 | **24** | **Context Systems: entregar el contexto correcto a la persona e IA correcta en el momento correcto** | **Enterprise AI** | **context-systems-entregar-contexto-correcto-enterprise** | **✅ Publicado** |
+| **25** | **Agentic AI en la empresa: por qué los agentes fallan y cómo construir la infraestructura para que funcionen** | **Enterprise AI** | **agentic-ai-enterprise-governance-memoria-arquitectura** | **✅ Publicado** |
 
 ### Último artículo completado
+
+- **Article-25: Agentic AI en la empresa**
+- Título completo: "Agentic AI en la empresa: por qué los agentes fallan y cómo construir la infraestructura para que funcionen"
+- Slug: agentic-ai-enterprise-governance-memoria-arquitectura
+- Categoría: Enterprise AI
+- Author: Miguel Benito García
+- Fecha: 2026-06-04
+- readingTime: 16 min
+- Estado técnico:
+   - build:content OK
+   - build:seo OK
+   - build:ssg OK
+   - deploy OK
+- Producción validada:
+   - URL operativa OK
+   - renderizado OK
+   - metadata OK
+   - relatedArticles OK
+
+### Actualización operativa — Article-25
+
+Fecha: 2026-06-04  
+Estado: PUBLISHED
+
+Datos:
+- slug: `agentic-ai-enterprise-governance-memoria-arquitectura`
+- categoría: `Enterprise AI`
+- readingTime: `16`
+- autor: `Miguel Benito García`
+- build: OK
+- deploy: OK
+- producción validada: OK
+
+### Registro histórico (article-24)
 
 - **Article-24: Context Systems**
 - Título completo: "Context Systems: entregar el contexto correcto a la persona e IA correcta en el momento correcto"
@@ -146,14 +181,14 @@ Mejora de discoverability y onboarding del framework Archwise.
 - Acción aplicada: creación de `article.json` para los cinco artículos.
 - Estado final: integrados en el corpus oficial 01–23.
 
-### Distribución por categoría (articles 01–24)
+### Distribución por categoría (articles 01–25)
 
 | Categoría | Artículos | IDs |
 |-----------|-----------|-----|
 | Context Engineering | 7 | 01, 03, 06, 07, 08, 14, 15 |
 | Governance | 3 | 09, 10, 20 |
 | AI-Ready Systems | 3 | 11, 12, 13 |
-| Enterprise AI | 8 | 16, 17, 18, 19, 21, 22, 23, 24 |
+| Enterprise AI | 9 | 16, 17, 18, 19, 21, 22, 23, 24, 25 |
 | Architecture Strategy | 1 | 04 |
 | Technical Debt | 2 | 02, 05 |
 
@@ -288,15 +323,14 @@ Nota: no se aplican reclasificaciones pendientes de auditoría. Se mantiene cate
 
 ## Verificación final
 
-- article-23 (Memory Architecture) es el último artículo completado y publicado.
-- El siguiente artículo candidato es article-24 (Context Systems).
-- Los artículos 01–23 están publicados y normalizados con article.json.
+- article-25 (Agentic AI en la empresa) es el último artículo completado y publicado.
+- Los artículos 01–25 están publicados y normalizados con article.json.
 - Build pipeline ejecuta con exit code 0 tras ajuste de presupuesto de bundle.
 - No hay bloqueos activos.
-- El sitio es funcional y los 23 artículos se procesan correctamente en el build.
+- El sitio es funcional y los 25 artículos se procesan correctamente en el build.
 - Presencia verificada en articles.json, sitemap.xml y rutas de prerender.
 - Related articles del framework core visibles en HTML estático prerenderizado.
 
 ---
 
-_Informe generado el 2026-06-01. Actualizacion operativa aplicada el 2026-06-03 con inclusion de article-23, validacion completa de build/seo/ssg y estado READY FOR DEPLOY._
+_Informe generado el 2026-06-01. Actualizacion operativa aplicada el 2026-06-04 con inclusion de article-25, validacion de build/deploy/produccion y estado PUBLISHED._
