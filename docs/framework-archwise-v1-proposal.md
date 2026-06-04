@@ -16,6 +16,11 @@ Archwise ya tiene masa crítica suficiente para evolucionar desde índice editor
 - Secuencia madura 20 -> 21 -> 22 -> 23 -> 24 -> 25 que ya funciona como columna vertebral del modelo.
 - Un bloque de "Mapa del framework" ya presente en `/articulos`, señal de que el framework dejó de ser implícito.
 
+Actualizacion 2026-06-04:
+- 26 articulos publicados.
+- article-26 formaliza explicitamente el Framework Archwise como sistema integrado.
+- La secuencia 20 -> 26 constituye el nucleo conceptual actual de `/framework`.
+
 El estado actual no es "blog + artículos sueltos"; es un corpus acumulativo con tesis, capas y dependencias. Una página propia `/framework` formaliza esa estructura y mejora comprensión estratégica sin sustituir `/articulos`.
 
 Conclusión ejecutiva:
@@ -224,6 +229,9 @@ Propuesta v1 ajustada:
 - 25. Agentic AI en la empresa
   - Cluster: Enterprise AI
   - Rol: Enterprise Agent Architecture como síntesis operacional de las cinco capas previas.
+- 26. Framework Archwise
+  - Cluster: Enterprise AI
+  - Rol: sintesis sistémica que integra governance, operating model, memoria, context systems y agentes como una sola capacidad organizativa.
 - 19. Enterprise AI Transformation Roadmap
   - Cluster: Enterprise AI
   - Rol: puente de evolución entre capas.
@@ -305,6 +313,18 @@ Sin código. Estructura propuesta para `/framework`:
 ---
 
 # 7. Navegación
+
+## Secuencia fundacional actual (nucleo del Framework Archwise)
+
+20. Governance  
+21. Operating Model  
+22. Organizational Memory  
+23. Memory Architecture  
+24. Context Systems  
+25. Enterprise Agent Architecture  
+26. Framework Archwise
+
+Esta secuencia constituye hoy el nucleo conceptual operativo del Framework Archwise: pasa de capacidades aisladas a sistema integrado y sirve como base directa para la pagina `/framework`.
 
 ## Desde Home
 

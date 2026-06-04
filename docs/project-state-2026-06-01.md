@@ -1,13 +1,13 @@
 # Project State Report — Enterprise AI Cluster
 Fecha: 2026-06-01
 
-Actualizacion operativa: 2026-06-04 (post-publicacion de article-25)
+Actualizacion operativa: 2026-06-04 (post-publicacion de article-26)
 
 ---
 
 ## Executive Summary
 
-El clúster Enterprise AI de Archwise cuenta con **25 artículos publicados**. Tras la publicación de article-25 ("Agentic AI en la empresa") y la validación de producción, el proyecto mantiene estado operativo pleno. La página /articulos refleja el nuevo artículo en listado y detalle, con metadata y relatedArticles correctos.
+El clúster Enterprise AI de Archwise cuenta con **26 artículos publicados**. Tras la publicación de article-26 ("Framework Archwise: por qué la IA no escala con más capacidades sino con mejor integración") y la validación de producción, el proyecto mantiene estado operativo pleno. La página /articulos refleja el nuevo artículo en listado y detalle, con metadata y relatedArticles correctos.
 
 El proyecto se encuentra en estado operativo. La infraestructura técnica, el pipeline de build y la publicación editorial funcionan correctamente. No hay bloqueos activos de publicación.
 
@@ -38,7 +38,7 @@ El proyecto se encuentra en estado operativo. La infraestructura técnica, el pi
 
 ### Archivos generados clave
 
-- `src/assets/content/articles.json` — 25 artículos, todos con `content` y `html` presentes
+- `src/assets/content/articles.json` — 26 artículos, todos con `content` y `html` presentes
 - `src/assets/content/articles/ai-operating-model-enterprise.json` — article-21 individual
 - `src/assets/content/articles/organizational-memory-activo-ai-native.json` — article-22 individual
 - `src/assets/content/articles/memory-architecture-contexto-reutilizable-enterprise.json` — article-23 individual
@@ -52,17 +52,17 @@ El proyecto se encuentra en estado operativo. La infraestructura técnica, el pi
 
 ### Technical State (actual)
 
-- 25 artículos normalizados.
+- 26 artículos normalizados.
 - Todos con `article.json` en `content/enterprise-ai/article-XX/`.
 - Build correcto (doble ejecución exitosa).
-- Sitemap correcto en producción para article-25.
+- Sitemap correcto en producción para article-26.
 - Internal linking framework core (articles 17–23) con relatedArticles en HTML prerenderizado.
 
 ---
 
 ## Estado editorial
 
-### Artículos publicados: 25
+### Artículos publicados: 26
 
 | Nº | Título | Categoría | Slug | Estado |
 |----|--------|-----------|------|--------|
@@ -91,16 +91,17 @@ El proyecto se encuentra en estado operativo. La infraestructura técnica, el pi
 | **23** | **Memory Architecture: cómo diseñar sistemas que convierten conocimiento organizativo en contexto reutilizable para humanos y agentes de IA** | **Enterprise AI** | **memory-architecture-contexto-reutilizable-enterprise** | **✅ Publicado** |
 | **24** | **Context Systems: entregar el contexto correcto a la persona e IA correcta en el momento correcto** | **Enterprise AI** | **context-systems-entregar-contexto-correcto-enterprise** | **✅ Publicado** |
 | **25** | **Agentic AI en la empresa: por qué los agentes fallan y cómo construir la infraestructura para que funcionen** | **Enterprise AI** | **agentic-ai-enterprise-governance-memoria-arquitectura** | **✅ Publicado** |
+| **26** | **Framework Archwise: por qué la IA no escala con más capacidades sino con mejor integración** | **Enterprise AI** | **framework-archwise-integracion-capacidades-escalar-ia** | **✅ Publicado** |
 
 ### Último artículo completado
 
-- **Article-25: Agentic AI en la empresa**
-- Título completo: "Agentic AI en la empresa: por qué los agentes fallan y cómo construir la infraestructura para que funcionen"
-- Slug: agentic-ai-enterprise-governance-memoria-arquitectura
+- **Article-26: Framework Archwise**
+- Título completo: "Framework Archwise: por qué la IA no escala con más capacidades sino con mejor integración"
+- Slug: framework-archwise-integracion-capacidades-escalar-ia
 - Categoría: Enterprise AI
 - Author: Miguel Benito García
 - Fecha: 2026-06-04
-- readingTime: 16 min
+- readingTime: 27 min
 - Estado técnico:
    - build:content OK
    - build:seo OK
@@ -112,15 +113,15 @@ El proyecto se encuentra en estado operativo. La infraestructura técnica, el pi
    - metadata OK
    - relatedArticles OK
 
-### Actualización operativa — Article-25
+### Actualización operativa — Article-26
 
 Fecha: 2026-06-04  
 Estado: PUBLISHED
 
 Datos:
-- slug: `agentic-ai-enterprise-governance-memoria-arquitectura`
+- slug: `framework-archwise-integracion-capacidades-escalar-ia`
 - categoría: `Enterprise AI`
-- readingTime: `16`
+- readingTime: `27`
 - autor: `Miguel Benito García`
 - build: OK
 - deploy: OK
@@ -181,14 +182,14 @@ Mejora de discoverability y onboarding del framework Archwise.
 - Acción aplicada: creación de `article.json` para los cinco artículos.
 - Estado final: integrados en el corpus oficial 01–23.
 
-### Distribución por categoría (articles 01–25)
+### Distribución por categoría (articles 01–26)
 
 | Categoría | Artículos | IDs |
 |-----------|-----------|-----|
 | Context Engineering | 7 | 01, 03, 06, 07, 08, 14, 15 |
 | Governance | 3 | 09, 10, 20 |
 | AI-Ready Systems | 3 | 11, 12, 13 |
-| Enterprise AI | 9 | 16, 17, 18, 19, 21, 22, 23, 24, 25 |
+| Enterprise AI | 10 | 16, 17, 18, 19, 21, 22, 23, 24, 25, 26 |
 | Architecture Strategy | 1 | 04 |
 | Technical Debt | 2 | 02, 05 |
 
@@ -323,8 +324,8 @@ Nota: no se aplican reclasificaciones pendientes de auditoría. Se mantiene cate
 
 ## Verificación final
 
-- article-25 (Agentic AI en la empresa) es el último artículo completado y publicado.
-- Los artículos 01–25 están publicados y normalizados con article.json.
+- article-26 (Framework Archwise) es el último artículo completado y publicado.
+- Los artículos 01–26 están publicados y normalizados con article.json.
 - Build pipeline ejecuta con exit code 0 tras ajuste de presupuesto de bundle.
 - No hay bloqueos activos.
 - El sitio es funcional y los 25 artículos se procesan correctamente en el build.
@@ -333,4 +334,4 @@ Nota: no se aplican reclasificaciones pendientes de auditoría. Se mantiene cate
 
 ---
 
-_Informe generado el 2026-06-01. Actualizacion operativa aplicada el 2026-06-04 con inclusion de article-25, validacion de build/deploy/produccion y estado PUBLISHED._
+_Informe generado el 2026-06-01. Actualizacion operativa aplicada el 2026-06-04 con inclusion de article-26, validacion de build/deploy/produccion y estado PUBLISHED._
