@@ -12,14 +12,15 @@ Alcance: análisis, arquitectura de información y especificación funcional (si
 **Sí.**
 
 Archwise ya tiene masa crítica suficiente para evolucionar desde índice editorial a entidad conceptual explícita:
-- 25 artículos publicados con continuidad temática real.
-- Secuencia madura 20 -> 21 -> 22 -> 23 -> 24 -> 25 que ya funciona como columna vertebral del modelo.
+- 27 artículos publicados con continuidad temática real.
+- Secuencia madura 20 -> 21 -> 22 -> 23 -> 24 -> 25 -> 26 -> 27 que ya funciona como columna vertebral del modelo.
 - Un bloque de "Mapa del framework" ya presente en `/articulos`, señal de que el framework dejó de ser implícito.
 
 Actualizacion 2026-06-04:
-- 26 articulos publicados.
+- 27 articulos publicados.
 - article-26 formaliza explicitamente el Framework Archwise como sistema integrado.
-- La secuencia 20 -> 26 constituye el nucleo conceptual actual de `/framework`.
+- article-27 extiende el Framework Archwise desde integracion conceptual hacia arquitectura de adopcion.
+- La secuencia 20 -> 27 constituye el nucleo conceptual actual de `/framework`.
 
 El estado actual no es "blog + artículos sueltos"; es un corpus acumulativo con tesis, capas y dependencias. Una página propia `/framework` formaliza esa estructura y mejora comprensión estratégica sin sustituir `/articulos`.
 
@@ -322,9 +323,12 @@ Sin código. Estructura propuesta para `/framework`:
 23. Memory Architecture  
 24. Context Systems  
 25. Enterprise Agent Architecture  
-26. Framework Archwise
+26. Framework Archwise  
+27. Adoption Architecture / Activation Debt
 
 Esta secuencia constituye hoy el nucleo conceptual operativo del Framework Archwise: pasa de capacidades aisladas a sistema integrado y sirve como base directa para la pagina `/framework`.
+
+Activation Debt pasa a formar parte del vocabulario conceptual emergente del corpus junto a Context Debt, y amplia el framework desde la calidad de integracion hacia la calidad de secuenciacion de capacidades.
 
 ## Desde Home
 
