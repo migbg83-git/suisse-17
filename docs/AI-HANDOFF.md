@@ -1,8 +1,8 @@
 # Archwise AI Handoff
 
 > Ultima actualizacion: 2026-06-04  
-> Ultimo articulo publicado: article-25 (Agentic AI en la empresa)  
-> Estado del proyecto: Operativo. 25 articulos publicados. Article-25 deployado y validado en produccion.
+> Ultimo articulo publicado: article-26 (Framework Archwise: por que la IA no escala con mas capacidades sino con mejor integracion)  
+> Estado del proyecto: Operativo. 26 articulos publicados. Article-26 deployado y validado en produccion.
 
 ---
 
@@ -27,11 +27,11 @@ Estado tecnico:
 - Deploy automatico en Vercel.
 - SEO tecnico funcional (OG, metadatos, sitemap, robots).
 - prerender dinamico de slugs activo.
-- Deploy de article-23 validado en produccion.
+- Deploy de article-26 validado en produccion.
 
 Estado editorial:
-- 25 articulos publicados (01-25).
-- article-25 completado, publicado e integrado.
+- 26 articulos publicados (01-26).
+- article-26 completado, publicado e integrado.
 - Internal Linking Fase 1 completada en framework core (17-23).
 - Articles Index v2 deployado (2026-06-03): Hero, Empieza aqui, Ultimos publicados, Mapa del framework, Navegacion por anclas.
 
@@ -76,6 +76,20 @@ Estado de publicacion article-25:
 - Fecha: 2026-06-04
 - readingTime: 16 min
 - Sitemap: post-deploy validado en produccion
+- Canonical correcta: OK
+- relatedArticles funcionando: OK
+
+Estado de publicacion article-26:
+- Titulo: Framework Archwise: por que la IA no escala con mas capacidades sino con mejor integracion
+- Slug: framework-archwise-integracion-capacidades-escalar-ia
+- Categoria: Enterprise AI
+- Author: Miguel Benito Garcia
+- Fecha: 2026-06-04
+- readingTime: 27 min
+- Build content/SEO/SSG: OK
+- Deploy: OK
+- Produccion validada: OK
+- Sitemap actualizado: OK
 - Canonical correcta: OK
 - relatedArticles funcionando: OK
 
@@ -160,7 +174,7 @@ Si hay desajuste:
 
 ---
 
-## 4. Corpus Overview (01-25)
+## 4. Corpus Overview (01-26)
 
 ### Tabla canonica de articulos
 
@@ -191,11 +205,12 @@ Si hay desajuste:
 | 23 | Memory Architecture: como disenar sistemas que convierten conocimiento organizativo en contexto reutilizable para humanos y agentes de IA | Enterprise AI | memory-architecture-contexto-reutilizable-enterprise | Publicado |
 | 24 | Context Systems: entregar el contexto correcto a la persona e IA correcta en el momento correcto | Enterprise AI | context-systems-entregar-contexto-correcto-enterprise | Publicado |
 | 25 | Agentic AI en la empresa: por que los agentes fallan y como construir la infraestructura para que funcionen | Enterprise AI | agentic-ai-enterprise-governance-memoria-arquitectura | Publicado |
+| 26 | Framework Archwise: por que la IA no escala con mas capacidades sino con mejor integracion | Enterprise AI | framework-archwise-integracion-capacidades-escalar-ia | Publicado |
 
 Estado de integridad del corpus:
-- 01-25 presentes en pipeline de contenido.
-- 01-25 publicados e indexados.
-- article-25 presente en listado, detalle, sitemap y prerender.
+- 01-26 presentes en pipeline de contenido.
+- 01-26 publicados e indexados.
+- article-26 presente en listado, detalle, sitemap y prerender.
 
 ---
 
@@ -209,11 +224,11 @@ Taxonomia cerrada oficial:
 - Architecture Strategy
 - Technical Debt
 
-Distribucion actual (01-25):
+Distribucion actual (01-26):
 - Context Engineering: 7
 - Governance: 3
 - AI-Ready Systems: 3
-- Enterprise AI: 9
+- Enterprise AI: 10
 - Architecture Strategy: 1
 - Technical Debt: 2
 
@@ -460,9 +475,10 @@ Mitigacion general:
 
 ## 16. Current Priorities
 
-1. Article-26: recomendacion estrategica y decision editorial.
-2. Framework Archwise: consolidacion v1 (narrativa, rutas y posicionamiento).
+1. Article-27: recomendacion estrategica y decision editorial.
+2. Pagina /framework: consolidacion v1 (narrativa, rutas y posicionamiento).
 3. Corpus Audit 2.0: integridad editorial, taxonomica y de enlazado interno.
+4. Internacionalizacion futura: ES -> FR -> EN.
 
 ---
 
@@ -481,8 +497,8 @@ Mitigacion general:
 ## 18. Next Article Candidates
 
 Candidatos priorizados:
-1. Framework Archwise (sintesis operativa del modelo 20-25).
-2. Corpus Audit 2.0 (diagnostico estructural post-25).
+1. Article-27 (pendiente definicion final por recomendacion estrategica).
+2. Corpus Audit 2.0 (diagnostico estructural post-26).
 3. AI Coordination Beyond Teams.
 4. Continuous Learning Organizations en contexto AI-Native.
 
@@ -513,7 +529,7 @@ Recuperado respecto a la version reducida:
 - Next Article Candidates.
 
 Se mantiene explicitamente:
-- article-25 publicado.
+- article-26 publicado.
 - Internal Linking Fase 1 completada.
 - fix SSR de relatedArticles documentado.
 - prerender dinamico documentado.

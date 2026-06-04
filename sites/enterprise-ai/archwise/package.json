@@ -6,7 +6,7 @@
     "start": "ng serve",
     "build:content": "tsx scripts/build-content.ts",
     "build:seo": "tsx scripts/generate-seo-files.ts",
-    "build": "npm run build:content && ng build",
+    "build": "npm run build:content && npm run build:seo && ng build",
     "build:ssg": "npm run build:content && npm run build:seo && ng build --prerender",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
