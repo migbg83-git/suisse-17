@@ -1,6 +1,6 @@
 # Framework Archwise v1 - Proposal
 
-Fecha: 2026-06-03
+Fecha: 2026-06-04
 Alcance: análisis, arquitectura de información y especificación funcional (sin implementación)
 
 ---
@@ -12,8 +12,8 @@ Alcance: análisis, arquitectura de información y especificación funcional (si
 **Sí.**
 
 Archwise ya tiene masa crítica suficiente para evolucionar desde índice editorial a entidad conceptual explícita:
-- 24 artículos publicados con continuidad temática real.
-- Secuencia madura 20 -> 21 -> 22 -> 23 -> 24 que ya funciona como columna vertebral del modelo.
+- 25 artículos publicados con continuidad temática real.
+- Secuencia madura 20 -> 21 -> 22 -> 23 -> 24 -> 25 que ya funciona como columna vertebral del modelo.
 - Un bloque de "Mapa del framework" ya presente en `/articulos`, señal de que el framework dejó de ser implícito.
 
 El estado actual no es "blog + artículos sueltos"; es un corpus acumulativo con tesis, capas y dependencias. Una página propia `/framework` formaliza esa estructura y mejora comprensión estratégica sin sustituir `/articulos`.
@@ -129,7 +129,7 @@ Propuesta v1 ajustada:
 
 - El corpus 11-13 demuestra que antes de diseñar governance/memory hay que diagnosticar preparación real.
 - Los artículos 01-08 + 14-15 muestran que el contexto explícito no es accesorio, es prerrequisito.
-- La secuencia 20-24 representa el tramo más maduro y debe mantenerse como columna principal.
+- La secuencia 20-25 representa el tramo más maduro y debe mantenerse como columna principal.
 
 ## Estabilidad del framework
 
@@ -221,6 +221,9 @@ Propuesta v1 ajustada:
 - 24. Context Systems
   - Cluster: Enterprise AI
   - Rol: entrega contextual en tiempo de decisión.
+- 25. Agentic AI en la empresa
+  - Cluster: Enterprise AI
+  - Rol: Enterprise Agent Architecture como síntesis operacional de las cinco capas previas.
 - 19. Enterprise AI Transformation Roadmap
   - Cluster: Enterprise AI
   - Rol: puente de evolución entre capas.
@@ -409,7 +412,7 @@ Clasificación solicitada:
 ## Justificación
 
 Por qué no A (no crear todavía):
-- El corpus ya superó umbral de masa crítica (24 artículos + secuencia madura 20-24).
+- El corpus ya superó umbral de masa crítica (25 artículos + secuencia madura 20-25).
 - El framework ya existe de facto en `/articulos` y en la tesis editorial.
 
 Por qué no C (crear inmediatamente):
@@ -436,3 +439,18 @@ La decisión será correcta si, tras lanzar `/framework`, se observa:
 - aumento de navegación cruzada entre capas y artículos,
 - reducción de dependencia del orden cronológico para entender el corpus,
 - mayor claridad comercial/editorial sobre qué ofrece Archwise como sistema.
+
+---
+
+## Nota estratégica post article-25
+
+Article-25 completa explícitamente la secuencia estructural del framework:
+
+- 20 Governance
+- 21 Operating Model
+- 22 Organizational Memory
+- 23 Memory Architecture
+- 24 Context Systems
+- 25 Enterprise Agent Architecture / Agentic AI
+
+Esta secuencia constituye actualmente la columna vertebral conceptual del Framework Archwise.
