@@ -1,8 +1,8 @@
 # Archwise AI Handoff
 
 > Ultima actualizacion: 2026-06-04  
-> Ultimo articulo publicado: article-26 (Framework Archwise: por que la IA no escala con mas capacidades sino con mejor integracion)  
-> Estado del proyecto: Operativo. 26 articulos publicados. Article-26 deployado y validado en produccion.
+> Ultimo articulo publicado: article-27 (Arquitectura de adopcion del Framework Archwise: por que el orden de activacion determina la escalabilidad real)  
+> Estado del proyecto: Operativo. 27 articulos publicados. Article-27 deployado y validado en produccion.
 
 ---
 
@@ -27,11 +27,12 @@ Estado tecnico:
 - Deploy automatico en Vercel.
 - SEO tecnico funcional (OG, metadatos, sitemap, robots).
 - prerender dinamico de slugs activo.
-- Deploy de article-26 validado en produccion.
+- Deploy de article-27 validado en produccion.
+- Pipeline de build corregido: `npm run build` ejecuta `build:seo` antes de compilar (evita sitemap stale).
 
 Estado editorial:
-- 26 articulos publicados (01-26).
-- article-26 completado, publicado e integrado.
+- 27 articulos publicados (01-27).
+- article-27 completado, publicado e integrado.
 - Internal Linking Fase 1 completada en framework core (17-23).
 - Articles Index v2 deployado (2026-06-03): Hero, Empieza aqui, Ultimos publicados, Mapa del framework, Navegacion por anclas.
 
@@ -86,6 +87,21 @@ Estado de publicacion article-26:
 - Author: Miguel Benito Garcia
 - Fecha: 2026-06-04
 - readingTime: 27 min
+- Build content/SEO/SSG: OK
+- Deploy: OK
+- Produccion validada: OK
+- Sitemap actualizado: OK
+- Canonical correcta: OK
+- relatedArticles funcionando: OK
+
+Estado de publicacion article-27:
+- Titulo: Arquitectura de adopcion del Framework Archwise: por que el orden de activacion determina la escalabilidad real
+- Slug: arquitectura-adopcion-framework-archwise-orden-activacion
+- Categoria: Enterprise AI
+- Author: Miguel Benito Garcia
+- Fecha: 2026-06-04
+- readingTime: 21 min
+- Concepto central nuevo: Activation Debt
 - Build content/SEO/SSG: OK
 - Deploy: OK
 - Produccion validada: OK
@@ -174,7 +190,7 @@ Si hay desajuste:
 
 ---
 
-## 4. Corpus Overview (01-26)
+## 4. Corpus Overview (01-27)
 
 ### Tabla canonica de articulos
 
@@ -206,11 +222,13 @@ Si hay desajuste:
 | 24 | Context Systems: entregar el contexto correcto a la persona e IA correcta en el momento correcto | Enterprise AI | context-systems-entregar-contexto-correcto-enterprise | Publicado |
 | 25 | Agentic AI en la empresa: por que los agentes fallan y como construir la infraestructura para que funcionen | Enterprise AI | agentic-ai-enterprise-governance-memoria-arquitectura | Publicado |
 | 26 | Framework Archwise: por que la IA no escala con mas capacidades sino con mejor integracion | Enterprise AI | framework-archwise-integracion-capacidades-escalar-ia | Publicado |
+| 27 | Arquitectura de adopcion del Framework Archwise: por que el orden de activacion determina la escalabilidad real | Enterprise AI | arquitectura-adopcion-framework-archwise-orden-activacion | Publicado |
 
 Estado de integridad del corpus:
-- 01-26 presentes en pipeline de contenido.
-- 01-26 publicados e indexados.
-- article-26 presente en listado, detalle, sitemap y prerender.
+- 01-27 presentes en pipeline de contenido.
+- 01-27 publicados e indexados.
+- article-27 presente en listado, detalle, sitemap y prerender.
+- Activation Debt incorporado al vocabulario conceptual emergente del corpus.
 
 ---
 
@@ -224,11 +242,11 @@ Taxonomia cerrada oficial:
 - Architecture Strategy
 - Technical Debt
 
-Distribucion actual (01-26):
+Distribucion actual (01-27):
 - Context Engineering: 7
 - Governance: 3
 - AI-Ready Systems: 3
-- Enterprise AI: 10
+- Enterprise AI: 11
 - Architecture Strategy: 1
 - Technical Debt: 2
 
@@ -346,6 +364,9 @@ Context Engineering
 -> AI Governance  
 -> AI Operating Model  
 -> Memory Architecture  
+-> Enterprise Agent Architecture  
+-> Framework Archwise  
+-> Adoption Architecture / Activation Debt  
 -> AI-Native Organizations
 
 Mapeo por corpus:
@@ -356,6 +377,9 @@ Mapeo por corpus:
 - AI Operating Model: 21
 - Memory Architecture: 23
 - Context Systems: 24
+- Enterprise Agent Architecture: 25
+- Framework Archwise: 26
+- Adoption Architecture / Activation Debt: 27
 - AI-Native Organizations: 17
 
 Articulos de entrada:
@@ -475,10 +499,11 @@ Mitigacion general:
 
 ## 16. Current Priorities
 
-1. Article-27: recomendacion estrategica y decision editorial.
-2. Pagina /framework: consolidacion v1 (narrativa, rutas y posicionamiento).
-3. Corpus Audit 2.0: integridad editorial, taxonomica y de enlazado interno.
-4. Internacionalizacion futura: ES -> FR -> EN.
+1. Article-28: recomendacion estrategica y decision editorial.
+2. Corpus Audit 2.0: integridad editorial, taxonomica y de enlazado interno.
+3. Pagina /framework: consolidacion v1 (narrativa, rutas y posicionamiento).
+4. Correccion tecnica/editorial Article-25 readingTime.
+5. Internacionalizacion futura: ES -> FR -> EN.
 
 ---
 

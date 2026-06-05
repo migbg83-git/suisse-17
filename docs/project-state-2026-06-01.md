@@ -1,13 +1,13 @@
 # Project State Report — Enterprise AI Cluster
 Fecha: 2026-06-01
 
-Actualizacion operativa: 2026-06-04 (post-publicacion de article-26)
+Actualizacion operativa: 2026-06-04 (post-publicacion de article-27)
 
 ---
 
 ## Executive Summary
 
-El clúster Enterprise AI de Archwise cuenta con **26 artículos publicados**. Tras la publicación de article-26 ("Framework Archwise: por qué la IA no escala con más capacidades sino con mejor integración") y la validación de producción, el proyecto mantiene estado operativo pleno. La página /articulos refleja el nuevo artículo en listado y detalle, con metadata y relatedArticles correctos.
+El clúster Enterprise AI de Archwise cuenta con **27 artículos publicados**. Tras la publicación de article-27 ("Arquitectura de adopción del Framework Archwise: por qué el orden de activación determina la escalabilidad real") y la validación de producción, el proyecto mantiene estado operativo pleno. La página /articulos refleja el nuevo artículo en listado y detalle, con metadata y relatedArticles correctos.
 
 El proyecto se encuentra en estado operativo. La infraestructura técnica, el pipeline de build y la publicación editorial funcionan correctamente. No hay bloqueos activos de publicación.
 
@@ -31,10 +31,10 @@ El proyecto se encuentra en estado operativo. La infraestructura técnica, el pi
 
 | Comando | Estado | Última ejecución |
 |---------|--------|------------------|
-| `npm run build:content` | ✅ | 2026-06-03 |
-| `npm run build:seo` | ✅ | 2026-06-03 |
-| `npm run build:ssg` | ✅ | 2026-06-03 |
-| deploy | ✅ | 2026-06-03 |
+| `npm run build:content` | ✅ | 2026-06-04 |
+| `npm run build:seo` | ✅ | 2026-06-04 |
+| `npm run build:ssg` | ✅ | 2026-06-04 |
+| deploy | ✅ | 2026-06-04 |
 
 ### Archivos generados clave
 
@@ -52,17 +52,18 @@ El proyecto se encuentra en estado operativo. La infraestructura técnica, el pi
 
 ### Technical State (actual)
 
-- 26 artículos normalizados.
+- 27 artículos normalizados.
 - Todos con `article.json` en `content/enterprise-ai/article-XX/`.
 - Build correcto (doble ejecución exitosa).
-- Sitemap correcto en producción para article-26.
+- Sitemap correcto en producción para article-27.
 - Internal linking framework core (articles 17–23) con relatedArticles en HTML prerenderizado.
+- Pipeline corregido: `npm run build` ejecuta `build:seo` antes de compilar para evitar sitemap stale.
 
 ---
 
 ## Estado editorial
 
-### Artículos publicados: 26
+### Artículos publicados: 27
 
 | Nº | Título | Categoría | Slug | Estado |
 |----|--------|-----------|------|--------|
@@ -92,16 +93,17 @@ El proyecto se encuentra en estado operativo. La infraestructura técnica, el pi
 | **24** | **Context Systems: entregar el contexto correcto a la persona e IA correcta en el momento correcto** | **Enterprise AI** | **context-systems-entregar-contexto-correcto-enterprise** | **✅ Publicado** |
 | **25** | **Agentic AI en la empresa: por qué los agentes fallan y cómo construir la infraestructura para que funcionen** | **Enterprise AI** | **agentic-ai-enterprise-governance-memoria-arquitectura** | **✅ Publicado** |
 | **26** | **Framework Archwise: por qué la IA no escala con más capacidades sino con mejor integración** | **Enterprise AI** | **framework-archwise-integracion-capacidades-escalar-ia** | **✅ Publicado** |
+| **27** | **Arquitectura de adopción del Framework Archwise: por qué el orden de activación determina la escalabilidad real** | **Enterprise AI** | **arquitectura-adopcion-framework-archwise-orden-activacion** | **✅ Publicado** |
 
 ### Último artículo completado
 
-- **Article-26: Framework Archwise**
-- Título completo: "Framework Archwise: por qué la IA no escala con más capacidades sino con mejor integración"
-- Slug: framework-archwise-integracion-capacidades-escalar-ia
+- **Article-27: Arquitectura de adopción del Framework Archwise**
+- Título completo: "Arquitectura de adopción del Framework Archwise: por qué el orden de activación determina la escalabilidad real"
+- Slug: arquitectura-adopcion-framework-archwise-orden-activacion
 - Categoría: Enterprise AI
 - Author: Miguel Benito García
 - Fecha: 2026-06-04
-- readingTime: 27 min
+- readingTime: 21 min
 - Estado técnico:
    - build:content OK
    - build:seo OK
@@ -113,19 +115,21 @@ El proyecto se encuentra en estado operativo. La infraestructura técnica, el pi
    - metadata OK
    - relatedArticles OK
 
-### Actualización operativa — Article-26
+### Actualización operativa — Article-27
 
 Fecha: 2026-06-04  
 Estado: PUBLISHED
 
 Datos:
-- slug: `framework-archwise-integracion-capacidades-escalar-ia`
+- slug: `arquitectura-adopcion-framework-archwise-orden-activacion`
 - categoría: `Enterprise AI`
-- readingTime: `27`
+- readingTime: `21`
 - autor: `Miguel Benito García`
 - build: OK
 - deploy: OK
 - producción validada: OK
+- sitemap fix aplicado: OK
+- pipeline build corregido (`build` incluye `build:seo`): OK
 
 ### Registro histórico (article-24)
 
@@ -182,14 +186,14 @@ Mejora de discoverability y onboarding del framework Archwise.
 - Acción aplicada: creación de `article.json` para los cinco artículos.
 - Estado final: integrados en el corpus oficial 01–23.
 
-### Distribución por categoría (articles 01–26)
+### Distribución por categoría (articles 01–27)
 
 | Categoría | Artículos | IDs |
 |-----------|-----------|-----|
 | Context Engineering | 7 | 01, 03, 06, 07, 08, 14, 15 |
 | Governance | 3 | 09, 10, 20 |
 | AI-Ready Systems | 3 | 11, 12, 13 |
-| Enterprise AI | 10 | 16, 17, 18, 19, 21, 22, 23, 24, 25, 26 |
+| Enterprise AI | 11 | 16, 17, 18, 19, 21, 22, 23, 24, 25, 26, 27 |
 | Architecture Strategy | 1 | 04 |
 | Technical Debt | 2 | 02, 05 |
 

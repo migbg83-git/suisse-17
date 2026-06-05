@@ -336,12 +336,15 @@ export const serverRoutes: ServerRoute[] = [
 
 Validación operativa reciente:
 - `npm run build:ssg` OK
-- 26 artículos prerenderizados
-- 29 rutas estáticas totales
+- 27 artículos prerenderizados
+- 30 rutas estáticas totales
 - Sin errores SSR
 
 Ruta nueva validada:
-- `/articulos/framework-archwise-integracion-capacidades-escalar-ia`
+- `/articulos/arquitectura-adopcion-framework-archwise-orden-activacion`
+
+Nota técnica de pipeline (2026-06-04):
+- `npm run build` ahora ejecuta `build:seo` antes de compilar para evitar `sitemap.xml` obsoleto en `dist`.
 
 Validación SEO interna reciente (relatedArticles en HTML estático):
 - `npm run build:ssg` exit code 0
@@ -362,7 +365,7 @@ Validación SEO interna reciente (relatedArticles en HTML estático):
 |---------|----------|
 | `ng build` | Build de producción con prerender (por `defaultConfiguration: production`) |
 | `ng build --prerender` | Equivalente (prerender ya está activo en production config) |
-| `npm run build` | `build:content` + `ng build` |
+| `npm run build` | `build:content` + `build:seo` + `ng build` |
 | `npm run build:ssg` | `build:content` + `build:seo` + `ng build --prerender` |
 
 En la práctica, `npm run build:ssg` es el **comando canónico** para generar el sitio completo listo para deploy.
@@ -375,7 +378,7 @@ En la práctica, `npm run build:ssg` es el **comando canónico** para generar el
 |---------|----------|---------------|-------------------|
 | `npm run build:content` | Ejecuta `build-content.ts` con tsx | Después de crear/modificar artículos | `src/assets/content/articles.json`, `src/assets/content/articles/*.json` |
 | `npm run build:seo` | Ejecuta `generate-seo-files.ts` con tsx | Después de `build:content` cuando cambian slugs o fechas | `public/sitemap.xml`, `public/robots.txt` |
-| `npm run build` | `build:content` + `ng build` (production) | Build rápido sin regenerar SEO files | `dist/archwise/` |
+| `npm run build` | `build:content` + `build:seo` + `ng build` (production) | Build estándar de publicación (sin sitemap stale) | `dist/archwise/`, `public/sitemap.xml`, `public/robots.txt` |
 | `npm run build:ssg` | `build:content` + `build:seo` + `ng build --prerender` | **Build completo para deploy** | `dist/archwise/`, `public/sitemap.xml`, `public/robots.txt` |
 | `npm run start` | `ng serve` (development) | Desarrollo local | Nada (sirve en memoria) |
 | `npm run watch` | `ng build --watch --configuration development` | Desarrollo con rebuild automático | `dist/archwise/` |
