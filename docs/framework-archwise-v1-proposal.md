@@ -2,6 +2,7 @@
 
 Fecha: 2026-06-04
 Alcance: análisis, arquitectura de información y especificación funcional (sin implementación)
+Actualizacion: 2026-06-05 (post-publicacion de article-28)
 
 ---
 
@@ -17,10 +18,18 @@ Archwise ya tiene masa crítica suficiente para evolucionar desde índice editor
 - Un bloque de "Mapa del framework" ya presente en `/articulos`, señal de que el framework dejó de ser implícito.
 
 Actualizacion 2026-06-04:
+Actualizacion 2026-06-04:
 - 27 articulos publicados.
 - article-26 formaliza explicitamente el Framework Archwise como sistema integrado.
 - article-27 extiende el Framework Archwise desde integracion conceptual hacia arquitectura de adopcion.
 - La secuencia 20 -> 27 constituye el nucleo conceptual actual de `/framework`.
+
+Actualizacion 2026-06-05:
+- 28 articulos publicados.
+- article-28 extiende el Framework Archwise hacia observabilidad sistémica y medición causal.
+- Introduce System Health, Coherence Signals, Evidence Integrity e Integration Health como capa de observabilidad transversal.
+- La secuencia 20 -> 28 es la cadena fundacional completa actual del Framework Archwise.
+- Coherence Signals pasa a formar parte del vocabulario conceptual emergente del corpus junto a Context Debt y Activation Debt.
 
 El estado actual no es "blog + artículos sueltos"; es un corpus acumulativo con tesis, capas y dependencias. Una página propia `/framework` formaliza esa estructura y mejora comprensión estratégica sin sustituir `/articulos`.
 
@@ -317,18 +326,26 @@ Sin código. Estructura propuesta para `/framework`:
 
 ## Secuencia fundacional actual (nucleo del Framework Archwise)
 
-20. Governance  
-21. Operating Model  
-22. Organizational Memory  
-23. Memory Architecture  
-24. Context Systems  
-25. Enterprise Agent Architecture  
-26. Framework Archwise  
+20. Governance
+21. Operating Model
+22. Organizational Memory
+23. Memory Architecture
+24. Context Systems
+25. Enterprise Agent Architecture
+26. Framework Archwise
 27. Adoption Architecture / Activation Debt
+28. Measurement System / System Health / Coherence Signals
 
-Esta secuencia constituye hoy el nucleo conceptual operativo del Framework Archwise: pasa de capacidades aisladas a sistema integrado y sirve como base directa para la pagina `/framework`.
+Esta secuencia constituye hoy el nucleo conceptual operativo del Framework Archwise: pasa de capacidades aisladas a sistema integrado, aborda la calidad de secuenciación de activación y añade observabilidad sistémica como capa transversal de gobierno.
 
-Activation Debt pasa a formar parte del vocabulario conceptual emergente del corpus junto a Context Debt, y amplia el framework desde la calidad de integracion hacia la calidad de secuenciacion de capacidades.
+Vocabulario conceptual emergente del corpus (2026-06-05):
+- Context Debt (article-24): costo acumulado de no entregar contexto correcto en el momento de decisión.
+- Activation Debt (article-27): costo acumulado de activar capacidades fuera de secuencia de dependencia.
+- Coherence Signals (article-28): señales tempranas de alineación, tensión o ruptura entre decisiones equivalentes en distintos dominios.
+- System Health (article-28): capacidad del sistema para absorber complejidad creciente sin degradar coherencia decisional.
+- Evidence Integrity (article-28): confiabilidad operativa de la evidencia para soportar decisiones comparables y trazables.
+
+Article-28 no añade una capa conceptual nueva al Framework Archwise; añade una capa de observabilidad sistémica para gobernar las capas existentes con anticipación y evidencia.
 
 ## Desde Home
 

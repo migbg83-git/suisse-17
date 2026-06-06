@@ -1,8 +1,8 @@
 # Archwise AI Handoff
 
-> Ultima actualizacion: 2026-06-04  
-> Ultimo articulo publicado: article-27 (Arquitectura de adopcion del Framework Archwise: por que el orden de activacion determina la escalabilidad real)  
-> Estado del proyecto: Operativo. 27 articulos publicados. Article-27 deployado y validado en produccion.
+> Ultima actualizacion: 2026-06-05  
+> Ultimo articulo publicado: article-28 (Measurement System para Integración y Madurez Operativa: cómo detectar salud sistémica antes de que la deuda se convierta en estructura)  
+> Estado del proyecto: Operativo. 28 articulos publicados. Article-28 deployado y validado en produccion.
 
 ---
 
@@ -93,6 +93,27 @@ Estado de publicacion article-26:
 - Sitemap actualizado: OK
 - Canonical correcta: OK
 - relatedArticles funcionando: OK
+
+Estado de publicacion article-27:
+Estado de publicacion article-28:
+- Titulo: Measurement System para Integración y Madurez Operativa: cómo detectar salud sistémica antes de que la deuda se convierta en estructura
+- Slug: measurement-system-integracion-madurez-operativa
+- Categoria: Enterprise AI
+- Author: Miguel Benito García
+- Fecha: 2026-06-05
+- readingTime: 29 min
+- Conceptos centrales nuevos: System Health, Coherence Signals, Evidence Integrity, Integration Health
+- Build content/SEO/SSG: OK (31 rutas prerenderizadas)
+- Deploy: OK
+- Produccion validada: OK
+- Sitemap actualizado: OK (31 URLs, archwise.org)
+- Canonical correcta: OK
+- relatedArticles funcionando: OK (5/5)
+
+Nota tecnica importante (slug source of truth):
+- El slug efectivo de produccion lo toma build-content desde el frontmatter de article.md (campo `slug`).
+- article.json debe mantenerse sincronizado con ese valor, pero no es la fuente que gobierna el slug efectivo.
+- Validacion obligatoria antes de cada publicacion: frontmatter.slug === article.json.slug.
 
 Estado de publicacion article-27:
 - Titulo: Arquitectura de adopcion del Framework Archwise: por que el orden de activacion determina la escalabilidad real
@@ -223,12 +244,14 @@ Si hay desajuste:
 | 25 | Agentic AI en la empresa: por que los agentes fallan y como construir la infraestructura para que funcionen | Enterprise AI | agentic-ai-enterprise-governance-memoria-arquitectura | Publicado |
 | 26 | Framework Archwise: por que la IA no escala con mas capacidades sino con mejor integracion | Enterprise AI | framework-archwise-integracion-capacidades-escalar-ia | Publicado |
 | 27 | Arquitectura de adopcion del Framework Archwise: por que el orden de activacion determina la escalabilidad real | Enterprise AI | arquitectura-adopcion-framework-archwise-orden-activacion | Publicado |
+| 28 | Measurement System para Integracion y Madurez Operativa: como detectar salud sistemica antes de que la deuda se convierta en estructura | Enterprise AI | measurement-system-integracion-madurez-operativa | Publicado |
 
 Estado de integridad del corpus:
-- 01-27 presentes en pipeline de contenido.
-- 01-27 publicados e indexados.
-- article-27 presente en listado, detalle, sitemap y prerender.
-- Activation Debt incorporado al vocabulario conceptual emergente del corpus.
+- 01-28 presentes en pipeline de contenido.
+- 01-28 publicados e indexados.
+- article-28 presente en listado, detalle, sitemap y prerender.
+- System Health, Coherence Signals, Evidence Integrity e Integration Health incorporados al vocabulario conceptual emergente del corpus.
+- Activation Debt y Context Debt siguen siendo conceptos nucleares del corpus.
 
 ---
 
@@ -243,12 +266,25 @@ Taxonomia cerrada oficial:
 - Technical Debt
 
 Distribucion actual (01-27):
+Distribucion actual (01-28):
 - Context Engineering: 7
 - Governance: 3
 - AI-Ready Systems: 3
-- Enterprise AI: 11
+- Enterprise AI: 12
 - Architecture Strategy: 1
 - Technical Debt: 2
+## Proximos pasos
+
+### Prioridades (alta)
+
+1. **Article-29** — Candidato recomendado: Sequence Integrity Scorecard (ver docs/article-29-recommendation.md).
+2. **Corpus Audit 2.0** — Revision de 01-28 con criterios actualizados.
+3. **Pagina /framework** — Implementacion editorial basada en framework-archwise-v1-proposal.md.
+4. **Correccion readingTime article-25** — Verificar alineacion entre calculo real y valor en article.json.
+5. **Limpieza tecnica: src/assets/sitemap.xml estatico obsoleto** — Contiene 7 URLs con dominio archwise.com; no afecta produccion (robots.txt apunta a /sitemap.xml raiz) pero recomendable eliminar.
+6. **Internacionalizacion futura** — Secuencia planificada: ES → FR → EN.
+
+## Recomendaciones
 
 Notas de gobernanza taxonomica:
 - Se mantienen clasificaciones historicas sin reclasificacion automatica.

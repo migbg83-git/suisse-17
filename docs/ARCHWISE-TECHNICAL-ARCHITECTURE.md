@@ -1,6 +1,6 @@
 # ARCHWISE — Technical Architecture Document
 
-> Última actualización: 2026-06-04  
+> Última actualización: 2026-06-05  
 > Propósito: documentar cómo funciona técnicamente el proyecto Archwise a nivel Angular, contenido, build, SSG, SEO y despliegue.  
 > Audiencia: desarrolladores, IAs asistentes, contribuidores.
 
@@ -336,12 +336,26 @@ export const serverRoutes: ServerRoute[] = [
 
 Validación operativa reciente:
 - `npm run build:ssg` OK
-- 27 artículos prerenderizados
-- 30 rutas estáticas totales
+- `npm run build:ssg` OK
+- 28 artículos prerenderizados
+- 31 rutas estáticas totales
 - Sin errores SSR
 
-Ruta nueva validada:
+Rutas nuevas validadas:
 - `/articulos/arquitectura-adopcion-framework-archwise-orden-activacion`
+- `/articulos/measurement-system-integracion-madurez-operativa`
+
+Nota técnica de slug (2026-06-05):
+- `build-content.ts` usa `frontmatter.slug` de `article.md` como fuente de verdad para el slug efectivo de producción.
+- `article.json` aporta metadatos complementarios y debe mantenerse sincronizado con `frontmatter.slug`.
+- Validación obligatoria pre-publicación: `frontmatter.slug === article.json.slug`.
+- Si divergen, el build usa el frontmatter e ignora el valor en `article.json`.
+
+Deuda técnica menor (2026-06-05):
+- `src/assets/sitemap.xml` es un archivo estático obsoleto (7 URLs, dominio `archwise.com`).
+- No afecta producción: `robots.txt` apunta a `/sitemap.xml` (raíz del browser), generado correctamente con 31+ URLs.
+- El obsoleto se copia a `dist/.../browser/assets/sitemap.xml` en cada build pero no es consumido por crawlers.
+- Acción pendiente: eliminar en próxima sesión de limpieza técnica.
 
 Nota técnica de pipeline (2026-06-04):
 - `npm run build` ahora ejecuta `build:seo` antes de compilar para evitar `sitemap.xml` obsoleto en `dist`.
