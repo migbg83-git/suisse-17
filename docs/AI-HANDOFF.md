@@ -1,8 +1,8 @@
 # Archwise AI Handoff
 
-> Ultima actualizacion: 2026-06-05  
-> Ultimo articulo publicado: article-28 (Measurement System para Integración y Madurez Operativa: cómo detectar salud sistémica antes de que la deuda se convierta en estructura)  
-> Estado del proyecto: Operativo. 28 articulos publicados. Article-28 deployado y validado en produccion.
+> Ultima actualizacion: 2026-06-06  
+> Ultimo articulo publicado: article-29 (Integridad de Secuencia: Como Evaluar la Madurez Operativa con Evidencia y No con Narrativas)  
+> Estado del proyecto: Operativo. 29 articulos publicados. Article-29 deployado y validado en produccion.
 
 ---
 
@@ -27,12 +27,12 @@ Estado tecnico:
 - Deploy automatico en Vercel.
 - SEO tecnico funcional (OG, metadatos, sitemap, robots).
 - prerender dinamico de slugs activo.
-- Deploy de article-27 validado en produccion.
+- Deploy de article-29 validado en produccion.
 - Pipeline de build corregido: `npm run build` ejecuta `build:seo` antes de compilar (evita sitemap stale).
 
 Estado editorial:
-- 27 articulos publicados (01-27).
-- article-27 completado, publicado e integrado.
+- 29 articulos publicados (01-29).
+- article-29 completado, publicado e integrado.
 - Internal Linking Fase 1 completada en framework core (17-23).
 - Articles Index v2 deployado (2026-06-03): Hero, Empieza aqui, Ultimos publicados, Mapa del framework, Navegacion por anclas.
 
@@ -107,6 +107,21 @@ Estado de publicacion article-28:
 - Deploy: OK
 - Produccion validada: OK
 - Sitemap actualizado: OK (31 URLs, archwise.org)
+- Canonical correcta: OK
+- relatedArticles funcionando: OK (5/5)
+
+Estado de publicacion article-29:
+- Titulo: Integridad de Secuencia: Como Evaluar la Madurez Operativa con Evidencia y No con Narrativas
+- Slug: integridad-secuencia-evaluar-madurez-operativa-evidencia-narrativas
+- Categoria: Enterprise AI
+- Author: Miguel Benito García
+- Fecha: 2026-06-06
+- readingTime: 29 min
+- Conceptos publicos asociados: Sequence Integrity, Evidence Integrity, Coherence Signals, Context Debt, Activation Debt, evaluacion de madurez operativa
+- Build content/SEO/SSG: OK (32 rutas prerenderizadas)
+- Deploy: OK
+- Produccion validada: OK
+- Sitemap actualizado: OK (32 URLs, archwise.org)
 - Canonical correcta: OK
 - relatedArticles funcionando: OK (5/5)
 
@@ -211,7 +226,7 @@ Si hay desajuste:
 
 ---
 
-## 4. Corpus Overview (01-27)
+## 4. Corpus Overview (01-29)
 
 ### Tabla canonica de articulos
 
@@ -245,13 +260,14 @@ Si hay desajuste:
 | 26 | Framework Archwise: por que la IA no escala con mas capacidades sino con mejor integracion | Enterprise AI | framework-archwise-integracion-capacidades-escalar-ia | Publicado |
 | 27 | Arquitectura de adopcion del Framework Archwise: por que el orden de activacion determina la escalabilidad real | Enterprise AI | arquitectura-adopcion-framework-archwise-orden-activacion | Publicado |
 | 28 | Measurement System para Integracion y Madurez Operativa: como detectar salud sistemica antes de que la deuda se convierta en estructura | Enterprise AI | measurement-system-integracion-madurez-operativa | Publicado |
+| 29 | Integridad de Secuencia: Como Evaluar la Madurez Operativa con Evidencia y No con Narrativas | Enterprise AI | integridad-secuencia-evaluar-madurez-operativa-evidencia-narrativas | Publicado |
 
 Estado de integridad del corpus:
-- 01-28 presentes en pipeline de contenido.
-- 01-28 publicados e indexados.
-- article-28 presente en listado, detalle, sitemap y prerender.
-- System Health, Coherence Signals, Evidence Integrity e Integration Health incorporados al vocabulario conceptual emergente del corpus.
-- Activation Debt y Context Debt siguen siendo conceptos nucleares del corpus.
+- 01-29 presentes en pipeline de contenido.
+- 01-29 publicados e indexados.
+- article-29 presente en listado, detalle, sitemap y prerender.
+- Sequence Integrity, Evidence Integrity, Coherence Signals, Context Debt y Activation Debt consolidados como vocabulario conceptual emergente del corpus.
+- La evaluacion de madurez operativa queda explicitada como pieza publica de continuidad 26-29.
 
 ---
 
@@ -265,21 +281,20 @@ Taxonomia cerrada oficial:
 - Architecture Strategy
 - Technical Debt
 
-Distribucion actual (01-27):
-Distribucion actual (01-28):
+Distribucion actual (01-29):
 - Context Engineering: 7
 - Governance: 3
 - AI-Ready Systems: 3
-- Enterprise AI: 12
+- Enterprise AI: 13
 - Architecture Strategy: 1
 - Technical Debt: 2
 ## Proximos pasos
 
 ### Prioridades (alta)
 
-1. **Article-29** — Candidato recomendado: Sequence Integrity Scorecard (ver docs/article-29-recommendation.md).
-2. **Corpus Audit 2.0** — Revision de 01-28 con criterios actualizados.
-3. **Pagina /framework** — Implementacion editorial basada en framework-archwise-v1-proposal.md.
+1. **Decision estrategica inmediata** — Definir Article-30 o priorizar implementacion de `/framework`.
+2. **Corpus Audit 2.0** — Revision de 01-29 con criterios actualizados.
+3. **Pagina /framework** — Sigue pendiente; implementar en cuanto se cierre la decision estrategica.
 4. **Correccion readingTime article-25** — Verificar alineacion entre calculo real y valor en article.json.
 5. **Limpieza tecnica: src/assets/sitemap.xml estatico obsoleto** — Contiene 7 URLs con dominio archwise.com; no afecta produccion (robots.txt apunta a /sitemap.xml raiz) pero recomendable eliminar.
 6. **Internacionalizacion futura** — Secuencia planificada: ES → FR → EN.
