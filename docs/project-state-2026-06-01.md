@@ -2,12 +2,37 @@
 Fecha: 2026-06-01
 
 Actualizacion operativa: 2026-06-04 (post-publicacion de article-27)
+Actualizacion operativa: 2026-06-05 (post-publicacion de article-28)
 
 ---
 
 ## Executive Summary
 
-El clúster Enterprise AI de Archwise cuenta con **27 artículos publicados**. Tras la publicación de article-27 ("Arquitectura de adopción del Framework Archwise: por qué el orden de activación determina la escalabilidad real") y la validación de producción, el proyecto mantiene estado operativo pleno. La página /articulos refleja el nuevo artículo en listado y detalle, con metadata y relatedArticles correctos.
+El clúster Enterprise AI de Archwise cuenta con **28 artículos publicados**. Tras la publicación de article-28 ("Measurement System para Integración y Madurez Operativa: cómo detectar salud sistémica antes de que la deuda se convierta en estructura") y la validación de producción, el proyecto mantiene estado operativo pleno. La página /articulos refleja el nuevo artículo en listado y detalle, con metadata y relatedArticles correctos.
+### Actualización operativa — Article-28
+
+Fecha: 2026-06-05
+Estado: PUBLISHED
+
+Datos:
+- slug: `measurement-system-integracion-madurez-operativa`
+- categoría: `Enterprise AI`
+- readingTime: `29`
+- autor: `Miguel Benito García`
+- conceptos centrales nuevos: System Health, Coherence Signals, Evidence Integrity, Integration Health
+- build:content OK
+- build:seo OK (31 URLs en sitemap)
+- build:ssg OK (31 rutas prerenderizadas)
+- deploy OK
+- producción validada OK
+- sitemap root OK (archwise.org)
+- canonical OK
+- relatedArticles OK (5/5 resueltos)
+- article.json sincronizado con frontmatter (slug corregido durante sesion)
+
+Nota técnica: el slug efectivo lo determina el frontmatter de article.md, no article.json. Ambos deben mantenerse sincronizados. Validación obligatoria pre-publicación: frontmatter.slug === article.json.slug.
+
+### Actualización operativa — Article-27
 
 El proyecto se encuentra en estado operativo. La infraestructura técnica, el pipeline de build y la publicación editorial funcionan correctamente. No hay bloqueos activos de publicación.
 
@@ -94,10 +119,11 @@ El proyecto se encuentra en estado operativo. La infraestructura técnica, el pi
 | **25** | **Agentic AI en la empresa: por qué los agentes fallan y cómo construir la infraestructura para que funcionen** | **Enterprise AI** | **agentic-ai-enterprise-governance-memoria-arquitectura** | **✅ Publicado** |
 | **26** | **Framework Archwise: por qué la IA no escala con más capacidades sino con mejor integración** | **Enterprise AI** | **framework-archwise-integracion-capacidades-escalar-ia** | **✅ Publicado** |
 | **27** | **Arquitectura de adopción del Framework Archwise: por qué el orden de activación determina la escalabilidad real** | **Enterprise AI** | **arquitectura-adopcion-framework-archwise-orden-activacion** | **✅ Publicado** |
+| **28** | **Measurement System para Integración y Madurez Operativa: cómo detectar salud sistémica antes de que la deuda se convierta en estructura** | **Enterprise AI** | **measurement-system-integracion-madurez-operativa** | **✅ Publicado** |
 
 ### Último artículo completado
 
-- **Article-27: Arquitectura de adopción del Framework Archwise**
+- **Article-28: Measurement System para Integración y Madurez Operativa**
 - Título completo: "Arquitectura de adopción del Framework Archwise: por qué el orden de activación determina la escalabilidad real"
 - Slug: arquitectura-adopcion-framework-archwise-orden-activacion
 - Categoría: Enterprise AI
@@ -187,13 +213,14 @@ Mejora de discoverability y onboarding del framework Archwise.
 - Estado final: integrados en el corpus oficial 01–23.
 
 ### Distribución por categoría (articles 01–27)
+### Distribución por categoría (articles 01–28)
 
 | Categoría | Artículos | IDs |
 |-----------|-----------|-----|
 | Context Engineering | 7 | 01, 03, 06, 07, 08, 14, 15 |
 | Governance | 3 | 09, 10, 20 |
 | AI-Ready Systems | 3 | 11, 12, 13 |
-| Enterprise AI | 11 | 16, 17, 18, 19, 21, 22, 23, 24, 25, 26, 27 |
+| Enterprise AI | 12 | 16, 17, 18, 19, 21, 22, 23, 24, 25, 26, 27, 28 |
 | Architecture Strategy | 1 | 04 |
 | Technical Debt | 2 | 02, 05 |
 
@@ -339,3 +366,4 @@ Nota: no se aplican reclasificaciones pendientes de auditoría. Se mantiene cate
 ---
 
 _Informe generado el 2026-06-01. Actualizacion operativa aplicada el 2026-06-04 con inclusion de article-26, validacion de build/deploy/produccion y estado PUBLISHED._
+_Informe generado el 2026-06-01. Actualizacion operativa 2026-06-04: article-27. Actualizacion operativa 2026-06-05: article-28 (Measurement System / System Health / Coherence Signals)._

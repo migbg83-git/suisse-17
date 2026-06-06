@@ -1,0 +1,48 @@
+{
+  "title": "Integridad de Secuencia: Como Evaluar la Madurez Operativa con Evidencia y No con Narrativas",
+  "slug": "integridad-secuencia-evaluar-madurez-operativa-evidencia-narrativas",
+  "description": "La actividad puede crecer mientras la coherencia operativa se deteriora. Este articulo propone una lectura practica para distinguir progreso narrativo de progreso real en organizaciones enterprise.",
+  "excerpt": "Article-29 propone evaluar madurez operativa con un criterio de integridad de secuencia y no por intensidad de actividad. La tesis central: una organizacion puede acelerar iniciativas y, al mismo tiempo, degradar su coherencia de decision interdominio. El articulo conecta Context Debt, Activation Debt, Evidence Integrity y Coherence Signals para detectar tension antes de la ruptura y decidir con evidencia.",
+  "category": "Enterprise AI",
+  "tags": [
+    "Sequence Integrity",
+    "Madurez Operativa",
+    "Evidence Integrity",
+    "Coherence Signals",
+    "Context Debt",
+    "Activation Debt",
+    "Arquitectura Empresarial",
+    "Transformación Empresarial"
+  ],
+  "keywords": [
+    "sequence integrity",
+    "madurez operativa",
+    "evidence integrity",
+    "coherence signals",
+    "context debt",
+    "activation debt",
+    "progreso narrativo",
+    "progreso real",
+    "coherencia operativa",
+    "arquitectura empresarial",
+    "transformación empresarial",
+    "evaluación de madurez",
+    "decisión interdominio",
+    "fricción estructural",
+    "escalabilidad enterprise"
+  ],
+  "difficulty": "advanced",
+  "featured": false,
+  "published": true,
+  "author": "Miguel Benito García",
+  "date": "2026-06-06",
+  "relatedArticles": [
+    "framework-archwise-integracion-capacidades-escalar-ia",
+    "arquitectura-adopcion-framework-archwise-orden-activacion",
+    "measurement-system-integracion-madurez-operativa",
+    "context-systems-entregar-contexto-correcto-enterprise",
+    "agentic-ai-enterprise-governance-memoria-arquitectura"
+  ],
+  "ogImage": "/content/enterprise-ai/article-29/og-image.png",
+  "canonicalUrl": "https://archwise.org/articulos/integridad-secuencia-evaluar-madurez-operativa-evidencia-narrativas"
+}
