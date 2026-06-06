@@ -7,10 +7,10 @@ Objetivo: definir la version mas simple posible de /framework que preserve tesis
 
 ---
 
-## 0) Decision de diseno
+## 0) Decisión de diseño
 
 /framework v2 debe operar como:
-- capa de orientacion conceptual,
+- capa de orientación conceptual,
 - capa de navegacion causal,
 - capa de activacion de lectura relevante.
 
@@ -18,17 +18,17 @@ No debe operar como:
 - indice editorial alternativo,
 - roadmap cronologico,
 - tutorial de implementacion,
-- pagina de producto.
+- página de producto.
 
 Principio de simplificacion:
 - menos bloques,
-- una taxonomia primaria unica,
+- una taxonomia primaria única,
 - una sola logica de navegacion,
-- reglas estrictas de aparicion de articulos.
+- reglas estrictas de aparicion de artículos.
 
 ---
 
-## 1) Diagnostico de complejidad (estado actual v1)
+## 1) Diagnóstico de complejidad (estado actual v1)
 
 ### 1.1 Complejidad estructural
 
@@ -58,14 +58,14 @@ Problema:
 Impacto:
 - redundancia editorial,
 - menor claridad para el lector,
-- mantenimiento manual no escalable a 50/100 articulos.
+- mantenimiento manual no escalable a 50/100 artículos.
 
 ---
 
 ### 1.3 Complejidad de cobertura por capa
 
 Estado actual:
-- Capa 6 agrega 24-29 y concentra demasiada carga semantica (operacion + integracion + adopcion + medicion + evaluacion).
+- Capa 6 agrega 24-29 y concentra demasiada carga semantica (operación + integración + adopción + medición + evaluación).
 
 Problema:
 - capa demasiado amplia para crecimiento futuro.
@@ -98,7 +98,7 @@ Se propone reducir de 9 bloques a 6 bloques operativos:
 
 1. Bloque 1 - Tesis operativa
 2. Bloque 2 - Mapa causal de 6 capas
-3. Bloque 3 - Capas (detalle de decision)
+3. Bloque 3 - Capas (detalle de decisión)
 4. Bloque 4 - Navigator unificado (perfil + intencion)
 5. Bloque 5 - Vocabulario minimo
 6. Bloque 6 - Continuidad (relacion con sitio + siguiente paso)
@@ -106,7 +106,7 @@ Se propone reducir de 9 bloques a 6 bloques operativos:
 Resultado:
 - se eliminan redundancias de navegacion,
 - se mantiene claridad conceptual,
-- se preserva la tesis Archwise y la orientacion causal.
+- se preserva la tesis Archwise y la orientación causal.
 
 ---
 
@@ -136,7 +136,7 @@ Nota:
 ### Bloque 1 - Tesis operativa
 
 Funcion:
-- alinear en 45-60 segundos.
+- alínear en 45-60 segundos.
 
 Pregunta que responde:
 - por que existe /framework.
@@ -159,16 +159,16 @@ Salida:
 
 ---
 
-### Bloque 3 - Capas (detalle de decision)
+### Bloque 3 - Capas (detalle de decisión)
 
 Funcion:
-- convertir cada capa en unidad de diagnostico y accion de lectura.
+- convertir cada capa en unidad de diagnóstico y accion de lectura.
 
 Pregunta que responde:
 - que me falta y que riesgo acumulo.
 
 Salida:
-- articulos de capa,
+- artículos de capa,
 - salto a Navigator (perfil/intencion).
 
 ---
@@ -176,13 +176,13 @@ Salida:
 ### Bloque 4 - Navigator unificado (perfil + intencion)
 
 Funcion:
-- ruta de lectura unica sin duplicar mecanismos.
+- ruta de lectura única sin duplicar mecanismos.
 
 Pregunta que responde:
 - que leer ahora segun quien soy y que necesito.
 
 Salida:
-- secuencia de articulos priorizada.
+- secuencia de artículos priorizada.
 
 ---
 
@@ -192,7 +192,7 @@ Funcion:
 - evitar ambiguedad conceptual y sostener coherencia con 26-29 y ASIS.
 
 Pregunta que responde:
-- que significa cada termino en decision operativa.
+- que significa cada termino en decisión operativa.
 
 Salida:
 - articulo base por termino,
@@ -220,19 +220,19 @@ Salida:
 
 ## 3.1 Taxonomia principal (obligatoria)
 
-Taxonomia primaria unica: CAPA.
+Taxonomia primaria única: CAPA.
 
 Toda pieza del corpus usada en /framework debe tener:
 - 1 capa primaria (obligatoria),
 - 0 o 1 capa secundaria (opcional solo si la contribucion es realmente dual).
 
 Capas (se mantienen 6):
-1. Diagnostico AI-Ready
-2. Contexto explicito y Knowledge Debt
+1. Diagnóstico AI-Ready
+2. Contexto explícito y Knowledge Debt
 3. Governance
 4. AI Operating Model
 5. Organizational Memory
-6. Context Systems y capacidad agentica
+6. Context Systems y capacidad agéntica
 
 Regla de estabilidad:
 - no crear nuevas capas hasta superar Article-100.
@@ -277,14 +277,14 @@ Regla 2:
 - si un articulo ya aparece en capa + perfil, no se repite en listado general visible; se referencia por enlace secundario.
 
 Regla 3:
-- maximo 3 articulos visibles por capa en primera vista.
-- articulos adicionales via "ver mas".
+- maximo 3 artículos visibles por capa en primera vista.
+- artículos adicionales via "ver mas".
 
 Regla 4:
-- maximo 5 articulos por ruta de perfil (invariante).
+- maximo 5 artículos por ruta de perfil (invariante).
 
 Regla 5:
-- priorizar articulos "ancla" estables y rotar satelites.
+- priorizar artículos "ancla" estables y rotar satélites.
 
 ---
 
@@ -295,11 +295,11 @@ Regla 5:
 Invariantes:
 - 26: framework como sistema integrado.
 - 27: secuencia causal y Activation Debt.
-- 28: observabilidad sistemica (Coherence Signals, Evidence Integrity).
-- 29: evaluacion de madurez por integridad de secuencia con evidencia.
+- 28: observabilidad sistémica (Coherence Signals, Evidence Integrity).
+- 29: evaluación de madurez por Sequence Integrity con evidencia.
 
 Aplicacion en v2:
-- estos cuatro articulos son "spine set" y deben estar siempre presentes en al menos un nodo de capa y uno de navigator.
+- estos cuatro artículos son "spine set" y deben estar siempre presentes en al menos un nodo de capa y uno de navigator.
 
 ---
 
@@ -315,7 +315,7 @@ No permitido en /framework v2:
 - scoring formal,
 - ITE operativo,
 - onboarding de producto ASIS,
-- evaluacion certificable.
+- evaluación certificable.
 
 Regla:
 - /framework prepara comprension compatible con ASIS, no implementa ASIS.
@@ -329,30 +329,30 @@ Regla:
 Escala 30-49:
 - mantener 6 capas fijas,
 - mantener Navigator unico,
-- actualizar satelites por perfil cada 5 articulos nuevos.
+- actualizar satélites por perfil cada 5 artículos nuevos.
 
 Escala 50-79:
 - activar subetiquetas dentro de cada capa (sin crear nuevas capas),
-- revisar rutas por perfil cada 10 articulos.
+- revisar rutas por perfil cada 10 artículos.
 
 Escala 80-100:
 - congelar anclas,
-- rotar satelites por intencion,
+- rotar satélites por intencion,
 - auditar equilibrio de aparicion trimestralmente.
 
 ---
 
-## 5.2 Politica de anclas y satelites
+## 5.2 Politica de anclas y satélites
 
 Anclas (estables):
-- articulos nucleares del marco (especialmente 20, 21, 22, 24, 26, 27, 28, 29).
+- artículos nucleares del marco (especialmente 20, 21, 22, 24, 26, 27, 28, 29).
 
-Satelites (rotables):
-- articulos que enriquecen una capa/perfil/intencion sin definir la columna vertebral.
+Satélites (rotables):
+- artículos que enriquecen una capa/perfil/intencion sin definir la columna vertebral.
 
 Regla:
-- cambios frecuentes solo en satelites.
-- cambios en anclas solo por decision ARB.
+- cambios frecuentes solo en satélites.
+- cambios en anclas solo por decisión ARB.
 
 ---
 
@@ -363,7 +363,7 @@ Checklist por cada articulo nuevo:
 2. asignar intencion principal,
 3. evaluar inclusion en 0-1 perfil,
 4. validar regla de aparicion maxima (<=3 contextos visibles),
-5. decidir si entra como satelite o reemplaza satelite existente.
+5. decidir si entra como satélite o reemplaza satélite existente.
 
 Objetivo:
 - crecimiento incremental sin rediseño estructural.
@@ -388,7 +388,7 @@ Trade-off:
 - estructura mas estricta, menor libertad editorial ad hoc.
 
 Mitigacion:
-- permitir variacion en satelites y notas por perfil.
+- permitir variacion en satélites y notas por perfil.
 
 ---
 
@@ -398,7 +398,7 @@ Trade-off:
 - se preservan 6 capas por mandato.
 
 Mitigacion:
-- usar subetiquetas internas para separar operacion contextual vs madurez/medicion sin crear nueva capa.
+- usar subetiquetas internas para separar operación contextual vs madurez/medicion sin crear nueva capa.
 
 ---
 
@@ -425,7 +425,7 @@ Mitigacion:
 ## 7) Recomendacion final (ARB)
 
 Recomendacion:
-- adoptar /framework v2 simplificado con 6 bloques operativos, taxonomia principal unica por capa y Navigator unificado.
+- adoptar /framework v2 simplificado con 6 bloques operativos, taxonomia principal única por capa y Navigator unificado.
 
 Por que esta es la version mas simple posible:
 - conserva tesis Archwise,
@@ -435,11 +435,11 @@ Por que esta es la version mas simple posible:
 - reduce mantenimiento manual,
 - escala sin rediseño de arquitectura hasta Article-100.
 
-Decision operativa sugerida:
+Decisión operativa sugerida:
 1. congelar arquitectura v2 (6 bloques),
 2. implementar reglas de taxonomia y aparicion,
 3. activar politica anclas/satelites,
-4. revisar cada 10 articulos (no por sesion).
+4. revisar cada 10 artículos (no por sesion).
 
 Criterio de exito:
 - cada nuevo articulo se integra en < 15 minutos editoriales,
@@ -452,9 +452,12 @@ Criterio de exito:
 
 Este documento se considera cerrado cuando:
 - queda aceptada la reduccion de 9 a 6 bloques,
-- queda aceptada la taxonomia principal unica,
+- queda aceptada la taxonomia principal única,
 - quedan aceptadas reglas de aparicion maxima,
 - queda aceptada la politica de escalabilidad 30-100.
 
 Estado actual:
 - Propuesta ARB lista para aprobacion.
+
+
+

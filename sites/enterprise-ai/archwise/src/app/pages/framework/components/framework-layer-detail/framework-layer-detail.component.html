@@ -1,0 +1,59 @@
+<section class="framework-layers" id="capas">
+  <div class="container-listing">
+    <h2>Capas (detalle)</h2>
+
+    @if (unresolvedCount > 0) {
+      <p class="framework-warning" role="status">
+        Se detectaron {{ unresolvedCount }} slug(s) sin resolver. No bloquea render, pero deben revisarse.
+      </p>
+    }
+
+    <div class="framework-layer-list">
+      @for (layer of layers; track layer.id) {
+        <article class="framework-layer" [id]="layer.id">
+          <button
+            #layerToggleButton
+            type="button"
+            class="framework-layer-toggle"
+            [attr.data-layer-id]="layer.id"
+            [class.active]="activeLayerId === layer.id"
+            [attr.aria-expanded]="isExpanded(layer.id)"
+            (click)="onLayerToggle(layer.id)">
+            <strong>{{ layer.order }}. {{ layer.name }}</strong>
+            <span>{{ isExpanded(layer.id) ? 'Ocultar detalle' : 'Ver detalle' }}</span>
+          </button>
+
+          @if (isExpanded(layer.id)) {
+            <div class="framework-layer-body">
+              <p>{{ layer.shortDescription }}</p>
+
+              @if (layer.articles.length > 0) {
+                <ul class="framework-articles">
+                  @for (article of layer.articles; track article.slug) {
+                    <li>
+                      <a [routerLink]="['/articulos', article.slug]" (click)="onArticleSelected(article.slug)">
+                        {{ article.title }}
+                      </a>
+                      <span> · {{ article.category.name }} · {{ article.readingTime }} min</span>
+                    </li>
+                  }
+                </ul>
+              } @else {
+                <p>No hay artículos resueltos para esta capa.</p>
+              }
+
+              @if (layer.unresolvedSlugs.length > 0) {
+                <p class="framework-warning" role="status">
+                  Slugs no resueltos en esta capa: {{ layer.unresolvedSlugs.join(', ') }}
+                </p>
+              }
+            </div>
+          }
+        </article>
+      }
+    </div>
+  </div>
+</section>
+
+
+

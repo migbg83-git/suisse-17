@@ -22,6 +22,10 @@ export const serverRoutes: ServerRoute[] = [
     renderMode: RenderMode.Prerender
   },
   {
+    path: 'framework',
+    renderMode: RenderMode.Prerender
+  },
+  {
     path: 'manifesto',
     renderMode: RenderMode.Prerender
   },

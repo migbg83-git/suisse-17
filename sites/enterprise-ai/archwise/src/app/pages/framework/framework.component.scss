@@ -1,0 +1,93 @@
+﻿.framework-page {
+  padding: 2rem 0 3rem;
+}
+
+.framework-hero {
+  margin-bottom: 1.5rem;
+}
+
+.framework-subtitle {
+  margin-top: 0.5rem;
+  max-width: 72ch;
+}
+
+.framework-anchor-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  margin: 0 0 1.15rem;
+  padding: 0.25rem 0;
+  align-items: center;
+}
+
+.framework-anchor-nav a {
+  font-size: 0.84rem;
+  line-height: 1;
+  text-decoration: none;
+  color: #1f466a;
+  border: 1px solid #c7d6e5;
+  background: #f7fbff;
+  border-radius: 999px;
+  padding: 0.45rem 0.72rem;
+  font-weight: 600;
+  transition: border-color 0.15s ease, background-color 0.15s ease, color 0.15s ease;
+}
+
+.framework-anchor-nav a:hover,
+.framework-anchor-nav a:focus-visible {
+  border-color: #86a8c7;
+  background: #eaf3fb;
+  color: #143a60;
+}
+
+.framework-layers h2 {
+  margin-bottom: 1rem;
+}
+
+.framework-layer-list {
+  display: grid;
+  gap: 1rem;
+}
+
+.framework-layer {
+  border: 1px solid #d9dde3;
+  border-radius: 8px;
+  padding: 1rem;
+  background: #fff;
+}
+
+.framework-layer h3 {
+  margin-bottom: 0.5rem;
+}
+
+.framework-articles {
+  margin: 0.75rem 0;
+  padding-left: 1.2rem;
+}
+
+.framework-warning {
+  margin-top: 0.5rem;
+  color: #8a5a00;
+}
+
+/* Sprint A.2 — wider layout for /framework on desktop */
+:host ::ng-deep .container-listing {
+  max-width: 1240px;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+@media (max-width: 767px) {
+  .framework-anchor-nav {
+    gap: 0.45rem;
+    margin-bottom: 1rem;
+  }
+
+  .framework-anchor-nav a {
+    font-size: 0.8rem;
+    padding: 0.42rem 0.64rem;
+  }
+}
+
+
+

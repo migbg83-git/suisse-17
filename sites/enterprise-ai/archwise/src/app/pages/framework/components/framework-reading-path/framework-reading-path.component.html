@@ -1,0 +1,26 @@
+<div class="framework-reading-path">
+  @if (articles.length > 0) {
+    <ol>
+      @for (article of articles; track article.slug; let idx = $index) {
+        <li>
+          <span>{{ idx + 1 }}.</span>
+          <a [routerLink]="['/articulos', article.slug]" (click)="onArticleSelected(article.slug)">
+            {{ article.title }}
+          </a>
+          <span> · {{ article.readingTime }} min</span>
+        </li>
+      }
+    </ol>
+  } @else {
+    <p>No hay artículos resueltos para esta combinacion.</p>
+  }
+
+  @if (unresolvedSlugs.length > 0) {
+    <p class="framework-warning" role="status">
+      Slugs no resueltos en ruta: {{ unresolvedSlugs.join(', ') }}
+    </p>
+  }
+</div>
+
+
+

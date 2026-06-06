@@ -3,15 +3,15 @@
 Fecha: 2026-06-06
 Estado: Especificacion cerrada de arquitectura conceptual y de contenido
 Dependencias de origen: framework-discovery aprobado, framework-archwise-v1-proposal aprobado, ASIS v1.1 aprobado
-Decision de programa: implementar /framework antes de iniciar Article-30
+Decisión de programa: implementar /framework antes de iniciar Article-30
 
 ---
 
-## 0. Decision arquitectonica
+## 0. Decisión arquitectónica
 
-/framework sera un hub de orientacion conceptual y navegacion causal del corpus Archwise, no un indice editorial, no un tutorial de implementacion y no un sustituto de /articulos.
+/framework sera un hub de orientación conceptual y navegacion causal del corpus Archwise, no un indice editorial, no un tutorial de implementacion y no un sustituto de /articulos.
 
-Su funcion es convertir 29 piezas en un sistema comprensible para decision operativa.
+Su funcion es convertir 29 piezas en un sistema comprensible para decisión operativa.
 
 Principio rector:
 - Orden causal de capacidades > orden cronologico de publicacion.
@@ -22,29 +22,29 @@ Principio rector:
 
 Orden definitivo de bloques:
 
-1. Bloque A - Tesis y uso de la pagina
+1. Bloque A - Tesis y uso de la página
 2. Bloque B - Mapa causal del framework (6 capas)
 3. Bloque C - Capas del framework (detalle operativo por capa)
-4. Bloque D - Ciclo de madurez y diagnostico continuo
+4. Bloque D - Ciclo de madurez y diagnóstico continuo
 5. Bloque E - Rutas por perfil
-6. Bloque F - Biblioteca guiada de articulos (fundacionales, diagnostico, avanzados)
+6. Bloque F - Biblioteca guiada de artículos (fundacionales, diagnóstico, avanzados)
 7. Bloque G - Vocabulario operativo (glosario corto)
 8. Bloque H - Relacion con Home, Manifesto, Articles y Newsletter
-9. Bloque I - Proximos pasos del lector (CTAs de continuidad)
+9. Bloque I - Próximos pasos del lector (CTAs de continuidad)
 
 Reglas estructurales:
 - Maximo 9 bloques para evitar sobrecarga.
 - Cada bloque debe habilitar el siguiente.
-- Ningun bloque puede depender de haber leido todos los articulos.
+- Ningun bloque puede depender de haber leido todos los artículos.
 
 ---
 
 ## 2. Objetivo de cada bloque
 
-### Bloque A - Tesis y uso de la pagina
+### Bloque A - Tesis y uso de la página
 
 Proposito:
-- Alinear expectativa en menos de 45 segundos.
+- Alínear expectativa en menos de 45 segundos.
 
 Mensaje principal:
 - Este framework explica como integrar capacidades de IA sin generar deuda estructural.
@@ -52,11 +52,11 @@ Mensaje principal:
 Informacion mostrada:
 - Que problema resuelve.
 - Para quien es.
-- Como leer la pagina.
+- Como leer la página.
 
-Articulos relacionados:
-- 26 (sintesis del framework)
-- 29 (integridad de secuencia)
+Artículos relacionados:
+- 26 (síntesis del framework)
+- 29 (Sequence Integrity)
 
 CTAs asociados:
 - Ver mapa causal.
@@ -67,20 +67,20 @@ CTAs asociados:
 ### Bloque B - Mapa causal del framework (6 capas)
 
 Proposito:
-- Dar orientacion global del sistema en una sola vista mental.
+- Dar orientación global del sistema en una sola vista mental.
 
 Mensaje principal:
 - Las capas son dependencias causales, no checklist temporal.
 
 Informacion mostrada:
-- Capa 1: Diagnostico AI-Ready.
-- Capa 2: Contexto explicito y Knowledge Debt.
+- Capa 1: Diagnóstico AI-Ready.
+- Capa 2: Contexto explícito y Knowledge Debt.
 - Capa 3: Governance.
 - Capa 4: AI Operating Model.
 - Capa 5: Organizational Memory.
-- Capa 6: Context Systems y capacidad agentica enterprise.
+- Capa 6: Context Systems y capacidad agéntica enterprise.
 
-Articulos relacionados:
+Artículos relacionados:
 - Entrada por capa (ver seccion 6).
 
 CTAs asociados:
@@ -95,26 +95,26 @@ Proposito:
 - Convertir cada capa en unidad accionable de comprension.
 
 Mensaje principal:
-- Cada capa tiene objetivo, dependencia, sintomas de ausencia y lectura recomendada.
+- Cada capa tiene objetivo, dependencia, síntomas de ausencia y lectura recomendada.
 
 Informacion mostrada por capa:
 - Que resuelve.
 - Que habilita aguas abajo.
 - Que rompe si falta.
-- Pregunta de diagnostico de readiness.
-- 3-5 articulos recomendados.
+- Pregunta de diagnóstico de readiness.
+- 3-5 artículos recomendados.
 
-Articulos relacionados:
+Artículos relacionados:
 - Cobertura completa 01-29 distribuida por capa.
 
 CTAs asociados:
-- Leer articulos de esta capa.
+- Leer artículos de esta capa.
 - Ver siguiente capa.
 - Ir a ruta por perfil.
 
 ---
 
-### Bloque D - Ciclo de madurez y diagnostico continuo
+### Bloque D - Ciclo de madurez y diagnóstico continuo
 
 Proposito:
 - Evitar lectura lineal simplista y reforzar aprendizaje adaptativo.
@@ -127,7 +127,7 @@ Informacion mostrada:
 - Diferencia entre actividad y madurez operativa.
 - Punto de control: Context Debt y Activation Debt.
 
-Articulos relacionados:
+Artículos relacionados:
 - 27 (adoption architecture)
 - 28 (measurement system)
 - 29 (sequence integrity)
@@ -135,23 +135,23 @@ Articulos relacionados:
 
 CTAs asociados:
 - Evaluar madurez actual.
-- Profundizar en evidencia y medicion.
+- Profundizar en evidencia y medición.
 
 ---
 
 ### Bloque E - Rutas por perfil
 
 Proposito:
-- Reducir friccion de entrada y personalizar navegacion.
+- Reducir fricción de entrada y personalizar navegacion.
 
 Mensaje principal:
 - No todos entran por el mismo punto; cada rol necesita una secuencia distinta.
 
 Informacion mostrada:
 - 5 rutas cerradas: CTO, Enterprise Architect, Head of Engineering, Transformation Leader, Consultor.
-- Para cada ruta: objetivo, secuencia de 5 articulos, resultado esperado.
+- Para cada ruta: objetivo, secuencia de 5 artículos, resultado esperado.
 
-Articulos relacionados:
+Artículos relacionados:
 - Curados por perfil (seccion 5).
 
 CTAs asociados:
@@ -160,7 +160,7 @@ CTAs asociados:
 
 ---
 
-### Bloque F - Biblioteca guiada de articulos
+### Bloque F - Biblioteca guiada de artículos
 
 Proposito:
 - Unificar descubrimiento sin duplicar /articulos.
@@ -170,11 +170,11 @@ Mensaje principal:
 
 Informacion mostrada:
 - Fundacionales.
-- Diagnostico.
+- Diagnóstico.
 - Avanzados.
 - Transversales.
 
-Articulos relacionados:
+Artículos relacionados:
 - Todos los grupos definidos en seccion 6.
 
 CTAs asociados:
@@ -186,7 +186,7 @@ CTAs asociados:
 ### Bloque G - Vocabulario operativo (glosario corto)
 
 Proposito:
-- Asegurar lenguaje comun minimo sin sobrecargar.
+- Asegurar lenguaje común minimo sin sobrecargar.
 
 Mensaje principal:
 - El vocabulario sirve para decidir mejor, no para sofisticar discurso.
@@ -199,7 +199,7 @@ Informacion mostrada:
 - Activation Debt.
 - Interface Integrity (como puente hacia ASIS).
 
-Articulos relacionados:
+Artículos relacionados:
 - 27, 28, 29, 24.
 
 CTAs asociados:
@@ -214,13 +214,13 @@ Proposito:
 - Eliminar solapamientos entre assets.
 
 Mensaje principal:
-- Cada pagina del ecosistema responde una pregunta distinta.
+- Cada página del ecosistema responde una pregunta distinta.
 
 Informacion mostrada:
 - Matriz de diferenciacion Home, Manifesto, Framework, Articles, Newsletter.
 
-Articulos relacionados:
-- No aplica como bloque de profundidad, si como bloque de orientacion.
+Artículos relacionados:
+- No aplica como bloque de profundidad, si como bloque de orientación.
 
 CTAs asociados:
 - Ir a Home.
@@ -230,7 +230,7 @@ CTAs asociados:
 
 ---
 
-### Bloque I - Proximos pasos del lector
+### Bloque I - Próximos pasos del lector
 
 Proposito:
 - Cerrar con accion clara y medible.
@@ -240,10 +240,10 @@ Mensaje principal:
 
 Informacion mostrada:
 - Opcion 1: iniciar ruta por perfil.
-- Opcion 2: evaluar madurez con bloque diagnostico.
+- Opcion 2: evaluar madurez con bloque diagnóstico.
 - Opcion 3: explorar corpus completo.
 
-Articulos relacionados:
+Artículos relacionados:
 - Personalizados segun interaccion previa.
 
 CTAs asociados:
@@ -259,7 +259,7 @@ CTAs asociados:
 
 El visitante debe entender:
 - Archwise no propone un stack tecnico, propone una arquitectura de capacidades.
-- El problema principal no es falta de iniciativas, sino falta de integracion coherente.
+- El problema principal no es falta de iniciativas, sino falta de integración coherente.
 
 Bloques que lo habilitan:
 - A (tesis), B (mapa causal).
@@ -274,7 +274,7 @@ Riesgo a evitar:
 El visitante debe entender:
 - Cuales son las 6 capas.
 - Por que el orden es causal.
-- Donde podria estar su organizacion hoy.
+- Donde podria estar su organización hoy.
 
 Bloques que lo habilitan:
 - B (mapa), C (capas), D (ciclo).
@@ -288,7 +288,7 @@ Riesgo a evitar:
 
 El visitante debe entender:
 - Que capa le falta y que deuda probable esta acumulando.
-- Que articulos leer primero segun su rol.
+- Que artículos leer primero segun su rol.
 
 Bloques que lo habilitan:
 - C (detalle), E (rutas), F (biblioteca guiada).
@@ -301,12 +301,12 @@ Riesgo a evitar:
 ### Minuto 10
 
 El visitante debe entender:
-- Como convertir el framework en secuencia de aprendizaje y decision real.
-- Como conectar diagnostico, integracion y medicion continua.
+- Como convertir el framework en secuencia de aprendizaje y decisión real.
+- Como conectar diagnóstico, integración y medición continua.
 - Cual es su siguiente accion concreta en el sitio.
 
 Bloques que lo habilitan:
-- D (ciclo), E (ruta), I (proximos pasos).
+- D (ciclo), E (ruta), I (próximos pasos).
 
 Riesgo a evitar:
 - Lectura completa sin accion posterior.
@@ -325,11 +325,11 @@ Matriz de diferenciacion:
 - Manifesto
   - Pregunta: cual es la tesis intelectual de fondo.
   - Funcion: marco filosofico y principios.
-  - No debe hacer: navegacion operativa por articulos.
+  - No debe hacer: navegacion operativa por artículos.
 
 - Framework
   - Pregunta: como encajan las capacidades y por donde empezar.
-  - Funcion: orientacion conceptual y decision de recorrido.
+  - Funcion: orientación conceptual y decisión de recorrido.
   - No debe hacer: listado cronologico total.
 
 - Articles
@@ -345,7 +345,7 @@ Matriz de diferenciacion:
 Regla de no solapamiento:
 - Home = promesa.
 - Manifesto = principios.
-- Framework = arquitectura y orientacion.
+- Framework = arquitectura y orientación.
 - Articles = evidencia y profundidad.
 - Newsletter = continuidad.
 
@@ -359,7 +359,7 @@ Entradas hacia /framework:
 - Navbar principal (item dedicado: Framework).
 - Bloque de contexto en Home.
 - Bloque Mapa del Framework en /articulos (enlace a version completa).
-- Enlace contextual desde articulos 20-29.
+- Enlace contextual desde artículos 20-29.
 
 Salidas principales desde /framework:
 - A /articulos para exploracion completa.
@@ -376,8 +376,8 @@ Secuencia interna recomendada:
 
 Enlaces obligatorios de cruce:
 - Desde cada capa (C) a su ruta por perfil (E).
-- Desde cada ruta (E) a articulos concretos (F).
-- Desde glosario (G) a articulos 27/28/29.
+- Desde cada ruta (E) a artículos concretos (F).
+- Desde glosario (G) a artículos 27/28/29.
 - Desde relacion del sitio (H) a Home/Manifesto/Articles.
 
 Regla:
@@ -392,7 +392,7 @@ Regla:
 Objetivo:
 - Priorizar secuencia de capacidades bajo restriccion real.
 
-Ruta sugerida (5 articulos):
+Ruta sugerida (5 artículos):
 1. 29
 2. 11
 3. 27
@@ -407,7 +407,7 @@ Resultado esperado:
 #### Enterprise Architect
 
 Objetivo:
-- Construir argumento trazable de integracion intercapas.
+- Construir argumento trazable de integración intercapas.
 
 Ruta sugerida:
 1. 26
@@ -417,14 +417,14 @@ Ruta sugerida:
 5. 23
 
 Resultado esperado:
-- Puede justificar decisiones con evidencia de coherencia y dependencia.
+- Puede justificar decisiónes con evidencia de coherencia y dependencia.
 
 ---
 
 #### Head of Engineering
 
 Objetivo:
-- Traducir framework a decisiones de ejecucion de equipos.
+- Traducir framework a decisiónes de ejecucion de equipos.
 
 Ruta sugerida:
 1. 21
@@ -441,7 +441,7 @@ Resultado esperado:
 #### Transformation Leader
 
 Objetivo:
-- Conectar estrategia, arquitectura y operacion en programa multiarea.
+- Conectar estrategia, arquitectura y operación en programa multiarea.
 
 Ruta sugerida:
 1. 26
@@ -468,24 +468,24 @@ Ruta sugerida:
 5. 28
 
 Resultado esperado:
-- Dispone de lenguaje comun, diagnostico y narrativa de accion replicable.
+- Dispone de lenguaje común, diagnóstico y narrativa de accion replicable.
 
 ---
 
-## 6. Integracion con articulos
+## 6. Integración con artículos
 
 ### 6.1 Clasificacion oficial para /framework
 
-Articulos fundacionales:
+Artículos fundacionales:
 - 01, 03, 04, 06, 07, 08, 09, 10, 14, 15, 20, 21, 22, 23, 24, 25, 26
 
-Articulos de diagnostico:
+Artículos de diagnóstico:
 - 11, 12, 13, 18, 19, 27, 29
 
-Articulos avanzados:
+Artículos avanzados:
 - 23, 24, 25, 26, 27, 28, 29
 
-Articulos transversales (medicion y coherencia):
+Artículos transversales (medición y coherencia):
 - 27, 28, 29
 
 Nota:
@@ -496,28 +496,28 @@ Nota:
 ### 6.2 Como deben aparecer en /framework
 
 Reglas de aparicion:
-- En Bloque C (capas): maximo 5 articulos por capa.
-- En Bloque E (rutas): exactamente 5 articulos por perfil.
+- En Bloque C (capas): maximo 5 artículos por capa.
+- En Bloque E (rutas): exactamente 5 artículos por perfil.
 - En Bloque F (biblioteca guiada): listado por grupo con prioridad recomendada.
 
 Formato conceptual por articulo:
 - ID y titulo.
-- Una linea de valor (para que leerlo en esta etapa).
+- Una línea de valor (para que leerlo en esta etapa).
 - Tiempo estimado de lectura.
 - Relacion con capa o ruta.
 
 Reglas de equilibrio:
 - No saturar una capa con exceso de enlaces.
-- Cada capa debe tener al menos 2 articulos y maximo 5 destacados.
+- Cada capa debe tener al menos 2 artículos y maximo 5 destacados.
 
 ---
 
 ### 6.3 Asignacion por capa (version cerrada v1)
 
-Capa 1 - Diagnostico AI-Ready:
+Capa 1 - Diagnóstico AI-Ready:
 - 11, 12, 13
 
-Capa 2 - Contexto explicito y Knowledge Debt:
+Capa 2 - Contexto explícito y Knowledge Debt:
 - 01, 03, 06, 14, 15
 
 Capa 3 - Governance:
@@ -529,7 +529,7 @@ Capa 4 - AI Operating Model:
 Capa 5 - Organizational Memory:
 - 22, 23
 
-Capa 6 - Context Systems y capacidad agentica:
+Capa 6 - Context Systems y capacidad agéntica:
 - 24, 25, 26, 27, 28, 29
 
 Soporte transversal:
@@ -537,18 +537,18 @@ Soporte transversal:
 
 ---
 
-## 7. Integracion futura con ASIS (sin implementacion)
+## 7. Integración futura con ASIS (sin implementacion)
 
 Objetivo:
-- Preparar encaje conceptual de ASIS sin convertir /framework en producto de evaluacion.
+- Preparar encaje conceptual de ASIS sin convertir /framework en producto de evaluación.
 
 Principio:
-- /framework seguira siendo pagina de orientacion. ASIS entrara como capa de evaluacion madura en un nivel posterior.
+- /framework seguira siendo página de orientación. ASIS entrara como capa de evaluación madura en un nivel posterior.
 
 Ubicacion conceptual prevista:
-- Bloque D (ciclo de madurez): introduccion a evaluacion por evidencia.
+- Bloque D (ciclo de madurez): introduccion a evaluación por evidencia.
 - Bloque G (vocabulario): terminos ASIS compatibles.
-- Bloque I (proximos pasos): CTA futuro a evaluacion estructurada cuando exista.
+- Bloque I (próximos pasos): CTA futuro a evaluación estructurada cuando exista.
 
 Contenido permitido ahora:
 - Mencionar que la madurez se valida con evidencia y transiciones, no con narrativa.
@@ -581,12 +581,12 @@ Mitigacion:
 ### Riesgo 2 - Exceso de complejidad estructural
 
 Fallo:
-- Demasiados bloques o rutas crean friccion cognitiva.
+- Demasiados bloques o rutas crean fricción cognitiva.
 
 Mitigacion:
 - Mantener 9 bloques maximo.
-- Limitar 5 articulos por ruta.
-- Limitar 5 articulos destacados por capa.
+- Limitar 5 artículos por ruta.
+- Limitar 5 artículos destacados por capa.
 
 ---
 
@@ -601,13 +601,13 @@ Mitigacion:
 
 ---
 
-### Riesgo 4 - Dependencia excesiva de articulos
+### Riesgo 4 - Dependencia excesiva de artículos
 
 Fallo:
-- Si el usuario no abre articulos, /framework no entrega valor.
+- Si el usuario no abre artículos, /framework no entrega valor.
 
 Mitigacion:
-- Incluir resumen operacional minimo autosuficiente por capa.
+- Incluir resumen operaciónal minimo autosuficiente por capa.
 - Asegurar que en 3 minutos se entienda el modelo.
 
 ---
@@ -628,7 +628,7 @@ Fallo:
 - /framework absorbe funciones de posicionamiento o tesis.
 
 Mitigacion:
-- Bloque H obligatorio con diferenciacion de roles por pagina.
+- Bloque H obligatorio con diferenciacion de roles por página.
 - CTAs cruzados para mantener arquitectura del sitio.
 
 ---
@@ -636,10 +636,10 @@ Mitigacion:
 ### Riesgo 7 - Obsolescencia con crecimiento del corpus
 
 Fallo:
-- Publicacion de nuevos articulos exige rediseño completo.
+- Publicacion de nuevos artículos exige rediseño completo.
 
 Mitigacion:
-- Estabilidad por capas y no por cantidad de articulos.
+- Estabilidad por capas y no por cantidad de artículos.
 - Versionado de rutas por perfil sin alterar estructura global.
 
 ---
@@ -652,7 +652,7 @@ La especificacion se considera cerrada cuando:
 - Existe flujo temporal de comprension (seccion 3).
 - Existe no solapamiento con el resto del sitio (seccion 4).
 - Existen rutas por perfil cerradas (seccion 5).
-- Existe taxonomia de articulos y reglas de aparicion (seccion 6).
+- Existe taxonomia de artículos y reglas de aparicion (seccion 6).
 - Existe encaje conceptual ASIS sin implementacion (seccion 7).
 - Existen riesgos y mitigaciones con reglas de control (seccion 8).
 
@@ -660,3 +660,6 @@ Estado actual:
 - Cerrado para iniciar framework-content.md.
 - Cerrado para iniciar framework-ui-spec.md.
 - No habilita aun implementacion tecnica.
+
+
+

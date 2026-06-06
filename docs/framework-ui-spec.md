@@ -1,4 +1,4 @@
-# Framework UI Specification
+﻿# Framework UI Specification
 
 Fecha: 2026-06-06
 Estado: Especificacion UI cerrada lista para implementacion Angular
@@ -18,7 +18,7 @@ Incluye:
 - componentes UI,
 - interacciones,
 - responsive,
-- integracion Angular,
+- integración Angular,
 - SEO y accesibilidad,
 - riesgos UX,
 - criterios de aceptacion.
@@ -31,7 +31,7 @@ No incluye:
 - cambios conceptuales en framework.
 
 Invariante de producto:
-- /framework mantiene 6 bloques aprobados y funcion de orientacion conceptual + navegacion causal.
+- /framework mantiene 6 bloques aprobados y funcion de orientación conceptual + navegacion causal.
 
 ---
 
@@ -51,7 +51,7 @@ En 3 minutos, visitante debe entender:
 
 En 10 minutos, visitante debe entender:
 - como convertir comprension en recorrido concreto de lectura,
-- como conectar capas con articulos relevantes,
+- como conectar capas con artículos relevantes,
 - cual es su siguiente accion en el sitio (continuidad).
 
 ---
@@ -63,7 +63,7 @@ Acciones primarias:
 2. expandir detalle de una capa,
 3. lanzar ruta por perfil,
 4. filtrar por intencion,
-5. abrir articulos relacionados,
+5. abrir artículos relacionados,
 6. volver a mapa sin perder contexto.
 
 Acciones secundarias:
@@ -77,7 +77,7 @@ Acciones secundarias:
 ## 1.3 Errores de comprension a evitar
 
 Errores criticos:
-1. confundir /framework con cronologia de /articulos,
+1. confundir /framework con cronología de /articulos,
 2. interpretar capas como checklist temporal fijo,
 3. creer que navigator duplica /articulos,
 4. pensar que ASIS se implementa aqui,
@@ -86,8 +86,8 @@ Errores criticos:
 Mecanismos UI para prevenirlos:
 - etiquetas de contexto en hero y mapa,
 - notas "orden causal, no cronologico",
-- separacion visual entre "orientacion" y "exploracion total",
-- CTAs de continuidad explicitos.
+- separacion visual entre "orientación" y "exploracion total",
+- CTAs de continuidad explícitos.
 
 ---
 
@@ -101,7 +101,7 @@ Orden visual definitivo:
 5. Vocabulario minimo
 6. Continuidad
 
-Regla de pagina:
+Regla de página:
 - una sola columna narrativa principal con subestructuras internas,
 - jerarquia fuerte arriba, densidad progresiva en centro, cierre accionable al final.
 
@@ -116,7 +116,7 @@ Jerarquia:
 - maxima (H1 + subtitulo + dos acciones primarias).
 
 Densidad de contenido:
-- baja (microcopy de orientacion, no detalle).
+- baja (microcopy de orientación, no detalle).
 
 Interaccion esperada:
 - click rapido a mapa o navigator.
@@ -126,7 +126,7 @@ Interaccion esperada:
 ## 2.2 Bloque 2 - Mapa causal de 6 capas
 
 Proposito visual:
-- representar arquitectura de sistema en una vista unica.
+- representar arquitectura de sistema en una vista única.
 
 Jerarquia:
 - alta (primer bloque de contenido estructural).
@@ -143,10 +143,10 @@ Interaccion esperada:
 ## 2.3 Bloque 3 - Capas (detalle)
 
 Proposito visual:
-- convertir capa en decision: que habilita, que riesgo evita, que leer.
+- convertir capa en decisión: que habilita, que riesgo evita, que leer.
 
 Jerarquia:
-- alta sostenida (nucleo de pagina).
+- alta sostenida (nucleo de página).
 
 Densidad de contenido:
 - alta controlada (estructura repetible por capa).
@@ -154,7 +154,7 @@ Densidad de contenido:
 Interaccion esperada:
 - expand/collapse por capa,
 - lectura por secciones internas,
-- links a articulos y navigator.
+- links a artículos y navigator.
 
 ---
 
@@ -172,7 +172,7 @@ Densidad de contenido:
 Interaccion esperada:
 - seleccion combinada perfil/intencion,
 - actualizacion de reading path en tiempo real,
-- CTA a articulos.
+- CTA a artículos.
 
 ---
 
@@ -222,7 +222,7 @@ Orden visual:
 - Continuidad en bloque final con CTAs paralelos.
 
 Tamano relativo aproximado:
-- Bloque 1: 12-15% altura total de pagina.
+- Bloque 1: 12-15% altura total de página.
 - Bloque 2: 12-15%.
 - Bloque 3: 35-40%.
 - Bloque 4: 15-18%.
@@ -238,7 +238,7 @@ Prioridades visuales:
 6. Vocabulario
 
 Flujo de scroll:
-- top-down lineal,
+- top-down líneal,
 - anclas internas para saltar entre bloques,
 - retorno rapido a mapa desde cada capa.
 
@@ -284,7 +284,7 @@ Comportamiento intermedio:
 ## 4.1 Hero
 
 Responsabilidad:
-- comunicar tesis operativa y entrada rapida.
+- comúnicar tesis operativa y entrada rapida.
 
 Inputs:
 - title,
@@ -324,7 +324,7 @@ Comportamiento:
 ## 4.3 Capas Detail Panels
 
 Responsabilidad:
-- mostrar detalle de decision por capa.
+- mostrar detalle de decisión por capa.
 
 Inputs:
 - layerDetail (que resuelve, que habilita, riesgos, readinessQuestion, relatedArticles[]).
@@ -336,7 +336,7 @@ Outputs:
 
 Comportamiento:
 - acordeon (single-open por defecto en mobile, multi-open opcional desktop),
-- preserva estado abierto al navegar dentro de pagina.
+- preserva estado abierto al navegar dentro de página.
 
 ---
 
@@ -357,8 +357,8 @@ Outputs:
 
 Comportamiento:
 - fallback si combinacion no definida (usa ruta por perfil),
-- muestra maximo 5 articulos por ruta,
-- marca articulo ancla vs satelite.
+- muestra maximo 5 artículos por ruta,
+- marca articulo ancla vs satélite.
 
 ---
 
@@ -466,7 +466,7 @@ En Bloque 3:
 Reglas:
 - mobile: una capa abierta por defecto,
 - desktop: permitir mantener varias abiertas,
-- preservar estado durante scroll dentro de pagina.
+- preservar estado durante scroll dentro de página.
 
 ---
 
@@ -478,7 +478,7 @@ Entrada:
 
 Salida:
 - detalle de capa,
-- articulos asociados,
+- artículos asociados,
 - salto a navigator.
 
 ---
@@ -550,7 +550,7 @@ Cambios clave:
 
 ---
 
-## 7) Integracion Angular (sin implementacion)
+## 7) Integración Angular (sin implementacion)
 
 ## 7.1 Rutas
 
@@ -656,7 +656,7 @@ FrameworkNavigationState
 ## 7.5 Data flow propuesto
 
 Fuente primaria:
-- ContentService.getArticles() para metadata real de articulos.
+- ContentService.getArticles() para metadata real de artículos.
 
 Fuente de mapeo /framework:
 - framework.data.ts (slugs, capas, perfiles, intenciones, vocabulario).
@@ -679,7 +679,7 @@ Estructura minima:
 
 Meta SEO:
 - title orientado a arquitectura causal,
-- description orientada a orientacion conceptual,
+- description orientada a orientación conceptual,
 - canonical /framework,
 - OpenGraph y Twitter via SeoService.
 
@@ -724,23 +724,23 @@ No permitido:
 
 ### Riesgo 1 - Sobrecarga visual
 
-Sintoma:
+Síntoma:
 - demasiados bloques de texto continuo.
 
 Mitigacion:
 - chunking por componentes,
 - resumen primero, detalle bajo demanda,
-- maximo 3 articulos visibles por contexto antes de "ver mas".
+- maximo 3 artículos visibles por contexto antes de "ver mas".
 
 ---
 
 ### Riesgo 2 - Exceso de navegacion
 
-Sintoma:
+Síntoma:
 - usuario salta entre mapa, capas y navigator sin decidir.
 
 Mitigacion:
-- CTA principal unica por bloque,
+- CTA principal única por bloque,
 - estado persistente de seleccion,
 - breadcrumbs internos ligeros.
 
@@ -748,7 +748,7 @@ Mitigacion:
 
 ### Riesgo 3 - Confusion entre capas
 
-Sintoma:
+Síntoma:
 - capa 6 absorbe demasiados temas.
 
 Mitigacion:
@@ -759,11 +759,11 @@ Mitigacion:
 
 ### Riesgo 4 - Confusion con /articulos
 
-Sintoma:
+Síntoma:
 - /framework percibido como indice alternativo.
 
 Mitigacion:
-- copy explicita "orientacion, no catalogo",
+- copy explicita "orientación, no catalogo",
 - salida clara a /articulos completo,
 - no renderizar listados masivos en /framework.
 
@@ -771,7 +771,7 @@ Mitigacion:
 
 ### Riesgo 5 - Confusion con Manifesto
 
-Sintoma:
+Síntoma:
 - usuario no distingue tesis filosofica vs marco operativo.
 
 Mitigacion:
@@ -782,7 +782,7 @@ Mitigacion:
 
 ## 10) Criterios de aceptacion (listo para implementacion)
 
-La pagina /framework se considera lista para implementacion cuando:
+La página /framework se considera lista para implementacion cuando:
 
 1. Cumple arquitectura de 6 bloques aprobada sin agregar bloques nuevos.
 2. Cada bloque tiene componente UI asignado y contrato de datos definido.
@@ -793,11 +793,11 @@ La pagina /framework se considera lista para implementacion cuando:
 7. Modelos TypeScript requeridos estan definidos a nivel de contrato.
 8. SEO base (title, meta, canonical, H1/H2) esta especificado.
 9. A11y minima (teclado, foco, aria, jerarquia headings) esta especificada.
-10. Riesgos UX criticos tienen mitigacion de diseno definida.
+10. Riesgos UX criticos tienen mitigacion de diseño definida.
 11. Es posible implementar sin reinterpretar arquitectura conceptual aprobada.
 
 Definicion de done para handoff tecnico:
-- este documento + framework-content constituyen insumo suficiente para implementar /framework en Angular sin abrir decisiones de arquitectura.
+- este documento + framework-content constituyen insumo suficiente para implementar /framework en Angular sin abrir decisiónes de arquitectura.
 
 ---
 
@@ -817,3 +817,5 @@ Orden recomendado de ejecucion tecnica (futura, fuera de este alcance):
 
 Estado actual:
 - especificacion UI cerrada.
+
+

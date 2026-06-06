@@ -43,7 +43,7 @@ Framework Archwise
 - No captura la realidad: equipos avanzan en paralelo pero con dependencias concretas de coherencia.
 - Visitante sale pensando "tengo roadmap" en lugar de "sé cómo diagnosticar qué falta".
 
-**Riesgo:** Desalinea expectativas. Los CTOs que siguen el roadmap lineal cometerán errores de Activation Debt.
+**Riesgo:** Desalínea expectativas. Los CTOs que siguen el roadmap lineal cometerán errores de Activation Debt.
 
 ---
 
@@ -66,7 +66,7 @@ Framework Archwise
 **Descripción:** `/framework` se estructura como paso-a-paso: "Primer paso: implementa Classification. Segundo paso: implementa Governance..."
 
 **Por qué falla:**
-- **Asume contexto organizativo homogéneo.** La realidad es que organizaciones entran en framework en puntos distintos.
+- **Asume contexto organizativo homogéneo.** La realidad es que organizaciónes entran en framework en puntos distintos.
 - CTO de empresa legacy no empieza igual que CTO en greenfield.
 - Tutorial reduce framework a procedimiento, no a sistema de decisión.
 - Visitor sigue pasos pero sin entender *por qué* ese orden en su contexto específico.
@@ -107,12 +107,12 @@ Framework Archwise
 
 #### Error 1: Jerga sin experiencia anclada
 
-**Descripción:** `/framework` usa términos como "Interface Integrity", "Coherence Signals", "Activation Debt" sin conectarlos a decisiones reales que el CTO toma mañana.
+**Descripción:** `/framework` usa términos como "Interface Integrity", "Coherence Signals", "Activation Debt" sin conectarlos a decisiónes reales que el CTO toma mañana.
 
 **Síntoma de fallo:**
 - Visitor dice "ok, entiendo los términos" pero sale sin saber qué hacer.
 - La vocabulario vive en los artículos, no en el framework.
-- Framework no traducee conceptos a decisiones operativas.
+- Framework no traducee conceptos a decisiónes operativas.
 
 **Corrección necesaria:** Cada término debe aparecer con ejemplo mínimo operativo antes de invitación a "lee más en Article-X".
 
@@ -165,7 +165,7 @@ Framework Archwise
 **Síntoma de fallo:**
 - Home pierde protagonismo.
 - Secuencia de descubrimiento se rompe (Home → Manifesto → Articles → Newsletter).
-- SEO interno se desalinea.
+- SEO interno se desalínea.
 
 **Corrección necesaria:** `/framework` y Home deben ser complementarios, no competitivos.
 - Home: **promesa emocional** ("Archwise cambia cómo piensas la IA").
@@ -220,7 +220,7 @@ Es "aquí está la lógica causal de cómo Archwise piensa la integración, y c�
 ### 2.2 Propósito secundario (el que diferencia /framework de /manifesto)
 
 - **Manifesto:** "Por qué importa pensarse de esta forma" (filosófico).
-- **/framework:** "Cómo pensar de esta forma" (operacional).
+- **/framework:** "Cómo pensar de esta forma" (operaciónal).
 
 `/framework` no vende la idea. La opera.
 
@@ -270,7 +270,7 @@ Es "aquí está la lógica causal de cómo Archwise piensa la integración, y c�
 
 - **Sequence Integrity:** orden de integración que respeta dependencias causales.
 - **Evidence Integrity:** confiabilidad de manera en que medimos progreso.
-- **Coherence Signals:** alerta temprana de alineación/tensión/ruptura entre decisiones.
+- **Coherence Signals:** alerta temprana de alíneación/tensión/ruptura entre decisiónes.
 - **Context Debt:** costo de contexto no entregado en momento decisión.
 - **Activation Debt:** costo de activar sin dependencias satisfechas.
 
@@ -328,7 +328,7 @@ CTO sale diciendo: "Veo dónde estamos fallando y tengo ruta clara sin revolucio
 ### 3.2 Perfil 2: Enterprise Architect
 
 **Contexto:**
-- Responsable de decisiones arquitectónicas de largo plazo.
+- Responsable de decisiónes arquitectónicas de largo plazo.
 - Debe interactuar con C-suite, COO, múltiples equipos.
 - Necesita argumento coherente y trazable.
 
@@ -339,7 +339,7 @@ CTO sale diciendo: "Veo dónde estamos fallando y tengo ruta clara sin revolucio
 
 **Qué necesita encontrar:**
 - Framework como *sistema* (no partes). Énfasis en Interface Integrity.
-- Conexión explícita entre decisiones arquitectónicas y outcomes operativos.
+- Conexión explícita entre decisiónes arquitectónicas y outcomes operativos.
 - Evidence-based progression, no hype-based roadmapping.
 
 **Artículos de entrada (ruta Architect):**
@@ -358,7 +358,7 @@ Architect sale con vocabulario compartible a executives ("Nos falta Interface In
 
 **Contexto:**
 - Responsable de ejecución técnica del equipo.
-- Debe traducir decisiones arquitectónicas en workflows y procesos.
+- Debe traducir decisiónes arquitectónicas en workflows y procesos.
 - Interactúa con product, data, platform, application teams.
 
 **Qué busca:**
@@ -386,7 +386,7 @@ Head sale sabiendo "cómo le explicaré esto a mis lead engineers mañana".
 
 **Contexto:**
 - Vista 360 de organización.
-- Debe conectar estrategia, arquitectura, operaciones, cultura.
+- Debe conectar estrategia, arquitectura, operaciónes, cultura.
 - Horizonte multiaño.
 
 **Qué busca:**
@@ -424,7 +424,7 @@ Responsable sale con framework de governance para la transformación, no solo in
 3. Puntos de mejora evidentes y mensurables.
 
 **Qué necesita encontrar:**
-- Framework como **diagnostico system** (no receta única).
+- Framework como **diagnóstico system** (no receta única).
 - Vocabulario transferible (Sequence Integrity, Evidence Integrity).
 - Puntos de intervención claros: "Tu organización sufre falta de Context Debt management porque..."
 
@@ -464,7 +464,7 @@ Consultor sale con lenguaje común para diagnosticar cliente y propuesta de mejo
 
 [BLOQUE 3: CAPAS EXPANDIDAS (capa por capa)]
 ├─ CAPA 1: Diagnóstico AI-Ready
-│  ├─ Qué es (párrafo de 2-3 lineas)
+│  ├─ Qué es (párrafo de 2-3 líneas)
 │  ├─ Por qué importa ahora
 │  ├─ Si no tienes esto... (riesgo anclado)
 │  ├─ Artículos clave (links con títulos y reading time)
@@ -520,7 +520,7 @@ Consultor sale con lenguaje común para diagnosticar cliente y propuesta de mejo
 
 | Bloque | Función | Output esperado |
 |--------|---------|-----------------|
-| Introducción | Alinear expectativa | "Voy a entender lógica causal" |
+| Introducción | Alínear expectativa | "Voy a entender lógica causal" |
 | Mapa Visual | Anclaje visual/causal | "Veo orden. Veo por qué." |
 | Capas Expandidas | Comprensión profunda | "Entiendo cada capa y cómo encaja" |
 | Ciclo de Madurez | Síntesis | "No es silos. Es sistema." |
@@ -565,7 +565,7 @@ Elementos:
 - H1 (muy corto, memorizable)
 - Subtítulo (maxo 10 palabras, problema + promesa)
 - Párrafo 1: Problema que resuelve (3-4 líneas)
-  "Las organizaciones confunden actividad en IA (pilotos, despliegues) 
+  "Las organizaciónes confunden actividad en IA (pilotos, despliegues) 
    con integración real. Framework Archwise responde: ¿Cómo avanzar 
    si tu orden de integración respeta dependencias causales?"
 - Párrafo 2: Para quién (3-4 líneas)
@@ -643,7 +643,7 @@ Si sí → avanza.
 Si no → profundiza en artículos.
 
 Ejemplo (Governance):
-"¿Puedes decir que tus decisiones sobre IA 
+"¿Puedes decir que tus decisiónes sobre IA 
  en distintos equipos responden a criterio único 
  y trazable, o varían por presión/contexto local?"
 ```
@@ -976,7 +976,7 @@ Nota final: "¿Necesitas volver a empezar? Ir al Mapa.
 - Usuario no se identifica con rol más cercano.
 
 **Mitigación:**
-- Describe roles con palabras amplias ("Responsable de decisiones arquitectónicas"), no títulos exactos.
+- Describe roles con palabras amplias ("Responsable de decisiónes arquitectónicas"), no títulos exactos.
 - Añade nota: "¿Tu rol no está? Elige el más cercano o combina rutas."
 - Mantén rutas flexibles.
 
@@ -1075,3 +1075,6 @@ Si logra esto, `/framework` multiplica valor del corpus actual sin reemplazarlo.
 
 **Documento completado:** 2026-06-06  
 **Próximo paso:** Leer este documento + calificación estratégica de implementación vs otros candidatos.
+
+
+

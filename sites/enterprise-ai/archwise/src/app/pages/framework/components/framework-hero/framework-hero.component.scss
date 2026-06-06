@@ -1,0 +1,121 @@
+﻿.framework-hero {
+  margin-bottom: 2rem;
+}
+
+.framework-hero-shell {
+  border: 1px solid #d3dce6;
+  border-radius: 14px;
+  padding: 1.5rem;
+  background: línear-gradient(150deg, #f8fafc 0%, #eef4fb 70%, #ffffff 100%);
+}
+
+.framework-hero-kicker {
+  margin: 0;
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #325272;
+  font-weight: 700;
+}
+
+.framework-hero-title {
+  margin: 0.55rem 0 0;
+  max-width: 30ch;
+  font-size: clamp(1.7rem, 2.8vw, 2.5rem);
+  line-height: 1.08;
+  color: #102033;
+}
+
+.framework-subtitle {
+  margin: 0.9rem 0 0;
+  max-width: 64ch;
+  font-size: 1.02rem;
+  color: #2a3f58;
+}
+
+.framework-hero-metrics {
+  margin: 1.1rem 0 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.75rem;
+}
+
+.framework-hero-metrics li {
+  border: 1px solid #d5dfe9;
+  border-radius: 10px;
+  padding: 0.75rem;
+  background: #ffffff;
+  display: grid;
+  gap: 0.2rem;
+}
+
+.framework-hero-metrics strong {
+  font-size: 1.2rem;
+  color: #173450;
+}
+
+.framework-hero-metrics span {
+  font-size: 0.85rem;
+  color: #4b6078;
+}
+
+.framework-hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  margin-top: 1rem;
+}
+
+.framework-hero-cta {
+  border-radius: 999px;
+  padding: 0.58rem 1rem;
+  border: 1px solid transparent;
+  font-weight: 600;
+}
+
+.framework-hero-cta.primary {
+  background: #0f3356;
+  color: #ffffff;
+}
+
+.framework-hero-cta.secondary {
+  background: #ffffff;
+  border-color: #bfd0e1;
+  color: #1f3e5f;
+}
+
+.framework-hero-howto {
+  margin-top: 1rem;
+  border-top: 1px solid #d7e2ee;
+  padding-top: 0.8rem;
+}
+
+.framework-hero-howto h2 {
+  font-size: 0.95rem;
+  margin: 0;
+  color: #1d3f61;
+}
+
+.framework-hero-howto ol {
+  margin: 0.5rem 0 0;
+  padding-left: 1.2rem;
+  color: #3d556f;
+}
+
+.framework-hero-howto li {
+  margin: 0.3rem 0;
+}
+
+@media (max-width: 767px) {
+  .framework-hero-shell {
+    padding: 1.1rem;
+  }
+
+  .framework-hero-metrics {
+    grid-template-columns: 1fr;
+  }
+}
+
+

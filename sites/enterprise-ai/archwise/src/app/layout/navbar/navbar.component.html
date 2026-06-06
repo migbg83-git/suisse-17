@@ -16,6 +16,12 @@
 
     <nav class="aw-navbar__nav" [class.active]="menuOpen" aria-label="Principal">
       <a 
+        routerLink="/framework" 
+        routerLinkActive="active"
+        (click)="closeMenu()">
+        Framework
+      </a>
+      <a 
         routerLink="/articulos" 
         routerLinkActive="active"
         (click)="closeMenu()">

@@ -1,0 +1,48 @@
+﻿.framework-layers {
+  margin-bottom: 1.5rem;
+}
+
+.framework-layer-list {
+  display: grid;
+  gap: 1rem;
+}
+
+.framework-layer {
+  border: 1px solid #d9dde3;
+  border-radius: 8px;
+  padding: 0.75rem;
+  background: #fff;
+}
+
+.framework-layer-toggle {
+  width: 100%;
+  text-align: left;
+  border: 1px solid #d9dde3;
+  border-radius: 6px;
+  background: #fff;
+  padding: 0.75rem;
+  display: grid;
+  gap: 0.2rem;
+}
+
+.framework-layer-toggle.active {
+  border-color: #4f647a;
+  background: #f5f8fb;
+}
+
+.framework-layer-body {
+  margin-top: 0.75rem;
+  padding: 0.25rem 0.25rem 0;
+}
+
+.framework-articles {
+  margin: 0.75rem 0;
+  padding-left: 1.2rem;
+}
+
+.framework-warning {
+  margin-top: 0.5rem;
+  color: #8a5a00;
+}
+
+
