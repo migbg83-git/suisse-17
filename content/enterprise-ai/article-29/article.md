@@ -1,11 +1,11 @@
 ---
-title: "Integridad de Secuencia: Como Evaluar la Madurez Operativa con Evidencia y No con Narrativas"
+title: "Integridad de Secuencia: Cómo Evaluar la Madurez Operativa con Evidencia y No con Narrativas"
 slug: "integridad-secuencia-evaluar-madurez-operativa-evidencia-narrativas"
-description: "La actividad puede crecer mientras la coherencia operativa se deteriora. Este articulo propone una lectura practica para distinguir progreso narrativo de progreso real en organizaciones enterprise."
+description: "La actividad puede crecer mientras la coherencia operativa se deteriora. Este artículo propone una lectura práctica para distinguir progreso narrativo de progreso real en organizaciones enterprise."
 date: "2026-06-06"
 ---
 
-# Integridad de Secuencia: Como Evaluar la Madurez Operativa con Evidencia y No con Narrativas
+# Integridad de Secuencia: Cómo Evaluar la Madurez Operativa con Evidencia y No con Narrativas
 
 ## 1. La paradoja del progreso visible
 
@@ -29,7 +29,7 @@ No son anomalias. Son sintomas de un mismo mecanismo: se mide movimiento, pero n
 
 Por eso la pregunta rectora de este texto es directa:
 
-Como sabemos realmente si estamos madurando o simplemente estamos haciendo mas cosas?
+¿Cómo sabemos realmente si estamos madurando o simplemente estamos haciendo más cosas?
 
 La respuesta que se desarrolla en las siguientes secciones se apoya en cinco ideas nucleares: Sequence Integrity como criterio, Context Debt y Activation Debt como lectura acoplada de deterioro, y Evidence Integrity con Coherence Signals como base para decidir antes de la ruptura.
 
