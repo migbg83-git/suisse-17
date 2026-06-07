@@ -222,18 +222,21 @@ export const FRAMEWORK_PAGE_DATA: FrameworkPageData = {
     {
       id: 'go-articles',
       label: 'Ir a Artículos',
+      linkLabel: 'Explorar los 29 artículos →',
       route: '/articulos',
       description: 'Explora el corpus completo en orden editorial.'
     },
     {
       id: 'go-manifesto',
       label: 'Leer Manifesto',
+      linkLabel: 'Leer el Manifesto →',
       route: '/manifesto',
       description: 'Contexto de tesis y principios de Archwise.'
     },
     {
       id: 'newsletter-soon',
       label: 'Newsletter (proximamente)',
+      linkLabel: 'Unirme cuando esté disponible',
       description: 'Continuidad semanal del framework y del corpus.',
       disabled: true
     }

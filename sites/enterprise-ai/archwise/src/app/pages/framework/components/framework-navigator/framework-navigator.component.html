@@ -39,13 +39,11 @@
 
     @if (activePath; as path) {
       <section class="framework-route-result" aria-label="Ruta recomendada">
-        <h3>Ruta recomendada para esta combinacion</h3>
-        <p class="framework-route-context">Perfil: <strong>{{ activeProfileLabel }}</strong> · Intencion: <strong>{{ activeIntentLabel }}</strong></p>
+        <h3>Tu ruta: {{ activeProfileLabel }} → {{ activeIntentLabel }}</h3>
 
         @if (isFallbackPath) {
           <div class="framework-route-fallback" role="status">
-            <strong>Fallback activo.</strong>
-            <span>No existe una ruta exacta para esta combinacion. Se muestra la opcion mas cercana para avanzar sin bloquearte.</span>
+            <span>No existe una ruta exacta para esta combinación. Mostramos la opción más próxima para que puedas avanzar.</span>
           </div>
         }
 

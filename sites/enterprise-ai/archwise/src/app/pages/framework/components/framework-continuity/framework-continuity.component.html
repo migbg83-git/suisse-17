@@ -11,9 +11,9 @@
           }
 
           @if (cta.disabled) {
-            <button type="button" disabled>{{ cta.label }}</button>
+            <button type="button" disabled>{{ cta.linkLabel || cta.label }}</button>
           } @else if (cta.route) {
-            <a [routerLink]="[cta.route]">Ir</a>
+            <a [routerLink]="[cta.route]">{{ cta.linkLabel || cta.label }}</a>
           }
         </article>
       }

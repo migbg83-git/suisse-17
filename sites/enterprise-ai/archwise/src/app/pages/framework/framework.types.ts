@@ -36,6 +36,7 @@ export interface FrameworkTerm {
 export interface FrameworkContinuityCta {
   id: string;
   label: string;
+  linkLabel?: string;
   route?: string;
   description?: string;
   disabled?: boolean;
