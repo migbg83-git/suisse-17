@@ -25,7 +25,7 @@
   left: calc(100% / 12);
   right: calc(100% / 12);
   height: 2px;
-  background: línear-gradient(90deg, #ccdce9 0%, #2c5f8a 50%, #ccdce9 100%);
+  background: línear-gradient(90deg, #ccdce9 0%, #1a4d7a 50%, #ccdce9 100%);
   z-index: 0;
   pointer-events: none;
   border-radius: 2px;
@@ -38,7 +38,7 @@
 
 /* Arrow badge connector between nodes */
 .framework-layer-node:not(:last-child)::after {
-  content: '›';
+  content: '→';
   position: absolute;
   top: 0.9rem;
   left: calc(100% + 0.025rem);
@@ -47,9 +47,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 0.75rem;
+  font-size: 1.1rem;
   line-height: 1;
-  color: #5a87b0;
+  color: #1a4d7a;
+  font-weight: 900;
   z-index: 3;
   pointer-events: none;
 }

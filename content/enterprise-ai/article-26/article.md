@@ -5,9 +5,9 @@ description: "La escalabilidad no falla por ausencia de capacidades. Falla por a
 date: "2026-06-04"
 ---
 
-# Framework Archwise: como convertir capacidades aisladas en una capacidad operativa de IA a escala
+# Framework Archwise: cómo convertir capacidades aisladas en una capacidad operativa de IA a escala
 
-## ACTO 1 - La paradoja de la organizacion moderna
+## ACTO 1 - La paradoja de la organización moderna
 
 En muchas empresas, la foto parece impecable.
 
@@ -40,7 +40,7 @@ Y aun asi:
 
 No estamos ante un problema de calidad puntual. Estamos ante un problema de arquitectura organizativa.
 
-Por que?
+¿Por qué?
 
 Porque el exito local no garantiza coherencia global.
 
