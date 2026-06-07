@@ -1,0 +1,55 @@
+﻿<div class="framework-page">
+  @if (viewModel$ | async; as vm) {
+    <aw-framework-hero
+      [title]="vm.title"
+      [subtitle]="vm.subtitle"
+      (primaryAction)="onPrimaryAction()"
+      (secondaryAction)="onSecondaryAction()">
+    </aw-framework-hero>
+
+    <div class="container-listing">
+      <nav class="framework-anchor-nav" aria-label="Navegacion secundaria de framework">
+        <a [routerLink]="['/framework']" fragment="mapa">Mapa</a>
+        <a [routerLink]="['/framework']" fragment="capas">Capas</a>
+        <a [routerLink]="['/framework']" fragment="navigator">Navigator</a>
+        <a [routerLink]="['/framework']" fragment="vocabulario">Vocabulario</a>
+        <a [routerLink]="['/framework']" fragment="continuidad">Continuidad</a>
+      </nav>
+    </div>
+
+    <aw-framework-layer-map
+      [layers]="vm.layers"
+      [activeLayerId]="activeLayerId"
+      (layerSelected)="onLayerSelected($event)">
+    </aw-framework-layer-map>
+
+    <aw-framework-layer-detail
+      [layers]="vm.layers"
+      [activeLayerId]="activeLayerId"
+      [expandedLayerIds]="expandedLayerIds"
+      [unresolvedCount]="vm.unresolvedCount"
+      (layerToggled)="onLayerToggled($event)">
+    </aw-framework-layer-detail>
+
+    <aw-framework-navigator
+      [profiles]="vm.profiles"
+      [intents]="vm.intents"
+      [activeProfileId]="activeProfileId"
+      [activeIntentId]="activeIntentId"
+      [activePath]="resolveActivePath(vm.resolvedPaths)"
+      [isFallbackPath]="isActivePathFallback(vm.resolvedPaths)"
+      (profileChanged)="onProfileChanged($event)"
+      (intentChanged)="onIntentChanged($event)">
+    </aw-framework-navigator>
+
+    <aw-framework-vocabulary
+      [terms]="vm.terms">
+    </aw-framework-vocabulary>
+
+    <aw-framework-continuity
+      [ctas]="vm.continuityCtas">
+    </aw-framework-continuity>
+  }
+</div>
+
+

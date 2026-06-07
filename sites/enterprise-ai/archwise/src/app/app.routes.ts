@@ -6,6 +6,10 @@ export const routes: Routes = [
     loadComponent: () => import('./pages/home/home.component').then(m => m.HomeComponent)
   },
   {
+    path: 'framework',
+    loadComponent: () => import('./pages/framework/framework.component').then(m => m.FrameworkComponent)
+  },
+  {
     path: 'manifesto',
     loadComponent: () => import('./pages/manifesto/manifesto.component').then(m => m.ManifestoComponent)
   },

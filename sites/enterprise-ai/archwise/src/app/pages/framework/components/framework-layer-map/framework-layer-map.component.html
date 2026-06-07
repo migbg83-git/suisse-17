@@ -1,0 +1,35 @@
+﻿<section class="framework-layer-map" id="mapa">
+  <div class="container-listing">
+    <h2>Mapa causal de 6 capas</h2>
+    <p class="framework-layer-map-subtitle">Un sistema de dependencias: cada capa habilita la siguiente.</p>
+
+    <ol class="framework-layer-map-list" aria-label="Mapa causal del framework">
+      @for (layer of layers; track layer.id; let idx = $index) {
+        <li
+          class="framework-layer-node"
+          [class.active]="isActive(layer.id)"
+          [class.related]="isRelated(layer.id)">
+          <button
+            type="button"
+            class="framework-layer-map-item"
+            [attr.aria-current]="isActive(layer.id) ? 'step' : null"
+            (click)="onLayerSelected(layer.id)">
+            <span class="framework-layer-node-order">Capa {{ layer.order }}</span>
+            <strong>{{ layer.name }}</strong>
+            <span>{{ layer.shortDescription }}</span>
+            @if (isActive(layer.id)) {
+              <span class="framework-layer-node-state">Capa en foco</span>
+            }
+          </button>
+
+          <div class="framework-layer-node-hint" aria-hidden="true">
+            <small>{{ getDependencyLabel(idx) }}</small>
+            <small>{{ getRiskLabel(idx) }}</small>
+          </div>
+        </li>
+      }
+    </ol>
+  </div>
+</section>
+
+

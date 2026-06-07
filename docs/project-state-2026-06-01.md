@@ -3,12 +3,33 @@ Fecha: 2026-06-01
 
 Actualizacion operativa: 2026-06-04 (post-publicacion de article-27)
 Actualizacion operativa: 2026-06-05 (post-publicacion de article-28)
+Actualizacion operativa: 2026-06-06 (post-publicacion de article-29)
 
 ---
 
 ## Executive Summary
 
-El clúster Enterprise AI de Archwise cuenta con **28 artículos publicados**. Tras la publicación de article-28 ("Measurement System para Integración y Madurez Operativa: cómo detectar salud sistémica antes de que la deuda se convierta en estructura") y la validación de producción, el proyecto mantiene estado operativo pleno. La página /articulos refleja el nuevo artículo en listado y detalle, con metadata y relatedArticles correctos.
+El clúster Enterprise AI de Archwise cuenta con **29 artículos publicados**. Tras la publicación de article-29 ("Integridad de Secuencia: Como Evaluar la Madurez Operativa con Evidencia y No con Narrativas") y la validación de producción, el proyecto mantiene estado operativo pleno. La página /articulos refleja el nuevo artículo en listado y detalle, con metadata y relatedArticles correctos.
+### Actualización operativa — Article-29
+
+Fecha: 2026-06-06
+Estado: PUBLISHED
+
+Datos:
+- slug: `integridad-secuencia-evaluar-madurez-operativa-evidencia-narrativas`
+- categoría: `Enterprise AI`
+- readingTime: `29`
+- autor: `Miguel Benito García`
+- conceptos públicos asociados: Sequence Integrity, Evidence Integrity, Coherence Signals, Context Debt, Activation Debt, evaluación de madurez operativa
+- build:content OK
+- build:seo OK (32 URLs en sitemap)
+- build:ssg OK (32 rutas prerenderizadas)
+- deploy OK
+- producción validada OK
+- sitemap root OK (archwise.org)
+- canonical OK
+- relatedArticles OK (5/5 resueltos)
+
 ### Actualización operativa — Article-28
 
 Fecha: 2026-06-05
@@ -88,7 +109,7 @@ El proyecto se encuentra en estado operativo. La infraestructura técnica, el pi
 
 ## Estado editorial
 
-### Artículos publicados: 27
+### Artículos publicados: 29
 
 | Nº | Título | Categoría | Slug | Estado |
 |----|--------|-----------|------|--------|
@@ -120,16 +141,17 @@ El proyecto se encuentra en estado operativo. La infraestructura técnica, el pi
 | **26** | **Framework Archwise: por qué la IA no escala con más capacidades sino con mejor integración** | **Enterprise AI** | **framework-archwise-integracion-capacidades-escalar-ia** | **✅ Publicado** |
 | **27** | **Arquitectura de adopción del Framework Archwise: por qué el orden de activación determina la escalabilidad real** | **Enterprise AI** | **arquitectura-adopcion-framework-archwise-orden-activacion** | **✅ Publicado** |
 | **28** | **Measurement System para Integración y Madurez Operativa: cómo detectar salud sistémica antes de que la deuda se convierta en estructura** | **Enterprise AI** | **measurement-system-integracion-madurez-operativa** | **✅ Publicado** |
+| **29** | **Integridad de Secuencia: Como Evaluar la Madurez Operativa con Evidencia y No con Narrativas** | **Enterprise AI** | **integridad-secuencia-evaluar-madurez-operativa-evidencia-narrativas** | **✅ Publicado** |
 
 ### Último artículo completado
 
-- **Article-28: Measurement System para Integración y Madurez Operativa**
-- Título completo: "Arquitectura de adopción del Framework Archwise: por qué el orden de activación determina la escalabilidad real"
-- Slug: arquitectura-adopcion-framework-archwise-orden-activacion
+- **Article-29: Integridad de Secuencia: Como Evaluar la Madurez Operativa con Evidencia y No con Narrativas**
+- Título completo: "Integridad de Secuencia: Como Evaluar la Madurez Operativa con Evidencia y No con Narrativas"
+- Slug: integridad-secuencia-evaluar-madurez-operativa-evidencia-narrativas
 - Categoría: Enterprise AI
 - Author: Miguel Benito García
-- Fecha: 2026-06-04
-- readingTime: 21 min
+- Fecha: 2026-06-06
+- readingTime: 29 min
 - Estado técnico:
    - build:content OK
    - build:seo OK
@@ -213,14 +235,14 @@ Mejora de discoverability y onboarding del framework Archwise.
 - Estado final: integrados en el corpus oficial 01–23.
 
 ### Distribución por categoría (articles 01–27)
-### Distribución por categoría (articles 01–28)
+### Distribución por categoría (articles 01–29)
 
 | Categoría | Artículos | IDs |
 |-----------|-----------|-----|
 | Context Engineering | 7 | 01, 03, 06, 07, 08, 14, 15 |
 | Governance | 3 | 09, 10, 20 |
 | AI-Ready Systems | 3 | 11, 12, 13 |
-| Enterprise AI | 12 | 16, 17, 18, 19, 21, 22, 23, 24, 25, 26, 27, 28 |
+| Enterprise AI | 13 | 16, 17, 18, 19, 21, 22, 23, 24, 25, 26, 27, 28, 29 |
 | Architecture Strategy | 1 | 04 |
 | Technical Debt | 2 | 02, 05 |
 
@@ -310,8 +332,8 @@ Nota: no se aplican reclasificaciones pendientes de auditoría. Se mantiene cate
 
 ### Inmediatos (prioridad alta)
 
-1. **Corpus Audit 2.0**
-2. **Article-24 candidato: Context Systems**
+1. **Decidir siguiente paso estratégico:** Article-30 o priorizar implementación de `/framework`.
+2. **Corpus Audit 2.0**
 3. **Optimización de metadata/relatedArticles si procede**
 4. **Eliminar logs de debug** en build-content.ts (console.log de article-11)
 5. **Optimizar bundle** — investigar SCSS deprecation y tree-shaking
@@ -366,4 +388,4 @@ Nota: no se aplican reclasificaciones pendientes de auditoría. Se mantiene cate
 ---
 
 _Informe generado el 2026-06-01. Actualizacion operativa aplicada el 2026-06-04 con inclusion de article-26, validacion de build/deploy/produccion y estado PUBLISHED._
-_Informe generado el 2026-06-01. Actualizacion operativa 2026-06-04: article-27. Actualizacion operativa 2026-06-05: article-28 (Measurement System / System Health / Coherence Signals)._
+_Informe generado el 2026-06-01. Actualizacion operativa 2026-06-04: article-27. Actualizacion operativa 2026-06-05: article-28 (Measurement System / System Health / Coherence Signals). Actualizacion operativa 2026-06-06: article-29 (Sequence Integrity / Evidence Integrity / Coherence Signals / Context Debt / Activation Debt / evaluacion de madurez operativa)._

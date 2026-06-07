@@ -1,0 +1,24 @@
+﻿<section class="framework-vocabulary" id="vocabulario">
+  <div class="container-listing">
+    <h2>Lenguaje del framework</h2>
+
+    <div class="framework-term-grid">
+      @for (term of terms; track term.id) {
+        <article class="framework-term-card">
+          <h3>{{ term.term }}</h3>
+          <p>{{ term.definition }}</p>
+
+          @if (term.article; as article) {
+            <a [routerLink]="['/articulos', article.slug]" (click)="onTermArticleSelected(article.slug)">
+              Ver articulo base
+            </a>
+          } @else {
+            <p class="framework-warning">Articulo base no resuelto: {{ term.articleSlug }}</p>
+          }
+        </article>
+      }
+    </div>
+  </div>
+</section>
+
+

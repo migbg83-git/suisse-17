@@ -4,6 +4,11 @@ Fecha: 2026-06-05
 Tipo: Documento estrategico interno de propiedad intelectual
 Estado: v1.1 (especificacion conceptual minima endurecida)
 
+Nota de estado publico (2026-06-06):
+- ASIS v1.1 permanece como base interna de propiedad intelectual.
+- Su expresion publica inicial ya fue publicada en Article-29 (Sequence Integrity / evaluacion de madurez operativa con evidencia).
+- Esta publicacion no modifica el modelo interno ni crea nuevas capas del framework.
+
 ---
 
 ## 1) Problema que resuelve

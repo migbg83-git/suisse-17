@@ -3,6 +3,7 @@
 Fecha: 2026-06-04
 Alcance: análisis, arquitectura de información y especificación funcional (sin implementación)
 Actualizacion: 2026-06-05 (post-publicacion de article-28)
+Actualizacion: 2026-06-06 (post-publicacion de article-29)
 
 ---
 
@@ -30,6 +31,13 @@ Actualizacion 2026-06-05:
 - Introduce System Health, Coherence Signals, Evidence Integrity e Integration Health como capa de observabilidad transversal.
 - La secuencia 20 -> 28 es la cadena fundacional completa actual del Framework Archwise.
 - Coherence Signals pasa a formar parte del vocabulario conceptual emergente del corpus junto a Context Debt y Activation Debt.
+
+Actualizacion 2026-06-06:
+- 29 articulos publicados.
+- article-29 consolida la expresion publica de Sequence Integrity para evaluacion de madurez operativa con evidencia.
+- Refuerza continuidad causal con article-27 (Activation Debt) y article-28 (Evidence Integrity / Coherence Signals).
+- No introduce una capa nueva del framework; profundiza lectura y decision sobre capas existentes.
+- `/framework` se mantiene pendiente de implementacion editorial.
 
 El estado actual no es "blog + artículos sueltos"; es un corpus acumulativo con tesis, capas y dependencias. Una página propia `/framework` formaliza esa estructura y mejora comprensión estratégica sin sustituir `/articulos`.
 
@@ -335,6 +343,7 @@ Sin código. Estructura propuesta para `/framework`:
 26. Framework Archwise
 27. Adoption Architecture / Activation Debt
 28. Measurement System / System Health / Coherence Signals
+29. Sequence Integrity / evaluacion de madurez operativa con evidencia
 
 Esta secuencia constituye hoy el nucleo conceptual operativo del Framework Archwise: pasa de capacidades aisladas a sistema integrado, aborda la calidad de secuenciación de activación y añade observabilidad sistémica como capa transversal de gobierno.
 
@@ -346,6 +355,7 @@ Vocabulario conceptual emergente del corpus (2026-06-05):
 - Evidence Integrity (article-28): confiabilidad operativa de la evidencia para soportar decisiones comparables y trazables.
 
 Article-28 no añade una capa conceptual nueva al Framework Archwise; añade una capa de observabilidad sistémica para gobernar las capas existentes con anticipación y evidencia.
+Article-29 tampoco añade una capa nueva; explicita públicamente el criterio de evaluacion de madurez operativa por integridad de secuencia y calidad de evidencia.
 
 ## Desde Home
 
