@@ -37,11 +37,11 @@
   "author": "Miguel Benito García",
   "date": "2026-06-06",
   "relatedArticles": [
+    "integracion-coherencia-principio-rector-mecanismo-arquitectonico",
     "framework-archwise-integracion-capacidades-escalar-ia",
     "arquitectura-adopcion-framework-archwise-orden-activacion",
     "measurement-system-integracion-madurez-operativa",
-    "context-systems-entregar-contexto-correcto-enterprise",
-    "agentic-ai-enterprise-governance-memoria-arquitectura"
+    "context-systems-entregar-contexto-correcto-enterprise"
   ],
   "ogImage": "/content/enterprise-ai/article-29/og-image.png",
   "canonicalUrl": "https://archwise.org/articulos/integridad-secuencia-evaluar-madurez-operativa-evidencia-narrativas"

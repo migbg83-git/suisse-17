@@ -11,8 +11,9 @@ export const FRAMEWORK_PAGE_DATA: FrameworkPageData = {
       shortDescription: 'Evalúa preparación real antes de activar nuevas capacidades.',
       articleSlugs: [
         'por-que-la-mayoria-de-los-sistemas-no-estan-preparados-para-ia',
-        'las-7-características-arquitectura-ai-ready',
-        'ai-ready-systems-vs-legacy-systems'
+        'las-7-caracteristicas-arquitectura-ai-ready',
+        'ai-ready-systems-vs-legacy-systems',
+        'por-que-fracasan-iniciativas-ia'
       ]
     },
     {
@@ -21,11 +22,15 @@ export const FRAMEWORK_PAGE_DATA: FrameworkPageData = {
       name: 'Contexto explícito y Knowledge Debt',
       shortDescription: 'Establece contexto operativo y reduce deuda de conocimiento.',
       articleSlugs: [
-        'architecture-md-vale-más-que-prompts',
-        'documentación-necesita-llm',
+        'architecture-md-vale-mas-que-prompts',
+        'documentacion-necesita-llm',
         'context-engineering-legacy-ia-falla',
         'por-que-el-prompt-engineering-no-es-suficiente-para-construir-sistemas-con-ia',
-        'context-engineering-vs-prompt-engineering'
+        'context-engineering-vs-prompt-engineering',
+        'deuda-tecnica-ia-revela',
+        'technical-debt-vs-knowledge-debt-ia',
+        'framework-context-engineering-enterprise',
+        'plantillas-ejemplos-architecture-md-enterprise'
       ]
     },
     {
@@ -36,7 +41,8 @@ export const FRAMEWORK_PAGE_DATA: FrameworkPageData = {
       articleSlugs: [
         'architecture-review-efectiva-ia',
         'architecture-governance-contexto-compartido',
-        'ai-governance-framework'
+        'ai-governance-framework',
+        'arquitectura-vuelve-ser-estrategica'
       ]
     },
     {
@@ -47,7 +53,8 @@ export const FRAMEWORK_PAGE_DATA: FrameworkPageData = {
       articleSlugs: [
         'ai-augmented-development-teams',
         'ai-native-organizations',
-        'ai-operating-model-enterprise'
+        'ai-operating-model-enterprise',
+        'enterprise-ai-transformation-roadmap'
       ]
     },
     {
@@ -71,7 +78,8 @@ export const FRAMEWORK_PAGE_DATA: FrameworkPageData = {
         'framework-archwise-integracion-capacidades-escalar-ia',
         'arquitectura-adopcion-framework-archwise-orden-activacion',
         'measurement-system-integracion-madurez-operativa',
-        'integridad-secuencia-evaluar-madurez-operativa-evidencia-narrativas'
+        'integridad-secuencia-evaluar-madurez-operativa-evidencia-narrativas',
+        'integracion-coherencia-principio-rector-mecanismo-arquitectonico'
       ]
     }
   ],
@@ -138,7 +146,8 @@ export const FRAMEWORK_PAGE_DATA: FrameworkPageData = {
         'por-que-la-mayoria-de-los-sistemas-no-estan-preparados-para-ia',
         'arquitectura-adopcion-framework-archwise-orden-activacion',
         'ai-governance-framework',
-        'framework-archwise-integracion-capacidades-escalar-ia'
+        'framework-archwise-integracion-capacidades-escalar-ia',
+        'integracion-coherencia-principio-rector-mecanismo-arquitectonico'
       ]
     },
     {
@@ -149,7 +158,8 @@ export const FRAMEWORK_PAGE_DATA: FrameworkPageData = {
         'measurement-system-integracion-madurez-operativa',
         'integridad-secuencia-evaluar-madurez-operativa-evidencia-narrativas',
         'ai-governance-framework',
-        'memory-architecture-contexto-reutilizable-enterprise'
+        'memory-architecture-contexto-reutilizable-enterprise',
+        'integracion-coherencia-principio-rector-mecanismo-arquitectonico'
       ]
     },
     {
@@ -171,7 +181,8 @@ export const FRAMEWORK_PAGE_DATA: FrameworkPageData = {
         'arquitectura-adopcion-framework-archwise-orden-activacion',
         'measurement-system-integracion-madurez-operativa',
         'integridad-secuencia-evaluar-madurez-operativa-evidencia-narrativas',
-        'por-que-fracasan-iniciativas-ia'
+        'por-que-fracasan-iniciativas-ia',
+        'integracion-coherencia-principio-rector-mecanismo-arquitectonico'
       ]
     },
     {
@@ -182,7 +193,8 @@ export const FRAMEWORK_PAGE_DATA: FrameworkPageData = {
         'integridad-secuencia-evaluar-madurez-operativa-evidencia-narrativas',
         'ai-governance-framework',
         'framework-archwise-integracion-capacidades-escalar-ia',
-        'measurement-system-integracion-madurez-operativa'
+        'measurement-system-integracion-madurez-operativa',
+        'integracion-coherencia-principio-rector-mecanismo-arquitectonico'
       ]
     }
   ],
@@ -216,13 +228,25 @@ export const FRAMEWORK_PAGE_DATA: FrameworkPageData = {
       term: 'Activation Debt',
       definition: 'Costo acumulado por activar capacidades fuera de dependencias satisfechas.',
       articleSlug: 'arquitectura-adopcion-framework-archwise-orden-activacion'
+    },
+    {
+      id: 'system-coherence',
+      term: 'System Coherence',
+      definition: 'Principio rector que define el estado de alineación global que el sistema debe sostener entre decisiones, contexto, evidencia y ejecución.',
+      articleSlug: 'integracion-coherencia-principio-rector-mecanismo-arquitectonico'
+    },
+    {
+      id: 'interface-integrity',
+      term: 'Interface Integrity',
+      definition: 'Propiedad arquitectónica que preserva semántica, causalidad, trazabilidad y temporalidad cuando contexto, decisiones y evidencia cruzan interfaces entre capas, sistemas y actores.',
+      articleSlug: 'integracion-coherencia-principio-rector-mecanismo-arquitectonico'
     }
   ],
   continuityCtas: [
     {
       id: 'go-articles',
       label: 'Ir a Artículos',
-      linkLabel: 'Explorar los 29 artículos →',
+      linkLabel: 'Explorar los 30 artículos →',
       route: '/articulos',
       description: 'Explora el corpus completo en orden editorial.'
     },

@@ -45,12 +45,12 @@
   "author": "Miguel Benito García",
   "date": "2026-06-04",
   "relatedArticles": [
+    "integracion-coherencia-principio-rector-mecanismo-arquitectonico",
     "ai-governance-framework",
     "ai-operating-model-enterprise",
     "organizational-memory-activo-ai-native",
     "memory-architecture-contexto-reutilizable-enterprise",
-    "context-systems-entregar-contexto-correcto-enterprise",
-    "agentic-ai-enterprise-governance-memoria-arquitectura"
+    "context-systems-entregar-contexto-correcto-enterprise"
   ],
   "ogImage": "/content/enterprise-ai/article-26/og-image.png",
   "canonicalUrl": "https://archwise.org/articulos/framework-archwise-integracion-capacidades-escalar-ia"
