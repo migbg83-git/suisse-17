@@ -17,7 +17,8 @@ const articles = JSON.parse(fs.readFileSync(articlesJsonPath, 'utf-8'));
 const staticRoutes = [
   '/',
   '/manifesto',
-  '/articulos'
+  '/articulos',
+  '/framework'
 ];
 
 // Build sitemap entries

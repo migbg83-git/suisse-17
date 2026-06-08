@@ -1,0 +1,161 @@
+﻿FRAMEWORK ARCHWISE | EXTRACCIÓN DE TEXTO COMPLETO
+====================================================================
+
+[HERO SECTION]
+FRAMEWORK ARCHWISE (label)
+Navega por dependencias, no por cronología.
+Orientación causal del corpus para entender capacidades, dependencias y rutas de lectura.
+
+[METRICS]
+6 capas del sistema
+1 orden causal
+1 ruta por perfil + intención
+
+[BUTTONS]
+Empezar por capas
+Construir ruta recomendada
+
+[HOW TO SECTION]
+Cómo usar esta página
+1. Ubica tu capa actual en el mapa causal.
+2. Explora riesgos y habilitadores en el detalle.
+3. Define tu ruta según perfil e intención.
+
+[NAVIGATION ANCHORS]
+Mapa
+Capas
+Navigator
+Vocabulario
+Continuidad
+
+[LAYER MAP SECTION]
+Mapa causal de 6 capas
+Un sistema de dependencias: cada capa habilita la siguiente.
+
+Capa 1
+Diagnóstico AI-Ready
+Evalúa preparación real antes de activar nuevas capacidades.
+Habilita: Contexto explícito y Knowledge Debt
+Riesgo si falta: bloqueo en Contexto explícito y Knowledge Debt
+
+Capa 2
+Contexto explícito y Knowledge Debt
+Establece contexto operativo y reduce deuda de conocimiento.
+Habilita: Governance
+Riesgo si falta: bloqueo en Governance
+
+Capa 3
+Governance
+Alínea criterio, trazabilidad y reglas de decisión.
+Habilita: AI Operating Model
+Riesgo si falta: bloqueo en AI Operating Model
+
+Capa 4
+AI Operating Model
+Define estructura operativa para escalar ejecución con IA.
+Habilita: Organizational Memory
+Riesgo si falta: bloqueo en Organizational Memory
+
+Capa 5
+Organizational Memory
+Convierte conocimiento organizativo en capacidad reutilizable.
+Habilita: Context Systems y capacidad agéntica
+Riesgo si falta: bloqueo en Context Systems y capacidad agéntica
+
+Capa 6
+Context Systems y capacidad agéntica
+Conecta operación contextual, integración y evaluación de madurez.
+Habilita: coherencia operativa del sistema
+Riesgo si falta: pérdida de continuidad
+
+[DETAILED LAYERS SECTION]
+Qué habilita cada capa
+
+1. Diagnóstico AI-Ready
+Evalúa preparación real antes de activar nuevas capacidades.
+- Por que la mayoria de los sistemas no estan preparados para IA · AI-Ready Systems · 35 min
+- AI-Ready Systems vs Legacy Systems: qué impide realmente adoptar IA · AI-Ready Systems · 11 min
+
+2. Contexto explícito y Knowledge Debt
+Ver detalle
+
+3. Governance
+Ver detalle
+
+4. AI Operating Model
+Ver detalle
+
+5. Organizational Memory
+Ver detalle
+
+6. Context Systems y capacidad agéntica
+Ver detalle
+
+[NAVIGATOR SECTION]
+Constructor de ruta
+Define quién eres y qué necesitas ahora para obtener una secuencia recomendada.
+
+Paso 1 · Quién eres
+- CTO: Prioriza secuencia de capacidades bajo restricciones reales de negocio.
+- Enterprise Architect: Busca trazabilidad y coherencia entre decisiones intercapas.
+- Head of Engineering: Traduce el framework a ejecución de equipos y flujo operativo.
+- Transformation Leader: Conecta estrategia, arquitectura y operación en transformación multiarea.
+- Consultor: Aplica el marco en contextos cliente con lenguaje común y transferencia.
+
+Paso 2 · Qué necesitas ahora
+- Diagnosticar: Identificar brechas de preparación y madurez operativa.
+- Diseñar: Definir arquitectura y secuencia de capacidades.
+- Operar: Aterrizar el marco en ejecución de equipos y procesos.
+- Medir: Evaluar integridad, coherencia y evidencia del sistema.
+- Corregir: Ajustar trayectoria para reducir deuda estructural.
+
+Tu ruta: CTO → Diagnosticar
+1. Integridad de Secuencia: Cómo Evaluar la Madurez Operativa con Evidencia y No con Narrativas · 29 min
+2. Por que la mayoria de los sistemas no estan preparados para IA · 35 min
+3. Arquitectura de adopción del Framework Archwise: por qué el orden de activación determina la escalabilidad real · 21 min
+4. AI Governance Framework: cómo gobernar sistemas, equipos y agentes de IA en la empresa · 15 min
+5. Framework Archwise: por qué la IA no escala con más capacidades sino con mejor integración · 27 min
+
+[VOCABULARY SECTION]
+Lenguaje del framework
+
+Sequence Integrity
+Coherencia causal del orden real de activación y decisión entre capas.
+Ver artículo base
+
+Evidence Integrity
+Calidad de la evidencia para sostener decisiones trazables y comparables.
+Ver artículo base
+
+Coherence Signals
+Señales de alineación, tensión o ruptura entre decisiones equivalentes.
+Ver artículo base
+
+Context Debt
+Costo acumulado por no entregar contexto útil en la ventana de decisión.
+Ver artículo base
+
+Activation Debt
+Costo acumulado por activar capacidades fuera de dependencias satisfechas.
+Ver artículo base
+
+[CONTINUITY SECTION]
+Continuidad
+
+Ir a Artículos
+Explora el corpus completo en orden editorial.
+Explorar los 29 artículos →
+
+Leer Manifesto
+Contexto de tesis y principios de Archwise.
+Leer el Manifesto →
+
+Newsletter (próximamente)
+Continuidad semanal del framework y del corpus.
+Unirme cuando esté disponible (DISABLED)
+
+[FOOTER]
+Archwise
+Enterprise architecture para la era de la IA.
+© 2026 Archwise
+Privacy
