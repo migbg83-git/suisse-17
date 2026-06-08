@@ -4,12 +4,13 @@ Fecha: 2026-06-01
 Actualizacion operativa: 2026-06-04 (post-publicacion de article-27)
 Actualizacion operativa: 2026-06-05 (post-publicacion de article-28)
 Actualizacion operativa: 2026-06-06 (post-publicacion de article-29)
+Actualizacion operativa: 2026-06-08 (post-deployment de /framework)
 
 ---
 
 ## Executive Summary
 
-El clúster Enterprise AI de Archwise cuenta con **29 artículos publicados**. Tras la publicación de article-29 ("Integridad de Secuencia: Como Evaluar la Madurez Operativa con Evidencia y No con Narrativas") y la validación de producción, el proyecto mantiene estado operativo pleno. La página /articulos refleja el nuevo artículo en listado y detalle, con metadata y relatedArticles correctos.
+El clúster Enterprise AI de Archwise cuenta con **29 artículos publicados** + **/framework deployed**. Tras la publicación de article-29 ("Integridad de Secuencia: Como Evaluar la Madurez Operativa con Evidencia y No con Narrativas"), la implementación de /framework con cobertura 29/29, y la validación de producción, el proyecto mantiene estado operativo pleno. El framework proporciona navegación multi-dimensional por perfil (CTO, Architect, Head of Engineering, Transformation Leader, Consultor) e intento (Diagnosticar, Diseñar, Operar, Medir, Corregir).
 ### Actualización operativa — Article-29
 
 Fecha: 2026-06-06
@@ -309,6 +310,88 @@ Nota: no se aplican reclasificaciones pendientes de auditoría. Se mantiene cate
    - `dist/archwise/browser/articulos/architecture-md-vale-mas-que-prompts/index.html` ✅
    - `dist/archwise/browser/articulos/organizational-memory-activo-ai-native/index.html` ✅
 - **Estado:** ✅ Resuelto.
+
+---
+
+## Framework Deployment — Actualización 2026-06-08
+
+### /Framework Page Live
+
+**Estado:** DEPLOYED AND VALIDATED
+
+**Descripción:**
+- URL: https://archwise.org/framework
+- Cobertura de articulos: 29/29 (100%)
+- Tipo de navegacion: Multi-dimensional (perfil + intento)
+
+**Estructura de capas:**
+
+1. **Diagnóstico AI-Ready** (4 artículos)
+   - Evalúa preparación real antes de activar nuevas capacidades
+   - Referencia: article-11, article-12, article-13, article-18
+
+2. **Contexto explícito y Knowledge Debt** (9 artículos)
+   - Establece contexto operativo y reduce deuda de conocimiento
+   - Referencia: article-01, article-03, article-06, article-07, article-08, article-14, article-15, article-02, article-05
+
+3. **Governance** (4 artículos)
+   - Alínea criterio, trazabilidad y reglas de decisión
+   - Referencia: article-09, article-10, article-20, article-04
+
+4. **AI Operating Model** (4 artículos)
+   - Define estructura operativa para escalar ejecución con IA
+   - Referencia: article-16, article-17, article-21, article-19
+
+5. **Organizational Memory** (2 artículos)
+   - Convierte conocimiento organizativo en capacidad reutilizable
+   - Referencia: article-22, article-23
+
+6. **Context Systems y capacidad agéntica** (6 artículos)
+   - Conecta operación contextual, integración y evaluación de madurez
+   - Referencia: article-24, article-25, article-26, article-27, article-28, article-29
+
+**Perfiles de usuario:**
+- CTO
+- Enterprise Architect
+- Head of Engineering
+- Transformation Leader
+- Consultor
+
+**Intents (navegacion por objetivo):**
+- Diagnosticar
+- Diseñar
+- Operar
+- Medir
+- Corregir
+
+**Build y deploy:**
+- Archivo modificado: `scripts/generate-seo-files.ts` (agregó `/framework` a staticRoutes)
+- Rutas prerrenderizadas: 33 (4 estaticas + 29 articulos)
+- Timestamp: 2026-06-08T12:59:58.970Z
+- Deploy: ✅ OK
+
+**Validación producción (2026-06-08):**
+- ✅ /framework carga sin errores (HTTP 200)
+- ✅ Contenido visible: titulo, 6 capas, 5 perfiles, 5 intents
+- ✅ Referencias a articulos navegables
+- ✅ Article-11 integrado y accesible
+- ✅ 7 articulos principales referenciados y funcionales
+- ✅ Sin texto visible sin tildes o problematicas
+- ⚠️ Sitemap dinamico en produccion: /framework no aparece en listado visible (investigation pending)
+
+**Issues encontrados:**
+
+1. **Sitemap en produccion no incluye /framework**
+   - Severidad: Media (framework IS accessible, pero SEO/discoverability limitado)
+   - Generado localmente: ✅ /framework en public/sitemap.xml
+   - En produccion: ❌ /framework no aparece en listado archwise.org/sitemap.xml
+   - Causa probable: Deploy incompleto o caching antiguo
+   - Accion recomendada: Verificar deployment en Vercel, revisar headers de cache, considerar cache purge
+
+**Siguientes pasos:**
+1. Investigar y resolver issue de sitemap en produccion
+2. Validar Article-11 en profundidad (verificar todas las referencias textuales)
+3. Monitorear coverage y performance de framework page
 
 ---
 

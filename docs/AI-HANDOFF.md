@@ -1,8 +1,8 @@
 # Archwise AI Handoff
 
-> Ultima actualizacion: 2026-06-06  
+> Ultima actualizacion: 2026-06-08  
 > Ultimo articulo publicado: article-29 (Integridad de Secuencia: Como Evaluar la Madurez Operativa con Evidencia y No con Narrativas)  
-> Estado del proyecto: Operativo. 29 articulos publicados. Article-29 deployado y validado en produccion.
+> Estado del proyecto: Operativo. 29 articulos publicados. Article-29 deployado y validado en produccion. /framework desplegado y operativo.
 
 ---
 
@@ -129,6 +129,51 @@ Nota tecnica importante (slug source of truth):
 - El slug efectivo de produccion lo toma build-content desde el frontmatter de article.md (campo `slug`).
 - article.json debe mantenerse sincronizado con ese valor, pero no es la fuente que gobierna el slug efectivo.
 - Validacion obligatoria antes de cada publicacion: frontmatter.slug === article.json.slug.
+
+### /Framework Deployment
+
+Fecha: 2026-06-08
+Estado: DEPLOYED AND VALIDATED
+
+Descripcion:
+- Pagina `/framework` implementada con 6 capas de contexto que mapean el corpus 01-29.
+- Cobertura de framework: 29/29 articulos integrados.
+- Navegacion multi-dimensional por perfil (CTO, Enterprise Architect, Head of Engineering, Transformation Leader, Consultor).
+- Navegacion por intento (Diagnosticar, Diseñar, Operar, Medir, Corregir).
+
+Capas del Framework:
+1. Diagnóstico AI-Ready: 4 articulos (por-que-la-mayoria..., las-7-caracteristicas..., ai-ready-systems-vs-legacy..., por-que-fracasan...)
+2. Contexto explícito y Knowledge Debt: 9 articulos (architecture-md-vale..., documentacion-necesita..., context-engineering-legacy..., y 6 más)
+3. Governance: 4 articulos (architecture-review-efectiva..., architecture-governance..., ai-governance-framework, arquitectura-vuelve...)
+4. AI Operating Model: 4 articulos (ai-augmented-development..., ai-native-organizations, ai-operating-model-enterprise, enterprise-ai-transformation...)
+5. Organizational Memory: 2 articulos (organizational-memory-activo..., memory-architecture-contexto...)
+6. Context Systems y capacidad agéntica: 6 articulos (context-systems..., agentic-ai..., framework-archwise-integracion..., arquitectura-adopcion..., measurement-system..., integridad-secuencia...)
+
+Build/Deploy:
+- `npm run build:seo`: Agregó /framework a staticRoutes en scripts/generate-seo-files.ts
+- `npm run build:ssg`: 33 rutas prerrenderizadas (4 estaticas + 29 articulos)
+- Deploy: OK en Vercel
+- Produccion validada: OK
+
+Validacion Produccion (2026-06-08):
+- ✅ https://archwise.org/framework carga correctamente
+- ✅ Contenido del framework visible (6 capas, 5 perfiles, 5 intents)
+- ✅ Referencias a 7 articulos integrados accesibles
+- ✅ No aparecen textos visibles sin tildes
+- ✅ Navegacion entre capas funciona
+- ✅ Article-11 integrado y validado
+- ⚠️ Sitemap en produccion: No incluye /framework en listado visible (aunque sitemap.xml generado localmente lo contiene - revisar deploy)
+
+Siguientes pasos:
+- Monitorear inclusion de /framework en sitemap produccion (posible issue de caching/deploy incompleto)
+- Documentar path profundo para validar framework coverage en futuras iteraciones
+
+Estado article-11 (saneado v2026-06-08):
+- Titulo: Context Engineering vs Prompt Engineering: la diferencia que la mayoria de las organizaciones todavia no entiende
+- Slug: context-engineering-vs-prompt-engineering (sin cambios)
+- Normalizacion lingüistica aplicada: 96 cambios en article.md
+- Produccion: Corrected title visible
+- Integracion: Presente en 3 capas del framework (puede estar subreferenciado pero es correcto)
 
 Estado de publicacion article-27:
 - Titulo: Arquitectura de adopcion del Framework Archwise: por que el orden de activacion determina la escalabilidad real
@@ -292,12 +337,20 @@ Distribucion actual (01-29):
 
 ### Prioridades (alta)
 
-1. **Decision estrategica inmediata** — Definir Article-30 o priorizar implementacion de `/framework`.
-2. **Corpus Audit 2.0** — Revision de 01-29 con criterios actualizados.
-3. **Pagina /framework** — Sigue pendiente; implementar en cuanto se cierre la decision estrategica.
+1. **Investigar sitemap en produccion** — /framework no aparece en listado produccion aunque generado correctamente localmente (posible problema de deploy/caching).
+2. **Decision estrategica siguiente** — Definir Article-30 o next phase del framework.
+3. **Corpus Audit 2.0** — Revision de 01-29 con criterios actualizados post-framework-deployment.
 4. **Correccion readingTime article-25** — Verificar alineacion entre calculo real y valor en article.json.
 5. **Limpieza tecnica: src/assets/sitemap.xml estatico obsoleto** — Contiene 7 URLs con dominio archwise.com; no afecta produccion (robots.txt apunta a /sitemap.xml raiz) pero recomendable eliminar.
 6. **Internacionalizacion futura** — Secuencia planificada: ES → FR → EN.
+
+### Completados (2026-06-08)
+
+- ✅ /framework deployed and operativo
+- ✅ Phase 1 corpus slug completada (01-29)
+- ✅ Article-11 saneado v2
+- ✅ Phase 2 corpus alignment completada
+- ✅ Framework coverage = 29/29
 
 ## Recomendaciones
 
