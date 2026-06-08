@@ -10,10 +10,10 @@
 
           @if (term.article; as article) {
             <a [routerLink]="['/articulos', article.slug]" (click)="onTermArticleSelected(article.slug)">
-              Ver articulo base
+              Ver artículo base
             </a>
           } @else {
-            <p class="framework-warning">Articulo base no resuelto: {{ term.articleSlug }}</p>
+            <p class="framework-warning">Artículo base no resuelto: {{ term.articleSlug }}</p>
           }
         </article>
       }

@@ -8,10 +8,10 @@ export const FRAMEWORK_PAGE_DATA: FrameworkPageData = {
       id: 'layer-1',
       order: 1,
       name: 'Diagnóstico AI-Ready',
-      shortDescription: 'Evalua preparacion real antes de activar nuevas capacidades.',
+      shortDescription: 'Evalúa preparación real antes de activar nuevas capacidades.',
       articleSlugs: [
         'por-que-la-mayoria-de-los-sistemas-no-estan-preparados-para-ia',
-        'las-7-caracteristicas-arquitectura-ai-ready',
+        'las-7-características-arquitectura-ai-ready',
         'ai-ready-systems-vs-legacy-systems'
       ]
     },
@@ -21,8 +21,8 @@ export const FRAMEWORK_PAGE_DATA: FrameworkPageData = {
       name: 'Contexto explícito y Knowledge Debt',
       shortDescription: 'Establece contexto operativo y reduce deuda de conocimiento.',
       articleSlugs: [
-        'architecture-md-vale-mas-que-prompts',
-        'documentacion-necesita-llm',
+        'architecture-md-vale-más-que-prompts',
+        'documentación-necesita-llm',
         'context-engineering-legacy-ia-falla',
         'por-que-el-prompt-engineering-no-es-suficiente-para-construir-sistemas-con-ia',
         'context-engineering-vs-prompt-engineering'
@@ -43,7 +43,7 @@ export const FRAMEWORK_PAGE_DATA: FrameworkPageData = {
       id: 'layer-4',
       order: 4,
       name: 'AI Operating Model',
-      shortDescription: 'Define estructura operativa para escalar ejecucion con IA.',
+      shortDescription: 'Define estructura operativa para escalar ejecución con IA.',
       articleSlugs: [
         'ai-augmented-development-teams',
         'ai-native-organizations',
@@ -84,17 +84,17 @@ export const FRAMEWORK_PAGE_DATA: FrameworkPageData = {
     {
       id: 'enterprise-architect',
       label: 'Enterprise Architect',
-      description: 'Busca trazabilidad y coherencia entre decisiónes intercapas.'
+      description: 'Busca trazabilidad y coherencia entre decisiones intercapas.'
     },
     {
       id: 'head-of-engineering',
       label: 'Head of Engineering',
-      description: 'Traduce el framework a ejecucion de equipos y flujo operativo.'
+      description: 'Traduce el framework a ejecución de equipos y flujo operativo.'
     },
     {
       id: 'transformation-leader',
       label: 'Transformation Leader',
-      description: 'Conecta estrategia, arquitectura y operación en transformacion multiarea.'
+      description: 'Conecta estrategia, arquitectura y operación en transformación multiarea.'
     },
     {
       id: 'consultor',
@@ -106,17 +106,17 @@ export const FRAMEWORK_PAGE_DATA: FrameworkPageData = {
     {
       id: 'diagnosticar',
       label: 'Diagnosticar',
-      description: 'Identificar brechas de preparacion y madurez operativa.'
+      description: 'Identificar brechas de preparación y madurez operativa.'
     },
     {
       id: 'disenar',
-      label: 'Disenar',
+      label: 'Diseñar',
       description: 'Definir arquitectura y secuencia de capacidades.'
     },
     {
       id: 'operar',
       label: 'Operar',
-      description: 'Aterrizar el marco en ejecucion de equipos y procesos.'
+      description: 'Aterrizar el marco en ejecución de equipos y procesos.'
     },
     {
       id: 'medir',
@@ -190,25 +190,25 @@ export const FRAMEWORK_PAGE_DATA: FrameworkPageData = {
     {
       id: 'sequence-integrity',
       term: 'Sequence Integrity',
-      definition: 'Coherencia causal del orden real de activacion y decisión entre capas.',
+      definition: 'Coherencia causal del orden real de activación y decisión entre capas.',
       articleSlug: 'integridad-secuencia-evaluar-madurez-operativa-evidencia-narrativas'
     },
     {
       id: 'evidence-integrity',
       term: 'Evidence Integrity',
-      definition: 'Calidad de la evidencia para sostener decisiónes trazables y comparables.',
+      definition: 'Calidad de la evidencia para sostener decisiones trazables y comparables.',
       articleSlug: 'measurement-system-integracion-madurez-operativa'
     },
     {
       id: 'coherence-signals',
       term: 'Coherence Signals',
-      definition: 'Señales de alíneacion, tension o ruptura entre decisiónes equivalentes.',
+      definition: 'Señales de alineación, tensión o ruptura entre decisiones equivalentes.',
       articleSlug: 'measurement-system-integracion-madurez-operativa'
     },
     {
       id: 'context-debt',
       term: 'Context Debt',
-      definition: 'Costo acumulado por no entregar contexto util en la ventana de decisión.',
+      definition: 'Costo acumulado por no entregar contexto útil en la ventana de decisión.',
       articleSlug: 'context-systems-entregar-contexto-correcto-enterprise'
     },
     {
@@ -235,7 +235,7 @@ export const FRAMEWORK_PAGE_DATA: FrameworkPageData = {
     },
     {
       id: 'newsletter-soon',
-      label: 'Newsletter (proximamente)',
+      label: 'Newsletter (próximamente)',
       linkLabel: 'Unirme cuando esté disponible',
       description: 'Continuidad semanal del framework y del corpus.',
       disabled: true

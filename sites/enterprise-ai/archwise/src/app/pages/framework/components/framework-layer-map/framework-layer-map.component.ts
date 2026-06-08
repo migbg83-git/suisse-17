@@ -41,7 +41,7 @@ export class FrameworkLayerMapComponent {
 
   getRiskLabel(index: number): string {
     const nextLayer = this.layers[index + 1];
-    return nextLayer ? `Riesgo si falta: bloqueo en ${nextLayer.name}` : 'Riesgo si falta: perdida de continuidad';
+    return nextLayer ? `Riesgo si falta: bloqueo en ${nextLayer.name}` : 'Riesgo si falta: pérdida de continuidad';
   }
 }
 
