@@ -7,11 +7,11 @@ date: "2026-06-08"
 
 # De la integración a la coherencia: el principio rector y el mecanismo arquitectónico que cierran el Framework Archwise
 
-## 1. Problema arquitectónico no resuelto tras Article-29
+## 1. Problema arquitectónico no resuelto tras la formalización de integridades
 
-El corpus Archwise llegó hasta Article-29 con una progresión sólida: diagnóstico, contexto explícito, gobernanza, operación, memoria, integración, medición y validación de integridades. No estamos ante un vacío de piezas. Estamos ante un problema de jerarquía entre piezas.
+El corpus Archwise llegó hasta la formalización de integridades con una progresión sólida: diagnóstico, contexto explícito, gobernanza, operación, memoria, integración, medición y validación. No estamos ante un vacío de piezas. Estamos ante un problema de jerarquía entre piezas.
 
-Article-26 dejó claro que escalar IA no depende de acumular capacidades, sino de mejorar integración. Article-27 añadió que la secuencia de activación condiciona la escalabilidad real y que activar fuera de dependencias satisfechas genera Activation Debt. Article-28 introdujo un sistema de lectura de salud operativa. Article-29 formalizó Sequence Integrity, Evidence Integrity y Coherence Signals como lenguaje de validación.
+El trabajo sobre integración de capacidades dejó claro que escalar IA no depende de acumular capacidades, sino de mejorar integración. El análisis de la secuencia de activación añadió que activar fuera de dependencias satisfechas condiciona la escalabilidad real y genera Activation Debt. La lectura de salud operativa introdujo un sistema de evaluación sistémica. La formalización de Sequence Integrity, Evidence Integrity y Coherence Signals consolidó un lenguaje de validación.
 
 Sin embargo, después de ese avance apareció una pregunta más exigente: ¿qué principio organiza todo ese vocabulario como sistema y qué mecanismo evita que se degrade al cruzar fronteras?
 
@@ -23,7 +23,7 @@ Cuando esto sucede, aparecen síntomas que parecen independientes: más excepcio
 
 En esa condición, seguir agregando reglas, dashboards o capacidades no corrige el problema de fondo. Puede incluso amplificarlo. Porque el problema no es solo qué hace cada capa, sino cómo se preserva la intención arquitectónica cuando pasa de una capa a otra.
 
-Ese es el vacío exacto que Article-30 debe cerrar: no inventar otro concepto aislado, sino fijar la jerarquía que convierte 01-29 en una tesis arquitectónica completa.
+Ese es el vacío exacto que este artículo debe cerrar: no inventar otro concepto aislado, sino fijar la jerarquía que convierte 01-29 en una tesis arquitectónica completa.
 
 La revelación central aparece aquí y no al final del texto: la IA empresarial no fracasa porque falten capacidades; fracasa porque la intención arquitectónica se degrada al atravesar fronteras organizativas y técnicas.
 
@@ -49,7 +49,7 @@ Esta tensión también corrige otra ilusión frecuente: pensar que el sistema fa
 
 Dicho de forma directa: la complejidad no explota cuando faltan piezas, explota cuando las piezas correctas interactúan sin preservar la intención común.
 
-En ese punto, la discusión deja de ser “qué más debemos añadir” y pasa a ser “qué debemos preservar para que lo que ya tenemos no se degrade”. Ahí empieza la transición conceptual que Article-30 necesita completar.
+En ese punto, la discusión deja de ser “qué más debemos añadir” y pasa a ser “qué debemos preservar para que lo que ya tenemos no se degrade”. Ahí empieza la transición conceptual que esta pieza necesita completar.
 
 ## 3. Jerarquía conceptual: principio rector, mecanismo y validación
 
@@ -150,7 +150,7 @@ Esa es la relación correcta:
 
 Cuando esta relación se rompe, aparece el anti-patrón clásico: mucha instrumentación, poca corrección estructural. El sistema aprende a describir su deterioro, pero no a reducirlo.
 
-Article-30 debe dejar este punto sin ambigüedad: la validación es indispensable, pero subordinada a una arquitectura de preservación.
+Este artículo debe dejar este punto sin ambigüedad: la validación es indispensable, pero subordinada a una arquitectura de preservación.
 
 ## 6. Ejemplo transversal end-to-end
 
@@ -203,7 +203,7 @@ Coherence Signals detectan divergencia creciente entre dominios: operaciones con
 
 El sistema no falló por ausencia de capacidades. Falló porque la intención arquitectónica se degradó en las fronteras entre diseño, contexto, memoria y ejecución.
 
-Este ejemplo no es excepcional. Es la forma habitual en que sistemas enterprise pierden coherencia al escalar. También muestra por qué Article-30 no trata de agregar complejidad conceptual, sino de nombrar con precisión el punto donde realmente se produce la degradación.
+Este ejemplo no es excepcional. Es la forma habitual en que sistemas enterprise pierden coherencia al escalar. También muestra por qué esta pieza no trata de agregar complejidad conceptual, sino de nombrar con precisión el punto donde realmente se produce la degradación.
 
 ## 7. Objeciones críticas después del caso
 
@@ -227,13 +227,13 @@ Estas respuestas no convierten el marco en dogma. Lo mantienen dentro de su alca
 
 ## 8. Capstone y puente: cierre contundente de la etapa fundacional
 
-Article-30 cumple una doble función que no compite, se refuerza.
+El cierre fundacional cumple una doble función que no compite, se refuerza.
 
 Primero, es capstone de 01-30: integra vocabulario, fija jerarquía y cierra la fundación conceptual. Sin esa integración, 01-29 seguiría siendo una secuencia potente pero parcialmente desacoplada.
 
 Segundo, es puente hacia 31+: define un contrato de continuidad para que el corpus crezca sin fragmentarse en marcos paralelos.
 
-Si Article-30 fuera solo cierre, el riesgo sería congelar la tesis y convertir 31+ en anexos oportunistas. Si fuera solo apertura, el riesgo sería diluir el peso fundacional de 01-29. La salida sólida es capstone-bridge: cerrar con reglas de continuidad.
+Si esta pieza fuera solo cierre, el riesgo sería congelar la tesis y convertir 31+ en anexos oportunistas. Si fuera solo apertura, el riesgo sería diluir el peso fundacional de 01-29. La salida sólida es capstone-bridge: cerrar con reglas de continuidad.
 
 La regla es simple y exigente: todo concepto nuevo deberá declarar qué dimensión de coherencia protege, mediante qué mecanismo la preserva y con qué lecturas se valida.
 
@@ -241,6 +241,6 @@ Con esa regla, el crecimiento a 50 o 100 artículos no depende de mantener homog
 
 System Coherence fija el estado; Interface Integrity lo preserva en frontera; Sequence Integrity, Evidence Integrity y Coherence Signals prueban si esa preservación es real.
 
-Esa es la tesis terminal de Article-30: la escala en IA empresarial no se rompe por falta de capacidades, se rompe cuando la intención arquitectónica se degrada al cruzar fronteras.
+Esa es la tesis terminal de este cierre fundacional: la escala en IA empresarial no se rompe por falta de capacidades, se rompe cuando la intención arquitectónica se degrada al cruzar fronteras.
 
-Por eso Article-30 es capstone y puente a la vez: cierra la fundación del corpus y fija la condición de su continuidad.
+Por eso esta pieza es capstone y puente a la vez: cierra la fundación del corpus y fija la condición de su continuidad.
