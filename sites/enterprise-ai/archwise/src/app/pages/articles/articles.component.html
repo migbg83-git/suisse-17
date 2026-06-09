@@ -2,9 +2,9 @@
   @if (viewModel$ | async; as vm) {
     <section class="articles-hero minimal-hero">
       <div class="container-listing">
-        <h1 class="page-title">Artículos</h1>
+        <h1 class="page-title">Decisiones arquitectónicas</h1>
         <p class="page-subtitle">
-          Índice editorial para CTOs, arquitectos y equipos que escalan IA en entornos enterprise.
+          Cada artículo explica una decisión crítica del Framework Archwise. Las decisiones tienen dependencias. Navega por capa, no por fecha.
         </p>
       </div>
     </section>
@@ -14,8 +14,8 @@
         <p class="anchor-nav-title">Navega por objetivo</p>
         <nav class="anchor-nav-links">
           <a href="#empieza-aqui" class="anchor-nav-link is-active" aria-current="true">Empieza aquí</a>
-          <a href="#ultimos-publicados" class="anchor-nav-link">Últimos publicados</a>
-          <a href="#mapa-framework" class="anchor-nav-link">Mapa del framework</a>
+          <a href="#capas-framework" class="anchor-nav-link">Capas del Framework</a>
+          <a href="#indice-completo" class="anchor-nav-link">Índice completo</a>
         </nav>
       </div>
     </section>
@@ -46,56 +46,60 @@
       </div>
     </section>
 
-    <section id="ultimos-publicados" class="articles-section articles-content">
+    <section id="capas-framework" class="articles-section framework-section">
       <div class="container-listing">
-        <h2 class="section-title">Últimos publicados</h2>
+        <h2 class="section-title">Capas del Framework</h2>
         <p class="section-subtitle">
-          Cronología completa del índice editorial.
+          Las 6 capas organizan las decisiones por dependencia, no por fecha. Una capa no funciona sin las anteriores.
         </p>
 
-        <div class="editorial-list">
-          @for (article of vm.articles; track article.slug) {
-            <div class="editorial-item">
-              <a [routerLink]="['/articulos', article.slug]" class="editorial-title">{{ article.title }}</a>
-              <div class="editorial-summary">{{ article.summary }}</div>
-              <div class="editorial-meta">
-                <span class="editorial-category">{{ article.category.name }}</span>
-                <span class="editorial-dot">·</span>
-                <span class="editorial-date">{{ article.date | date:'d MMM y' }}</span>
-                <span class="editorial-dot">·</span>
-                <span class="editorial-reading-time">{{ article.readingTime }} min</span>
+        <div class="framework-stages">
+          @for (layer of vm.frameworkLayers; let isLast = $last; track layer.id) {
+            <div class="framework-stage">
+              <div class="framework-stage-header">
+                <div class="framework-stage-connector"></div>
+                <h3 class="framework-stage-title">CAPA {{ layer.order }} · {{ layer.name }}</h3>
               </div>
+              <p class="framework-stage-description">{{ layer.shortDescription }}</p>
+              <ul class="framework-stage-links">
+                @for (article of layer.articles; track article.slug) {
+                  <li>
+                    <a [routerLink]="['/articulos', article.slug]">{{ article.title }}</a>
+                  </li>
+                }
+              </ul>
+              <a [routerLink]="['/framework']" [fragment]="layer.id" class="framework-layer-cta">Ver esta capa en el Framework →</a>
+              @if (!isLast) {
+                <div class="framework-stage-arrow">↓</div>
+              }
             </div>
           }
         </div>
       </div>
     </section>
 
-    <section id="mapa-framework" class="articles-section framework-section">
+    <section id="indice-completo" class="articles-section articles-content">
       <div class="container-listing">
-        <h2 class="section-title">Mapa del framework Archwise</h2>
+        <h2 class="section-title">Índice completo</h2>
         <p class="section-subtitle">
-          De contexto explícito a decisiones consistentes: una secuencia para escalar IA con criterio.
+          Todos los artículos del framework. Ordenados por fecha de publicación.
         </p>
 
-        <div class="framework-stages">
-          @for (stage of vm.frameworkStages; let isLast = $last; track stage.name) {
-            <div class="framework-stage">
-              <div class="framework-stage-header">
-                <div class="framework-stage-connector"></div>
-                <h3 class="framework-stage-title">{{ stage.name }}</h3>
-              </div>
-              <p class="framework-stage-description">{{ stage.description }}</p>
-              <ul class="framework-stage-links">
-                @for (article of stage.articles; track article.slug) {
-                  <li>
-                    <a [routerLink]="['/articulos', article.slug]">{{ article.title }}</a>
-                  </li>
-                }
-              </ul>
-              @if (!isLast) {
-                <div class="framework-stage-arrow">↓</div>
+        <div class="editorial-list">
+          @for (item of vm.articlesWithLayer; track item.article.slug) {
+            <div class="editorial-item">
+              <a [routerLink]="['/articulos', item.article.slug]" class="editorial-title">{{ item.article.title }}</a>
+              <div class="editorial-summary">{{ item.article.summary }}</div>
+              @if (item.layer) {
+                <div class="editorial-layer-badge">CAPA {{ item.layer.order }} · {{ item.layer.name }}</div>
               }
+              <div class="editorial-meta">
+                <span class="editorial-category">{{ item.article.category.name }}</span>
+                <span class="editorial-dot">·</span>
+                <span class="editorial-date">{{ item.article.date | date:'d MMM y' }}</span>
+                <span class="editorial-dot">·</span>
+                <span class="editorial-reading-time">{{ item.article.readingTime }} min</span>
+              </div>
             </div>
           }
         </div>

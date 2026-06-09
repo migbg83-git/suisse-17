@@ -272,6 +272,19 @@
   }
 }
 
+.framework-layer-cta {
+  display: inline-block;
+  margin-top: 0.85rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--aw-accent);
+  text-decoration: none;
+
+  &:hover {
+    color: var(--aw-accent-hover);
+  }
+}
+
 .framework-stage-arrow {
   display: none;
 }
@@ -346,6 +359,16 @@
   font-size: 1rem;
   color: var(--aw-gray-600);
   font-weight: 400;
+}
+
+.editorial-layer-badge {
+  display: inline-block;
+  margin-top: 0.15rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--aw-gray-700);
 }
 
 .editorial-meta {

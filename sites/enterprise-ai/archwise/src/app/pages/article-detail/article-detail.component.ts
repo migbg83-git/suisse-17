@@ -8,6 +8,7 @@ import { RouterLink } from '@angular/router';
 import { NewsletterCtaComponent } from '../../shared/newsletter-cta/newsletter-cta.component';
 import { forkJoin, of, Subscription } from 'rxjs';
 import { catchError, distinctUntilChanged, map, switchMap } from 'rxjs/operators';
+import { ArticleLayerInfo, getLayerForArticle } from '../../core/utils/layer-mapping';
 
 @Component({
   selector: 'aw-article-detail',
@@ -21,6 +22,7 @@ export class ArticleDetailComponent implements OnInit, OnDestroy {
   loading = true;
   notFound = false;
   relatedArticles: Article[] = [];
+  articleLayer: ArticleLayerInfo | null = null;
   private routeParamsSubscription?: Subscription;
 
   constructor(
@@ -67,6 +69,7 @@ export class ArticleDetailComponent implements OnInit, OnDestroy {
           }
 
           this.article = article;
+          this.articleLayer = getLayerForArticle(article.slug);
           this.relatedArticles = this.resolveRelatedArticles(article, articles);
 
           this.seo.update({

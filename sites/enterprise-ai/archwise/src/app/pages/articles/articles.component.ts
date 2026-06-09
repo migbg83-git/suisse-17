@@ -5,6 +5,8 @@ import { Article } from '../../core/models/article.model';
 import { map, Observable } from 'rxjs';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
+import { FRAMEWORK_PAGE_DATA } from '../framework/framework.data';
+import { ArticleLayerInfo, getLayerForArticle } from '../../core/utils/layer-mapping';
 
 interface StartHereSeed {
   slug: string;
@@ -17,22 +19,23 @@ interface StartHereItem {
   article: Article;
 }
 
-interface FrameworkStage {
+interface FrameworkLayerItem {
+  id: string;
+  order: number;
   name: string;
-  description: string;
-  slugs: string[];
+  shortDescription: string;
+  articles: Article[];
 }
 
-interface FrameworkStageItem {
-  name: string;
-  description: string;
-  articles: Article[];
+interface ArticleWithLayer {
+  article: Article;
+  layer: ArticleLayerInfo | null;
 }
 
 interface ArticlesViewModel {
-  articles: Article[];
+  articlesWithLayer: ArticleWithLayer[];
   startHereItems: StartHereItem[];
-  frameworkStages: FrameworkStageItem[];
+  frameworkLayers: FrameworkLayerItem[];
 }
 
 const START_HERE_SEEDS: StartHereSeed[] = [
@@ -55,45 +58,6 @@ const START_HERE_SEEDS: StartHereSeed[] = [
   {
     slug: 'context-systems-entregar-contexto-correcto-enterprise',
     reason: 'Cómo transformar conocimiento en contexto útil en el momento de decidir.'
-  }
-];
-
-const FRAMEWORK_STAGES: FrameworkStage[] = [
-  {
-    name: 'Contexto y deuda de conocimiento',
-    description: 'Fundamentos de contexto explícito y deuda de conocimiento como base operativa.',
-    slugs: [
-      'architecture-md-vale-mas-que-prompts',
-      'documentacion-necesita-llm',
-      'context-engineering-vs-prompt-engineering',
-      'technical-debt-vs-knowledge-debt-ia'
-    ]
-  },
-  {
-    name: 'Gobierno y control',
-    description: 'Marco de governance para reglas, trazabilidad y toma de decisiones confiable.',
-    slugs: [
-      'architecture-review-efectiva-ia',
-      'architecture-governance-contexto-compartido',
-      'ai-governance-framework'
-    ]
-  },
-  {
-    name: 'Modelo operativo',
-    description: 'Diseño organizativo para coordinar equipos, ownership y ejecución con IA.',
-    slugs: [
-      'ai-operating-model-enterprise',
-      'ai-native-organizations'
-    ]
-  },
-  {
-    name: 'Memoria y Context Systems',
-    description: 'Capacidad para transformar conocimiento en contexto útil en tiempo de decisión.',
-    slugs: [
-      'organizational-memory-activo-ai-native',
-      'memory-architecture-contexto-reutilizable-enterprise',
-      'context-systems-entregar-contexto-correcto-enterprise'
-    ]
   }
 ];
 
@@ -129,18 +93,25 @@ export class ArticlesComponent implements OnInit {
           })
           .filter((item): item is StartHereItem => item !== null);
 
-        const frameworkStages = FRAMEWORK_STAGES.map((stage) => ({
-          name: stage.name,
-          description: stage.description,
-          articles: stage.slugs
+        const frameworkLayers = FRAMEWORK_PAGE_DATA.layers.map((layer) => ({
+          id: layer.id,
+          order: layer.order,
+          name: layer.name,
+          shortDescription: layer.shortDescription,
+          articles: layer.articleSlugs
             .map((slug) => articleBySlug.get(slug))
             .filter((article): article is Article => !!article)
         }));
 
+        const articlesWithLayer = articles.map((article) => ({
+          article,
+          layer: getLayerForArticle(article.slug)
+        }));
+
         return {
-          articles,
+          articlesWithLayer,
           startHereItems,
-          frameworkStages
+          frameworkLayers
         };
       })
     );
