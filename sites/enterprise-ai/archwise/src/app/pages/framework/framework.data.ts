@@ -2,7 +2,7 @@
 
 export const FRAMEWORK_PAGE_DATA: FrameworkPageData = {
   title: 'Framework Archwise',
-  subtitle: 'El Framework Archwise organiza seis capas de decisiones arquitectónicas conectadas por dependencias causales. No navegas por fecha ni por categoría: navegas según lo que tu arquitectura ya ha resuelto.',
+  subtitle: 'Archwise es un framework arquitectónico de 6 capas para construir capacidades IA en el orden correcto. Conecta decisiones, dependencias y gobernanza para escalar sin deuda estructural.',
   layers: [
     {
       id: 'layer-1',
@@ -245,23 +245,23 @@ export const FRAMEWORK_PAGE_DATA: FrameworkPageData = {
   continuityCtas: [
     {
       id: 'go-articles',
-      label: 'Ir a Artículos',
-      linkLabel: 'Explorar los 30 artículos →',
+      label: 'Soy nuevo en Archwise',
+      linkLabel: 'Empezar por visión general →',
       route: '/articulos',
-      description: 'Explora los 30 artículos en orden causal.'
+      description: 'Entiende el problema arquitectónico que Archwise resuelve y cómo leer el framework sin perderte.'
     },
     {
       id: 'go-manifesto',
-      label: 'Leer Manifesto',
-      linkLabel: 'Leer el Manifesto →',
+      label: 'Soy CTO / Enterprise Architect / Head of Engineering',
+      linkLabel: 'Construir ruta recomendada →',
       route: '/manifesto',
-      description: 'Contexto de tesis y principios de Archwise.'
+      description: 'Prioriza decisiones para escalar IA con control de riesgo, trazabilidad y coherencia entre capas.'
     },
     {
       id: 'newsletter-soon',
-      label: 'Newsletter (próximamente)',
-      linkLabel: 'Unirme cuando esté disponible',
-      description: 'Continuidad semanal del framework y de la arquitectura Archwise.',
+      label: 'Ya conozco el framework',
+      linkLabel: 'Ir directo a decisiones avanzadas',
+      description: 'Profundiza en términos avanzados, señales de coherencia y validación sistémica.',
       disabled: true
     }
   ]
