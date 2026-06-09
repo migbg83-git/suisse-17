@@ -20,20 +20,42 @@
   <section class="framework-preview-section">
     <div class="container-reading">
       <h2 class="section-title">Framework Archwise</h2>
-      <div class="framework-metrics">
-        <div class="metric">
-          <span class="metric-number">6</span>
-          <span class="metric-label">capas arquitectónicas</span>
+      <p class="framework-preview-subtitle">
+        6 capas arquitectónicas conectadas por dependencias causales.
+      </p>
+
+      <!-- Layer Sequence -->
+      <div class="framework-layers-preview">
+        @for (layer of frameworkLayers; track layer.order) {
+          <div class="layer-preview-card">
+            <div class="layer-preview-number">{{ layer.order }}</div>
+            <div class="layer-preview-content">
+              <h3 class="layer-preview-name">{{ layer.name }}</h3>
+              <p class="layer-preview-description">{{ layer.shortDescription }}</p>
+            </div>
+            @if (layer.order < 6) {
+              <div class="layer-preview-arrow">→</div>
+            }
+          </div>
+        }
+      </div>
+
+      <!-- Metrics as Support -->
+      <div class="framework-metrics-support">
+        <div class="metric-support">
+          <span class="metric-support-number">6</span>
+          <span class="metric-support-label">capas arquitectónicas</span>
         </div>
-        <div class="metric">
-          <span class="metric-number">30</span>
-          <span class="metric-label">decisiones críticas</span>
+        <div class="metric-support">
+          <span class="metric-support-number">30</span>
+          <span class="metric-support-label">artículos conectados</span>
         </div>
-        <div class="metric">
-          <span class="metric-number">1</span>
-          <span class="metric-label">orden causal de activación</span>
+        <div class="metric-support">
+          <span class="metric-support-number">1</span>
+          <span class="metric-support-label">orden causal</span>
         </div>
       </div>
+
       <a routerLink="/framework" class="framework-preview-link">Ver mapa completo →</a>
     </div>
   </section>
