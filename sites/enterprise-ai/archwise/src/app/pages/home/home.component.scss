@@ -367,6 +367,81 @@
   }
 }
 
+.value-problems-section,
+.value-takeaways-section {
+  padding: 3.5rem 0;
+  background: var(--aw-white);
+}
+
+.value-section-subtitle {
+  margin: -1.5rem 0 1rem;
+  max-width: 760px;
+  color: var(--aw-gray-600);
+  line-height: 1.6;
+}
+
+.value-differentiator {
+  margin: 0 0 1.75rem;
+  max-width: 860px;
+  color: var(--aw-gray-700);
+  line-height: 1.6;
+  font-weight: 500;
+}
+
+.value-problems-grid,
+.value-takeaways-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+
+  @media (max-width: 992px) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.value-problem-item,
+.value-takeaway-card {
+  border: 1px solid rgba(15, 23, 42, 0.1);
+  border-radius: 8px;
+  padding: 1rem;
+  background: var(--aw-white);
+
+  h3 {
+    margin: 0 0 0.625rem;
+    font-size: 1rem;
+    line-height: 1.35;
+    color: var(--aw-gray-900);
+  }
+
+  p {
+    margin: 0 0 0.5rem;
+    color: var(--aw-gray-700);
+    line-height: 1.5;
+    font-size: 0.9375rem;
+  }
+
+  p:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.value-section-link {
+  display: inline-block;
+  font-weight: 600;
+  color: var(--aw-accent);
+  text-decoration: none;
+
+  &:hover {
+    color: var(--aw-accent-hover);
+    text-decoration: none;
+  }
+}
+
 
 // Featured Essays Section
 .featured-essays-section {

@@ -1,7 +1,8 @@
 ﻿<section class="framework-layer-map" id="mapa">
   <div class="container-listing">
     <h2>Mapa causal de 6 capas</h2>
-    <p class="framework-layer-map-subtitle">Un sistema de dependencias: cada capa habilita la siguiente.</p>
+    <p class="framework-layer-map-subtitle">Sirve para identificar dónde empezar: cada capa habilita la siguiente y muestra qué riesgo aparece si te saltas dependencias.</p>
+    <p class="framework-layer-map-subtitle">Después de revisar el mapa, abre "Qué habilita cada capa" para convertir la lectura en decisiones concretas.</p>
 
     <ol class="framework-layer-map-list" aria-label="Mapa causal del framework">
       @for (layer of layers; track layer.id; let idx = $index) {
