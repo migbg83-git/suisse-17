@@ -67,7 +67,7 @@ export class FrameworkComponent implements OnInit {
 
     this.seo.update({
       title: 'Framework Archwise | Arquitectura causal para escalar IA',
-      description: 'Mapa conceptual de seis capas para navegar el corpus Archwise por dependencias causales, no por cronología.',
+      description: 'Seis capas de decisiones arquitectónicas conectadas por dependencias causales. El framework para construir capacidades IA empresariales en el orden correcto.',
       url: SeoService.getBaseUrl() + '/framework',
       type: 'website',
       image: SeoService.getBaseUrl() + '/assets/images/og-image.png'
