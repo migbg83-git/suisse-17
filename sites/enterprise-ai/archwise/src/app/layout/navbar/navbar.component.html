@@ -1,10 +1,12 @@
 <header class="aw-navbar">
   <div class="container aw-navbar__inner">
+    <!-- Logo / Brand -->
     <a class="aw-navbar__brand" routerLink="/" (click)="closeMenu()">
       <img src="/assets/icons/favicon-32x32.png" alt="" class="aw-navbar__logo" />
       <span class="aw-navbar__brand-text">Archwise</span>
     </a>
 
+    <!-- Mobile Toggle -->
     <button 
       class="aw-navbar__toggle" 
       (click)="toggleMenu()"
@@ -15,37 +17,88 @@
       <span class="aw-navbar__toggle-icon"></span>
     </button>
 
+    <!-- Main Navigation -->
     <nav class="aw-navbar__nav" [class.active]="menuOpen" aria-label="Principal">
-      <a 
-        routerLink="/framework" 
-        routerLinkActive="active"
-        (click)="closeMenu()">
-        Framework
-      </a>
       <a 
         routerLink="/articulos" 
         routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: false }"
         (click)="closeMenu()">
         Artículos
       </a>
       <a 
         routerLink="/manifesto" 
         routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: false }"
         (click)="closeMenu()">
         Manifesto
       </a>
       <a 
         routerLink="/newsletter" 
         routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: false }"
         (click)="closeMenu()">
         Newsletter
       </a>
       <a 
         routerLink="/about" 
         routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: false }"
         (click)="closeMenu()">
         About
       </a>
     </nav>
+
+    <!-- Right Section: CTA + Language Selector -->
+    <div class="aw-navbar__right">
+      <!-- CTA Button with Active State for Framework -->
+      <a 
+        class="aw-navbar__cta" 
+        [class.active]="isFrameworkActive"
+        routerLink="/framework" 
+        (click)="closeMenu()">
+        Explorar Framework
+      </a>
+
+      <!-- Language Selector with Dropdown -->
+      <div class="aw-navbar__language-wrapper">
+        <button 
+          class="aw-navbar__language"
+          (click)="toggleLanguageDropdown()"
+          aria-haspopup="listbox"
+          [attr.aria-expanded]="languageDropdownOpen"
+          aria-label="Seleccionar idioma">
+          <span class="aw-navbar__language-current">{{ currentLanguage }}</span>
+          <svg class="aw-navbar__language-icon" width="12" height="8" viewBox="0 0 12 8" fill="none">
+            <path d="M1 1L6 6L11 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+
+        <!-- Language Dropdown Menu -->
+        <div class="aw-navbar__language-menu" *ngIf="languageDropdownOpen" role="listbox">
+          <button 
+            class="aw-navbar__language-option selected"
+            role="option"
+            aria-selected="true"
+            disabled>
+            Español
+          </button>
+          <button 
+            class="aw-navbar__language-option disabled"
+            role="option"
+            aria-disabled="true"
+            disabled>
+            Français <span class="label-soon">próximamente</span>
+          </button>
+          <button 
+            class="aw-navbar__language-option disabled"
+            role="option"
+            aria-disabled="true"
+            disabled>
+            English <span class="label-soon">próximamente</span>
+          </button>
+        </div>
+      </div>
+    </div>
   </div>
 </header>
