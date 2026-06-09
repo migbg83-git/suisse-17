@@ -18,8 +18,16 @@
       <div class="container-reading">
         <nav class="article-breadcrumb">
           <a routerLink="/articulos" class="breadcrumb-link">Artículos</a>
-          <span class="breadcrumb-separator">/</span>
-          <span class="breadcrumb-link category">{{ article.category.name }}</span>
+          <ng-container *ngIf="articleLayer; else categoryBreadcrumb">
+            <span class="breadcrumb-separator">/</span>
+            <a routerLink="/framework" class="breadcrumb-link">Framework</a>
+            <span class="breadcrumb-separator">/</span>
+            <a routerLink="/framework" [fragment]="articleLayer.id" class="breadcrumb-link category">Capa {{ articleLayer.order }}</a>
+          </ng-container>
+          <ng-template #categoryBreadcrumb>
+            <span class="breadcrumb-separator">/</span>
+            <span class="breadcrumb-link category">{{ article.category.name }}</span>
+          </ng-template>
         </nav>
         <div class="category-label">{{ article.category.name }}</div>
         <h1 class="article-title">{{ article.title }}</h1>
@@ -30,6 +38,14 @@
           <span>{{ formatDate(article.date) }}</span>
           <span class="meta-separator">·</span>
           <span>{{ article.readingTime }} min de lectura</span>
+        </div>
+
+        <!-- Layer Badge -->
+        <div *ngIf="articleLayer" class="layer-badge">
+          <span class="layer-badge-label">Framework Archwise · Capa {{ articleLayer.order }}</span>
+          <strong class="layer-badge-name">{{ articleLayer.name }}</strong>
+          <span class="layer-badge-description">{{ articleLayer.shortDescription }}</span>
+          <a routerLink="/framework" [fragment]="articleLayer.id" class="layer-badge-link">Ver esta capa en el Framework →</a>
         </div>
       </div>
     </section>
@@ -51,6 +67,17 @@
       </div>
     </article>
 
+    <!-- Framework CTA -->
+    <section class="framework-cta-section">
+      <div class="container-reading">
+        <div class="framework-cta">
+          <h2 class="framework-cta-title">Este artículo forma parte del Framework Archwise</h2>
+          <p class="framework-cta-text">Cada artículo explica una decisión arquitectónica. El framework muestra cómo esas decisiones se conectan mediante dependencias reales.</p>
+          <a routerLink="/framework" class="framework-cta-link">Explorar Framework →</a>
+        </div>
+      </div>
+    </section>
+
     <!-- Newsletter CTA: SOLO después del contenido -->
     <section class="newsletter-cta-section">
       <div class="container-reading">
@@ -61,8 +88,8 @@
     <!-- Related Articles -->
     <section class="related-articles-section">
       <div class="container-reading">
-        <h2 class="related-heading">Seguir leyendo</h2>
-        <p class="related-intro">Artículos conectados para profundizar en la misma línea estratégica.</p>
+        <h2 class="related-heading">Más decisiones relacionadas</h2>
+        <p class="related-intro">Artículos que exploran decisiones arquitectónicas conectadas a esta.</p>
 
         <div *ngIf="relatedArticles.length > 0" class="related-grid">
           <a

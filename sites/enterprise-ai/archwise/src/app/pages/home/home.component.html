@@ -2,27 +2,46 @@
   <!-- Hero Section -->
   <section class="hero minimal-hero">
     <div class="container-listing">
-      <h1 class="hero-title">Arquitectura. Criterio. IA.</h1>
+      <h1 class="hero-title">La IA empresarial falla por arquitectura, no por modelos.</h1>
       <p class="hero-subtitle">
-        Una publicación para arquitectos y líderes técnicos que diseñan sistemas complejos en la era de la inteligencia artificial.
+        Archwise es un framework arquitectónico de 6 capas para construir capacidades IA en el orden correcto. Conecta decisiones, dependencias y gobernanza para escalar sin deuda estructural.
       </p>
+      <p class="hero-foundational">
+        Los problemas de IA empresarial rara vez son problemas de modelos. Son problemas de arquitectura.
+      </p>
+      <div class="hero-actions">
+        <a routerLink="/framework" class="btn btn-primary">Explorar Framework</a>
+        <a routerLink="/articulos" class="btn btn-link">Ver artículos</a>
+      </div>
     </div>
   </section>
 
-  <!-- Quote Section -->
-  <section class="quote-section">
+  <!-- Framework Preview Section -->
+  <section class="framework-preview-section">
     <div class="container-reading">
-      <blockquote class="quote-text">
-        Los equipos que mejor trabajan con IA no son los que tienen mejores prompts. 
-        Son los que tienen mejor conocimiento explícito.
-      </blockquote>
+      <h2 class="section-title">Framework Archwise</h2>
+      <div class="framework-metrics">
+        <div class="metric">
+          <span class="metric-number">6</span>
+          <span class="metric-label">capas arquitectónicas</span>
+        </div>
+        <div class="metric">
+          <span class="metric-number">30</span>
+          <span class="metric-label">decisiones críticas</span>
+        </div>
+        <div class="metric">
+          <span class="metric-number">1</span>
+          <span class="metric-label">orden causal de activación</span>
+        </div>
+      </div>
+      <a routerLink="/framework" class="framework-preview-link">Ver mapa completo →</a>
     </div>
   </section>
 
   <!-- Featured Essays Section -->
   <section class="featured-essays-section">
     <div class="container-listing">
-      <h2 class="section-title">Ensayos destacados</h2>
+      <h2 class="section-title">Decisiones arquitectónicas destacadas</h2>
       <div class="essays-list">
         @if (foundationalArticles$ | async; as articles) {
           @for (article of articles; track article.slug) {
@@ -48,9 +67,8 @@
       <ul class="principles-list">
         <li class="principle-item">
           <span class="principle-arrow">→</span>
-          <strong>Contexto sobre prompts.</strong>
-          La calidad del contexto que la IA recibe es órdenes de magnitud más importante 
-          que la formulación de la pregunta.
+          <strong>Dependencias sobre cronología.</strong>
+          Las capas de un sistema IA se activan por causalidad, no por fecha de lanzamiento.
         </li>
         <li class="principle-item">
           <span class="principle-arrow">→</span>
@@ -60,8 +78,8 @@
         </li>
         <li class="principle-item">
           <span class="principle-arrow">→</span>
-          <strong>Criterio sobre velocidad.</strong>
-          La velocidad sin criterio produce deuda a velocidad de máquina.
+          <strong>Arquitectura sobre velocidad.</strong>
+          La velocidad sin arquitectura produce deuda a velocidad de máquina.
         </li>
       </ul>
       <a routerLink="/manifesto" class="manifesto-link">Leer manifesto completo →</a>
@@ -71,7 +89,7 @@
   <!-- Newsletter CTA Section -->
   <section class="newsletter-cta-section">
     <div class="container-reading">
-      <h2 class="cta-title">Cada semana. Sin hype.</h2>
+      <h2 class="cta-title">Continuidad para arquitectos que construyen IA real.</h2>
       <form class="newsletter-form">
         <input 
           type="email" 

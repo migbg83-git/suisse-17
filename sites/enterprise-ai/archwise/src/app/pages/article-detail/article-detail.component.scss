@@ -669,3 +669,60 @@
     color: var(--aw-accent-hover);
   }
 }
+
+// Layer Badge
+.layer-badge {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  margin: 1.5rem auto 0;
+  padding: 1rem 1.25rem;
+  border: 1px solid var(--aw-gray-200);
+  border-radius: 8px;
+  background: var(--aw-gray-50);
+  text-align: left;
+  max-width: 480px;
+  @media (max-width: 768px) { margin-left: 0; margin-right: 0; max-width: none; }
+}
+.layer-badge-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--aw-gray-500);
+}
+.layer-badge-name { font-size: 1rem; font-weight: 700; color: var(--aw-gray-900); }
+.layer-badge-description { font-size: 0.875rem; color: var(--aw-gray-600); line-height: 1.5; }
+.layer-badge-link {
+  display: inline-block;
+  margin-top: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--aw-accent);
+  text-decoration: none;
+  &:hover { color: var(--aw-accent-hover); }
+}
+
+// Framework CTA Section
+.framework-cta-section {
+  padding: 2.5rem 0;
+  @media (max-width: 768px) { padding: 2rem 0; }
+}
+.framework-cta {
+  padding: 2rem 1.5rem;
+  border: 1px solid var(--aw-gray-200);
+  border-radius: 12px;
+  background: radial-gradient(circle at top left, rgba(27, 127, 200, 0.04), transparent 50%), var(--aw-gray-50);
+  text-align: center;
+  @media (max-width: 768px) { padding: 1.5rem 1rem; }
+}
+.framework-cta-title { margin: 0 0 0.5rem; font-size: 1.15rem; font-weight: 700; color: var(--aw-gray-900); }
+.framework-cta-text { margin: 0 auto 1.25rem; font-size: 0.95rem; color: var(--aw-gray-600); line-height: 1.6; max-width: 520px; }
+.framework-cta-link {
+  display: inline-block;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--aw-accent);
+  text-decoration: none;
+  &:hover { color: var(--aw-accent-hover); }
+}

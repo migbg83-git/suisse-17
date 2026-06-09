@@ -22,8 +22,8 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
     this.foundationalArticles$ = this.contentService.getFeaturedArticles();
     this.seo.update({
-      title: 'Enterprise Architecture para la era de la IA | Archwise',
-      description: 'Análisis sobre arquitectura enterprise, documentación, contexto explícito, IA aplicada y decisiones técnicas para arquitectos y tech leads.',
+      title: 'Framework arquitectónico para IA empresarial | Archwise',
+      description: 'Archwise es un framework de 6 capas para construir capacidades IA en el orden correcto. Conecta decisiones, dependencias y gobernanza para escalar sin deuda estructural.',
       url: SeoService.getBaseUrl() + '/',
       type: 'website',
       image: SeoService.getBaseUrl() + '/assets/images/og-image.png'
