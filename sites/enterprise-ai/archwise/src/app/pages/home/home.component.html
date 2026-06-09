@@ -18,41 +18,52 @@
 
   <!-- Framework Preview Section -->
   <section class="framework-preview-section">
-    <div class="container-reading">
+    <div class="container-wide">
       <h2 class="section-title">Framework Archwise</h2>
       <p class="framework-preview-subtitle">
         6 capas arquitectónicas conectadas por dependencias causales.
       </p>
+      <p class="framework-causal-note">
+        Cada capa habilita la siguiente. Las capacidades IA no aparecen por cronología, sino por dependencias.
+      </p>
 
-      <!-- Layer Sequence -->
-      <div class="framework-layers-preview">
+      <!-- Layer Sequence with Connectors -->
+      <div class="framework-layers-connected">
         @for (layer of frameworkLayers; track layer.order) {
-          <div class="layer-preview-card">
-            <div class="layer-preview-number">{{ layer.order }}</div>
-            <div class="layer-preview-content">
-              <h3 class="layer-preview-name">{{ layer.name }}</h3>
-              <p class="layer-preview-description">{{ layer.shortDescription }}</p>
+          <div class="layer-connected-wrapper">
+            <div class="layer-preview-card">
+              <div class="layer-preview-number">{{ layer.order }}</div>
+              <div class="layer-preview-content">
+                <h3 class="layer-preview-name">{{ layer.name }}</h3>
+                <p class="layer-preview-description">{{ layer.shortDescription }}</p>
+              </div>
             </div>
             @if (layer.order < 6) {
-              <div class="layer-preview-arrow">→</div>
+              <div class="layer-connector">
+                <svg class="connector-arrow" viewBox="0 0 24 24" fill="none">
+                  <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
             }
           </div>
         }
       </div>
 
-      <!-- Metrics as Support -->
-      <div class="framework-metrics-support">
-        <div class="metric-support">
-          <span class="metric-support-number">6</span>
-          <span class="metric-support-label">capas arquitectónicas</span>
+      <!-- Metrics as Authority Indicators -->
+      <div class="framework-metrics-authority">
+        <div class="metric-authority">
+          <span class="metric-authority-number">6</span>
+          <span class="metric-authority-label">capas arquitectónicas</span>
         </div>
-        <div class="metric-support">
-          <span class="metric-support-number">30</span>
-          <span class="metric-support-label">artículos conectados</span>
+        <div class="metric-authority-divider"></div>
+        <div class="metric-authority">
+          <span class="metric-authority-number">30</span>
+          <span class="metric-authority-label">artículos conectados</span>
         </div>
-        <div class="metric-support">
-          <span class="metric-support-number">1</span>
-          <span class="metric-support-label">orden causal</span>
+        <div class="metric-authority-divider"></div>
+        <div class="metric-authority">
+          <span class="metric-authority-number">1</span>
+          <span class="metric-authority-label">orden causal</span>
         </div>
       </div>
 
