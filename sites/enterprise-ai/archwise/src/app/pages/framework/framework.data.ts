@@ -246,16 +246,16 @@ export const FRAMEWORK_PAGE_DATA: FrameworkPageData = {
     {
       id: 'go-articles',
       label: 'Soy nuevo en Archwise',
-      linkLabel: 'Empezar por visión general →',
+      linkLabel: 'Siguiente paso recomendado: entender el marco base →',
       route: '/articulos',
-      description: 'Entiende el problema arquitectónico que Archwise resuelve y cómo leer el framework sin perderte.'
+      description: 'Empieza aquí si es tu primera visita. Obtendrás contexto del problema, términos base y cómo leer Archwise sin fricción.'
     },
     {
       id: 'go-manifesto',
       label: 'Soy CTO / Enterprise Architect / Head of Engineering',
-      linkLabel: 'Construir ruta recomendada →',
+      linkLabel: 'Siguiente paso recomendado: priorizar decisiones ejecutivas →',
       route: '/manifesto',
-      description: 'Prioriza decisiones para escalar IA con control de riesgo, trazabilidad y coherencia entre capas.'
+      description: 'Entra aquí si ya necesitas decidir prioridades. Obtendrás una guía para secuenciar decisiones con control de riesgo y trazabilidad.'
     },
     {
       id: 'newsletter-soon',

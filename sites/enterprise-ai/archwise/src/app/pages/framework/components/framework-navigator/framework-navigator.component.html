@@ -1,7 +1,8 @@
 ﻿<section class="framework-navigator" id="navigator">
   <div class="container-listing framework-navigator-shell">
     <h2>Constructor de ruta</h2>
-    <p class="framework-navigator-subtitle">Define quién eres y qué necesitas ahora para obtener una secuencia recomendada.</p>
+    <p class="framework-navigator-subtitle">Selecciona tu perfil y objetivo para obtener una secuencia recomendada de decisiones y lecturas en orden causal.</p>
+    <p class="framework-navigator-subtitle">Resultado: una ruta inicial accionable para decidir qué resolver primero en tu contexto.</p>
 
     <div class="framework-builder-step" aria-label="Paso 1: perfil">
       <p class="framework-step-label">Paso 1 · Quién eres</p>
@@ -40,6 +41,7 @@
     @if (activePath; as path) {
       <section class="framework-route-result" aria-label="Ruta recomendada">
         <h3>Tu ruta: {{ activeProfileLabel }} → {{ activeIntentLabel }}</h3>
+        <p>Usa esta ruta como orden de trabajo inicial. Cada punto reduce riesgo antes de escalar autonomía o alcance.</p>
 
         @if (isFallbackPath) {
           <div class="framework-route-fallback" role="status">

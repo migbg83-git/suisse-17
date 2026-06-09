@@ -10,18 +10,101 @@
     <section class="framework-overview" id="que-es" aria-labelledby="que-es-heading">
       <div class="container-listing">
         <h2 id="que-es-heading">¿Qué es Archwise?</h2>
-        <p>Archwise no es un catálogo de prácticas ni un roadmap lineal. Es un framework arquitectónico para resolver el problema real de la IA empresarial: capacidades activadas fuera de orden, governance tardía, contexto fragmentado y memoria organizativa débil.</p>
-        <p>Sus 6 capas organizan decisiones que se condicionan entre sí: diagnóstico, contexto, gobernanza, operación, memoria y sistemas de ejecución.</p>
-        <p>Cada artículo explica una decisión crítica: qué riesgo evita, qué habilita y qué dependencias exige. Por eso Archwise no se recorre por fecha: se recorre por arquitectura.</p>
+        <p>Archwise es un framework de arquitectura para decidir en qué orden activar capacidades de IA en una empresa.</p>
+        <p>No es una herramienta de software, no es una plataforma y no requiere instalación. Tampoco es una metodología genérica de innovación.</p>
+        <p>Su función es práctica: reducir riesgo de implementación y evitar deuda estructural al alinear diagnóstico, contexto, gobernanza, operación, memoria y ejecución agéntica.</p>
+        <p>Qué obtienes al usarlo: una secuencia causal de decisiones para priorizar qué hacer primero, qué no escalar todavía y qué dependencias resolver antes.</p>
+      </div>
+    </section>
+
+    <section class="framework-overview framework-value-takeaways" aria-labelledby="framework-value-takeaways-heading">
+      <div class="container-listing">
+        <h2 id="framework-value-takeaways-heading">En 15 minutos te llevas</h2>
+        <p class="framework-value-subtitle">No una teoría: una primera secuencia de decisiones para actuar con menor riesgo.</p>
+
+        <div class="framework-value-grid" role="list" aria-label="Valor por perfil en 15 minutos">
+          <article class="framework-value-card" role="listitem">
+            <h3>CTO</h3>
+            <p><strong>Valor:</strong> Priorización causal de iniciativas IA del trimestre.</p>
+            <p><strong>Riesgo:</strong> Escalar sin control y pagar deuda estructural después.</p>
+            <p><strong>Decisión:</strong> Qué acelerar, qué pausar, qué dependencia cerrar primero.</p>
+            <p><strong>Resultado:</strong> Más predictibilidad de negocio con menor exposición.</p>
+          </article>
+
+          <article class="framework-value-card" role="listitem">
+            <h3>Enterprise Architect</h3>
+            <p><strong>Valor:</strong> Marco causal para validar dependencias y trazabilidad intercapas.</p>
+            <p><strong>Riesgo:</strong> Incoherencia arquitectónica entre equipos y dominios.</p>
+            <p><strong>Decisión:</strong> Qué dependencia debe cumplirse antes de escalar operación.</p>
+            <p><strong>Resultado:</strong> Más consistencia sistémica y menos fallos por decisiones aisladas.</p>
+          </article>
+
+          <article class="framework-value-card" role="listitem">
+            <h3>Head of Engineering</h3>
+            <p><strong>Valor:</strong> Traducción del framework a una secuencia operativa ejecutable.</p>
+            <p><strong>Riesgo:</strong> Delivery rápido con degradación progresiva de calidad sistémica.</p>
+            <p><strong>Decisión:</strong> Qué iniciativas ejecutar ahora y qué guardrails activar antes.</p>
+            <p><strong>Resultado:</strong> Mayor confiabilidad de entrega IA en plazos de negocio.</p>
+          </article>
+        </div>
+
+        <a [routerLink]="['/framework']" fragment="navigator" class="framework-value-link">Generar mi ruta inicial</a>
       </div>
     </section>
 
     <section class="framework-overview" id="como-navegar" aria-labelledby="como-navegar-heading">
       <div class="container-listing">
         <h2 id="como-navegar-heading">Cómo navegar Archwise</h2>
-        <p>Si hoy estás desplegando agentes, copilots o automatización, no empieces por la tecnología más visible: empieza por la capa que está bloqueando resultados.</p>
-        <p>Si el problema es escalado inconsistente, revisa dependencias entre operación, governance y memoria antes de ampliar alcance. Si el problema es control o trazabilidad, prioriza decisiones de gobernanza y evidencia antes de aumentar autonomía.</p>
-        <p><strong>Usa las rutas recomendadas para entrar por tu situación actual y avanzar en orden causal. Cada decisión debe reducir deuda arquitectónica y aumentar coherencia entre equipos, sistemas y resultados.</strong></p>
+        <p>Si hoy estás desplegando agentes, copilots o automatización, no empieces por la tecnología más visible: empieza por la capa que bloquea resultados.</p>
+        <p>Secuencia recomendada para primera visita: 1) revisa el mapa causal, 2) abre el detalle de capas, 3) genera tu ruta por perfil e intención.</p>
+        <p><strong>Para un visitante nuevo: empieza por "Mapa" y después "Capas". Para un CTO: ve directo a "Constructor de ruta" con perfil CTO y la intención prioritaria del trimestre.</strong></p>
+      </div>
+    </section>
+
+    <section class="framework-overview framework-value-problems" aria-labelledby="framework-value-problems-heading">
+      <div class="container-listing">
+        <h2 id="framework-value-problems-heading">Problemas que Archwise ayuda a resolver</h2>
+        <p class="framework-value-subtitle">Señales típicas de activación fuera de orden y cómo reencuadrarlas con secuencia causal.</p>
+        <p class="framework-value-differentiator">Otros marcos te dicen qué capacidades IA existen. Archwise te ayuda a decidir cuál activar primero, cuál no escalar todavía y qué dependencia resolver para evitar deuda estructural.</p>
+
+        <div class="framework-problems-grid" role="list" aria-label="Problemas, riesgos, capa de entrada y resultado esperado">
+          <article class="framework-value-card" role="listitem">
+            <h3>Muchos pilotos, poco impacto repetible.</h3>
+            <p><strong>Riesgo:</strong> dispersión de inversión y fatiga organizativa.</p>
+            <p><strong>Entrada:</strong> Diagnóstico + Governance.</p>
+            <p><strong>Resultado:</strong> cartera priorizada con criterio.</p>
+          </article>
+
+          <article class="framework-value-card" role="listitem">
+            <h3>Agentes/copilots escalan con respuestas inconsistentes.</h3>
+            <p><strong>Riesgo:</strong> errores operativos y pérdida de confianza.</p>
+            <p><strong>Entrada:</strong> Contexto explícito + Memory.</p>
+            <p><strong>Resultado:</strong> mayor consistencia y reutilización.</p>
+          </article>
+
+          <article class="framework-value-card" role="listitem">
+            <h3>No hay trazabilidad de decisiones IA.</h3>
+            <p><strong>Riesgo:</strong> exposición regulatoria y bloqueo ejecutivo.</p>
+            <p><strong>Entrada:</strong> Governance.</p>
+            <p><strong>Resultado:</strong> decisiones auditables y defendibles.</p>
+          </article>
+
+          <article class="framework-value-card" role="listitem">
+            <h3>Cada equipo define IA con reglas distintas.</h3>
+            <p><strong>Riesgo:</strong> fragmentación arquitectónica y deuda de integración.</p>
+            <p><strong>Entrada:</strong> AI Operating Model + System Coherence.</p>
+            <p><strong>Resultado:</strong> ejecución alineada inter-áreas.</p>
+          </article>
+
+          <article class="framework-value-card" role="listitem">
+            <h3>Se prioriza velocidad y suben incidentes.</h3>
+            <p><strong>Riesgo:</strong> coste de corrección tardía y degradación de delivery.</p>
+            <p><strong>Entrada:</strong> Sequence Integrity.</p>
+            <p><strong>Resultado:</strong> escalado más estable y predecible.</p>
+          </article>
+        </div>
+
+        <a [routerLink]="['/framework']" fragment="mapa" class="framework-value-link">Ver por dónde empezar según tu problema</a>
       </div>
     </section>
 

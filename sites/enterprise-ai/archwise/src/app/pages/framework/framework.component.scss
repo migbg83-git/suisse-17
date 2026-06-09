@@ -60,6 +60,68 @@
   margin-bottom: 0.5rem;
 }
 
+.framework-value-takeaways,
+.framework-value-problems {
+  margin-bottom: 1.25rem;
+}
+
+.framework-value-subtitle {
+  margin: -0.35rem 0 0.75rem;
+  color: #4a5c70;
+  line-height: 1.6;
+}
+
+.framework-value-differentiator {
+  margin: 0 0 1rem;
+  color: #2f4358;
+  line-height: 1.6;
+  font-weight: 500;
+}
+
+.framework-value-grid,
+.framework-problems-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.8rem;
+  margin-bottom: 0.9rem;
+}
+
+.framework-value-card {
+  border: 1px solid #d9dde3;
+  border-radius: 8px;
+  padding: 0.8rem;
+  background: #fff;
+
+  h3 {
+    margin: 0 0 0.5rem;
+    font-size: 0.98rem;
+    color: #1f2d3d;
+    line-height: 1.35;
+  }
+
+  p {
+    margin: 0 0 0.45rem;
+    color: #394d63;
+    line-height: 1.5;
+    font-size: 0.9rem;
+  }
+
+  p:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.framework-value-link {
+  font-weight: 600;
+  text-decoration: none;
+  color: #1f466a;
+}
+
+.framework-value-link:hover,
+.framework-value-link:focus-visible {
+  color: #143a60;
+}
+
 .framework-articles {
   margin: 0.75rem 0;
   padding-left: 1.2rem;
@@ -78,6 +140,11 @@
 }
 
 @media (max-width: 767px) {
+  .framework-value-grid,
+  .framework-problems-grid {
+    grid-template-columns: 1fr;
+  }
+
   .framework-anchor-nav {
     gap: 0.45rem;
     margin-bottom: 1rem;
