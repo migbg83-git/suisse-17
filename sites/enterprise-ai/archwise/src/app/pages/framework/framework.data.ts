@@ -2,7 +2,7 @@
 
 export const FRAMEWORK_PAGE_DATA: FrameworkPageData = {
   title: 'Framework Archwise',
-  subtitle: 'Orientación causal del corpus para entender capacidades, dependencias y rutas de lectura.',
+  subtitle: 'El Framework Archwise organiza seis capas de decisiones arquitectónicas conectadas por dependencias causales. No navegas por fecha ni por categoría: navegas según lo que tu arquitectura ya ha resuelto.',
   layers: [
     {
       id: 'layer-1',
@@ -248,7 +248,7 @@ export const FRAMEWORK_PAGE_DATA: FrameworkPageData = {
       label: 'Ir a Artículos',
       linkLabel: 'Explorar los 30 artículos →',
       route: '/articulos',
-      description: 'Explora el corpus completo en orden editorial.'
+      description: 'Explora los 30 artículos en orden causal.'
     },
     {
       id: 'go-manifesto',
@@ -261,7 +261,7 @@ export const FRAMEWORK_PAGE_DATA: FrameworkPageData = {
       id: 'newsletter-soon',
       label: 'Newsletter (próximamente)',
       linkLabel: 'Unirme cuando esté disponible',
-      description: 'Continuidad semanal del framework y del corpus.',
+      description: 'Continuidad semanal del framework y de la arquitectura Archwise.',
       disabled: true
     }
   ]
