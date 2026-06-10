@@ -175,7 +175,7 @@
 }
 
 .section-subtitle {
-  margin: 0.85rem 0 0;
+  margin: 0.85rem 0 2.5rem;
   font-size: 1.05rem;
   line-height: 1.6;
   color: var(--aw-gray-600);
@@ -256,7 +256,7 @@
 .framework-stage::before {
   content: '';
   position: absolute;
-  left: -2.25rem;
+  left: -2rem;
   top: 1.5rem;
   width: 0.75rem;
   height: 0.75rem;
@@ -270,7 +270,6 @@
 .framework-stage-header {
   display: flex;
   align-items: center;
-  gap: 0.75rem;
 }
 
 .framework-stage-connector {
@@ -286,9 +285,12 @@
 
 .framework-stage-description {
   margin: 0.5rem 0 0.85rem;
-  color: var(--aw-gray-600);
+  // color: var(--aw-gray-600);
+  color: #687385;
   line-height: 1.55;
   font-size: 0.98rem;
+  font-weight: 500;
+  
 }
 
 .framework-stage-links {
