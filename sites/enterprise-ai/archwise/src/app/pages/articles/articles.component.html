@@ -4,18 +4,33 @@
       <div class="container-listing">
         <h1 class="page-title">Decisiones arquitectónicas</h1>
         <p class="page-subtitle">
-          Cada artículo explica una decisión crítica del Framework Archwise. Las decisiones tienen dependencias. Navega por capa, no por fecha.
+          30 artículos conectados para entender cómo se construyen capacidades de IA enterprise siguiendo las 6 capas del Framework Archwise. No están pensados como posts aislados, sino como una secuencia de decisiones con dependencias.
         </p>
+
+        <div class="hero-metrics">
+          <div class="metric-item">
+            <span class="metric-value">{{ vm.articlesWithLayer.length }}</span>
+            <span class="metric-label">artículos</span>
+          </div>
+          <div class="metric-item">
+            <span class="metric-value">6</span>
+            <span class="metric-label">capas</span>
+          </div>
+          <div class="metric-item">
+            <span class="metric-value">1</span>
+            <span class="metric-label">recorrido recomendado</span>
+          </div>
+        </div>
       </div>
     </section>
 
     <section class="anchor-nav-section" aria-label="Navegación interna">
       <div class="container-listing">
         <p class="anchor-nav-title">Navega por objetivo</p>
-        <nav class="anchor-nav-links">
-          <a href="#empieza-aqui" class="anchor-nav-link is-active" aria-current="true">Empieza aquí</a>
-          <a href="#capas-framework" class="anchor-nav-link">Capas del Framework</a>
-          <a href="#indice-completo" class="anchor-nav-link">Índice completo</a>
+        <nav class="anchor-nav-links" role="navigation" aria-label="Navegación por secciones de artículos">
+          <a href="javascript:void(0)" (click)="scrollToSection('capas-framework')" class="btn-primary-anchor" aria-current="true">Explorar por capas</a>
+          <a href="javascript:void(0)" (click)="scrollToSection('empieza-aqui')" class="link-secondary-anchor">Ruta recomendada</a>
+          <a href="javascript:void(0)" (click)="scrollToSection('indice-completo')" class="link-secondary-anchor">Índice completo</a>
         </nav>
       </div>
     </section>
@@ -80,9 +95,9 @@
 
     <section id="indice-completo" class="articles-section articles-content">
       <div class="container-listing">
-        <h2 class="section-title">Índice completo</h2>
+        <h2 class="section-title">Índice completo de decisiones</h2>
         <p class="section-subtitle">
-          Todos los artículos del framework. Ordenados por fecha de publicación.
+          Todas las decisiones del framework. Puedes leerlas por fecha, pero están diseñadas para entenderse por capa y dependencia.
         </p>
 
         <div class="editorial-list">
