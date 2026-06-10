@@ -76,7 +76,7 @@ export class ArticlesComponent implements OnInit {
   ngOnInit(): void {
     this.viewModel$ = this.contentService.getArticles().pipe(
       map((articles) => {
-        const articleBySlug = new Map(articles.map((article) => [article.slug, article]));
+        const articleBySlug = new Map(articles.map((article) => [article.slug, article])); // Use articles directly from the service
 
         const startHereItems = START_HERE_SEEDS
           .map((seed, index) => {

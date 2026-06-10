@@ -11,7 +11,7 @@
 // Hero Section
 
 .articles-hero.minimal-hero {
-  padding: 3.5rem 0 2rem;
+  padding: 4rem 0 3rem;
   text-align: left;
   background-color: var(--aw-white);
   @media (max-width: 768px) {
@@ -20,33 +20,64 @@
 }
 
 .page-title {
-  margin: 0 0 1.5rem;
-  font-size: 3rem; // 48px
-  font-weight: 700;
+  margin: 0 0 1rem;
+  font-size: 3.5rem;
+  font-weight: 700; // Keep strong
   line-height: 1.1;
   color: var(--aw-gray-900);
   letter-spacing: -0.02em;
+  max-width: 850px;
   
   @media (max-width: 768px) {
     font-size: 2.25rem; // 36px
-  }
+  } // Original size, let's reduce it slightly
+  font-size: 2.5rem; // Slightly smaller than 3.5rem
 }
 
 .page-subtitle {
-  margin: 0;
-  font-size: 1.25rem; // 20px
+  margin: 0 0 2.5rem;
+  font-size: 1.125rem; // 20px
   font-weight: 400;
   line-height: 1.6;
   color: var(--aw-gray-600);
-  max-width: 640px;
-  margin-left: auto;
-  margin-right: auto;
-  
+  max-width: 720px;
+
   @media (max-width: 768px) {
-    margin-left: 0;
     margin-right: 0;
     font-size: 1.125rem; // 18px
   }
+}
+
+.hero-metrics {
+  display: flex;
+  gap: 3.5rem;
+  padding-top: 0.5rem;
+
+  @media (max-width: 768px) {
+    gap: 1.5rem;
+    flex-wrap: wrap;
+  }
+}
+
+.metric-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.metric-value {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--aw-accent);
+  line-height: 1;
+}
+
+.metric-label {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--aw-gray-500);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
 }
 
 .anchor-nav-section {
@@ -64,42 +95,51 @@
   font-weight: 700;
 }
 
-.anchor-nav-links {
-  display: inline-flex;
+.anchor-nav-links { // Container for the navigation links
+  display: flex;
   align-items: center;
-  gap: 0.55rem;
-  flex-wrap: wrap;
+  gap: 1.25rem; // Increased gap for better separation
+  flex-wrap: wrap; // Allow wrapping on smaller screens
 }
 
-.anchor-nav-link {
-  color: var(--aw-gray-700);
+.btn-primary-anchor { // Style for the primary CTA
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.6rem 1.2rem;
+  background-color: var(--aw-accent);
+  color: var(--aw-white);
+  border-radius: 6px;
   text-decoration: none;
   font-weight: 600;
   font-size: 0.95rem;
-  line-height: 1.2;
-  padding: 0.38rem 0.7rem;
-  border: 1px solid var(--aw-gray-200);
-  border-radius: 999px;
-  background-color: var(--aw-white);
-  transition: color 150ms, border-color 150ms, background-color 150ms;
+  transition: background-color 150ms ease;
 
   &:hover {
-    color: var(--aw-gray-900);
-    border-color: var(--aw-gray-300);
-    background-color: var(--aw-gray-50);
+    background-color: var(--aw-accent-hover);
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--aw-accent);
+    outline-offset: 2px;
+  }
+}
+
+.link-secondary-anchor { // Style for secondary links
+  color: var(--aw-gray-600);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: color 150ms ease;
+
+  &:hover {
+    color: var(--aw-accent);
   }
 
   &:focus-visible {
     outline: 2px solid var(--aw-gray-300);
-    outline-offset: 1px;
+    outline-offset: 2px;
   }
-}
-
-.anchor-nav-link.is-active {
-  color: var(--aw-gray-900);
-  font-weight: 700;
-  border-color: var(--aw-gray-300);
-  background-color: var(--aw-gray-100);
 }
 
 @media (max-width: 768px) {
@@ -108,9 +148,13 @@
     gap: 0.5rem;
   }
 
-  .anchor-nav-link {
+  .btn-primary-anchor {
+    padding: 0.5rem 1rem;
     font-size: 0.9rem;
-    padding: 0.34rem 0.62rem;
+  }
+
+  .link-secondary-anchor {
+    font-size: 0.9rem;
   }
 }
 

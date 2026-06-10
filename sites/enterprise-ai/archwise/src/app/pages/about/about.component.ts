@@ -171,7 +171,7 @@ import { Component } from '@angular/core';
     }
 
     .hero-content h1 {
-      font-size: 2.75rem;
+      font-size: 2.5rem;
       font-weight: 700;
       color: var(--aw-gray-900);
       margin-bottom: 0.5rem;
