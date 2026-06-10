@@ -4,10 +4,6 @@
   background-color: var(--aw-white);
 }
 
-.container-listing {
-  scroll-margin-top: 6rem;
-}
-
 // Hero Section
 
 .articles-hero.minimal-hero {
@@ -160,6 +156,7 @@
 
 .articles-section {
   padding: 3rem 0;
+  scroll-margin-top: 96px; // Adjusted to match header height
 
   @media (max-width: 768px) {
     padding: 2.25rem 0;

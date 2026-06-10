@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject, PLATFORM_ID } from '@angular/core';
 import { SeoService } from '../../shared/seo/seo.service';
 import { ContentService } from '../../core/services/content.service';
 import { Article } from '../../core/models/article.model';
+import { isPlatformBrowser } from '@angular/common';
 import { map, Observable } from 'rxjs';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
@@ -70,8 +71,24 @@ const START_HERE_SEEDS: StartHereSeed[] = [
 })
 export class ArticlesComponent implements OnInit {
   viewModel$!: Observable<ArticlesViewModel>;
+  isBrowser: boolean;
 
-  constructor(private contentService: ContentService, private seo: SeoService) {}
+  constructor(
+    private contentService: ContentService,
+    private seo: SeoService,
+    @Inject(PLATFORM_ID) private platformId: Object
+  ) {
+    this.isBrowser = isPlatformBrowser(this.platformId);
+  }
+
+  scrollToSection(sectionId: string): void {
+    if (this.isBrowser) {
+      const element = document.getElementById(sectionId);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }
+  }
 
   ngOnInit(): void {
     this.viewModel$ = this.contentService.getArticles().pipe(
