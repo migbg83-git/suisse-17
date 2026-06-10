@@ -17,11 +17,11 @@ import { Component } from '@angular/core';
               <h1>Miguel Benito García</h1>
               <p class="hero-lead">
                 Enterprise Software Architect<br>
-                <span class="author-tag">Author of the Archwise Framework</span>
+                <span class="author-tag">Autor del Archwise Framework</span>
               </p>
-              <p class="hero-tagline">Architecture, governance and organizational memory for Enterprise AI.</p>
+              <p class="hero-tagline">Arquitectura, gobernanza y memoria organizativa para Enterprise AI.</p>
               <div class="hero-trajectory-block">
-                <p class="hero-trajectory">20 años diseñando, evolucionando y gobernando sistemas enterprise.</p>
+                <!--<p class="hero-trajectory">20 años diseñando, evolucionando y gobernando sistemas enterprise.</p>-->
                 <p class="hero-focus">Arquitectura, gobierno técnico y transformación tecnológica para organizaciones complejas.</p>
               </div>
               <div class="hero-actions">
