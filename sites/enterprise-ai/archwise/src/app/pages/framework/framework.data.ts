@@ -1,4 +1,4 @@
-﻿import { FrameworkPageData } from './framework.types';
+﻿﻿import { FrameworkPageData } from './framework.types';
 
 export const FRAMEWORK_PAGE_DATA: FrameworkPageData = {
   title: 'Framework Archwise',
@@ -54,6 +54,7 @@ export const FRAMEWORK_PAGE_DATA: FrameworkPageData = {
         'ai-augmented-development-teams',
         'ai-native-organizations',
         'ai-operating-model-enterprise',
+        'arquitectura-equipos-virtuales-ia-enterprise',
         'enterprise-ai-transformation-roadmap'
       ]
     },
@@ -147,7 +148,8 @@ export const FRAMEWORK_PAGE_DATA: FrameworkPageData = {
         'arquitectura-adopcion-framework-archwise-orden-activacion',
         'ai-governance-framework',
         'framework-archwise-integracion-capacidades-escalar-ia',
-        'integracion-coherencia-principio-rector-mecanismo-arquitectonico'
+        'integracion-coherencia-principio-rector-mecanismo-arquitectonico',
+        'arquitectura-equipos-virtuales-ia-enterprise'
       ]
     },
     {
@@ -159,7 +161,8 @@ export const FRAMEWORK_PAGE_DATA: FrameworkPageData = {
         'integridad-secuencia-evaluar-madurez-operativa-evidencia-narrativas',
         'ai-governance-framework',
         'memory-architecture-contexto-reutilizable-enterprise',
-        'integracion-coherencia-principio-rector-mecanismo-arquitectonico'
+        'integracion-coherencia-principio-rector-mecanismo-arquitectonico',
+        'arquitectura-equipos-virtuales-ia-enterprise'
       ]
     },
     {
@@ -170,7 +173,8 @@ export const FRAMEWORK_PAGE_DATA: FrameworkPageData = {
         'organizational-memory-activo-ai-native',
         'memory-architecture-contexto-reutilizable-enterprise',
         'context-systems-entregar-contexto-correcto-enterprise',
-        'arquitectura-adopcion-framework-archwise-orden-activacion'
+        'arquitectura-adopcion-framework-archwise-orden-activacion',
+        'arquitectura-equipos-virtuales-ia-enterprise'
       ]
     },
     {
@@ -266,4 +270,3 @@ export const FRAMEWORK_PAGE_DATA: FrameworkPageData = {
     }
   ]
 };
-
