@@ -1,8 +1,8 @@
 # Archwise AI Handoff
 
-> Última actualización: 2026-06-10  
-> Último artículo publicado: article-30 (De la integración a la coherencia: el principio rector y el mecanismo arquitectónico que cierran el Framework Archwise)  
-> Estado del proyecto: Operativo. 30 artículos publicados. Article-30 deployado y validado en producción. /framework desplegado y operativo.
+> Última actualización: 2026-06-11  
+> Último artículo publicado: article-31 (Del Prompt al Sistema: una arquitectura para equipos virtuales de IA)  
+> Estado del proyecto: Operativo. 31 artículos publicados. Article-31 integrado y prerenderizado. /framework desplegado y operativo.
 
 ---
 
@@ -29,13 +29,33 @@ Estado técnico:
 - prerender dinámico de slugs activo.
 - Deploy de article-30 validado en producción.
 - Pipeline de build corregido: `npm run build` ejecuta `build:seo` antes de compilar (evita sitemap stale).
-- Total de rutas estimadas para SSG: **34** (4 estáticas: /, /manifesto, /articulos, /framework + 30 artículos).
+- Total de rutas estimadas para SSG: **35** (4 estáticas: /, /manifesto, /articulos, /framework + 31 artículos).
 
 Estado editorial:
 - 30 artículos publicados (01-30).
-- **article-30 completado, publicado e integrado** como cierre de la etapa fundacional.
+- **article-30 completado, publicado e integrado** como parte de la etapa fundacional.
 - Internal Linking Fase 1 completada en framework core (17-23).
 - Articles Index v2 deployado (2026-06-03): Hero, Empieza aquí, Últimos publicados, Mapa del framework, Navegación por anclas.
+
+### Article-31 (resumen operativo)
+
+- Título: "Del Prompt al Sistema: una arquitectura para equipos virtuales de IA"
+- Slug: `arquitectura-equipos-virtuales-ia-enterprise`
+- Categoría: Enterprise AI
+- Capa Framework: Capa 4 · AI Operating Model
+- Fecha: 2026-06-11
+- Estado: Publicado / integrado / prerenderizado
+
+Cambios técnicos realizados durante la integración (resumen):
+
+1. El slug inicial fue normalizado a `arquitectura-equipos-virtuales-ia-enterprise` y sincronizado en `article.json` y en el frontmatter de `article.md`.
+2. `build-content` (MD -> HTML/JSON) requiere que el slug en frontmatter sea la fuente de verdad; `article.json` fue actualizado para permanecer en sincronía.
+3. `FRAMEWORK_PAGE_DATA.layers[].articleSlugs` se actualizó para incluir el nuevo slug (Article-31 mapeado a Capa 4 · AI Operating Model). El slug ya existía en `pathMappings` y se añadió a `layers[].articleSlugs` para permitir la visibilidad en el Framework.
+4. Se detectó y eliminó un bloque duplicado al final de `article.md` (copia completa a partir de "## Executive Summary"). Esta corrección editorial evitó la duplicación en el HTML prerenderizado.
+
+Notas operativas:
+- Estas acciones son ajustes editoriales y de mapeo; no implicaron cambios en componentes Angular ni en la lógica de aplicación.
+- Ver sección "Correcciones técnicas realizadas" más abajo para el diff conceptual resumido.
 
 Estado de build (validado):
 - `npm run build:content`: OK
@@ -73,8 +93,8 @@ Fecha: 2026-06-08
 Estado: DEPLOYED AND VALIDATED
 
 Descripción:
-- Página `/framework` implementada con 6 capas de contexto que mapean el corpus 01-30.
-- **Cobertura de framework: 30/30 artículos integrados.**
+- Página `/framework` implementada con 6 capas de contexto que mapean el corpus 01-31.
+- **Cobertura de framework: 31/31 artículos integrados.**
 - Navegación multi-dimensional por perfil (CTO, Enterprise Architect, Head of Engineering, Transformation Leader, Consultor).
 - Navegación por intento (Diagnosticar, Diseñar, Operar, Medir, Corregir).
 
@@ -82,7 +102,7 @@ Capas del Framework (Corpus 01-30):
 1. Diagnóstico AI-Ready: 4 artículos (011, 012, 013, 018)
 2. Contexto explícito y Knowledge Debt: 9 artículos (01, 03, 06, 07, 08, 14, 15, 02, 05)
 3. Governance: 4 artículos (09, 10, 20, 04)
-4. AI Operating Model: 4 artículos (16, 17, 21, 19)
+4. AI Operating Model: 5 artículos (16, 17, 21, 19, 31)
 5. Organizational Memory: 2 artículos (22, 23)
 6. Context Systems y capacidad agéntica: 7 artículos (24, 25, 26, 27, 28, 29, **30**)
 
@@ -172,9 +192,10 @@ Regla post-deploy:
 | 28 | Measurement System | Enterprise AI | measurement-system-integracion-madurez-operativa | Publicado |
 | 29 | Integridad de Secuencia | Enterprise AI | integridad-secuencia-evaluar-madurez-operativa-evidencia-narrativas | Publicado |
 | 30 | De la integración a la coherencia (Capstone) | Enterprise AI | integracion-coherencia-principio-rector-mecanismo-arquitectonico | Publicado |
+| 31 | Del Prompt al Sistema: una arquitectura para equipos virtuales de IA | Enterprise AI | arquitectura-equipos-virtuales-ia-enterprise | Publicado |
 
 Estado de integridad del corpus:
-- 01-30 presentes y publicados.
+- 01-31 presentes y publicados.
 - **System Coherence** e **Interface Integrity** consolidados como los pilares rectores que cierran la etapa fundacional.
 - La evaluación de madurez operativa (26-29) queda subordinada al principio de Coherencia Sistémica.
 
@@ -279,6 +300,20 @@ Pendiente: Fase 2 (Clusters desconectados) y Fase 3 (Enlazado inline).
 3. **Logs debug residuales**: Pendiente limpieza en `build-content.ts`.
 
 ---
+
+## Correcciones técnicas realizadas
+
+Durante la integración de Article-31 se aplicaron las siguientes correcciones técnicas (resumen):
+
+1. El slug inicial fue cambiado de `fin-prompt-aislado-equipos-virtuales-ia-enterprise` a `arquitectura-equipos-virtuales-ia-enterprise`.
+2. El slug fue actualizado tanto en `article.json` como en el `frontmatter` de `article.md` (build-content toma el slug canónico desde `article.md`).
+3. `article.md` frontmatter quedó como fuente de la verdad para el slug; `article.json` se mantuvo sincronizado.
+4. Article-31 no aparecía inicialmente en el Framework porque el slug estaba en `pathMappings` pero no en `FRAMEWORK_PAGE_DATA.layers[].articleSlugs`.
+5. Se resolvió añadiendo `arquitectura-equipos-virtuales-ia-enterprise` a `layers[].articleSlugs` en la Capa 4 (AI Operating Model).
+6. El contenido duplicado al final del artículo provenía del propio `article.md`: había una segunda copia completa que comenzaba en `## Executive Summary`. Se eliminó el bloque duplicado en el MD fuente.
+
+Estas correcciones se documentan aquí para trazabilidad editorial; no se modificó código de aplicación ni componentes Angular.
+
 
 ## 14. Lessons Learned
 
