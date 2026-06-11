@@ -5,9 +5,7 @@ description: "El auge y los límites del Prompt Engineering en IA. Por qué el v
 date: "2026-05-30"
 ---
 
-# Why Prompt Engineering Is Not Enough
-
-## El auge del Prompt Engineering
+# Por qué el Prompt Engineering no es suficiente para construir sistemas con IA
 
 En los primeros años de la IA generativa, Prompt Engineering emergió como la disciplina estrella. La aparición de modelos de lenguaje de gran escala (LLMs) abrió la puerta a una nueva forma de interactuar con la tecnología: ya no era necesario programar, bastaba con "hablarle" a la máquina. Equipos de todo el mundo comenzaron a experimentar con prompts, ajustando instrucciones para obtener respuestas más útiles, precisas o creativas. El entusiasmo era palpable: por primera vez, la barrera de entrada a la IA parecía baja y el retorno, inmediato.
 
