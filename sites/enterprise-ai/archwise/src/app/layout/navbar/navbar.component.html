@@ -24,28 +24,28 @@
         routerLinkActive="active"
         [routerLinkActiveOptions]="{ exact: false }"
         (click)="closeMenu()">
-        Artículos
+        {{ t.articles }}
       </a>
       <a 
         routerLink="/manifesto" 
         routerLinkActive="active"
         [routerLinkActiveOptions]="{ exact: false }"
         (click)="closeMenu()">
-        Manifesto
+        {{ t.manifesto }}
       </a>
       <a 
         routerLink="/newsletter" 
         routerLinkActive="active"
         [routerLinkActiveOptions]="{ exact: false }"
         (click)="closeMenu()">
-        Newsletter
+        {{ t.newsletter }}
       </a>
       <a 
         routerLink="/about" 
         routerLinkActive="active"
         [routerLinkActiveOptions]="{ exact: false }"
         (click)="closeMenu()">
-        About
+        {{ t.about }}
       </a>
     </nav>
 
@@ -57,7 +57,7 @@
         [class.active]="isFrameworkActive"
         routerLink="/framework" 
         (click)="closeMenu()">
-        Explorar Framework
+        {{ t.framework }}
       </a>
 
       <!-- Language Selector with Dropdown -->
@@ -66,9 +66,9 @@
           class="aw-navbar__language"
           (click)="toggleLanguageDropdown()"
           aria-haspopup="listbox"
-          [attr.aria-expanded]="languageDropdownOpen"
-          aria-label="Seleccionar idioma">
-          <span class="aw-navbar__language-current">{{ currentLanguage }}</span>
+          [attr.aria-expanded]="languageDropdownOpen" 
+          [attr.aria-label]="t.selectLanguage">
+          <span class="aw-navbar__language-current">{{ t.es }}</span>
           <svg class="aw-navbar__language-icon" width="12" height="8" viewBox="0 0 12 8" fill="none">
             <path d="M1 1L6 6L11 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
@@ -80,22 +80,22 @@
             class="aw-navbar__language-option selected"
             role="option"
             aria-selected="true"
-            disabled>
-            Español
+            disabled> 
+            {{ t.spanish }}
           </button>
           <button 
             class="aw-navbar__language-option disabled"
             role="option"
             aria-disabled="true"
-            disabled>
-            Français <span class="label-soon">próximamente</span>
+            disabled> 
+            {{ t.french }} <span class="label-soon">{{ t.soon }}</span>
           </button>
           <button 
             class="aw-navbar__language-option disabled"
             role="option"
             aria-disabled="true"
-            disabled>
-            English <span class="label-soon">próximamente</span>
+            disabled> 
+            {{ t.english }} <span class="label-soon">{{ t.soon }}</span>
           </button>
         </div>
       </div>

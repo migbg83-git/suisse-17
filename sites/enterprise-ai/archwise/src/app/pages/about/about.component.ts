@@ -14,23 +14,23 @@ import { Component } from '@angular/core';
               <img src="assets/images/about/miguel-benito-garcia.jpg" alt="Miguel Benito García">
             </div>
             <div class="hero-content">
-              <h1>Miguel Benito García</h1>
+              <h1>{{ t.title }}</h1>
               <p class="hero-lead">
-                Enterprise Software Architect<br>
-                <span class="author-tag">Autor del Archwise Framework</span>
+                {{ t.roleLine1 }}<br>
+                <span class="author-tag">{{ t.authorTag }}</span>
               </p>
-              <p class="hero-tagline">Arquitectura, gobernanza y memoria organizativa para Enterprise AI.</p>
+              <p class="hero-tagline">{{ t.tagline }}</p>
               <div class="hero-trajectory-block">
                 <!--<p class="hero-trajectory">20 años diseñando, evolucionando y gobernando sistemas enterprise.</p>-->
-                <p class="hero-focus">Arquitectura, gobierno técnico y transformación tecnológica para organizaciones complejas.</p>
+                <p class="hero-focus">{{ t.focus }}</p>
               </div>
               <div class="hero-actions">
-                <a [href]="linkedInUrl" target="_blank" class="btn btn-primary">Ver perfil en LinkedIn</a>
+                <a [href]="linkedInUrl" target="_blank" class="btn btn-primary">{{ t.linkedInText }}</a>
               </div>
               <div class="hero-context">
                 <!--<span class="location-tag">Madrid · Lausanne</span>-->
-                <span class="topic-tag">20 años de experiencia en sistemas enterprise.</span>
-                <span class="topic-tag">Universidades · Fintech · Seguros · Plataformas digitales</span>
+                <span class="topic-tag">{{ t.topic1 }}</span>
+                <span class="topic-tag">{{ t.topic2 }}</span>
               </div>
             </div>
           </div>
@@ -40,18 +40,18 @@ import { Component } from '@angular/core';
       <!-- Section 1: Quién soy -->
       <section class="content-section">
         <div class="container-reading">
-          <h2 class="section-label">Quién soy</h2>
+          <h2 class="section-label">{{ t.whoLabel }}</h2>
           <p class="body-text">
-            Durante casi dos décadas he trabajado en sistemas que gestionan procesos críticos, conocimiento organizativo y operaciones a gran escala. He participado en la definición de arquitectura y gobierno técnico para universidades, fintech, seguros y plataformas globales.
+            {{ t.whoPara1 }}
           </p>
           <p class="body-text">
-            Esa experiencia es la base sobre la que se construye Archwise.
+            {{ t.whoPara2 }}
           </p>
           <p class="body-text mt-5">
-            Archwise nace de la observación práctica en organizaciones complejas. El framework surge de identificar patrones repetidos donde el éxito o el fracaso no dependen de la capacidad técnica, sino de la integridad de la arquitectura y la preservación del contexto.
+            {{ t.whoPara3 }}
           </p>
           <p class="body-text">
-            Es el resultado de años analizando por qué sistemas robustos se vuelven frágiles al escalar y cómo el diseño organizativo condiciona la viabilidad real de la tecnología.
+            {{ t.whoPara4 }}
           </p>
         </div>
       </section>
@@ -59,17 +59,17 @@ import { Component } from '@angular/core';
       <!-- Section 2: Por qué existe Archwise -->
       <section class="content-section gray-bg">
         <div class="container-reading">
-          <h2 class="section-label">Por qué existe Archwise</h2>
+          <h2 class="section-label">{{ t.whyLabel }}</h2>
           <p class="body-text mb-4">
-            La mayoría de iniciativas de IA no fracasan por los modelos. Fracasan porque las organizaciones no están preparadas para operar con ellos.
+            {{ t.whyPara1 }}
           </p>
           <div class="failure-grid">
-            <div class="failure-item"><span>Falta contexto</span></div>
-            <div class="failure-item"><span>Falta memoria organizativa</span></div>
-            <div class="failure-item"><span>Falta arquitectura</span></div>
+            <div class="failure-item"><span>{{ t.failure1 }}</span></div>
+            <div class="failure-item"><span>{{ t.failure2 }}</span></div>
+            <div class="failure-item"><span>{{ t.failure3 }}</span></div>
           </div>
           <p class="body-text mt-4">
-            Archwise nace para explorar ese problema.
+            {{ t.whyPara2 }}
           </p>
         </div>
       </section>
@@ -78,19 +78,19 @@ import { Component } from '@angular/core';
       <section class="content-section white-bg">
         <div class="container-reading">
           <div class="definition-card">
-            <h2 class="def-main-title">Qué es Archwise</h2>
+            <h2 class="def-main-title">{{ t.whatLabel }}</h2>
             <p class="def-description">
-              Archwise no es una herramienta ni una plataforma. Es un framework arquitectónico para ayudar a las organizaciones a construir capacidades de IA respetando dependencias técnicas, organizativas y operativas.
+              {{ t.whatDescription }}
             </p>
             <div class="def-highlights">
               <div class="def-highlight-item">
-                <span class="dot"></span> Framework arquitectónico
+                <span class="dot"></span> {{ t.highlight1 }}
               </div>
               <div class="def-highlight-item">
-                <span class="dot"></span> Sistema de decisiones
+                <span class="dot"></span> {{ t.highlight2 }}
               </div>
               <div class="def-highlight-item">
-                <span class="dot"></span> Capacidades AI-Native
+                <span class="dot"></span> {{ t.highlight3 }}
               </div>
             </div>
           </div>
@@ -100,27 +100,27 @@ import { Component } from '@angular/core';
       <!-- Section 4: Áreas de trabajo -->
       <section class="content-section gray-bg">
         <div class="container-reading">
-          <h2 class="section-label">Áreas de trabajo</h2>
+          <h2 class="section-label">{{ t.areasLabel }}</h2>
           <div class="areas-grid">
             <div class="area-card">
-              <strong>Enterprise Architecture</strong>
-              <p>Diseño de sistemas complejos y toma de decisiones técnicas.</p>
+              <strong>{{ t.area1.title }}</strong>
+              <p>{{ t.area1.desc }}</p>
             </div>
             <div class="area-card">
-              <strong>Context Engineering</strong>
-              <p>Contexto explícito para humanos y agentes de IA.</p>
+              <strong>{{ t.area2.title }}</strong>
+              <p>{{ t.area2.desc }}</p>
             </div>
             <div class="area-card">
-              <strong>Governance</strong>
-              <p>Mecanismos para escalar decisiones con coherencia.</p>
+              <strong>{{ t.area3.title }}</strong>
+              <p>{{ t.area3.desc }}</p>
             </div>
             <div class="area-card">
-              <strong>Organizational Memory</strong>
-              <p>Conocimiento reutilizable más allá de las personas.</p>
+              <strong>{{ t.area4.title }}</strong>
+              <p>{{ t.area4.desc }}</p>
             </div>
             <div class="area-card">
-              <strong>Enterprise AI</strong>
-              <p>Capacidad organizativa para operar IA a escala.</p>
+              <strong>{{ t.area5.title }}</strong>
+              <p>{{ t.area5.desc }}</p>
             </div>
           </div>
         </div>
@@ -130,10 +130,10 @@ import { Component } from '@angular/core';
       <section class="content-section cta-section white-bg">
       <div class="container-reading">
           <p class="body-text text-center mb-4">
-            Si trabajas diseñando sistemas, equipos o capacidades de IA, probablemente encontrarás aquí problemas que ya has vivido y modelos para abordarlos con más criterio.
+            {{ t.ctaText }}
           </p>
           <div class="text-center mt-5">
-            <button class="btn btn-primary">Suscribirme a la newsletter</button>
+            <button class="btn btn-primary">{{ t.ctaButton }}</button>
           </div>
         </div>
       </section>
@@ -412,4 +412,80 @@ import { Component } from '@angular/core';
 })
 export class AboutComponent {
   linkedInUrl = 'https://www.linkedin.com/in/miguelbg83';
+
+  // Local i18n object (ES/FR). `currentLanguage` stays 'es' by default.
+  currentLanguage = 'es';
+
+  i18n: Record<string, any> = {
+    es: {
+      title: 'Miguel Benito García',
+      roleLine1: 'Enterprise Software Architect',
+      authorTag: 'Autor del Archwise Framework',
+      tagline: 'Arquitectura, gobernanza y memoria organizativa para Enterprise AI.',
+      focus: 'Arquitectura, gobierno técnico y transformación tecnológica para organizaciones complejas.',
+      linkedInText: 'Ver perfil en LinkedIn',
+      topic1: '20 años de experiencia en sistemas enterprise.',
+      topic2: 'Universidades · Fintech · Seguros · Plataformas digitales',
+      whoLabel: 'Quién soy',
+      whoPara1: 'Durante casi dos décadas he trabajado en sistemas que gestionan procesos críticos, conocimiento organizativo y operaciones a gran escala. He participado en la definición de arquitectura y gobierno técnico para universidades, fintech, seguros y plataformas globales.',
+      whoPara2: 'Esa experiencia es la base sobre la que se construye Archwise.',
+      whoPara3: 'Archwise nace de la observación práctica en organizaciones complejas. El framework surge de identificar patrones repetidos donde el éxito o el fracaso no dependen de la capacidad técnica, sino de la integridad de la arquitectura y la preservación del contexto.',
+      whoPara4: 'Es el resultado de años analizando por qué sistemas robustos se vuelven frágiles al escalar y cómo el diseño organizativo condiciona la viabilidad real de la tecnología.',
+      whyLabel: 'Por qué existe Archwise',
+      whyPara1: 'La mayoría de iniciativas de IA no fracasan por los modelos. Fracasan porque las organizaciones no están preparadas para operar con ellos.',
+      failure1: 'Falta contexto',
+      failure2: 'Falta memoria organizativa',
+      failure3: 'Falta arquitectura',
+      whyPara2: 'Archwise nace para explorar ese problema.',
+      whatLabel: 'Qué es Archwise',
+      whatDescription: 'Archwise no es una herramienta ni una plataforma. Es un framework arquitectónico para ayudar a las organizaciones a construir capacidades de IA respetando dependencias técnicas, organizativas y operativas.',
+      highlight1: 'Framework arquitectónico',
+      highlight2: 'Sistema de decisiones',
+      highlight3: 'Capacidades AI-Native',
+      areasLabel: 'Áreas de trabajo',
+      area1: { title: 'Enterprise Architecture', desc: 'Diseño de sistemas complejos y toma de decisiones técnicas.' },
+      area2: { title: 'Context Engineering', desc: 'Contexto explícito para humanos y agentes de IA.' },
+      area3: { title: 'Governance', desc: 'Mecanismos para escalar decisiones con coherencia.' },
+      area4: { title: 'Organizational Memory', desc: 'Conocimiento reutilizable más allá de las personas.' },
+      area5: { title: 'Enterprise AI', desc: 'Capacidad organizativa para operar IA a escala.' },
+      ctaText: 'Si trabajas diseñando sistemas, equipos o capacidades de IA, probablemente encontrarás aquí problemas que ya has vivido y modelos para abordarlos con más criterio.',
+      ctaButton: 'Suscribirme a la newsletter'
+    },
+    fr: {
+      title: 'Miguel Benito García',
+      roleLine1: 'Architecte Logiciel d’Entreprise',
+      authorTag: 'Auteur du Archwise Framework',
+      tagline: 'Architecture, gouvernance et mémoire organisationnelle pour Enterprise AI.',
+      focus: 'Architecture, gouvernance technique et transformation technologique pour organisations complexes.',
+      linkedInText: 'Voir le profil LinkedIn',
+      topic1: '20 ans d’expérience en systèmes enterprise.',
+      topic2: 'Universités · Fintech · Assurances · Plateformes numériques',
+      whoLabel: 'Qui je suis',
+      whoPara1: 'Pendant près de deux décennies, j’ai travaillé sur des systèmes gérant des processus critiques, la connaissance organisationnelle et des opérations à grande échelle. J’ai participé à la définition de l’architecture et de la gouvernance technique pour des universités, des fintech, des assurances et des plateformes mondiales.',
+      whoPara2: 'Cette expérience est la base sur laquelle Archwise est construit.',
+      whoPara3: 'Archwise est né de l’observation pratique dans des organisations complexes. Le framework identifie des motifs récurrents où le succès ou l’échec ne dépend pas de la seule capacité technique, mais de l’intégrité architecturale et de la préservation du contexte.',
+      whoPara4: 'C’est le résultat d’années d’analyse sur pourquoi des systèmes robustes deviennent fragiles à l’échelle et comment la conception organisationnelle conditionne la viabilité réelle de la technologie.',
+      whyLabel: 'Pourquoi Archwise existe',
+      whyPara1: 'La plupart des initiatives IA n’échouent pas à cause des modèles. Elles échouent parce que les organisations ne sont pas prêtes à les exploiter.',
+      failure1: 'Manque de contexte',
+      failure2: 'Manque de mémoire organisationnelle',
+      failure3: 'Manque d’architecture',
+      whyPara2: 'Archwise est né pour explorer ce problème.',
+      whatLabel: 'Qu’est-ce qu’Archwise',
+      whatDescription: 'Archwise n’est pas un outil ni une plateforme. C’est un framework architectural pour aider les organisations à construire des capacités IA en respectant les dépendances techniques, organisationnelles et opérationnelles.',
+      highlight1: 'Framework architectural',
+      highlight2: 'Système de décision',
+      highlight3: 'Capacités AI-Native',
+      areasLabel: 'Domaines de travail',
+      area1: { title: 'Enterprise Architecture', desc: 'Conception de systèmes complexes et prise de décision technique.' },
+      area2: { title: 'Context Engineering', desc: 'Contexte explicite pour humains et agents IA.' },
+      area3: { title: 'Governance', desc: 'Mécanismes pour étendre les décisions de manière cohérente.' },
+      area4: { title: 'Organizational Memory', desc: 'Connaissance réutilisable au-delà des personnes.' },
+      area5: { title: 'Enterprise AI', desc: 'Capacité organisationnelle pour exploiter l’IA à grande échelle.' },
+      ctaText: 'Si vous concevez des systèmes, des équipes ou des capacités IA, vous trouverez probablement ici des problèmes que vous avez déjà vécus et des modèles pour y répondre avec plus de discernement.',
+      ctaButton: 'S’abonner à la newsletter'
+    }
+  };
+
+  get t() { return this.i18n[this.currentLanguage] || this.i18n['es']; }
 }

@@ -13,9 +13,42 @@ import { filter } from 'rxjs/operators';
 export class NavbarComponent {
   menuOpen = false;
   languageDropdownOpen = false;
-  currentLanguage = 'ES';
+  currentLanguage = 'es';
   isFrameworkActive = false;
   
+  private readonly translations: Record<string, any> = {
+    es: {
+      framework: 'Explorar Framework',
+      articles: 'Artículos',
+      manifesto: 'Manifesto',
+      newsletter: 'Newsletter',
+      about: 'About', // Mantener en inglés según el contexto original, aunque el literal sea "About"
+      es: 'ES',
+      selectLanguage: 'Seleccionar idioma',
+      spanish: 'Español',
+      french: 'Français',
+      english: 'English',
+      soon: 'próximamente'
+    },
+    fr: {
+      framework: 'Framework',
+      articles: 'Articles',
+      manifesto: 'Manifeste',
+      newsletter: 'Newsletter',
+      about: 'À propos',
+      es: 'FR', // El texto del botón de idioma en francés será "FR"
+      selectLanguage: 'Sélectionner la langue',
+      spanish: 'Espagnol',
+      french: 'Français',
+      english: 'Anglais',
+      soon: 'prochainement'
+    }
+  };
+
+  get t() {
+    return this.translations[this.currentLanguage];
+  }
+
   constructor(private router: Router, private elementRef: ElementRef) {
     // Detect framework route
     this.router.events
