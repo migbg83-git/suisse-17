@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'aw-about',
@@ -410,8 +411,10 @@ import { Component } from '@angular/core';
     }
   `]
 })
-export class AboutComponent {
+export class AboutComponent implements OnInit {
   linkedInUrl = 'https://www.linkedin.com/in/miguelbg83';
+
+  constructor(private route: ActivatedRoute) {}
 
   // Local i18n object (ES/FR). `currentLanguage` stays 'es' by default.
   currentLanguage = 'es';
@@ -488,4 +491,9 @@ export class AboutComponent {
   };
 
   get t() { return this.i18n[this.currentLanguage] || this.i18n['es']; }
+
+  ngOnInit(): void {
+    const lang = this.route.snapshot.data?.['lang'];
+    this.currentLanguage = lang || 'es';
+  }
 }

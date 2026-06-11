@@ -27,7 +27,18 @@ export const routes: Routes = [
   },
   {
     path: 'about',
-    loadComponent: () => import('./pages/about/about.component').then(m => m.AboutComponent)
+    loadComponent: () => import('./pages/about/about.component').then(m => m.AboutComponent),
+    data: { lang: 'es' }
+  },
+  {
+    path: 'fr',
+    children: [
+      {
+        path: 'a-propos',
+        loadComponent: () => import('./pages/about/about.component').then(m => m.AboutComponent),
+        data: { lang: 'fr' }
+      }
+    ]
   },
   {
     path: '**',

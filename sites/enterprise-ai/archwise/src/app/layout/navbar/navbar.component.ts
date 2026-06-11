@@ -13,7 +13,8 @@ import { filter } from 'rxjs/operators';
 export class NavbarComponent {
   menuOpen = false;
   languageDropdownOpen = false;
-  currentLanguage = 'es';
+  // `currentLanguage` will be derived from the current URL at runtime
+  currentLanguage = '';
   isFrameworkActive = false;
   
   private readonly translations: Record<string, any> = {
@@ -46,7 +47,7 @@ export class NavbarComponent {
   };
 
   get t() {
-    return this.translations[this.currentLanguage];
+    return this.translations[this.currentLanguage] || this.translations['es'];
   }
 
   constructor(private router: Router, private elementRef: ElementRef) {
@@ -54,11 +55,20 @@ export class NavbarComponent {
     this.router.events
       .pipe(filter(event => event instanceof NavigationEnd))
       .subscribe((event: any) => {
+        // Update active framework flag (keep original behavior)
         this.isFrameworkActive = event.urlAfterRedirects.startsWith('/framework');
+        // Update current language based on navigated URL
+        this.currentLanguage = this.detectLanguageFromUrl(event.urlAfterRedirects);
       });
     
     // Initial check
     this.isFrameworkActive = this.router.url.startsWith('/framework');
+    this.currentLanguage = this.detectLanguageFromUrl(this.router.url);
+  }
+
+  private detectLanguageFromUrl(url: string): string {
+    if (!url) return 'es';
+    return url.startsWith('/fr') ? 'fr' : 'es';
   }
   
   @HostListener('document:click', ['$event'])
