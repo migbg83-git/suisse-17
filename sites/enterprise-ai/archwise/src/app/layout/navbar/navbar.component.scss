@@ -308,6 +308,7 @@
   font-family: inherit;
   gap: 0.5rem;
   justify-content: space-between;
+  text-decoration: none;
   
   &:hover:not(:disabled) {
     background-color: var(--aw-gray-50);

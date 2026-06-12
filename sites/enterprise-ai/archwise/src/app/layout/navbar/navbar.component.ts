@@ -13,7 +13,7 @@ import { filter } from 'rxjs/operators';
 export class NavbarComponent {
   menuOpen = false;
   languageDropdownOpen = false;
-  currentLanguage = 'ES';
+  currentLanguage = 'Español';
   isFrameworkActive = false;
   
   constructor(private router: Router, private elementRef: ElementRef) {
