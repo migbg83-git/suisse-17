@@ -80,6 +80,13 @@ export class ArticleDetailComponent implements OnInit, OnDestroy {
             image: SeoService.getBaseUrl() + '/assets/images/og-image.png'
           });
 
+          const hreflang = SeoService.getHreflangBySlug(article.slug);
+          if (hreflang) {
+            this.seo.setHreflang(hreflang.es, hreflang.fr);
+          } else {
+            this.seo.clearHreflang();
+          }
+
           if (typeof window !== 'undefined') {
             window.scrollTo({ top: 0, behavior: 'auto' });
           }

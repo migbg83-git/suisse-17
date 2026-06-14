@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { SeoService } from '../../shared/seo/seo.service';
+import { STATIC_HREFLANG } from '../../core/seo/hreflang-map';
 import { RouterLink } from '@angular/router';
 import { ArticleCardComponent } from '../../layout/article-card/article-card.component';
 import { ContentService } from '../../core/services/content.service';
@@ -68,5 +69,6 @@ export class HomeComponent implements OnInit {
       type: 'website',
       image: SeoService.getBaseUrl() + '/assets/images/og-image.png'
     });
+    this.seo.setHreflang(STATIC_HREFLANG.home.es, STATIC_HREFLANG.home.fr);
   }
 }

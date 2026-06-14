@@ -5,6 +5,7 @@ import { distinctUntilChanged, map, Observable } from 'rxjs';
 import { ContentService } from '../../core/services/content.service';
 import { Article } from '../../core/models/article.model';
 import { SeoService } from '../../shared/seo/seo.service';
+import { STATIC_HREFLANG } from '../../core/seo/hreflang-map';
 import { FRAMEWORK_PAGE_DATA } from './framework.data';
 import {
   FrameworkPageViewModel,
@@ -72,6 +73,7 @@ export class FrameworkComponent implements OnInit {
       type: 'website',
       image: SeoService.getBaseUrl() + '/assets/images/og-image.png'
     });
+    this.seo.setHreflang(STATIC_HREFLANG.framework.es, STATIC_HREFLANG.framework.fr);
   }
 
   private buildViewModel(articles: Article[]): FrameworkPageViewModel {

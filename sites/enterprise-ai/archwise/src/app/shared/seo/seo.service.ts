@@ -1,8 +1,17 @@
 import { Injectable, Inject } from '@angular/core';
 import { Title, Meta } from '@angular/platform-browser';
 import { DOCUMENT } from '@angular/common';
+import { HREFLANG_MAP, HreflangEntry } from '../../core/seo/hreflang-map';
 
 const BASE_URL = 'https://archwise.org';
+
+// Reverse lookup: ES slug → HreflangEntry (computed once at module load)
+const ES_SLUG_TO_HREFLANG: Record<string, HreflangEntry> = Object.fromEntries(
+  Object.values(HREFLANG_MAP).map(entry => {
+    const slug = entry.es.split('/').pop()!;
+    return [slug, entry];
+  })
+);
 
 export interface SeoConfig {
   title: string;
@@ -49,7 +58,33 @@ export class SeoService {
     }
   }
 
+  setHreflang(esUrl: string, frUrl: string): void {
+    this.clearHreflang();
+    const pairs = [
+      { hreflang: 'es', href: esUrl },
+      { hreflang: 'fr', href: frUrl },
+      { hreflang: 'x-default', href: esUrl }
+    ];
+    for (const { hreflang, href } of pairs) {
+      const link = this.document.createElement('link');
+      link.setAttribute('rel', 'alternate');
+      link.setAttribute('hreflang', hreflang);
+      link.setAttribute('href', href);
+      link.setAttribute('data-aw-hreflang', 'true');
+      this.document.head.appendChild(link);
+    }
+  }
+
+  clearHreflang(): void {
+    const existing = this.document.querySelectorAll('link[data-aw-hreflang]');
+    existing.forEach(el => el.parentNode?.removeChild(el));
+  }
+
   static getBaseUrl() {
     return BASE_URL;
+  }
+
+  static getHreflangBySlug(esSlug: string): HreflangEntry | null {
+    return ES_SLUG_TO_HREFLANG[esSlug] ?? null;
   }
 }
