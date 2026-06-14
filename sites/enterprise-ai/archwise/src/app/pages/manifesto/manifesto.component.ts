@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { SeoService } from '../../shared/seo/seo.service';
+import { STATIC_HREFLANG } from '../../core/seo/hreflang-map';
 import { RouterLink } from '@angular/router';
 
 @Component({
@@ -18,5 +19,6 @@ export class ManifestoComponent implements OnInit {
       url: SeoService.getBaseUrl() + '/manifesto',
       type: 'article'
     });
+    this.seo.setHreflang(STATIC_HREFLANG.manifesto.es, STATIC_HREFLANG.manifesto.fr);
   }
 }

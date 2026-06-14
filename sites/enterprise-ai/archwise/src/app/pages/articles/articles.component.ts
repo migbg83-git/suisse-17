@@ -1,6 +1,7 @@
 import { Component, OnInit, Inject, PLATFORM_ID } from '@angular/core';
 import { SeoService } from '../../shared/seo/seo.service';
 import { ContentService } from '../../core/services/content.service';
+import { STATIC_HREFLANG } from '../../core/seo/hreflang-map';
 import { Article } from '../../core/models/article.model';
 import { isPlatformBrowser } from '@angular/common';
 import { map, Observable } from 'rxjs';
@@ -139,5 +140,6 @@ export class ArticlesComponent implements OnInit {
       url: SeoService.getBaseUrl() + '/articulos',
       type: 'website'
     });
+    this.seo.setHreflang(STATIC_HREFLANG.articles.es, STATIC_HREFLANG.articles.fr);
   }
 }
