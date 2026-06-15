@@ -76,19 +76,36 @@
 
         <!-- Language Dropdown Menu -->
         <div class="aw-navbar__language-menu" *ngIf="languageDropdownOpen" role="listbox">
-          <button 
-            class="aw-navbar__language-option selected"
-            role="option"
-            aria-selected="true"
-            disabled>
-            Español
-          </button>
-          <a 
-            class="aw-navbar__language-option"
-            role="option"
-            href="https://archwise.fr">
-            Français 
-        </a>
+          <ng-container *ngIf="!isFrenchSite">
+            <button 
+              class="aw-navbar__language-option selected"
+              role="option"
+              aria-selected="true"
+              disabled>
+              Español
+            </button>
+            <a 
+              class="aw-navbar__language-option"
+              role="option"
+              href="https://archwise.fr">
+              Français
+            </a>
+          </ng-container>
+          <ng-container *ngIf="isFrenchSite">
+            <button 
+              class="aw-navbar__language-option selected"
+              role="option"
+              aria-selected="true"
+              disabled>
+              Français
+            </button>
+            <a 
+              class="aw-navbar__language-option"
+              role="option"
+              href="https://archwise.org">
+              Español
+            </a>
+          </ng-container>
           <button 
             class="aw-navbar__language-option disabled"
             role="option"

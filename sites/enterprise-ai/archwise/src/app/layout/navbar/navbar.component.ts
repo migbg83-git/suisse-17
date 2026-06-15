@@ -1,4 +1,4 @@
-import { Component, HostListener, ElementRef } from '@angular/core';
+import { Component, HostListener, ElementRef, OnInit } from '@angular/core';
 import { RouterLink, RouterLinkActive, Router, NavigationEnd } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { filter } from 'rxjs/operators';
@@ -10,11 +10,12 @@ import { filter } from 'rxjs/operators';
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.scss']
 })
-export class NavbarComponent {
+export class NavbarComponent implements OnInit {
   menuOpen = false;
   languageDropdownOpen = false;
   currentLanguage = 'Español';
   isFrameworkActive = false;
+  isFrenchSite: boolean = false;
   
   constructor(private router: Router, private elementRef: ElementRef) {
     // Detect framework route
@@ -26,6 +27,13 @@ export class NavbarComponent {
     
     // Initial check
     this.isFrameworkActive = this.router.url.startsWith('/framework');
+  }
+
+  ngOnInit(): void {
+    if (typeof window !== 'undefined') {
+      this.isFrenchSite = window.location.hostname.includes('archwise.fr');
+      this.currentLanguage = this.isFrenchSite ? 'Français' : 'Español';
+    }
   }
   
   @HostListener('document:click', ['$event'])
