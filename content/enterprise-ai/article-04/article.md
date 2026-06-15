@@ -224,9 +224,9 @@ No porque alguien lo haya decidido. Porque la economía lo exige.
 
 Este artículo forma parte de una serie sobre arquitectura e inteligencia artificial en entornos enterprise. Si quieres pasar de la reflexión estratégica a la acción concreta:
 
-1. Crea el artefacto: "Por qué un architecture.md vale más que cien prompts mágicos"
-2. Diagnostica la deuda: "La deuda técnica que la IA está empezando a revelar"
-3. Aplica el criterio: "Qué documentación necesita realmente un LLM"
+1. Crea el artefacto: "[Por qué un architecture.md vale más que cien prompts mágicos](/articulos/architecture-md-vale-mas-que-prompts)"
+2. Diagnostica la deuda: "[La deuda técnica que la IA está empezando a revelar](/articulos/deuda-tecnica-ia-revela)"
+3. Aplica el criterio: "[Qué documentación necesita realmente un LLM](/articulos/documentacion-necesita-llm)"
 
 Si la conversación sobre cómo la IA está cambiando los incentivos del software te interesa, cada semana publico análisis para arquitectos, tech leads y responsables técnicos que necesitan pensar estratégicamente. Sin hype. Sin predicciones mesiánicas. Observaciones de lo que está pasando en proyectos reales y qué significa para quien construye sistemas complejos.
 
