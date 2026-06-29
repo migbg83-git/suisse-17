@@ -192,7 +192,7 @@ El futuro pertenece a las organizaciones que entienden que la IA no es una soluc
 
 # Referencias y recursos adicionales
 
-- Article-11: Por qué la mayoría de los sistemas no están preparados para trabajar con IA
-- Article-12: Las 7 características de una arquitectura realmente AI-Ready
+ - [Por qué la mayoría de los sistemas no están preparados para trabajar con IA](/articulos/por-que-la-mayoria-de-los-sistemas-no-estan-preparados-para-ia)
+ - [Las 7 características de una arquitectura realmente AI-Ready](/articulos/las-7-caracteristicas-arquitectura-ai-ready)
 - Recursos sobre AI Readiness, context engineering, governance adaptativo
 - Playbooks y whitepapers de Archwise
